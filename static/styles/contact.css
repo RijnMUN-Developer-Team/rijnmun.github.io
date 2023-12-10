@@ -1,0 +1,22 @@
+.pg-headings {
+    padding-top: 3%;
+    color:#D90148;
+    font: 900;
+    font-size: 50px;
+}
+
+.pg-subheadings {
+    color:#0269B3;
+    font: 700;
+    font-size: 30px;
+    padding: 1% 1% 0% 0%;
+    margin: 1% 1% 0% 0%;
+}
+
+.pg-text {
+    color:#0269B3;
+    font: 600;
+    font-size: 20px;
+    padding: 0 0 0.5%;
+    margin: 0;
+}
