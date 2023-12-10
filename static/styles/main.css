@@ -1,0 +1,89 @@
+/* Top announcement banner */
+
+.welcome {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+.main {
+    background-color: #235690;
+    display: block;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 55px;
+    color: white;
+    padding-left: 7%;
+    padding-bottom: 10px;
+    width: 50%;
+}
+
+h3 {
+    width: 40%;
+    font-size: 30px;
+    align-self: start;
+    text-align: start;
+    color: #01afe8;
+}
+
+/* Mobile support */
+
+@media screen and (max-width: 700px) {
+    .welcome {
+        display: block;
+        flex-direction: unset;
+        padding: 1.5%;
+        width: fit-content;
+    }
+
+    h1 {
+        width: unset;
+        padding: 5%;
+        padding-bottom: none;
+        font-size: 50px;
+    }    
+
+    h3 {
+        width: unset;
+        padding: 5%;
+        font-size: 25px;
+    }
+}
+
+/* SG welcome/announcement letter */
+
+.message p {
+    color: #0269B3;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.message {
+    width: 60%;
+    display: block;
+    justify-content: center;
+}
+
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile support */
+
+@media screen and (max-width: 700px) {
+    .message {
+        width: 90%;
+    }
+
+    .message p {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}

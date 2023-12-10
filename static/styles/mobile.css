@@ -1,0 +1,73 @@
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.menu .current, .normal {
+    display: none;
+}
+
+.menu .icon {
+    float: right;
+    display: block;
+    font-size: 45px;
+    padding-top: 5px;
+    padding-right: 10px;
+    color: black;
+}
+
+.toggle.responsive {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+.toggle.responsive a {
+    display: block;
+    color: white;
+    background-color: black;
+    padding: 4px;
+}
+
+footer {
+    display: block;
+    font-size: 14px;
+}
+
+.ftr {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.ft ul {
+    width: 110px;
+    padding-left: 10px;
+}
+
+.ftr ul {
+    margin-right: 5px;
+    width: auto;
+    padding-right: 5px;
+}
+
+.ftr, .ft {
+    padding: unset;
+    width: auto;
+    margin-top: 20px;
+}
+
+.map_div {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.ft h4 {
+    padding-left: 10px;
+}

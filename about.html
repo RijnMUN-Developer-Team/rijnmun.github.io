@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./static/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="./static/styles/mobile.css" media="screen and (max-width: 700px)">
+        <link rel="stylesheet" href="./static/styles/">
+        <link rel="icon" href="./static/images/icon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>RijnMUN</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo_container">
+                <img class="logo" src="./static/images/logo.png">
+            </div>
+            <div class="menu" id="menu">
+                <a href="./index.html" class="normal">Home</a>
+                <div class="normal">
+                    <div class="dropdown">
+                        <a class="dropbtn" href="./rijnmun-2024/index.html">RijnMUN 2024</a>
+                        <div class="dropdown-content">
+                            <a href="./rijnmun-2024/general-information.html">General Information</a>
+                            <a href="./rijnmun-2024/committees-and-issues.html">Committees and Issues</a>
+                            <a href="./rijnmun-2024/programme-of-events.html">Programme of Events</a>
+                            <a href="./rijnmun-2024/board-of-directors.html">Board of Directors</a>
+                            <a href="./rijnmun-2024/student-officers.html">Student Officers</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="normal" href="./news.html">News</a>
+                <a class="current" href="./about.html">About</a>
+                <a class="normal" href="./contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="show_bars()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </header>
+        <div class="toggle" id="toggle">
+            <ul>
+                <li class="main"><a href="./index.html">Home</a></li>
+                <li class="main"><a href="./rijnmun-2024/index.html">RijnMUN 2023</a></li>
+                <ul><li class="main">
+                    <a href="./rijnmun-2024/general-information.html">General Information</a>
+                    <a href="./rijnmun-2024/committees-and-issues.html">Committees and Issues</a>
+                    <a href="./rijnmun-2024/programme-of-events.html">Programme of Events</a>
+                    <a href="./rijnmun-2024/board-of-directors.html">Board of Directors</a>
+                    <a href="./rijnmun-2024/student-officers.html">Student Officers</a>
+                </li></ul>
+                <li class="main"><a href="./news.html">News</a></li>
+                <li class="main"><a href="./about.html">About</a></li>
+                <li class="main"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <script>
+            function show_bars() {
+              var x = document.getElementById("toggle");
+              if (x.className === "toggle") {
+                x.className += " responsive";
+              } else {
+                x.className = "toggle";
+              }
+            }
+            function hide_bars() {
+                var x = document.getElementById("toggle");
+                if (x.className != "toggle") {
+                    x.className = "toggle"
+                }
+            }
+        </script>
+        <main>
+            <!-- MAIN CONTENT HERE -->
+        </main>
+        <footer>
+            <div class="f">
+                <div class="ft">
+                    <h4>GENERAL</h4>
+                    <ul class="f_important">
+                        <li>
+                            <a href="./rijnmun-2024/programme-of-events.html">Agenda</a>
+                        </li>
+                        <li>
+                            <a href="https://foundation.thimun.org/participation/guidelines/">Guidelines</a>
+                        </li>
+                        <li>
+                            <a href="./rijnmun-2024/committees-and-issues.html">Research</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ftr">
+                    <h4>CONTACT</h4>
+                    <ul class="f_contact">
+                        <li>
+                            <i class="fa fa-institution"></i>
+                            <a>
+                                RijnMUN
+                            </a>
+                        </li>
+                        <li>
+                            <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
+                            <a href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
+                                Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <a href="mailto:rijnmunsecretariat@gmail.com">
+                                rijnmunsecretariat@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <span class="spc>"><i class="fa fa-globe"></i></span>
+                            <a href="./index.html">
+                                [ webiste URL ]
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map_div">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482386883!2d4.459190276739407!3d52.181011671974325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1702158487137!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
+    </body>
+</html>
