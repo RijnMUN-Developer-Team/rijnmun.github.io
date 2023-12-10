@@ -20,8 +20,8 @@ html {
     position: absolute;
     right: 0;
     width: 100%;
-    background-color: black;
-    opacity: 0.9;
+    background-color: #8A002D;
+    opacity: 0.95;
     float: none;
     display: block;
     text-align: left;
@@ -30,7 +30,7 @@ html {
 .toggle.responsive a {
     display: block;
     color: white;
-    background-color: black;
+    background-color: #8A002D;
     padding: 4px;
 }
 
