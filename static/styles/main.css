@@ -31,7 +31,7 @@ h3 {
 
 /* Mobile support */
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 800px) {
     .welcome {
         display: block;
         flex-direction: unset;
