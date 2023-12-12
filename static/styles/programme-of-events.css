@@ -1,0 +1,9 @@
+main {
+    display: flex;
+    justify-content: center;
+    text-decoration: unset;
+}
+
+table {
+    width: 70%;
+}
