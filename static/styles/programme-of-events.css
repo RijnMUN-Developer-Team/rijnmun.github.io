@@ -8,13 +8,12 @@ table {
     border: 1px solid #005795;
     table-layout: fixed;
     width: 75%;
-    text-align: center;
+    text-align: left;
     margin: 5% auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 th {
-    text-align: left;
     background-color: rgb(103, 0, 147);
     height: 50px;
     border: 1px #005795 solid;
@@ -26,4 +25,8 @@ td {
     padding-left: 5%;
     padding-right: 5%;
     width: 50%;
+}
+
+.time {
+    margin-right: 20px;
 }
