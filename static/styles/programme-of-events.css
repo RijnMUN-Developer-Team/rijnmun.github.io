@@ -14,6 +14,8 @@ table {
 }
 
 th {
+    text-align: left;
+    margin: 5px;
     background-color: rgb(103, 0, 147);
     height: 50px;
     border: 1px #005795 solid;
@@ -21,6 +23,8 @@ th {
 }
 
 td {
+    text-align: left;
+    margin: 5px;
     border: 1px solid #005795;
     padding-left: 5%;
     padding-right: 5%;
@@ -29,4 +33,5 @@ td {
 
 .time {
     margin-right: 20px;
+    padding-right: 20px;
 }
