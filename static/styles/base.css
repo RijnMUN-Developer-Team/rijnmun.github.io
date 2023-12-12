@@ -96,6 +96,7 @@ body {
 }
 
 .dropdown:hover .dropdown-content {
+    z-index: 999;
     display: block;
     border-top: 5px solid #D90148;
 }
