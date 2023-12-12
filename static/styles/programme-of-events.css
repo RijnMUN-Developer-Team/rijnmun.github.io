@@ -24,8 +24,6 @@ th {
 
 td {
     text-align: left;
-    display: flex;
-    justify-content: start;
     margin: 5px;
     border: 1px solid #005795;
     padding-left: 5%;
