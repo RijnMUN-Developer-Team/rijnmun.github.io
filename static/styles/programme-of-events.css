@@ -2,6 +2,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .saturday {
