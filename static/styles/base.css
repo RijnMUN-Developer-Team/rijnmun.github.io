@@ -235,4 +235,6 @@ h4 {
 .title {
     background-color: #235690;
     display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
