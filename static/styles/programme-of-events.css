@@ -41,6 +41,7 @@ tr {
 
 td {
     margin: 5px;
+    display: table-cell;
 }
 
 .time {
