@@ -29,11 +29,11 @@ h2 {
     
 }
 
-table {
-    background-color: #729bb9d2;
+table, th, td {
+    border: 1px #005795 solid;
+    border-collapse: collapse;
 }
 
 tr {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
 }
