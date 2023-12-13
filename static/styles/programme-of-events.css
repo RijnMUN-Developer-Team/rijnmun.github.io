@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.saturday {
+    display: block;
+}
+
+h2 {
+    text-decoration: 1.5px solid #005795 underline;
+    text-underline-offset: 8px;
+    
+}
+
+table {
+    background-color: #729bb9d2;
+}
+
+tr {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
