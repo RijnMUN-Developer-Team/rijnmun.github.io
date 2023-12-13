@@ -32,8 +32,21 @@ h2 {
 table, th, td {
     border: 1px #005795 solid;
     border-collapse: collapse;
+    font-family: sans-serif;
 }
 
 tr {
     padding: 7px;
+}
+
+td {
+    margin: 5px;
+}
+
+.time {
+    width: auto;
+}
+
+.text {
+    width: auto;
 }
