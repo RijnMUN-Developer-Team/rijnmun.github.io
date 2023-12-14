@@ -42,6 +42,7 @@ tr {
 td {
     margin: 5px;
     display: table-cell;
+    outline-offset: 10px;
 }
 
 .time {
