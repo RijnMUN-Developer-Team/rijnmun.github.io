@@ -6,13 +6,21 @@ main {
     width: 90%;
     color: #0269B3;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 55px;
+    font-size: 45px;
     color: white;
     padding-left: 7%;
     padding-bottom: 10px;
     width: 80%;
+}
+
+.welcome_message {
+    width: 85%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;    
 }
