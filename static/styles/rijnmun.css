@@ -6,8 +6,8 @@ main {
     width: 90%;
     color: #0269B3;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 h1 {
@@ -21,6 +21,6 @@ h1 {
 
 .welcome_message {
     width: 85%;
-    padding-left: 7.5%;
-    padding-right: 7.5%;    
+    margin-left: 7.5%;
+    margin-right: 7.5%;    
 }
