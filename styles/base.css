@@ -110,7 +110,8 @@ body {
   
 .dropdown-content a:hover {
     /* background-color: var(--theme-rd); */
-    background-color: var(--theme-bl);
+    /* background-color: var(--theme-bl); */
+    background-color: #333;
 }
 
 .dropdown:hover .dropdown-content {
