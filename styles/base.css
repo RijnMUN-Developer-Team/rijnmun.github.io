@@ -101,7 +101,7 @@ body {
     color: var(--theme-wh);
     /* background-color: var(--theme-bl); */
     /* background-color: var(--theme-rd); */
-    background-color: var(--bl-text);
+    background-color: var(--bl-txt);
     font-weight: 500;
     padding: 14px 16px;
     text-decoration: none;
