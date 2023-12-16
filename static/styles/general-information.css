@@ -1,0 +1,38 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #E02D68;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about {
+    width: 100%;
+    margin: 1% 2%;
+
+    /* to align with title */
+    padding-left: 7%;
+    margin-left: 0;
+
+}
+
+.half-screen-block {
+    /* but when on phone should take up 100% width */
+    /* 46% + 2*2% = perfectly 50% so both fit next to each other */
+    width: 46%;
+    margin: 0;
+    padding: 2%;
+    text-align: center;
+}
+
+h2 {
+    color: var(--theme-bl)
+}
+
+.container p, .container li {
+    color: var(--bl-txt);
+}
