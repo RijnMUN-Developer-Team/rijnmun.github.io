@@ -3,6 +3,23 @@ html {
     overflow-x: hidden;
 }
 
+.title {
+    width: 100%;
+    display: block;
+    padding: 30px;
+    background-color: var(--theme-bl);
+    justify-content: start;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    color: white;
+    padding-bottom:1%;
+    width: 90%;
+    margin: 2%;
+}
+
 .menu .current, .normal {
     display: none;
 }
