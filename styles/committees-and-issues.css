@@ -25,9 +25,8 @@ h2 {
 }
 
 /* for smaller screens */
-@media only screen and (max-width:800px){
+@media screen and (max-width: 800px){
     .per-committee {
         width:100%;
     }
-    
 }

@@ -21,7 +21,7 @@
 }
 
 .half-screen-block {
-    /* but when on phone should take up 100% width */
+    /* RESOLVED but when on phone should take up 100% width */
     /* 46% + 2*2% = perfectly 50% so both fit next to each other */
     width: 46%;
     margin: 0;
