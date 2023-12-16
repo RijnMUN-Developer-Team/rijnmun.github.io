@@ -27,10 +27,11 @@ h2 {
     padding: 1.5%;
     /* text-align: center; */
     text-align: left;
-    
-    h4 {
-        padding-inline-start: none;
-    }
+}
+
+.per-committee ul {
+    padding-inline-start: none;
+    margin-block-start: none;
 }
 
 /* for smaller screens */
