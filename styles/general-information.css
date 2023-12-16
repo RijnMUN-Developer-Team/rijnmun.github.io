@@ -29,6 +29,12 @@
     text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+    .half-screen-block {
+        width: 96%;
+    }
+}
+
 h2 {
     color: var(--theme-bl)
 }
