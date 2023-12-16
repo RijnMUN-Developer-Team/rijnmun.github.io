@@ -24,8 +24,7 @@ h2 {
 
 .per-committee {
     width: 50%;
-    padding:1%;
-    padding-left: none;
+    padding: 1.5%;
     /* text-align: center; */
     text-align: left;
 }
@@ -38,7 +37,10 @@ h2 {
 
     .all-committees{
         flex-direction: column;
-        justify-content: start;
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+
     }
 
 }
