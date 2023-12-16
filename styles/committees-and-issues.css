@@ -42,7 +42,7 @@ h2 {
 
     .all-committees{
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
         padding-top: 1%;
         padding-bottom: 1%;
 
