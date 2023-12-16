@@ -1,0 +1,31 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #E02D68;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+}
+
+/* header {
+    position: relative;
+    z-index: 2000;
+}
+
+.menu {
+    width: 100px;
+}
+
+.container {
+    padding-top: 5%;
+}
+
+.title {
+    width: 100%;
+    color: var(--theme-wh);
+
+}
+
+.person img {
+    background-color: black;
+    width: auto;
+    height: auto;
+} */
