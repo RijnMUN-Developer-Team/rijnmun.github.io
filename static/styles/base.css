@@ -1,3 +1,10 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #E02D68;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+}
+
 html {
     max-width: 100%;
     overflow-x: hidden;
@@ -27,14 +34,20 @@ body {
 }
 
 .menu .normal {
-    color: #005795;
+    color: var(--theme-bl);
     text-decoration: none;
 }
 
 .current {
-    color: #D90148;
+    color: var(--theme-rd);
     text-decoration: solid underline 3px;
     text-underline-offset: 5px;
+}
+
+/* ensures the RijnMUN 2024 btn also changes colour when hovered */
+.dropbtn:hover {
+    color: var(--theme-rd);
+    text-decoration-color: var(--theme-rd);
 }
 
 .menu .current, .normal {
@@ -70,11 +83,13 @@ body {
     color: inherit;
 }
 
+
+
 .dropdown-content {
     display: none;
     position: absolute;
     margin-top: 12px;
-    background-color: #fff1ff;
+    background-color: var(--theme-wh);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
@@ -83,7 +98,9 @@ body {
 
 .dropdown-content a {
     float: none;
-    color: black;
+    /* color: black; */
+    color: var(--theme-wh);
+    background-color: var(--theme-bl);
     font-weight: 500;
     padding: 14px 16px;
     text-decoration: none;
@@ -92,35 +109,40 @@ body {
 }
   
 .dropdown-content a:hover {
-    background-color: #ffd1e0;
+    background-color: var(--theme-rd);
 }
 
 .dropdown:hover .dropdown-content {
     z-index: 999;
     display: block;
-    border-top: 5px solid #D90148;
+    /* border-top: 5px solid var(--theme-rd); */
+    border: none;
 }
 
+/* text in upper banner becomes theme-red on hover */
 .menu .normal:hover {
-    color: #0269B3;
+    /* color: var(--bl-txt); */
+    color:var(--theme-rd);
+    text-decoration-color: var(--theme-rd);
     text-decoration: 3px dashed underline;
     text-underline-offset: 5px;
 }
 
 .normal .dropdown:hover {
-    color: #0269B3;
+    /* color: var(--bl-txt); */
+    color: var(--theme-rd);
     text-decoration: 3px dashed underline;
     text-underline-offset: 5px;
 }
 
 .menu .current .dropbtn {
-    color: #D90148;
+    color: var(--theme-rd);
     text-decoration: 3px solid underline;
     text-underline-offset: 5px;
 }
 
 .current .dropbtn:hover {
-    color: #D90148;
+    color: var(--theme-rd);
     text-decoration: 3px solid underline;
     text-underline-offset: 5px;
 }
@@ -149,7 +171,7 @@ header {
 }
 
 footer {
-    background-color: #005795;
+    background-color: var(--theme-bl);
     display: flex;
     flex-direction: row;
 }
