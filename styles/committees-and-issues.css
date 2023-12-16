@@ -11,17 +11,23 @@ h2 {
 }
 
 .per-committee ul li {
+    list-style-type: none;
+    text-decoration: none;
     color: var(--bl-txt);
 }
 
 .all-committees {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .per-committee {
     width: 50%;
     padding:1%;
-    text-align: center;
+    padding-left: none;
+    /* text-align: center; */
+    text-align: left;
 }
 
 /* for smaller screens */
@@ -29,4 +35,10 @@ h2 {
     .per-committee {
         width:100%;
     }
+
+    .all-committees{
+        flex-direction: column;
+        justify-content: start;
+    }
+
 }
