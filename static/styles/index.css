@@ -1,32 +1,45 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #E02D68;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+}
+
 /* Top announcement banner */
 
-.welcome {
+.title {
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    display: block;
+    /* display: flex; */
+    /* flex-direction: row; */
     padding: 3%;
+
+    background-color: var(--theme-bl);
 }
 
-.main {
-    background-color: #235690;
+/* .main {
+    background-color: var(--theme-bl);
     display: block;
-}
+} */
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 55px;
     color: white;
-    padding-left: 7%;
-    padding-bottom: 10px;
-    width: 50%;
+    /* padding-left: 7%; */
+    padding-bottom:1%;
+    width: 100%;
+    margin: 3%
 }
 
 h3 {
-    width: 40%;
+    width: 90%;
     font-size: 30px;
-    align-self: start;
-    text-align: start;
+    /* align-self: end; */
+    text-align: end;
+    justify-self: end;
     color: #01afe8;
+    margin: 1%;
 }
 
 /* Mobile support */
@@ -56,7 +69,7 @@ h3 {
 /* SG welcome/announcement letter */
 
 .message p {
-    color: #0269B3;
+    color: var(--bl-txt);
     font-size: 20px;
     text-align: center;
     font-weight: 700;
