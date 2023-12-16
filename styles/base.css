@@ -15,6 +15,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* DROPDWON MENU ----------------------------------------------------- */
 .menu {
     height: min-content;
     overflow: hidden;
@@ -172,6 +173,28 @@ header {
     display: none;
 }
 
+/* TITLE DESIGN of every page -------------------------*/
+.title {
+    width: 100%;
+    display: block;
+    /* display: flex; */
+    /* flex-direction: row; */
+    padding: 3%;
+
+    background-color: var(--theme-bl);
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 55px;
+    color: white;
+    /* padding-left: 7%; */
+    padding-bottom:1%;
+    width: 100%;
+    margin: 2%;
+}
+
+/* FOOTER DESIGN ----------------------------- */
 footer {
     background-color: var(--theme-bl);
     display: flex;
