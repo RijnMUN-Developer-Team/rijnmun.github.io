@@ -97,9 +97,9 @@
                     <h2>Deadlines</h2>
 
                     <ul>
-                        <li>March2024: Registrations Open</li>
-                        <li>May 2024: Registration Closed</li>
-                        <li>June 2024: First Mailing</li>
+                        <li><b><span style="color:var(--theme-rd);"> March 2024</span></b>: Registrations Open</li>
+                        <li><b><span style="color:var(--theme-rd);"> May 2024</span></b>: Registration Closed</li>
+                        <li><b><span style="color:var(--theme-rd);"> June 2024</span></b>: First Mailing</li>
                     </ul>
                     
                 </div>
@@ -123,7 +123,11 @@
 
                     if (cont.style.display === 'none') {
                         // shows text on click
-                        heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-rd")
+
+                        // changes colour
+                        // heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-gr")
+                        // heading.style.color =  getComputedStyle(document.body).getPropertyValue("--theme-rd")
+
                         cont.style.display = 'block';
                         
                         cont.style.height = cont.scrollHeight + "px";
@@ -132,12 +136,16 @@
                             
                     } else {
                         // closes text on click
-                        cont.style.height= null;
+                        cont.style.height= 0;
                         
                         // pausing code for animation
                         setTimeout(function(){
-                            cont.style.display = 'none'; heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--bl-txt");
-                        }, 150, cont)
+                            cont.style.display = 'none'; 
+                            
+                            // changes colour
+                            // heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-yw");
+                            // heading.style.color =  getComputedStyle(document.body).getPropertyValue("--bl-txt")
+                        }, 200, cont)
                         
                     }
                 }

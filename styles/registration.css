@@ -3,6 +3,16 @@
     --theme-rd: #D90148;
     --theme-wh: white;
     --bl-txt: #0269B3;
+
+    /* other possible colours */
+    /* --theme-gr: #01895D; */
+    /* --light-gr: #b3e3d4; */
+    /* --theme-yw: #FAB800; */
+    /* --theme-yw: #EBC700; */
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
 }
 
 .container {
@@ -13,17 +23,29 @@
 }
 
 .container h2 {
+    /* color of the deadline h2  */
     color: var(--theme-bl);
-    background-color: var(--theme-wh);
+    /* color: var(--theme-rd); */
+
     font-size: 25px;
 }
 
+/* BANNER COLOURS HERE ------ */
 #ind-heading, #sch-heading {
-    background-color: var(--bl-txt);
+    /* background-color: var(--bl-txt);
+    color: var(--theme-wh); */
+
+    /* background-color: var(--theme-gr); */
+    background-color: var(--mid-bl);
     color: var(--theme-wh);
+
+    /* background-color: var(--theme-wh); */
+    /* color:var(--bl-txt); */
+
     padding: 3%;
-    border-radius: 0;
-    margin-bottom: 5px;
+
+    /* makes sure bottom of banner is connected to info-div */
+    margin-bottom: 0;
 }
 
 #ind-heading:hover, #sch-heading:hover {
@@ -31,6 +53,7 @@
     cursor: default;
 }
 
+/* badly placed- but the flex container for the two registration collapsibles */
 .info {
     display: flex;
     flex-direction: column;
@@ -39,18 +62,16 @@
     padding: 1%;
 }
 
-.school-registration, .ind-registration {
-    width: 100%;
-    /* margin: 1%;
-    padding: 1%; */
-}
-
+/* COLLAPSIBLE CONTENT COLOURS -----  CHANGE HERE ------------ */
 #school-registration-info, #ind-registration-info {
-    display: none;
-    border: 2px solid var(--theme-rd);
-    color: var(--theme-wh);
+    /* border: 2px solid var(--theme-rd); */
+    /* border: 2px solid var(--theme-gr); */
+    /* background-color: var(--light-gr); */
+    background-color: var(--light-bl);
 
-    padding: 3%;
+    /* initiall closed */
+    display: none;
+    padding: 0 3%;
     font-size: 18px;
 
     /* for animation */
@@ -59,8 +80,13 @@
     transition: height 0.2s ease-out;
 }
 
+/* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
 #school-registration-info p, #ind-registration-info p{
-    color: var(--theme-rd);
+    /* color: var(--theme-rd); */
+    /* color: var(--theme-gr); */
+    /* color: black; */
+    color: var(var(--dark-bl));
+
 }
 
 /* timeline  ------------------*/
@@ -68,9 +94,13 @@
     width: 36%;
     margin: 1%;
     padding: 1%;
+    padding-left: 3%;
+
+    border-left: 5px solid var(--theme-bl);
 }
 
 .timeline li {
     margin: 5px 0;
+    /* color: black; */
     color: var(--bl-txt);
 }
