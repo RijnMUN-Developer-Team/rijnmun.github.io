@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="./styles/mobile.css" media="screen and (max-width: 800px)">
         <link rel="stylesheet" href="./styles/">
         <link rel="icon" href="./images/icon.ico">
+        <link rel="stylesheet" type="text/css" href="./styles/registration.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>RijnMUN</title>
     </head>
@@ -71,6 +72,69 @@
         </script>
         <main onclick="hide_bars()">
             <!-- MAIN CONTENT HERE -->
+            <div class="title">
+                <h1>Registration</h1>
+            </div>
+
+            <div class="container">
+                <div class="info">
+                    <div class="school-registration">
+                        <h2 onclick="collapse('sch')" id="sch-heading">School Registrations</h2>
+                        <div id="school-registration-info">
+                            <p>School registrations are not yet open. Please come back later.</p>
+                        </div>
+                    </div>
+
+                    <div class="ind-registration">
+                        <h2 onclick="collapse('ind')" id="ind-heading">Individual Registrations</h2>
+                        <div id="ind-registration-info">
+                            <p>Individual registrations are not yet open. Please come back later.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <h2>Deadlines</h2>
+
+                    <ul>
+                        <li>March2024: Registrations Open</li>
+                        <li>May 2024: Registration Closed</li>
+                        <li>June 2024: First Mailing</li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <script>
+                // for collapsible
+
+                function collapse(option) {
+                    let cont;
+                    let heading;
+
+                    if (option==='ind') {
+                        heading = document.getElementById('ind-heading');
+                        cont = document.getElementById('ind-registration-info');
+
+                    } else {
+                        heading = document.getElementById('sch-heading');
+                        cont = document.getElementById('school-registration-info');
+                    }
+
+                    if (cont.style.display === 'none') {
+                        // shows text on click
+                        heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-rd")
+                        cont.style.display = 'block';
+                            
+                    } else {
+                        // closes text on click
+                        heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--bl-txt")
+
+                        cont.style.display = 'none';
+                    }
+                }
+            </script>
+
         </main>
         <footer>
             <div class="f">

@@ -3,4 +3,66 @@
     --theme-rd: #E02D68;
     --theme-wh: white;
     --bl-txt: #0269B3;
+    --light-rd: #FE71A0;
+    --dark-green: #1b784e;
+}
+
+.container {
+    display: flex;
+
+    /* to align with title */
+    padding-left: 2%;
+}
+
+.container h2 {
+    color: var(--theme-bl);
+    background-color: var(--theme-wh);
+    font-size: 25px;
+}
+
+#ind-heading, #sch-heading {
+    background-color: var(--bl-txt);
+    color: var(--theme-wh);
+    padding: 3%;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+
+#ind-heading:hover, #sch-heading:hover {
+    text-decoration: underline;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width:56%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.school-registration, .ind-registration {
+    width: 100%;
+    /* margin: 1%;
+    padding: 1%; */
+}
+
+#school-registration-info, #ind-registration-info {
+    display: none;
+    border: 2px solid var(--theme-rd);
+    /* background-color: var(--light-rd); */
+    color: var(--theme-wh);
+
+    padding: 3%;
+    font-size: 18px;
+}
+
+#school-registration-info p, #ind-registration-info p{
+    color: var(--theme-rd);
+}
+
+/* timeline  ------------------*/
+.timeline {
+    width: 36%;
+    margin: 1%;
+    padding: 1%;
 }
