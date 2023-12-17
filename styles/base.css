@@ -188,11 +188,9 @@ header {
     display: block;
     /* display: flex; */
     /* flex-direction: row; */
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-right: 3%;
-    padding-left: 3%;
 
+    /* numbers in order: top-right-bottom-left */
+    padding: 2% 3% 3% 2%;
     background-color: var(--theme-bl);
 }
 
