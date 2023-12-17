@@ -10,7 +10,7 @@ h2 {
     font-style: italic;
 }
 
-.per-committee ul li {
+.pc-txt ul li {
     list-style-type: none;
     text-decoration: none;
     color: var(--bl-txt);
@@ -18,20 +18,42 @@ h2 {
 
 .all-committees {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center space-evenly;
+    padding-left: 10px;
 }
 
 .per-committee {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pc-txt {
     width: 50%;
     padding: 1.5%;
     /* text-align: center; */
     text-align: left;
 }
 
-.per-committee ul {
+.pc-txt ul {
     padding-inline-start: none;
     margin-block-start: none;
+    list-style-type: none;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.pc-btn {
+    width: 80px;
+    background-color: var(--theme-bl);
+    border-radius: 10px;
+}
+
+.pc-btn a {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
 }
 
 /* for smaller screens */
