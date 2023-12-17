@@ -8,25 +8,82 @@
 h2 {
     color: var(--theme-bl);
     font-style: italic;
+    border-left: var(--theme-rd) solid 5px;
+    padding-left: 10px;
 }
 
-.per-committee ul li {
+.pc-txt ul li {
+    list-style-type: disc;
+    text-decoration: none;
     color: var(--bl-txt);
 }
 
 .all-committees {
+    width: 66%;
+    margin-left: 17%;
+    margin-right: 17%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
 }
 
 .per-committee {
-    width: 50%;
-    padding:1%;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+.pc-txt {
+    width: 59%;
+    padding: 1.5%;
+    /* text-align: center; */
+    text-align: left;
+}
+
+.pc-btn a {
+    width: 75px;
+    background-color: var(--theme-bl);
+    /* border-radius: 10px; */
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    margin: 1px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.pc-btn br {
+    display: block;
+    content: "";
+    margin-bottom: 50px;
+}
+
+.pc-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
 /* for smaller screens */
 @media screen and (max-width: 800px){
     .per-committee {
-        width:100%;
+        width: 80%;
     }
+
+    .all-committees{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 100%;
+    }
+
+    .pc-btn br {
+        display: block;
+        content: "";
+        margin-bottom: 75px;
+    }
+
 }
