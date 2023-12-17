@@ -6,9 +6,43 @@
 }
 
 .container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cap_bold {
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 18px;
+    color: var(--theme-rd);
+}
+
+p {
+    color: var(--bl-txt)
+}
+
+li {
+    list-style-type: none;
+    list-style: none;
+}
+
+/* OLD CODE
+.container {
     display: flex;
 
-    /* to align with title */
+    < alignment with title >
     padding-left: 2%;
 }
 
@@ -41,8 +75,8 @@
 
 .school-registration, .ind-registration {
     width: 100%;
-    /* margin: 1%;
-    padding: 1%; */
+    < margin: 1%;
+    padding: 1%; >
 }
 
 #school-registration-info, #ind-registration-info {
@@ -53,7 +87,7 @@
     padding: 3%;
     font-size: 18px;
 
-    /* for animation */
+    < for animation >
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-out;
@@ -63,7 +97,7 @@
     color: var(--theme-rd);
 }
 
-/* timeline  ------------------*/
+< timeline  ------------------>
 .timeline {
     width: 36%;
     margin: 1%;
@@ -73,4 +107,4 @@
 .timeline li {
     margin: 5px 0;
     color: var(--bl-txt);
-}
+} */
