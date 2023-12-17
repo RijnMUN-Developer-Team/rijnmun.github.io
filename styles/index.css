@@ -56,13 +56,15 @@ h3 {
     h1 {
         width: unset;
         padding: 5%;
+        padding-left: 2%;
         padding-bottom: none;
         font-size: 50px;
     }    
 
     h3 {
-        width: unset;
+        width: 400px;
         padding: 5%;
+        margin: 1px;
         font-size: 25px;
     }
 }
