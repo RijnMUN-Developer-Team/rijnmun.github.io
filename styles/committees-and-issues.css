@@ -29,6 +29,10 @@ h2 {
 }
 
 .per-committee {
+    display: block;
+}
+
+.txt-btn-rel {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,9 +72,6 @@ h2 {
 }
 /* for smaller screens */
 @media screen and (max-width: 800px){
-    .per-committee {
-        width: 80%;
-    }
 
     .all-committees{
         flex-direction: column;
