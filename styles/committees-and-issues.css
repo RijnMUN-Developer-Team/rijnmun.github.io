@@ -11,15 +11,15 @@ h2 {
 }
 
 .pc-txt ul li {
-    list-style-type: none;
+    list-style-type: disc;
     text-decoration: none;
     color: var(--bl-txt);
 }
 
 .all-committees {
     width: 66%;
-    padding-left: 17%;
-    padding-right: 17%;
+    margin-left: 17%;
+    margin-right: 17%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,22 +30,13 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
 }
 
 .pc-txt {
-    width: 45%;
+    width: 59%;
     padding: 1.5%;
     /* text-align: center; */
     text-align: left;
-}
-
-.pc-txt ul {
-    padding-inline-start: none;
-    margin-block-start: none;
-    list-style-type: none;
-    list-style-position: inside;
-    list-style: none;
 }
 
 .pc-btn a {
@@ -57,6 +48,14 @@ h2 {
     text-decoration: none;
     margin: 1px;
     text-align: center;
+    font-size: 13px;
+}
+
+
+.pc-btn br {
+    display: block;
+    content: "";
+    margin-bottom: 45px;
 }
 
 .pc-btn {
