@@ -3,8 +3,6 @@
     --theme-rd: #E02D68;
     --theme-wh: white;
     --bl-txt: #0269B3;
-    --light-rd: #FE71A0;
-    --dark-green: #1b784e;
 }
 
 .container {
@@ -49,7 +47,6 @@
 #school-registration-info, #ind-registration-info {
     display: none;
     border: 2px solid var(--theme-rd);
-    /* background-color: var(--light-rd); */
     color: var(--theme-wh);
 
     padding: 3%;
