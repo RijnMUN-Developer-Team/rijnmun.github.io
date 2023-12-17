@@ -15,10 +15,71 @@
     --dark-bl: #143152;
 }
 
+/* .container {
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sch {
+    padding-right: 5%;
+}
+
+.ind {
+    padding-left: 5%;
+}
+
+.mailings {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cap_bold {
+    font-weight: bold;
+}
+
+.container a {
+    text-decoration: unset;
+    color: var(--bl-txt);
+}
+
+.container h2 {
+    color: var(--theme-rd);
+}
+
+.container h4 {
+    font-size: 18px;
+    color: var(--theme-rd);
+    margin-bottom: unset;
+    padding-top: 3%;
+}
+
+.container p {
+    color: var(--bl-txt);
+    padding: unset; 
+}
+
+.container li {
+    list-style-type: none;
+    list-style: none;
+    color: var(--bl-txt);
+} */
+
+/* OLD CODE */
 .container {
     display: flex;
 
-    /* to align with title */
+    /* < alignment with title > */
     padding-left: 2%;
 }
 
@@ -61,8 +122,13 @@
     margin: 1%;
     padding: 1%;
 }
+/* 
+.school-registration, .ind-registration {
+    width: 100%;
+    < margin: 1%;
+    padding: 1%; >
+} */
 
-/* COLLAPSIBLE CONTENT COLOURS -----  CHANGE HERE ------------ */
 #school-registration-info, #ind-registration-info {
     /* border: 2px solid var(--theme-rd); */
     /* border: 2px solid var(--theme-gr); */
@@ -74,7 +140,7 @@
     padding: 0 3%;
     font-size: 18px;
 
-    /* for animation */
+    /* < for animation > */
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-out;
@@ -89,7 +155,7 @@
 
 }
 
-/* timeline  ------------------*/
+/* < timeline  ------------------> */
 .timeline {
     width: 36%;
     margin: 1%;
@@ -103,4 +169,4 @@
     margin: 5px 0;
     /* color: black; */
     color: var(--bl-txt);
-}
+} 
