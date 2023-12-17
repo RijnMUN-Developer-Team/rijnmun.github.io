@@ -64,8 +64,13 @@ h3 {
     h3 {
         width: 400px;
         padding: 5%;
+        padding-right: unset;
         margin: 1px;
         font-size: 25px;
+    }
+
+    .title {
+        width: fit-content;
     }
 }
 
