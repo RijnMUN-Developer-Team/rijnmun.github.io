@@ -43,7 +43,7 @@ h2 {
 
 .pc-btn a {
     width: 75px;
-    background-color: var(--theme-bl);
+    background-color: var(--theme-rd);
     /* border-radius: 10px; */
     padding: 4px;
     color: white;
