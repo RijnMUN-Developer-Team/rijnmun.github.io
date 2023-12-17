@@ -25,8 +25,8 @@
 }
 
 .container a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: unset;
+    color: var(--bl-txt);
 }
 
 .container h2 {
