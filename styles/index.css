@@ -56,14 +56,21 @@ h3 {
     h1 {
         width: unset;
         padding: 5%;
+        padding-left: 2%;
         padding-bottom: none;
         font-size: 50px;
     }    
 
     h3 {
-        width: unset;
+        width: 350px;
         padding: 5%;
+        padding-right: unset;
+        margin: 1px;
         font-size: 25px;
+    }
+
+    .title {
+        width: fit-content;
     }
 }
 
