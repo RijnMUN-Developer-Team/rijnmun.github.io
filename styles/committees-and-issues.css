@@ -76,4 +76,12 @@ h2 {
         width: 100%;
     }
 
+    h2 {
+        width: 90%;
+    }
+
+    .pc-btn {
+        padding-right: 20px;
+    }
+
 }
