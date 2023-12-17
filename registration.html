@@ -125,12 +125,20 @@
                         // shows text on click
                         heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-rd")
                         cont.style.display = 'block';
+                        
+                        cont.style.height = cont.scrollHeight + "px";
+                        console.log("opening");
+                        
                             
                     } else {
                         // closes text on click
-                        heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--bl-txt")
-
-                        cont.style.display = 'none';
+                        cont.style.height= null;
+                        
+                        // pausing code for animation
+                        setTimeout(function(){
+                            cont.style.display = 'none'; heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--bl-txt");
+                        }, 150, cont)
+                        
                     }
                 }
             </script>

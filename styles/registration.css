@@ -28,6 +28,7 @@
 
 #ind-heading:hover, #sch-heading:hover {
     text-decoration: underline;
+    cursor: default;
 }
 
 .info {
@@ -51,6 +52,11 @@
 
     padding: 3%;
     font-size: 18px;
+
+    /* for animation */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
 }
 
 #school-registration-info p, #ind-registration-info p{
