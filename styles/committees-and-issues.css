@@ -29,6 +29,10 @@ h2 {
 }
 
 .per-committee {
+    display: block;
+}
+
+.txt-btn-rel {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -43,7 +47,7 @@ h2 {
 
 .pc-btn a {
     width: 75px;
-    background-color: var(--theme-bl);
+    background-color: var(--theme-rd);
     /* border-radius: 10px; */
     padding: 4px;
     color: white;
@@ -68,15 +72,14 @@ h2 {
 }
 /* for smaller screens */
 @media screen and (max-width: 800px){
-    .per-committee {
-        width: 80%;
-    }
 
     .all-committees{
         flex-direction: column;
         justify-content: center;
         padding-top: 1%;
         padding-bottom: 1%;
+        margin-left: 10px;
+        margin-right: 10px;
         width: 100%;
     }
 
