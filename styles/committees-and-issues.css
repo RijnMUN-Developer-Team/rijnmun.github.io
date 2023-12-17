@@ -17,9 +17,12 @@ h2 {
 }
 
 .all-committees {
+    width: 66%;
+    padding-left: 17%;
+    padding-right: 17%;
     display: flex;
     flex-direction: column;
-    justify-content: center space-evenly;
+    justify-content: center;
     padding-left: 10px;
 }
 
@@ -27,10 +30,11 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 60%;
 }
 
 .pc-txt {
-    width: 50%;
+    width: 45%;
     padding: 1.5%;
     /* text-align: center; */
     text-align: left;
@@ -44,18 +48,23 @@ h2 {
     list-style: none;
 }
 
-.pc-btn {
-    width: 80px;
-    background-color: var(--theme-bl);
-    border-radius: 10px;
-}
-
 .pc-btn a {
-    font-size: 17px;
+    width: 75px;
+    background-color: var(--theme-bl);
+    /* border-radius: 10px; */
+    padding: 4px;
     color: white;
     text-decoration: none;
+    margin: 1px;
+    text-align: center;
 }
 
+.pc-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
 /* for smaller screens */
 @media screen and (max-width: 800px){
     .per-committee {
