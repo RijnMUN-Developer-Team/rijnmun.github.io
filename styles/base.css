@@ -49,8 +49,7 @@ body {
 
 /* ensures the RijnMUN 2024 btn also changes colour when hovered */
 .dropbtn:hover {
-    color: var(--theme-rd);
-    text-decoration-color: var(--theme-rd);
+    color: var(--theme-rd)
 }
 
 .menu .current, .normal {
