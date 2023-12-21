@@ -1,3 +1,75 @@
-main {
-    display: block;
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+    /* other possible colours */
+    /* --theme-gr: #01895D; */
+    /* --light-gr: #b3e3d4; */
+    /* --theme-yw: #FAB800; */
+    /* --theme-yw: #EBC700; */
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+}
+
+.container {
+    display: flex;
+
+    /* to align with title banner  */
+    padding: 2% 3% 3% 2%;
+}
+
+.container h2 {
+    color: var(--theme-bl);
+    /* text-decoration: underline; */
+    border-left: 5px solid var(--mid-bl);
+
+    /* margin order: top/bottom left-right */
+    /* 1.5% just to align with the banner title */
+    padding: 0 1.5%;
+}
+
+.container li, .container a {
+    color: var(--dark-bl);
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.container a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* schedules ------------------------------- */
+.schedule {
+    width: 48%;
+    margin: 1%;
+}
+
+.schedule h2:hover {
+    border-left: 10px solid var(--theme-rd);
+    cursor: default;
+}
+
+#sat-info, #sun-info {
+    /* initially closed */
+    display: none;
+
+    /* for animation */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+}
+
+.time {
+    font-weight: bold;
+}
+
+/* prep section ------------------------------------------ */
+.prep-info {
+    width: 48%;
+    margin: 1%;
 }

@@ -74,6 +74,93 @@
             <div class="title">
                 <h1>Programme of Events</h1>
             </div>
+
+            <div class="container">
+                <div class="schedule">
+                    <div class="sat">
+                        <h2 id="sat-title" onclick="collapse('sat')">Saturday [date]</h2>
+
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it ensures collapsible responds to first click -->
+                        <div id="sat-info" style="display: none;">
+                            <ul>
+                                <li><span class="time">08:30-10:00</span> Opening Ceremony</li>
+                                <li><span class="time">11:00-12:00</span> Delegate Workshops</li>
+                                <li><span class="time">13:00-15:00</span> Lobbying in All Committees</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="sun">
+                        <h2 id="sun-title" onclick="collapse('sun')">Sunday [date]</h2>
+                        
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it ensures collapsible responds to first click -->
+                        <div id="sun-info" style="display:none;">
+                            <ul>
+                                <li><span class="time">08:30-10:00</span> All committees in session</li>
+                                <li><span class="time">11:00-12:00</span> Staggered Lunch</li>
+                                <li><span class="time">13:00-15:00</span> All committees in session</li>
+                                <li><span class="time">15:00-15:30</span> Closing Ceremony</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prep-info">
+                    <h2>Preparing for the conference...</h2>
+                    <ul class="tips">
+                        <li>Do research about your country through <a href ="https://www.cia.gov/the-world-factbook/" target="_blank">The CIA World Factbook</a></li>
+                        <li>Read the <a href="./committees-and-issues">research reports</a></li>
+                        <li>...</li>
+                        <li>Make friends!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+            
+                function collapse(opt) {
+                    let cont;
+                    let heading;
+
+                    heading = document.getElementById(`${opt}-title`);
+                    cont = document.getElementById(`${opt}-info`);
+
+                    if (cont.style.display === 'none') {
+                        // shows text on click
+
+                        // changes colour of border
+                        heading.style.borderColor =  getComputedStyle(document.body).getPropertyValue("--theme-rd");
+
+                        // prevents too much space between text and heading of collapsible
+                        heading.style.marginBottom = 0;
+
+                        cont.style.display = 'block';
+                        cont.style.height = cont.scrollHeight + "px";
+
+                    } else {
+                        // closes text on click
+
+                        cont.style.height = 0;
+
+                        // pausing code for animation
+                        setTimeout(function(){
+                            cont.style.display = 'none'; 
+                            
+                            // changes colour
+                            heading.style.borderColor =  getComputedStyle(document.body).getPropertyValue("--mid-bl");
+
+                            // ensures heading gets enough spacing with the bottom collapsible title after closing
+                            heading.style.marginBottom = '0.83em';
+                        }, 200, cont)
+                    }
+                    
+                }
+
+
+            </script>
             <!-- Don't edit after here -->
         </main>
         <footer>
