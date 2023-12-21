@@ -3,42 +3,65 @@
     --theme-rd: #D90148;
     --theme-wh: white;
     --bl-txt: #0269B3;
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+
+    --light-rd: #FF0A5C;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-}
 
-.about {
-    width: 100%;
-    margin: 1% 2%;
-
-    /* to align with title */
-    padding-left: 7%;
-    margin-left: 0;
-
-}
-
-.half-screen-block {
-    /* RESOLVED but when on phone should take up 100% width */
-    /* 46% + 2*2% = perfectly 50% so both fit next to each other */
-    width: 46%;
-    margin: 0;
-    padding: 2%;
-    text-align: center;
-}
-
-@media screen and (max-width: 800px) {
-    .half-screen-block {
-        width: 96%;
-    }
+    margin: 2% 3% 3% 2%;
 }
 
 h2 {
-    color: var(--theme-bl)
+    /* color: var(--theme-bl); */
+    color: var(--theme-rd);
 }
 
 .container p, .container li {
-    color: var(--bl-txt);
+    color: var(--dark-bl);
 }
+
+.about {
+    margin: 1.5%;
+}
+
+.btns {
+    width: 100%;
+    height: 5%;
+    margin: 0 1.5%;
+}
+
+.btns button {
+    background-color: var(--theme-bl);
+    height: inherit;
+    align-items: center;
+    padding: 1% 2%;
+    color: var(--theme-wh);
+    border: none;
+    font-size: 14px;
+}
+
+.page {
+    display: "block";
+    width: 96%;
+    margin: 0 1.5% 1.5% 1.5%;
+
+    /* to give a bit of indentation? */
+    padding-left: 1%;
+
+    /* background-color: var(--light-bl); */
+    border-top: 10px solid var(--light-rd);
+
+
+}
+
+@media screen and (max-width: 800px) {
+    
+}
+
