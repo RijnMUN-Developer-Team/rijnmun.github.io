@@ -192,6 +192,7 @@ header {
     /* flex-direction: row; */
 
     /* numbers in order: top-right-bottom-left */
+    /* DONT DARE CHANGE THE PADDING NOR THE MARGIN OR ELSE ALL THE CONTAINERS IN ALL THE PAGES WILL BE MIS-LIGNED */
     padding: 2% 3% 3% 2%;
     background-color: var(--theme-bl);
 }
@@ -203,6 +204,9 @@ h1 {
     /* padding-left: 7%; */
     /* padding-bottom: 1%; */
     width: 90%;
+
+    /* DONT DARE CHANGE THE PADDING NOR THE MARGIN OR ELSE ALL THE CONTAINERS IN ALL THE PAGES WILL BE MIS-LIGNED */
+    /* change with caution! */
     margin: 1.5%;
 }
 
