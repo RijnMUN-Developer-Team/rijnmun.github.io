@@ -77,3 +77,19 @@
     width: 48%;
     margin: 1%;
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    
+    .schedule {
+        width: 98%;
+        padding: 1%;
+    }
+
+    .prep-info {
+        width: 98%;
+        padding: 1%;
+    }
+}
