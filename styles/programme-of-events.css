@@ -54,6 +54,10 @@
     cursor: default;
 }
 
+.schedule li {
+    list-style-type: none;
+}
+
 #sat-info, #sun-info {
     /* initially closed */
     display: none;
