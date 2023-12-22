@@ -88,7 +88,7 @@
     color: var(--theme-bl);
     /* color: var(--theme-rd); */
 
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* BANNER COLOURS HERE ------ */
@@ -103,7 +103,7 @@
     /* background-color: var(--theme-wh); */
     /* color:var(--bl-txt); */
 
-    padding: 3%;
+    padding: 1.5%;
 
     /* makes sure bottom of banner is connected to info-div */
     margin-bottom: 0;
