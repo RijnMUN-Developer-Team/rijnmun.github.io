@@ -20,7 +20,7 @@
 
 .text h2 {
     color: var(--theme-bl);
-    font-size: 35px;
+    /* font-size: 35px; */
     margin: 2% 2% 1% 2%;;
 }
 
