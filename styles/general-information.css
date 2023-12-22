@@ -20,7 +20,7 @@
 
 h2 {
     /* color: var(--theme-bl); */
-    color: var(--light-rd);
+    color: var(--theme-rd);
 }
 
 .container p, .container li {
@@ -55,8 +55,7 @@ h2 {
     /* to give a bit of indentation? */
     padding-left: 1%;
 
-    /* background-color: var(--light-bl); */
-    border-top: 10px solid var(--light-rd);
+    border-top: 10px solid var(--theme-rd);
 
 
 }

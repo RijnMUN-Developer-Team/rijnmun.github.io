@@ -82,15 +82,18 @@
                 </div>
 
                 <div class="btns">
-                    <button id="MUN-details-btn" onclick="openTab('MUN-details')"  style="background-color: var(--light-rd);">What is MUN?</button>
+                    <button id="MUN-details-btn" onclick="openTab('MUN-details')"  style="background-color: var(--theme-rd);">MUN guide for Beginners</button>
                     <button id="guidelines-btn" onclick="openTab('guidelines')">Guidelines</button>
-                    <button id="rop-btn" onclick="openTab('rop')">Rules of Debate Procedures</button>
+                    <button id="rop-btn" onclick="openTab('rop')">Rules of (Debate) Procedures</button>
 
                 </div>
 
                 <div id="MUN-details" class= "page">
-                    <h2>What is MUN?</h2>
-                    <p>It is a simulation where....</p>
+                    <h2>How can I be part of (Rijn)MUN?</h2>
+                    <ul>
+                        <li>Register for RijnMUN! We are a beginner-friendly conference and in the two-day event you will receive workshops to help you find your way in the MUN community!</li>
+                        <li></li>
+                    </ul>
                 </div>
 
                 <div id="guidelines" class="page" style="display:none;">
@@ -102,7 +105,7 @@
                 </div>
 
                 <div id="rop" class="page" style="display:none;">
-                    <h2>Rules of Debate Procedures</h2>
+                    <h2>THIMUN Rules of Procedures</h2>
                     <p>RijnMUN follows the THIMUN procedures, which...</p>
                 </div>
             </div>
@@ -120,7 +123,7 @@
                     }
 
                     document.getElementById(name).style.display = "block";
-                    btn.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--light-rd");
+                    btn.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--theme-rd");
                 }
 
             </script>
