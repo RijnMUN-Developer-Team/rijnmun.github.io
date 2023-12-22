@@ -8,8 +8,8 @@
 }
 
 html {
-    max-width: 100%;
-    overflow-x: hidden;
+    max-width: 100vw;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -186,7 +186,7 @@ header {
 */
 
 .title {
-    width: 100%;
+    width: 100;
     display: block;
     /* display: flex; */
     /* flex-direction: row; */
