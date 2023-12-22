@@ -62,7 +62,7 @@ h3 {
     }    
 
     h3 {
-        width: 350px;
+        width: 80%;
         padding: 5%;
         padding-right: unset;
         margin: 1px;
@@ -71,6 +71,16 @@ h3 {
 
     .title {
         width: fit-content;
+    }
+
+    .f_contact {
+        margin-right: none;
+        padding-right: none;
+    }
+
+    ul.f_contact {
+        margin: unset;
+        padding: unset;
     }
 }
 
