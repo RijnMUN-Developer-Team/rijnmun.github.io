@@ -25,7 +25,7 @@
 .container h2 {
     color: var(--theme-bl);
     /* text-decoration: underline; */
-    border-left: 5px solid var(--mid-bl);
+    border-left: 5px solid var(--theme-rd);
 
     /* margin order: top/bottom left-right */
     /* 1.5% just to align with the banner title */
@@ -38,58 +38,21 @@
     font-size: 16px;
 }
 
-.container a {
-    text-decoration: none;
-    font-style: italic;
-}
 
-/* schedules ------------------------------- */
-.schedule {
+.sat, .sun {
     width: 48%;
     margin: 1%;
-}
-
-.schedule h2:hover {
-    border-left: 10px solid var(--theme-rd);
-    cursor: default;
 }
 
 .schedule li {
     list-style-type: none;
 }
 
-#sat-info, #sun-info {
-    /* initially closed */
-    display: none;
-
-    /* for animation */
-    height: 0;
-    overflow: hidden;
-    transition: height 0.2s ease-out;
-}
-
 .time {
     font-weight: bold;
 }
 
-/* prep section ------------------------------------------ */
-.prep-info {
-    width: 48%;
-    margin: 1%;
-}
 
 @media screen and (max-width: 800px) {
-    .container {
-        flex-wrap: wrap;
-    }
     
-    .schedule {
-        width: 98%;
-        padding: 1%;
-    }
-
-    .prep-info {
-        width: 98%;
-        padding: 1%;
-    }
 }
