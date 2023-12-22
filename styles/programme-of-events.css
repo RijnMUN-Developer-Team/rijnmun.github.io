@@ -54,5 +54,12 @@
 
 
 @media screen and (max-width: 800px) {
-    
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .sat, .sun {
+        width: 98%;
+        margin: 1%;
+    }
 }
