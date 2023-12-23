@@ -128,14 +128,14 @@ body {
     /* color: var(--bl-txt); */
     color:var(--theme-rd);
     text-decoration-color: var(--theme-rd);
-    text-decoration: 3px dashed underline;
+    /* text-decoration: 3px dashed underline; */
     text-underline-offset: 5px;
 }
 
 .normal .dropdown:hover {
     /* color: var(--bl-txt); */
     color: var(--theme-rd);
-    text-decoration: 3px dashed underline;
+    /* text-decoration: 3px dashed underline; */
     text-underline-offset: 5px;
 }
 
@@ -147,7 +147,7 @@ body {
 
 .current .dropbtn:hover {
     color: var(--theme-rd);
-    text-decoration: 3px dashed underline;
+    /* text-decoration: 3px dashed underline; */
     text-underline-offset: 5px;
 }
 
