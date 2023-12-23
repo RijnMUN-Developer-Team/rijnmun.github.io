@@ -7,7 +7,7 @@
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
-
+    --bg-red: #B20000;
     --light-rd: #FF0A5C;
 }
 
@@ -33,14 +33,17 @@ h2 {
 
 .btns {
     width: 100%;
-    height: 5%;
+    height: 40px;
     margin: 0 1.5%;
 }
 
 .btns button {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: var(--theme-bl);
     height: inherit;
     align-items: center;
+    align-content: start;
     padding: 1% 2%;
     color: var(--theme-wh);
     border: none;
