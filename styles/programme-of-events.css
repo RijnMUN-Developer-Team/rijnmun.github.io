@@ -16,10 +16,18 @@
 }
 
 .container {
+    width: 90vw;
     display: flex;
-
+    justify-content: flex-end;
     /* to align with title banner  */
     padding: 2% 3% 3% 2%;
+}
+
+.agenda {
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .container h2 {
