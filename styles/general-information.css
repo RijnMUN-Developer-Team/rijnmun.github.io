@@ -19,6 +19,18 @@
     flex-wrap: wrap;
 
     margin: 2% 3% 3% 2%;
+
+    justify-content: center;
+    width: 96%
+}
+
+.content {
+    display: flex;
+    justify-content: row;
+}
+
+.text {
+    width: 75%;
 }
 
 h2 {
