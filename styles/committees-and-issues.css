@@ -14,10 +14,18 @@ h2 {
     margin-bottom: unset;    
 }
 
+h3 {
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--bl-txt);
+}
+
 .pc-txt ul li {
     list-style-type: disc;
     text-decoration: none;
-    color: var(--bl-txt);
+    /* color: var(--bl-txt); */
+    color: black;
 }
 
 .all-committees {
@@ -85,7 +93,19 @@ h2 {
     }
 
     .pc-btn {
-        padding-right: 20px;
+        padding-right: unset;
+        margin-right: unset;
+        padding-left: 5%;
+    }
+
+    .txt-btn-rel {
+        display: flex;
+        justify-content: start;
+    }
+
+    .all-committees {
+        padding-left: unset;
+        margin-left: unset;
     }
 
 }
