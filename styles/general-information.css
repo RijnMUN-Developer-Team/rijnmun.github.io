@@ -65,7 +65,8 @@ h2 {
 }
 
 .guidelines-list li{
-    margin: 5px;
+    margin: 8px;
+    list-style: none;
 }
 
 @media screen and (max-width: 800px) {
