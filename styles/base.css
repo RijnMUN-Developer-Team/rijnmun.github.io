@@ -244,6 +244,14 @@ footer {
     text-decoration: none;
 }
 
+.ftr p {
+    margin: unset;
+}
+
+.f a:hover {
+    text-decoration: underline;
+}
+
 .ftr i {
     padding-right: 15px;
 }

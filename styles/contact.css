@@ -32,6 +32,10 @@
     padding: 1.5%;
 }
 
+.text a:hover {
+    color: var(--hov-rd);
+}
+
 .map {
     /* map takes up 70% of the page */
     width: 46%;

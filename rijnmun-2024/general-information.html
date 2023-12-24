@@ -86,12 +86,9 @@
             </div>
 
             <div class="btns">
-                <button id="MUN-details-btn" onclick="openTab('MUN-details')"
-                    style="background-color: var(--theme-rd);">MUN Guide</button>
-                <button id="guidelines-btn" onclick="openTab('guidelines')"
-                    style="background-color: var(--bg-rd);">Guidelines</button>
-                <button id="about-btn" onclick="openTab('about')" style="background-color: var(--bg-rd);">About RLO</button>
-
+                <button id="MUN-details-btn" onclick="openTab('MUN-details')" style="background-color: var(--theme-rd);">MUN Guide</button>
+                <button id="guidelines-btn" onclick="openTab('guidelines')">Guidelines</button>
+                <button id="about-btn" onclick="openTab('about')">About RLO</button>
             </div>
             <div id="MUN-details" class="page">
                 <h2>How can I be part of (Rijn)MUN?</h2>
@@ -141,7 +138,8 @@
 
                 for (let i = 0; i < pages.length; i++) {
                     pages[i].style.display = "none";
-                    btns[i].style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--bg-rd");
+                    // btns[i].style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--bg-rd");
+                    btns[i].style.backgroundColor = "";
                 }
 
                 document.getElementById(name).style.display = "block";
@@ -170,9 +168,9 @@
                 <ul class="f_contact">
                     <li>
                         <i class="fa fa-institution"></i>
-                        <a>
+                        <p>
                             RijnMUN
-                        </a>
+                        </p>
                     </li>
                     <li>
                         <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
