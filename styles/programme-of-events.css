@@ -52,8 +52,10 @@
     margin: 1%;
 }
 
-.schedule li {
-    list-style-type: none;
+.agenda li {
+    /* list-style-type: none; */
+    padding-left: 7px;
+    list-style: none;
 }
 
 .time {
@@ -64,10 +66,18 @@
 @media screen and (max-width: 800px) {
     .container {
         flex-wrap: wrap;
+        justify-content: start;
     }
 
     .sat, .sun {
         width: 98%;
         margin: 1%;
+        text-align: left;
+    }
+
+    .agenda {
+        width: 75vw;
+        display: flex;
+        flex-direction: column;
     }
 }
