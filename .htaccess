@@ -1,2 +1,2 @@
 ErrorDocument 404 /404.html
-require not ip 192.168.1.117
+Deny from 192.168.1.225
