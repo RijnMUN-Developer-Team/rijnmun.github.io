@@ -3,12 +3,15 @@
     --theme-rd: #D90148;
     --theme-wh: white;
     --bl-txt: #0269B3;
-    --hov-rd: #dc2525;
+
+
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
+
     --bg-red: #B20000;
     --light-rd: #FF0A5C;
+    --hov-rd: #dc2525;
 }
 
 .container {
@@ -59,8 +62,10 @@ h2 {
     padding-left: 1%;
 
     border-top: 10px solid var(--theme-rd);
+}
 
-
+.guidelines-list li{
+    margin: 5px;
 }
 
 @media screen and (max-width: 800px) {

@@ -1,188 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../styles/base.css">
-        <link rel="stylesheet" type="text/css" href="../styles/mobile.css" media="screen and (max-width: 800px)">
-        <link rel="stylesheet" type="text/css" href="../styles/general-information.css">
-        <link rel="icon" href="../images/icon.ico">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>RijnMUN</title>
-    </head>
-    <body>
-        <header>
-            <div class="logo_container">
-                <img class="logo" src="../images/logo.png">
-            </div>
-            <div class="menu" id="menu">
-                <a href="../" class="normal">Home</a>
-                <div class="current">
-                    <div class="dropdown">
-                        <a class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
-                        <div class="dropdown-content">
-                            <a href="./general-information">General Information</a>
-                            <a href="./committees-and-issues">Committees and Issues</a>
-                            <a href="./programme-of-events">Programme of Events</a>
-                            <a href="./board-of-directors">Board of Directors</a>
-                        </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/base.css">
+    <link rel="stylesheet" type="text/css" href="../styles/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" type="text/css" href="../styles/general-information.css">
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>RijnMUN</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo_container">
+            <img class="logo" src="../images/logo.png">
+        </div>
+        <div class="menu" id="menu">
+            <a href="../" class="normal">Home</a>
+            <div class="current">
+                <div class="dropdown">
+                    <a class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
+                    <div class="dropdown-content">
+                        <a href="./general-information">General Information</a>
+                        <a href="./committees-and-issues">Committees and Issues</a>
+                        <a href="./programme-of-events">Programme of Events</a>
+                        <a href="./board-of-directors">Board of Directors</a>
                     </div>
                 </div>
-                <a class="normal" href="../registration">Registration</a>
-                <a class="normal" href="../contact">Contact</a>
-                <a href="javascript:void(0);" class="icon" onclick="show_bars()">
-                    <i class="fa fa-bars"></i>
-                </a>
             </div>
-        </header>
-        <div class="toggle" id="toggle">
+            <a class="normal" href="../registration">Registration</a>
+            <a class="normal" href="../contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="show_bars()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <div class="toggle" id="toggle">
+        <ul>
+            <li class="main"><a href="../">Home</a></li>
+            <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2023</a></li>
             <ul>
-                <li class="main"><a href="../">Home</a></li>
-                <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2023</a></li>
-                <ul><li class="main">
+                <li class="main">
                     <a href="./general-information">General Information</a>
                     <a href="./committees-and-issues">Committees and Issues</a>
                     <a href="./programme-of-events">Programme of Events</a>
                     <a href="./board-of-directors">Board of Directors</a>
-                </li></ul>
-                <li class="main"><a href="../registration">Registration</a></li>
-                <li class="main"><a href="../contact">Contact</a></li>
+                </li>
             </ul>
-        </div>
-        <script>
-            function show_bars() {
-              var x = document.getElementById("toggle");
-              if (x.className === "toggle") {
+            <li class="main"><a href="../registration">Registration</a></li>
+            <li class="main"><a href="../contact">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        function show_bars() {
+            var x = document.getElementById("toggle");
+            if (x.className === "toggle") {
                 x.className += " responsive";
-              } else {
+            } else {
                 x.className = "toggle";
-              }
             }
-            function hide_bars() {
-                var x = document.getElementById("toggle");
-                if (x.className != "toggle") {
-                    x.className = "toggle"
+        }
+
+        function hide_bars() {
+            var x = document.getElementById("toggle");
+            if (x.className != "toggle") {
+                x.className = "toggle"
+            }
+        }
+    </script>
+    <main>
+        <!-- MAIN CONTENT HERE -->
+        <div class="title">
+            <h1>General Information</h1>
+        </div>
+
+        <div class="container">
+            <div class="about">
+                <p>RijnMUN is a Model United Nations conference hosted by students of Het Rijnlands Lyceum Oegstgeest.
+                    It is a small conference aimed for beginner delegates to familiarize themselves with the (THI)MUN
+                    rules of procedure and get involved with the MUN community. <br>RijnMUN follows the THIMUN rules of
+                    procedures, which can be found <a
+                        href="https://foundation.thimun.org/participation/guidelines/">here</a>.</p>
+            </div>
+
+            <div class="btns">
+                <button id="MUN-details-btn" onclick="openTab('MUN-details')"
+                    style="background-color: var(--theme-rd);">MUN guide for Beginners</button>
+                <button id="guidelines-btn" onclick="openTab('guidelines')"
+                    style="background-color: var(--bg-rd);">Guidelines</button>
+                <button id="about-btn" onclick="openTab('about')" style="background-color: var(--bg-rd);">About
+                    RLO</button>
+
+            </div>
+
+            <div id="MUN-details" class="page">
+                <h2>How can I be part of (Rijn)MUN?</h2>
+                <ul>
+                    <li>Register for RijnMUN! We are a beginner-friendly conference and in the two-day event you will
+                        receive workshops to help you find your way in the MUN community!</li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div id="guidelines" class="page" style="display:none;">
+                <h2>Guidelines</h2>
+                <span class="guidelines-list">
+                    <li>All must abide by the THIMUN guidelines on top of the following RijnMUN specific guidelines
+                        below</li>
+                    <li>Delegates must respect all other staff and delegates associated with the conference</li>
+                    <li>Visitors will only be allowed into the conference with a badge, which will be distributed on the
+                    first day upon arrival</li>
+                    <li>All people associated with RijnMUN must treat the building and corresponding properties with respect and care. Anyone caught in violation of this rule will be held accountable by the RijnMUN Board of Directors, who will decide upon appropriate consequences.</li>
+                    <li>Wear appropriate attire. Males shall wear a suit, tie, and formal footwear, while female delegates are expected to wear formal clothing, for e.g. a blouse and appropriate length skirt. </li>
+                </span>
+            </div>
+
+            <div id="about" class="page" style="display:none;">
+                <h2>About RLO</h2>
+                <img src="/images/icon.ico" alt="RLO icon">
+
+                <div class="text">
+                    <p>Part of the Het Rijnlands Lyceum Foundation first established in 1936, Het Rijnlands Lyceum was
+                        first founded in 1956 as a Dutch secondary school. It soon founded its TTO (bilingual) education
+                        and IB programs in the 1990s. </p>
+                    <p>Having HAVO, VWOo, gymnasium, TTO and IB programs all under the same roof, Het Rijnlands Lyceum
+                        Oegstgeest is a unique and diverse place for students to be in. With over 1400 students, with
+                        350 of which are international students from over 40 countries, and 150 staff members, RLO is
+                        home to many fun times and good memories.</p>
+                </div>
+
+                <div class="imgs">
+
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            function openTab(name) {
+                let pages = document.getElementsByClassName("page");
+                let btns = document.getElementsByTagName('button');
+                let btn = document.getElementById(`${name}-btn`);
+
+                for (let i = 0; i < pages.length; i++) {
+                    pages[i].style.display = "none";
+                    btns[i].style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--bg-rd");
                 }
+
+                document.getElementById(name).style.display = "block";
+                btn.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--theme-rd");
             }
         </script>
-        <main>
-            <!-- MAIN CONTENT HERE -->
-            <div class="title">
-                <h1>General Information</h1>
+    </main>
+    <footer>
+        <div class="f">
+            <div class="ft">
+                <h4>GENERAL</h4>
+                <ul class="f_important">
+                    <li>
+                        <a href="./programme-of-events">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="https://foundation.thimun.org/participation/guidelines/">Guidelines</a>
+                    </li>
+                    <li>
+                        <a href="./committees-and-issues">Research</a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="container">
-                <div class="about">
-                    <p>RijnMUN is a Model United Nations conference hosted by students of Het Rijnlands Lyceum Oegstgeest. It is a
-                        small conference aimed for beginner delegates to........</p>
-                </div>
-
-                <div class="btns">
-                    <button id="MUN-details-btn" onclick="openTab('MUN-details')"  style="background-color: var(--theme-rd);">MUN guide for Beginners</button>
-                    <button id="guidelines-btn" onclick="openTab('guidelines')" style="background-color: var(--bg-rd);">Guidelines</button>
-                    <button id="about-btn" onclick="openTab('about')" style="background-color: var(--bg-rd);">About RLO</button>
-
-                </div>
-
-                <div id="MUN-details" class= "page">
-                    <h2>How can I be part of (Rijn)MUN?</h2>
-                    <ul>
-                        <li>Register for RijnMUN! We are a beginner-friendly conference and in the two-day event you will receive workshops to help you find your way in the MUN community!</li>
-                        <li></li>
-                    </ul>
-                </div>
-
-                <div id="guidelines" class="page" style="display:none;">
-                    <h2>Guidelines</h2>
-                    <ul>
-                        <li>Delegates must...</li>
-                        <li>....</li>
-                    </ul>
-                </div>
-
-                <div id="about" class="page" style="display:none;">
-                    <h2>About RLO</h2>
-                    <img src="/images/icon.ico" alt="RLO icon">
-
-                    <div class="text">
-                        <p>Part of the Het Rijnlands Lyceum Foundation first established in 1936, Het Rijnlands Lyceum was first founded in 1956 as a Dutch secondary school. It soon founded its TTO (bilingual) education and IB programs in the 1990s. </p>
-                        <p>Having havo, vwo, gymnasium, tto and IB programs all under the same roof, Het Rijnlands Lyceum Oegstgeest is a unique and diverse place for students to be in. With over 1400 students, with 350 of which are international students from over 40 countries, and 150 staff members, RLO is home to many fun times and good memories.</p>
-                    </div>
-
-                    <div class="imgs">
-
-                    </div>
-                    
-                </div>
+            <div class="ftr">
+                <h4>CONTACT</h4>
+                <ul class="f_contact">
+                    <li>
+                        <i class="fa fa-institution"></i>
+                        <a>
+                            RijnMUN
+                        </a>
+                    </li>
+                    <li>
+                        <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
+                        <a href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
+                            Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:rijnmunsecretariat@gmail.com">
+                            rijnmunsecretariat@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <span class="spc>"><i class="fa fa-globe"></i></span>
+                        <a href="../">
+                            [ webiste URL ]
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
+        <div class="map_div">
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482386883!2d4.459190276739407!3d52.181011671974325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1702158487137!5m2!1sen!2snl"
+                width="300" height="200" style="border:0;" allowfullscreen="no" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+</body>
 
-            <script>
-
-                function openTab(name) {
-                    let pages = document.getElementsByClassName("page");
-                    let btns = document.getElementsByTagName('button');
-                    let btn = document.getElementById(`${name}-btn`);
-
-                    for (let i=0; i<pages.length; i++) {
-                        pages[i].style.display = "none";
-                        btns[i].style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--bg-rd");
-                    }
-
-                    document.getElementById(name).style.display = "block";
-                    btn.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--theme-rd");
-                }
-
-            </script>
-        </main>
-        <footer>
-            <div class="f">
-                <div class="ft">
-                    <h4>GENERAL</h4>
-                    <ul class="f_important">
-                        <li>
-                            <a href="./programme-of-events">Agenda</a>
-                        </li>
-                        <li>
-                            <a href="https://foundation.thimun.org/participation/guidelines/">Guidelines</a>
-                        </li>
-                        <li>
-                            <a href="./committees-and-issues">Research</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ftr">
-                    <h4>CONTACT</h4>
-                    <ul class="f_contact">
-                        <li>
-                            <i class="fa fa-institution"></i>
-                            <a>
-                                RijnMUN
-                            </a>
-                        </li>
-                        <li>
-                            <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
-                            <a href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
-                                Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
-                            </a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:rijnmunsecretariat@gmail.com">
-                                rijnmunsecretariat@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <span class="spc>"><i class="fa fa-globe"></i></span>
-                            <a href="../">
-                                [ webiste URL ]
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="map_div">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482386883!2d4.459190276739407!3d52.181011671974325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1702158487137!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </footer>
-    </body>
 </html>
