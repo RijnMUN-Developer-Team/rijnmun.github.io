@@ -15,7 +15,7 @@
     margin: 2%;
 
     /* ensures text aligns with title  */
-    padding-left: 3%;
+    padding-left: 1.5%;
 }
 
 .text h2 {
@@ -34,4 +34,30 @@
     /* map takes up 70% of the page */
     width: 66%;
     margin: 2%;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text {
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .map {
+        width: 90vw;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    .text {
+        flex-direction: column;
+        justify-content: start;
+    }
 }
