@@ -64,9 +64,18 @@ h2 {
     border-top: 10px solid var(--theme-rd);
 }
 
-.guidelines-list li{
+.container li{
     margin: 8px;
     list-style: none;
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--theme-rd);
+}
+
+.container a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
