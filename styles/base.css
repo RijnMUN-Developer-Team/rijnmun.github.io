@@ -6,16 +6,7 @@
     --bg-rd: #B20000;
     --hov-rd: #cb2323;
 
-    /* font-family: "Istok", Arial, Helvetica, sans-serif; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-@font-face {
-    font-family: "Istok";
-    src: url("/fonts/IstokWeb-Bold.ttf") format("truetype"),
-         url("/fonts/IstokWeb-BoldItalic.ttf") format("truetype"),
-         url("/fonts/IstokWeb-Italic.ttf") format("truetype"),
-         url("/fonts/IstokWeb-Regular.ttf") format("truetype");
 }
 
 html {
