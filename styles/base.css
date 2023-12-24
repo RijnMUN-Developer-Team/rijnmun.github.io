@@ -215,6 +215,7 @@ footer {
     background-color: var(--theme-bl);
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .ftr {
@@ -293,5 +294,6 @@ h4 {
 
 .map_div {
     margin-top: 20px;
+    padding-right: 7%;
 }
 
