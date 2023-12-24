@@ -5,27 +5,19 @@
     --bl-txt: #0269B3;
 }
 
-/* header {
-    position: relative;
-    z-index: 2000;
-}
-
-.menu {
-    width: 100px;
-}
-
 .container {
-    padding-top: 5%;
+    /* padding-top: 5%;
+    margin-left: 1.5%; */
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.title {
-    width: 100%;
-    color: var(--theme-wh);
-
+.img_label {
+    font-style: italic;
 }
 
 .person img {
-    background-color: black;
-    width: auto;
-    height: auto;
-} */
+    width: 350px;
+}
+
