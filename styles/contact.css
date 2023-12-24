@@ -7,13 +7,14 @@
 
 .container {
     display: flex;
+    justify-content: space-around;
 }
 
 .text {
     /* to ensure the two text boxes are exactly 50% and fits side by side */
     width: 25%;
     margin: 2%;
-
+    align-self: center;
     /* ensures text aligns with title  */
     padding-left: 1.5%;
 }
@@ -22,17 +23,18 @@
     color: var(--theme-bl);
     /* font-size: 35px; */
     margin: 2% 2% 1% 2%;;
+    margin-left: unset;
 }
 
 .text p, .text a {
     color:var(--bl-txt);
     /* margin-left: 2px; */
-    padding: 1%;
+    padding: 1.5%;
 }
 
 .map {
     /* map takes up 70% of the page */
-    width: 66%;
+    width: 46%;
     margin: 2%;
 }
 
@@ -51,6 +53,7 @@
 
     .map {
         width: 90vw;
+        padding-bottom: 20px;
     }
 
 }
