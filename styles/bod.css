@@ -11,6 +11,7 @@
     padding: 2% 3%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .img_label {
@@ -21,3 +22,10 @@
     width: 350px;
 }
 
+@media screen and (max-width: 800px) {
+    .container {
+        padding-top: 15px;
+        flex-direction: column;
+        justify-content: unset;
+    }
+}
