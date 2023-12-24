@@ -83,6 +83,7 @@ footer {
     display: flex;
     justify-content: center;
     padding-bottom: 40px;
+    padding-right: unset;
 }
 
 .ft h4 {
