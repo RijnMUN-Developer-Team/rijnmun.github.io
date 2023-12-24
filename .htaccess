@@ -1,2 +1,1 @@
 ErrorDocument 404 /404.html
-Deny from 192.168.1.225
