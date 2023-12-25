@@ -15,8 +15,9 @@
             <div class="logo_container">
                 <a href="/"><img class="logo" src="/images/logo.png"></a>
             </div>
+            <!-- dropdown for laptop version -->
             <div class="menu" id="menu">
-                <a href="/" class="normal">Home</a>
+                <a href="./" class="normal">Home</a>
                 <div class="normal">
                     <div class="dropdown">
                         <a class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
@@ -35,9 +36,11 @@
                 </a>
             </div>
         </header>
-        <div class="toggle" id="toggle">
+
+        <!-- dropdown for phone version -->
+        <div class="toggle" id="toggle" style="display:none;">
             <ul>
-                <li class="main"><a href="/">Home</a></li>
+                <li class="main"><a href="./">Home</a></li>
                 <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2023</a></li>
                 <ul><li class="main">
                     <a href="/rijnmun-2024/general-information">General Information</a>
@@ -51,18 +54,42 @@
         </div>
         <script>
             function show_bars() {
-              var x = document.getElementById("toggle");
-              if (x.className === "toggle") {
-                x.className += " responsive";
-              } else {
-                x.className = "toggle";
-              }
+                var x = document.getElementById("toggle");
+
+                // if (x.className === "toggle") {
+                //     x.className += " responsive";
+                // } else {
+                //     x.className = "toggle";
+                // }
+                
+                // the responsive class name is no longer used
+                if (x.style.display === 'none') {
+                    x.style.display = 'block';
+                    x.style.height = x.scrollHeight + "px";
+
+                } else {
+
+                    x.style.height = 0;
+
+                    setTimeout(function(){
+                        x.style.display = 'none'; 
+                    }, 200, x)
+                    
+                }
             }
             function hide_bars() {
                 var x = document.getElementById("toggle");
-                if (x.className != "toggle") {
-                    x.className = "toggle"
-                }
+
+                // if (x.className != "toggle") {
+                //     x.className = "toggle"
+                // }
+
+                x.style.height = 0;
+
+                setTimeout(function(){
+                    x.style.display = 'none'; 
+                }, 200, x)
+                    
             }
         </script>
         <main onclick="hide_bars()">

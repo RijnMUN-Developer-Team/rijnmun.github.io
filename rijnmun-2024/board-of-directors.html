@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../styles/base.css">
         <link rel="stylesheet" type="text/css" href="../styles/mobile.css" media="screen and (max-width: 800px)">
-        <link rel="stylesheet" type="text/css" href="../styles/rijnmun.css">
         <link rel="stylesheet" type="text/css" href="../styles/bod.css">
         <link rel="icon" href="../images/icon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,6 +15,7 @@
             <div class="logo_container">
                 <a href="/"><img class="logo" src="../images/logo.png"></a>
             </div>
+            <!-- dropdown for laptop version -->
             <div class="menu" id="menu">
                 <a href="../" class="normal">Home</a>
                 <div class="current">
@@ -35,11 +35,10 @@
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-
-            <!-- bootstrap -->
-            <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
         </header>
-        <div class="toggle" id="toggle">
+
+        <!-- dropdown for mobile support  -->
+        <div class="toggle" id="toggle" style="display:none;">
             <ul>
                 <li class="main"><a href="../">Home</a></li>
                 <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2023</a></li>
@@ -55,18 +54,42 @@
         </div>
         <script>
             function show_bars() {
-              var x = document.getElementById("toggle");
-              if (x.className === "toggle") {
-                x.className += " responsive";
-              } else {
-                x.className = "toggle";
-              }
+                var x = document.getElementById("toggle");
+
+                // if (x.className === "toggle") {
+                //     x.className += " responsive";
+                // } else {
+                //     x.className = "toggle";
+                // }
+                
+                // the responsive class name is no longer used
+                if (x.style.display === 'none') {
+                    x.style.display = 'block';
+                    x.style.height = x.scrollHeight + "px";
+
+                } else {
+
+                    x.style.height = 0;
+
+                    setTimeout(function(){
+                        x.style.display = 'none'; 
+                    }, 200, x)
+                    
+                }
             }
             function hide_bars() {
                 var x = document.getElementById("toggle");
-                if (x.className != "toggle") {
-                    x.className = "toggle"
-                }
+
+                // if (x.className != "toggle") {
+                //     x.className = "toggle"
+                // }
+
+                x.style.height = 0;
+
+                setTimeout(function(){
+                    x.style.display = 'none'; 
+                }, 200, x)
+                    
             }
         </script>
         <main>
