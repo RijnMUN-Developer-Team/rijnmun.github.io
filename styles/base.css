@@ -161,18 +161,45 @@ header {
     display: none;
 }
 
+/* mobile support dropdown HERE */
 .toggle ul {
     text-decoration: none;
     list-style: none;
 }
 
-.toggle a {
+/* .toggle a moved underneath .toggle class */
+/* .toggle a {
     text-decoration: none;
     color: black;
-}
+} */
 
 .toggle {
-    display: none;
+    /* even if display:block, it is overridden by display:none in the html, so the dropdown does not show when webpage is first loaded */
+    display: block;
+
+    /* used for transition */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+
+    /* design of the open dropdown, copied from .toggle.responsive in mobile.css */
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: #6c0024;
+    opacity: 0.95;
+    float: none;
+    text-align: left;
+}
+
+.toggle a {
+    /* design of the open dropdown, copied from .toggle.responsive in mobile.css */
+    display: block;
+    color: white;
+    background-color: #6c0024;
+    padding: 4px;
+
+    text-decoration: none;
 }
 
 /* TITLE DESIGN of every page -------------------------*/

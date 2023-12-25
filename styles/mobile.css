@@ -47,7 +47,8 @@ h1 {
     color: black;
 }
 
-.toggle.responsive {
+/* css of mobile dropdown is now in base.css */
+/* .toggle.responsive {
     position: absolute;
     right: 0;
     width: 100%;
@@ -63,7 +64,7 @@ h1 {
     color: white;
     background-color: #6c0024;
     padding: 4px;
-}
+} */
 
 footer {
     overflow-wrap: break-word;
