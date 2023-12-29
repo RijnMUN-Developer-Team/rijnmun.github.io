@@ -62,9 +62,10 @@ h3 {
     }    
 
     h3 {
-        width: 80%;
-        padding: 5%;
-        padding-right: unset;
+        width: 85%;
+        padding-left: 5%;
+        padding-bottom: 3%;
+        /* padding-right: unset; */
         margin: 1px;
         font-size: 25px;
     }
