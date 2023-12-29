@@ -5,6 +5,16 @@
     --bl-txt: #0269B3;
 }
 
+.title h3 {
+    width: 98%;
+    font-size: 30px;
+    /* align-self: end; */
+    text-align: end;
+    justify-self: end;
+    color: #5cd6ff;
+    margin: 1%;
+}
+
 h2 {
     color: var(--theme-bl);
     font-style: italic;
@@ -14,7 +24,7 @@ h2 {
     margin-bottom: unset;    
 }
 
-h3 {
+.container h3 {
     margin-left: 15px;
     font-size: 15px;
     font-weight: 300;
@@ -77,6 +87,21 @@ h3 {
 }
 /* for smaller screens */
 @media screen and (max-width: 800px){
+    .title h1 {
+        width: unset;
+        padding: 5%;
+        padding-left: 2%;
+        padding-bottom: none;
+        font-size: 50px;
+    }    
+
+    .title h3 {
+        width: 80%;
+        padding: 5%;
+        padding-right: unset;
+        margin: 1px;
+        font-size: 25px;
+    }
 
     .all-committees{
         flex-direction: column;
