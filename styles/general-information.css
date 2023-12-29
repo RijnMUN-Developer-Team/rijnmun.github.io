@@ -94,6 +94,12 @@ h2 {
     text-decoration: underline;
 }
 
+#theme-text {
+    font-style: italic;
+    color: var(--theme-rd);
+    font-weight: 500;
+}
+
 @media screen and (max-width: 800px) {
     .content {
         flex-direction: column;
