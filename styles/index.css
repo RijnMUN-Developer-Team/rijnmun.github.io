@@ -91,13 +91,19 @@ h3 {
     color: var(--bl-txt);
     font-size: 20px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
+    /* font-weight: 550; */
+    line-height: 30px;
 }
 
 .message {
     width: 60%;
     display: block;
     justify-content: center;
+}
+
+.keywords {
+    font-weight: 800;
 }
 
 .container {
