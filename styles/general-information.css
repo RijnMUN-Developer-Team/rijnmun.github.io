@@ -83,6 +83,7 @@ h2 {
 .container li{
     margin: 8px;
     list-style: none;
+    line-height: 22px;
 }
 
 .container a {
