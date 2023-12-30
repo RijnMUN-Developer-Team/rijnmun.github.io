@@ -89,7 +89,7 @@ h3 {
 
 .message p {
     color: var(--bl-txt);
-    font-size: 20px;
+    font-size: 19px;
     text-align: center;
     font-weight: 500;
     /* font-weight: 550; */
@@ -122,6 +122,6 @@ h3 {
 
     .message p {
         font-size: 15px;
-        font-weight: 600;
+        /* font-weight: 600; don't override default font design settings*/
     }
 }
