@@ -11,17 +11,17 @@ img {
     padding-top: 2%;
 }
 
-h1 {
+/* h1 {
     text-align: center;
-}
+} */
 
 main {
     margin-bottom: 5%;
 }
-
+/* 
 @media screen and (max-width: 800px) {
     main {
         padding-left: 10px;
         padding-right: 10px;
     }
-}
+} */
