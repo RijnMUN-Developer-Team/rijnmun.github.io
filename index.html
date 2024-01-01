@@ -130,87 +130,90 @@
             </div>
         </main>
         <footer>
-            <div class="f">
-                <div class="ft">
-                    <h4>GENERAL</h4>
-                    <ul class="f_important">
-                        <li>
-                            <a href="./rijnmun-2024/programme-of-events">Agenda</a>
-                        </li>
-                        <li>
-                            <a href="https://foundation.thimun.org/participation/guidelines/">Guidelines</a>
-                        </li>
-                        <li>
-                            <a href="./rijnmun-2024/committees-and-issues">Research</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ftr">
-                    <h4>CONTACT</h4>
-                    <ul class="f_contact">
-                        <li>
-                            <i class="fa fa-institution"></i>
-                            <p>
-                                RijnMUN
-                            </p>
-                        </li>
-                        <li>
-                            <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
-                            <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
-                                Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
-                            </a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope"></i>
-                            <a href="mailto:rijnmunsecretariat@gmail.com">
-                                rijnmunsecretariat@gmail.com
-                            </a>
-                        </li>
-                        <li>
-                            <span class="spc>"><i class="fa fa-globe"></i></span>
-                            <a href="./">
-                                rijnmun.org
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="timer">
-                    <h4>COUNTDOWN TO RIJNMUN</h4>
-                    <div class="countdown">
-                        <table class="tm_tbl">
-                            <tr><td id="days"></td><td id="hours"></td><td id="minutes"></td><td id="seconds"></td></tr>
-                            <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
-                        </table>
-                        <script>
-                            var countDownDate = new Date("Oct 5, 2024 12:00:00").getTime();
-                            var x = setInterval(function() {
-                              var now = new Date().getTime();
-                              var distance = countDownDate - now;
-                              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-                              document.getElementById("days").innerHTML = days;
-                              document.getElementById("hours").innerHTML = hours;
-                              document.getElementById("minutes").innerHTML = minutes;
-                              document.getElementById("seconds").innerHTML = seconds;
-    
-                              if (distance < 0) {
-                                clearInterval(x);
-                                document.getElementById("days").innerHTML = "00";
-                                document.getElementById("hours").innerHTML = "00";
-                                document.getElementById("minutes").innerHTML = "00";
-                                document.getElementById("seconds").innerHTML = "00";
-                              }
-                            }, 1000);
-                        </script>
+            <div class="f_container">
+                <div class="f">
+                    <div class="ft">
+                        <h4>GENERAL</h4>
+                        <ul class="f_important">
+                            <li>
+                                <a href="./rijnmun-2024/programme-of-events">Agenda</a>
+                            </li>
+                            <li>
+                                <a href="https://foundation.thimun.org/participation/guidelines/">Guidelines</a>
+                            </li>
+                            <li>
+                                <a href="./rijnmun-2024/committees-and-issues">Research</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ftr">
+                        <h4>CONTACT</h4>
+                        <ul class="f_contact">
+                            <li>
+                                <i class="fa fa-institution"></i>
+                                <p>
+                                    RijnMUN
+                                </p>
+                            </li>
+                            <li>
+                                <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
+                                <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
+                                    Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:rijnmunsecretariat@gmail.com">
+                                    rijnmunsecretariat@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <span class="spc>"><i class="fa fa-globe"></i></span>
+                                <a href="./">
+                                    rijnmun.org
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timer">
+                        <h4>COUNTDOWN TO RIJNMUN</h4>
+                        <div class="countdown">
+                            <table class="tm_tbl">
+                                <tr><td id="days"></td><td id="hours"></td><td id="minutes"></td><td id="seconds"></td></tr>
+                                <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
+                            </table>
+                            <script>
+                                var countDownDate = new Date("Oct 5, 2024 12:00:00").getTime();
+                                var x = setInterval(function() {
+                                  var now = new Date().getTime();
+                                  var distance = countDownDate - now;
+                                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                
+                                  document.getElementById("days").innerHTML = days;
+                                  document.getElementById("hours").innerHTML = hours;
+                                  document.getElementById("minutes").innerHTML = minutes;
+                                  document.getElementById("seconds").innerHTML = seconds;
+                                
+                                  if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("days").innerHTML = "00";
+                                    document.getElementById("hours").innerHTML = "00";
+                                    document.getElementById("minutes").innerHTML = "00";
+                                    document.getElementById("seconds").innerHTML = "00";
+                                  }
+                                }, 1000);
+                            </script>
+                        </div>
                     </div>
                 </div>
+                <div class="map_div">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482386883!2d4.459190276739407!3d52.181011671974325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1702158487137!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-            <div class="map_div">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482386883!2d4.459190276739407!3d52.181011671974325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1702158487137!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
         </footer>
     </body>
 </html>

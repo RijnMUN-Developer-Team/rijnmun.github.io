@@ -241,6 +241,10 @@ h1 {
 /* FOOTER DESIGN ----------------------------- */
 footer {
     background-color: var(--theme-bl);
+}
+
+.f_container {
+    background-color: var(--theme-bl);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -326,7 +330,7 @@ h4 {
     justify-content: space-evenly;
     width: 65%;
     padding-top: 2%;
-    padding-left: 5%;
+    /* padding-left: 5%; */
     padding-right: 3%;
 }
 
@@ -370,8 +374,23 @@ h4 {
     padding-left: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 530;
+}
+
+.timer h4 {
+    padding-left: 9px;
 }
 
 .map_div {
     padding-right: 4%;
+}
+
+.copyright {
+    color: #cfcfcf;
+    font-size: 14px;
+    text-align: center;
+    margin: unset;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

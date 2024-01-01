@@ -66,7 +66,7 @@ h1 {
     padding: 4px;
 } */
 
-footer {
+.f_container {
     overflow-wrap: break-word;
     display: block;
     font-size: 14px;
@@ -123,8 +123,10 @@ footer {
     width: 80vw;
     display: flex;
     flex-direction: column;
+    padding-left: 5%;
 }
 
 .timer {
+    padding-left: unset;
     padding-top: 40px;
 }
