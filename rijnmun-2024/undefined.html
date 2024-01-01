@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../styles/base.css">
         <link rel="stylesheet" type="text/css" href="../styles/mobile.css" media="screen and (max-width: 800px)">
-        <link rel="stylesheet" type="text/css" href="../styles/bod.css">
+        <link rel="stylesheet" type="text/css" href="../styles/undefined.css">
         <link rel="icon" href="../images/icon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>RijnMUN</title>
@@ -96,32 +96,51 @@
         </script>
         <main>
 
-            <div class="title">
-                <h1>Board of Directors</h1>
+            <div id="t1" class="title active">
+                <h1>Oops, non-existent page</h1>
+            </div>
+
+            <div id="t2" class="title">
+                <h1>Classified Information</h1>
             </div>
 
             <div class="container">
-                <div class="person">
-                    <img src="/images/grey.png" alt="">
-                    <p class="img_label">Emily Hanlon & Julie Lodereau | Secretary Generals</p>
-                </div>
-
-                <div class="person">
-                    <img src="/images/grey.png" alt="">
-                    <p class="img_label"><a href="" target="_blank" class="s">Alan</a> Gil Forza, Emily Hanlon, <a href="" target="_blank" class="s">Lenka</a> Huang, <br>Julie Lodereau, & Taran Saha | RijnMUN Secretariat</p>
-                </div>
-
-                <div class="person col-12 col-sm-12 col-lg-4">
-                    <img src="/images/grey.png" alt="">
-                    <p class="img_label">name(s) | Board of Directors</p>
-                </div>
-                
-
-                <div class="group">
-                    <img src="" alt="" class="group_photo">
-                    <p class="img_labal" id="group_photo"></p>
-                </div>
+            
             </div>
+            
+            <script>
+                let prog = 0;
+                document.onkeypress = function (key) {
+                    key = key || window.event;
+                    // alert(key.keyCode);
+                    if(key.keyCode == 104 && prog == 0){
+                        prog = 1;
+                    } else if (key.keyCode == 116 && prog == 1){
+                        prog = 2;
+                    } else if (key.keyCode == 109 && prog == 2){
+                        prog = 3;
+                    } else if (key.keyCode == 108 && prog == 3){
+                        toggle_content();
+                        prog = 0;
+                    } else {
+                        window.location.replace("/");
+                    }
+                }
+                function toggle_content() {
+                    var a = document.getElementById("t1");
+                    var b = document.getElementById("t2");
+                    if (a.className === "title") {
+                        a.className += " active";
+                    } else {
+                        a.className = "title";
+                    }
+                    if (b.className === "title") {
+                        b.className += " active";
+                    } else {
+                        b.className = "title";
+                    }
+                }
+             </script>
         </main>
         <footer>
             <div class="f_container">
