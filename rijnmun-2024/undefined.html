@@ -127,8 +127,8 @@
                         prog = 3;
                     } else if (key.keyCode == 108 && prog == 3){
                         toggle_content();
-                        prog = 0;
-                    } else {
+                        prog = 4;
+                    } else if (prog != 4){
                         window.location.replace("/");
                     }
                 }
