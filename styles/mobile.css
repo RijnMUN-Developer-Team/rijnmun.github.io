@@ -47,6 +47,10 @@ h1 {
     color: black;
 }
 
+.toggle .main {
+    font-weight: 550;
+}
+
 /* css of mobile dropdown is now in base.css */
 /* .toggle.responsive {
     position: absolute;
