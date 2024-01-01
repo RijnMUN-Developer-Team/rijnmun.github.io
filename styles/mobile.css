@@ -80,7 +80,8 @@ footer {
 
 .ft ul {
     width: 110px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
+    padding-left: unset;
 }
 
 .ftr ul {
@@ -104,7 +105,8 @@ footer {
 }
 
 .ft h4 {
-    padding-left: 10px;
+    /* padding-left: 10px; */
+    padding-left: unset;
 }
 
 .f_contact {
@@ -121,4 +123,8 @@ footer {
     width: 80vw;
     display: flex;
     flex-direction: column;
+}
+
+.timer {
+    padding-top: 40px;
 }
