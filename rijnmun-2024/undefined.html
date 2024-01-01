@@ -119,7 +119,7 @@
                 document.onkeypress = function (key) {
                     key = key || window.event;
                     // alert(key.keyCode);
-                    if (prog != 4 || key.keyCode == 13) {
+                    if (prog != 4 && key.keyCode == 13) {
                         window.location.replace("/");
                     } else if (key.keyCode == 104 && prog == 0) {
                         prog = 1;
