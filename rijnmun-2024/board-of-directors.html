@@ -105,7 +105,7 @@
 
                 <div class="person">
                     <img src="/images/grey.png" alt="">
-                    <p class="img_label"><a href="/rijnmun-2024/undefined" class="s">Alan</a> Gil Forza, Emily Hanlon, <a href="/rijnmun-2024/undefined" class="s">Lenka</a> Huang, <br>Julie Lodereau, & Tarana Saha | RijnMUN Secretariat</p>
+                    <p class="img_label" id="creator-support"><a href="/rijnmun-2024/undefined" class="s">Alan</a> Gil Forza, Emily Hanlon, <a href="/rijnmun-2024/undefined" class="s">Lenka</a> Huang, <br>Julie Lodereau, & Tarana Saha | RijnMUN Secretariat</p>
                 </div>
 
                 <div class="person col-12 col-sm-12 col-lg-4">
@@ -120,6 +120,15 @@
                 </div>
             </div>
         </main>
+        <script>
+
+            if (screen.availWidth < 1000) {
+                console.log(screen.availWidth);
+                document.getElementById("creator-support").innerHTML = "Alan Gil Forza, Emily Hanlon, Lenka Huang, <br>Julie Lodereau, & Tarana Saha | RijnMUN Secretariat";
+            }         
+            
+        </script>
+
         <footer>
             <div class="f_container">
                 <div class="f">
