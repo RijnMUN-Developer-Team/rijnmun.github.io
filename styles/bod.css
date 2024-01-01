@@ -16,6 +16,15 @@
 
 .img_label {
     font-style: italic;
+    font-size: 16px;
+    max-width: 350px;
+    text-wrap: balance;
+    margin: 10px 0;
+}
+
+.img_label.role-title {
+    font-weight: 600;
+    margin: 0 0 15px 0;
 }
 
 .person img {
