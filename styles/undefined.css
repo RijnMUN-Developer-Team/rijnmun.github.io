@@ -1,7 +1,3 @@
-.title {
-    display: none;
-}
-
-.title.active {
-    display: inherit;
+.container {
+    padding: 4.5%;
 }

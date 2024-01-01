@@ -96,18 +96,21 @@
         </script>
         <main>
 
-            <div id="t1" class="title active">
-                <h1>Oops, non-existent page</h1>
-            </div>
-
-            <div id="t2" class="title">
-                <h1>Classified Information</h1>
+            <div class="title active">
+                <h1 id="title">Oops, non-existent page</h1>
             </div>
 
             <div class="container">
-            
+                <div class="cover">
+                    <p>Please find information about the RijnMUN conference in other pages.</p>
+                </div>
+    
+                <div class="real-content" style="display: none;">
+                    <p>All brilliant ideas can be traced back to Monday 1st January, 2024.</p>
+                
+                </div>
             </div>
-
+        
             <script>
                 if (screen.availWidth < 1000) { 
                    window.location.replace("/");
@@ -129,19 +132,11 @@
                         window.location.replace("/");
                     }
                 }
+
                 function toggle_content() {
-                    var a = document.getElementById("t1");
-                    var b = document.getElementById("t2");
-                    if (a.className === "title") {
-                        a.className += " active";
-                    } else {
-                        a.className = "title";
-                    }
-                    if (b.className === "title") {
-                        b.className += " active";
-                    } else {
-                        b.className = "title";
-                    }
+                    document.getElementById('title').innerHTML = "Classified Creator Support Page";
+                    document.getElementsByClassName("real-content")[0].style.display = "block";
+                    document.getElementsByClassName("cover")[0].style.display = "none";
                 }
              </script>
         </main>
