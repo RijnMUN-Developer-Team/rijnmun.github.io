@@ -1,3 +1,22 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+}
+
 .container {
-    padding: 4.5%;
+    padding: 1% 4.5% 1% 4.5%;
+}
+
+p, p a {
+    text-align: center;
+    color: var(--bl-txt);
+}
+
+.quote {
+    color: var(--theme-bl);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 60px;
 }
