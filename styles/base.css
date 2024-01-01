@@ -334,6 +334,13 @@ h4 {
     .f {
         width: 98vw;
     }
+    
+    .map_div {
+        display: flex;
+        width: 98vw;
+        justify-content: center;
+        padding-bottom: 2%;
+    }
 }
 
 .map_div {
