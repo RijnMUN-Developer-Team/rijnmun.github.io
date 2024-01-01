@@ -321,8 +321,9 @@ h4 {
 .f {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    width: 65%;
     padding-top: 2%;
     padding-left: 5%;
     padding-right: 3%;
@@ -333,3 +334,29 @@ h4 {
     padding-right: 7%;
 }
 
+/* Countdown timer */
+
+.countdown {
+    width: 300px;
+}
+
+.timer {
+    padding-right: 8%;
+    padding-top: 1%;
+    padding: 2%;
+    color: white;
+}
+
+.tm_tbl {
+    text-align: center;
+}
+
+.countdown td {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.map_div {
+    padding-right: 4%;
+}
