@@ -147,9 +147,8 @@
                 }
 
                 window.onresize = function() {
-                    if ((screen.height - screen.availHeight) > 100 || (screen.width - screen.availWidth) > 20) {
-                        alert("You tried to access restricted content without permission. This incident will be reported.");
-                        window.close();
+                    if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
+                        window.location.replace("/");
                     }
                 }
 
