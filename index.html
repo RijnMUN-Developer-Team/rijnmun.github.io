@@ -96,7 +96,9 @@
             }
 
             previous = document.referrer;
-            alert(previous);
+            if ("/undefined" in previous) {
+                alert("You tried to access restricted content. This incident will be reported.");
+            }
         </script>
         <main onclick="hide_bars()">
             <div class="title">
