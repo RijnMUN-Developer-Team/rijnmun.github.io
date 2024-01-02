@@ -96,7 +96,7 @@
             }
 
             previous = document.referrer;
-            if ("/undefined" in previous) {
+            if (previous.includes("/undefined")) {
                 alert("You tried to access restricted content. This incident will be reported.");
             }
         </script>

@@ -3,6 +3,12 @@
     --theme-rd: #D90148;
     --theme-wh: white;
     --bl-txt: #0269B3;
+
+    /* other possible colours */
+    --theme-gr: #01895D;
+    --light-gr: #b3e3d4;
+    --theme-yw: #FAB800;
+    --theme-yw: #EBC700;
 }
 
 .container {
@@ -19,6 +25,14 @@
     font-size: 20px;
     font-style: italic;
     font-weight: 60px;
+}
+
+.alan {
+    color: #008000;
+}
+
+.lenka {
+    color: var(--the)
 }
 
 .fears ul {
