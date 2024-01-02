@@ -13,6 +13,7 @@
 
 .container {
     padding: 1% 4.5% 1% 4.5%;
+    display: flex;
 }
 
 .container p, .container p a {
@@ -20,21 +21,21 @@
     color: var(--bl-txt);
 }
 
+.container ul, .container ul p {
+    color: var(--bl-txt);
+    text-align: left;
+}
+
 .quote {
-    color: var(--theme-bl);
     font-size: 20px;
     font-style: italic;
     font-weight: 60px;
 }
 
 .alan {
-    color: #008000;
+    color: #008000 !important;
 }
 
 .lenka {
-    color: #800080;
-}
-
-.fears ul {
-    color: var(--bl-txt);
+    color: #800080 !important; 
 }
