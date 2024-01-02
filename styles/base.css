@@ -6,6 +6,8 @@
     --bg-rd: #B20000;
     --hov-rd: #cb2323;
 
+    color-scheme: light !important;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
