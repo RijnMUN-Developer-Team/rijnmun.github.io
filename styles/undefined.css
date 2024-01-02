@@ -20,3 +20,7 @@
     font-style: italic;
     font-weight: 60px;
 }
+
+.fears ul {
+    color: var(--bl-txt);
+}
