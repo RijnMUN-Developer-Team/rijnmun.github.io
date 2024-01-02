@@ -79,6 +79,10 @@ h2 {
     font-size: 13px;
 }
 
+.pc-btn a:hover {
+    background-color: #b6003d;
+}
+
 .pc-btn {
     display: flex;
     flex-direction: column;
