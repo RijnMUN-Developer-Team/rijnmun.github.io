@@ -404,14 +404,17 @@ h4 {
     justify-content: start;
 }
 
-.insta {
+.insta, .tiktok {
     margin: unset;
-    margin-right: 10px;
     padding: unset;
+    width: 40px;
+    height: 40px;
+}
+
+.insta {
+    margin-right: 10px;
 }
 
 .tiktok {
-    margin: unset;
     margin-left: 10px;
-    padding: unset;
 }
