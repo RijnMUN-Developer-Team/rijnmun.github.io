@@ -142,10 +142,34 @@
             </div>
         
             <script>
+                // shut off page to mobile/tablet users
                 if (screen.availWidth < 1000) { 
                    window.location.replace("/");
                 }
 
+                // prevent keyboard shortcuts to open inspect element
+                document.onkeydown = (e) => {
+                    if (e.key == 123) {
+                        e.preventDefault();
+                    }
+                    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+                        e.preventDefault();
+                    }
+                    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+                        e.preventDefault();
+                    }
+                    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+                        e.preventDefault();
+                    }
+                    if (e.ctrlKey && e.key == 'U') {
+                        e.preventDefault();
+                    }
+                };
+
+                // prevent right mouse click to open inspect element
+                document.addEventListener('contextmenu', event => event.preventDefault());
+
+                // if the inspect element is opened, then redirect 
                 window.onresize = function() {
                     if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
                         window.location.replace("/");
