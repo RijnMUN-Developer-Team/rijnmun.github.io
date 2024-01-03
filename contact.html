@@ -98,6 +98,11 @@
             }, 200, x)
 
         }
+
+        previous = document.referrer;
+        if (previous.includes("/undefined")) {
+            window.location.replace("/");
+        }
     </script>
     <main onclick="hide_bars()">
         <div class="title">
