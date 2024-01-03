@@ -397,3 +397,21 @@ h4 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.insta {
+    margin: unset;
+    margin-right: 10px;
+    padding: unset;
+}
+
+.tiktok {
+    margin: unset;
+    margin-left: 10px;
+    padding: unset;
+}
