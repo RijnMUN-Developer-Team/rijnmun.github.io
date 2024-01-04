@@ -409,6 +409,7 @@ h4 {
     /* padding-right: 30px; */
     padding: unset;
     margin: unset;
+    align-self: center;
 }
 
 .insta, .tiktok {
