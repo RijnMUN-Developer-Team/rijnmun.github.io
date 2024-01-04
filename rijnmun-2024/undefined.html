@@ -87,7 +87,7 @@
                 <h1 id="title">Error 404: Page Not Found</h1>
             </div>
             <div class="container">
-                <div class="cover">
+                <div class="cover" style="width: 98vw;">
                     <!-- <p>Please go back to the <a href="./board-of-directors.html">previos page</a> to find information about RijnMUN 2024 Conference.</p> -->
                     <img src="/images/404_not_found.png" style="margin: auto; display: block; width: 30%;">
                     <br>
@@ -142,10 +142,8 @@
                 }
 
                 // if the inspect element is opened, then redirect 
-                window.onresize = function() {
-                    if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
-                        window.location.replace("/");
-                    }
+                if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
+                    window.location.replace("/");
                 }
 
                 // a (index 0, keycode 66)
