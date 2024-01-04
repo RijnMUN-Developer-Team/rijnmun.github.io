@@ -39,3 +39,8 @@
 .lenka {
     color: #800080 !important; 
 }
+
+.insta-embeds {
+    display: flex;
+    justify-content: space-evenly;
+}
