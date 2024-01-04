@@ -153,6 +153,9 @@
                    window.location.replace("/");
                 }
 
+                // stop right click
+                document.addEventListener('contextmenu', event => event.preventDefault());
+
                 // if the inspect element is opened, then redirect 
                 window.onresize = function () {
                     if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
