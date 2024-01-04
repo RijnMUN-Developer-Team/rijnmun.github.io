@@ -406,7 +406,9 @@ h4 {
 }
 
 .socials h4 {
-    padding-right: 30px;
+    /* padding-right: 30px; */
+    padding: unset;
+    margin: unset;
 }
 
 .insta, .tiktok {
@@ -416,14 +418,14 @@ h4 {
 }
 
 .insta {
-    margin-right: 15px;
+    /* margin-right: 15px; */
     width: 50px;
     height: 50px;
 }
 
 .tiktok {
     margin-bottom: 4px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     width: 37px;
     height: 42px;
 }
