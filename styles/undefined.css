@@ -32,6 +32,10 @@
     font-weight: 60px;
 }
 
+.list-title {
+    text-decoration: underline;
+}
+
 .alan {
     color: #008000 !important;
 }
