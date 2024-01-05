@@ -110,7 +110,21 @@ h3 {
     padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.sidebar {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ade1f2f2;
+    height: fit-content;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.sidebar div {
+    padding-bottom: 20px;
 }
 
 /* Mobile support */
@@ -124,4 +138,13 @@ h3 {
         font-size: 15px;
         /* font-weight: 600; don't override default font design settings*/
     }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 98vw;
+    }
+
 }

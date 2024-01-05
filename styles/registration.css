@@ -32,7 +32,7 @@
 }
 
 /* BANNER COLOURS HERE ------ */
-#ind-heading, #sch-heading {
+.collapsible-heading {
     /* background-color: var(--bl-txt);
     color: var(--theme-wh); */
 
@@ -49,7 +49,7 @@
     margin-bottom: 0;
 }
 
-#ind-heading:hover, #sch-heading:hover {
+.collapsible-heading:hover {
     text-decoration: underline;
     cursor: default;
 }
@@ -69,7 +69,7 @@
     padding: 1%; >
 } */
 
-#school-registration-info, #ind-registration-info {
+.collapsible-content {
     /* border: 2px solid var(--theme-rd); */
     /* border: 2px solid var(--theme-gr); */
     /* background-color: var(--light-gr); */
@@ -87,7 +87,7 @@
 }
 
 /* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
-#school-registration-info p, #ind-registration-info p{
+.collapsible-content p{
     /* color: var(--theme-rd); */
     /* color: var(--theme-gr); */
     /* color: black; */

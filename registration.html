@@ -103,35 +103,46 @@
 
             <div class="container">
                 <div class="info">
-                    <div class="school-registration">
-                        <h2 onclick="collapse('sch')" id="sch-heading">School Registrations</h2>
+                    <div class="sch-registration">
+                        <h2 onclick="collapse('sch')" class="collapsible-heading" id="sch-heading">School Registrations</h2>
 
                         <!-- DO NOT REMOVE style tag: display -->
                         <!-- it prevents unresponsive first-clicks -->
-                        <div id="school-registration-info" style="display: none;">
+                        <div id="sch-registration-info" class="collapsible-content" style="display: none;">
                             <p>School registrations are not yet open. Please come back later.</p>
                         </div>
                     </div>
 
                     <div class="ind-registration">
-                        <h2 onclick="collapse('ind')" id="ind-heading">Individual Registrations</h2>
+                        <h2 onclick="collapse('ind')" class="collapsible-heading" id="ind-heading">Individual Registrations</h2>
 
                         <!-- DO NOT REMOVE style tag: display -->
                         <!-- it prevents unresponsive first-clicks -->
-                        <div id="ind-registration-info" style="display: none;">
+                        <div id="ind-registration-info" class="collapsible-content" style="display: none;">
                             <p>Individual registrations are not yet open. Please come back later.</p>
+                        </div>
+                    </div>
+
+                    <div class="stoff-registration">
+                        <h2 onclick="collapse('stoff')" class="collapsible-heading" id="stoff-heading">StOff Registrations</h2>
+
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it prevents unresponsive first-clicks -->
+                        <div id="stoff-registration-info" class="collapsible-content" style="display: none;">
+                            <p>StOff registrations are not yet open. Please come back later.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline">
                     <h2>Deadlines</h2>
+                    <p>To be announced.</p>
 
-                    <ul>
+                    <!-- <ul>
                         <li><b><span style="color:var(--theme-rd);"> March 2024</span></b>: Registrations Open</li>
                         <li><b><span style="color:var(--theme-rd);"> May 2024</span></b>: Registration Closed</li>
                         <li><b><span style="color:var(--theme-rd);"> June 2024</span></b>: First Mailing</li>
-                    </ul>
+                    </ul> -->
                     
                 </div>
             </div>
@@ -140,27 +151,13 @@
                 // for collapsible
 
                 function collapse(option) {
-                    let cont;
-                    let heading;
-
-                    if (option==='ind') {
-                        heading = document.getElementById('ind-heading');
-                        cont = document.getElementById('ind-registration-info');
-
-                    } else {
-                        heading = document.getElementById('sch-heading');
-                        cont = document.getElementById('school-registration-info');
-                    }
+                    let cont = document.getElementById(`${option}-registration-info`);
+                    let heading = document.getElementById(`${option}-heading`);
 
                     if (cont.style.display === 'none') {
                         // shows text on click
 
-                        // changes colour
-                        // heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-gr")
-                        // heading.style.color =  getComputedStyle(document.body).getPropertyValue("--theme-rd")
-
                         cont.style.display = 'block';
-                        
                         cont.style.height = cont.scrollHeight + "px";                  
                             
                     } else {
@@ -170,10 +167,6 @@
                         // pausing code for animation
                         setTimeout(function(){
                             cont.style.display = 'none'; 
-                            
-                            // changes colour
-                            // heading.style.backgroundColor =  getComputedStyle(document.body).getPropertyValue("--theme-yw");
-                            // heading.style.color =  getComputedStyle(document.body).getPropertyValue("--bl-txt")
                         }, 200, cont)
                         
                     }
