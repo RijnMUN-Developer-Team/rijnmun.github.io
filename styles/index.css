@@ -3,6 +3,8 @@
     --theme-rd: #D90148;
     --theme-wh: white;
     --bl-txt: #0269B3;
+
+    --dark-bl: #143152;
 }
 
 /* Top announcement banner */
@@ -122,6 +124,11 @@ h3 {
     height: fit-content;
     border-radius: 10px;
     width: 250px;
+    color: var(--dark-bl);
+
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
 }
 
 .sidebar div {
