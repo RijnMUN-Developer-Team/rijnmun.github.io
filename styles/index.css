@@ -131,6 +131,10 @@ h3 {
     color: var(--dark-bl);
 }
 
+.sidebar h4 {
+    margin-bottom: unset;
+}
+
 .sidebar div {
     padding-bottom: 20px;
 }
