@@ -132,6 +132,7 @@ h3 {
 @media screen and (max-width: 800px) {
     .message {
         width: 90%;
+        margin-left: 2.5vw;
     }
 
     .message p {
@@ -141,10 +142,12 @@ h3 {
 
     .container {
         flex-direction: column;
+        justify-content: center;
     }
 
     .sidebar {
-        width: 90vw;
+        width: 85vw;
+        margin-left: 2.5vw;
     }
 
 }
