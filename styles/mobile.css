@@ -138,3 +138,15 @@ h1 {
     padding-left: unset;
     padding-top: 40px;
 }
+
+.timer h4 {
+    padding-left: unset;
+}
+
+.timer td .days, #days {
+    padding-left: unset;
+}
+
+.socials {
+    width: 90vw;
+}
