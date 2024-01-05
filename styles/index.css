@@ -138,21 +138,18 @@ h3 {
 .side_insta {
     width: 25px;
     height: 25px;
+    margin-right: 4px;
+    position: relative;
+    top: 6px;
 }
 
 .side_tiktok {
-    width: 16px;
-    height: 21px;
-}
-
-.insta_div {
-    padding-bottom: unset;
-    align-content: center;
-}
-
-.tiktok_div {
-    padding-bottom: unset;
-    align-content: center;
+    width: 19px;
+    height: 23px;
+    margin-right: 4px;
+    margin-left: 4px;
+    position: relative;
+    top: 6px;
 }
 
 /* Mobile support */
