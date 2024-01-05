@@ -159,6 +159,7 @@ h3 {
     }
 
     .sidebar {
+        position: relative;
         width: 85vw;
         margin-left: 2.5vw;
     }
