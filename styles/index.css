@@ -125,10 +125,6 @@ h3 {
     border-radius: 10px;
     width: 250px;
     color: var(--dark-bl);
-
-    position: fixed;
-    right: 10px;
-    bottom: 20px;
 }
 
 .sidebar div {
@@ -140,7 +136,7 @@ h3 {
 @media screen and (max-width: 800px) {
     .message {
         width: 90%;
-        margin-left: 2.5vw;
+        margin-left: 5vw;
     }
 
     .message p {
