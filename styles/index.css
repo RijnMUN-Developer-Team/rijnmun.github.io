@@ -135,6 +135,20 @@ h3 {
     padding-bottom: 20px;
 }
 
+.side_insta {
+    margin: unset;
+    padding: unset;
+    width: 10px;
+    height: 10px;
+}
+
+.side_tiktok {
+    margin: unset;
+    padding: unset;
+    width: 4px;
+    height: 9px;
+}
+
 /* Mobile support */
 
 @media screen and (max-width: 800px) {
