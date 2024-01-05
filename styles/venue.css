@@ -29,6 +29,14 @@
     color: var(--bl-txt);
 }
 
+.container p {
+    color: var(--dark-bl);
+}
+
+.container p a {
+    color: var(--dark-bl);
+}
+
 .content {
     display: flex;
     text-align: justify;
@@ -40,14 +48,11 @@
 
 .go-to-rlo {
     width: 95%;
-    display: flex;
-    justify-content: space-between;
-
+    display: block;
 }
 
 .go-to-rlo .content {
     display: block;
-    width: 40%;
 }
 
 .go-to-rlo img{
