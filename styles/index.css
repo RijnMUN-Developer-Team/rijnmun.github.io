@@ -90,10 +90,11 @@ h3 {
 .message p {
     color: var(--bl-txt);
     font-size: 19px;
-    text-align: center;
+    text-align: left;
     font-weight: 500;
     /* font-weight: 550; */
     line-height: 30px;
+    text-align: justify;
 }
 
 .message {
