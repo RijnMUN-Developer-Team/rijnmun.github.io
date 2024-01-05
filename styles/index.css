@@ -136,17 +136,13 @@ h3 {
 }
 
 .side_insta {
-    margin: unset;
-    padding: unset;
-    width: 10px;
-    height: 10px;
+    width: 25px;
+    height: 25px;
 }
 
 .side_tiktok {
-    margin: unset;
-    padding: unset;
-    width: 4px;
-    height: 9px;
+    width: 16px;
+    height: 21px;
 }
 
 /* Mobile support */
