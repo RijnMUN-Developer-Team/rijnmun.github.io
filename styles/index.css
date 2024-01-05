@@ -145,6 +145,16 @@ h3 {
     height: 21px;
 }
 
+.insta_div {
+    padding-bottom: unset;
+    align-content: center;
+}
+
+.tiktok_div {
+    padding-bottom: unset;
+    align-content: center;
+}
+
 /* Mobile support */
 
 @media screen and (max-width: 800px) {
