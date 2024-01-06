@@ -46,6 +46,7 @@
     /* font-style: italic; */
 }
 
+/* travel info css------------- */
 .go-to-rlo {
     width: 100%;
     display: block;
@@ -64,10 +65,52 @@
     margin-bottom: 20px;
 }
 
+/* about leiden ------------- */
+.leiden {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.leiden .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.leiden .half {
+    width: 48%;
+}
+
+.label .text {
+    width: 100%;
+}
+
+.leiden img {
+    width: 100%;
+}
+
+.leiden .image .label {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    text-wrap: wrap;
+    width: 100%;
+}
+
+.leiden .label .author {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/* mobile support --------- */
 @media screen and (max-width: 800px) {
     .content {
         flex-direction: column;
     }
+
+    /* about rlo section ------------- */
 
     .about-rlo .text {
         width: 100%;
@@ -81,6 +124,8 @@
         width: 100;
     }
 
+    /* travel advice section ------------- */
+
     .go-to-rlo .text {
         width: 100%;
     }
@@ -88,4 +133,10 @@
     .go-to-rlo .map {
         width: 100%;
     }
+
+    /* about leiden section ----------- */
+    .leiden .half {
+        width: 100%;
+    }
+
 }
