@@ -16,11 +16,12 @@
     display: flex;
     flex-wrap: wrap;
 
+    /* shorthand: top right bottom left */
     margin: 2% 3% 3% 2%;
     padding: 0 1.5% 0 1.5%;
 
     justify-content: left;
-    width: 90%;
+    width: auto;
 }
 
 .container h2 {
@@ -50,6 +51,8 @@
 .go-to-rlo {
     width: 100%;
     display: block;
+
+    border-bottom: 5px solid var(--theme-rd);
 }
 
 .go-to-rlo .content {
@@ -67,6 +70,9 @@
 
 /* about leiden ------------- */
 .leiden {
+    margin-top: 5px;
+    border-top: 5px solid var(--theme-bl);
+
     display: flex;
     justify-content: space-evenly;
     width: 100%;
