@@ -4,10 +4,6 @@
     --theme-wh: white;
     --bl-txt: #0269B3;
 
-    --mid-bl: #5B95D7;
-    --light-bl: #cedff3;
-    --dark-bl: #143152;
-
     --light-rd: #FE206A;
     --link-rd: #B7013E;
 }
@@ -26,7 +22,7 @@
 
 .container h2 {
     color: var(--theme-rd);
-    margin-top: 20px;
+    margin: 10px 0 10px 0;
 }
 
 .container h3 {
@@ -52,7 +48,9 @@
     width: 100%;
     display: block;
 
+    /* red border separator */
     border-bottom: 5px solid var(--theme-rd);
+    padding-bottom: 20px;
 }
 
 .go-to-rlo .content {
@@ -70,7 +68,9 @@
 
 /* about leiden ------------- */
 .leiden {
+    /* blue border separator  */
     margin-top: 5px;
+    padding-top: 20px;
     border-top: 5px solid var(--theme-bl);
 
     display: flex;
@@ -79,15 +79,21 @@
     flex-direction: column;
 }
 
+/* font colors ------  */
 .leiden h2.sub-heading {
     color: var(--theme-bl);
     width: 100%;
 }
 
 .leiden .emphasis {
-    color: var(--theme-bl);
+    color: var(--bl-txt);
 }
 
+.leiden p a {
+    color: var(--bl-txt);
+}
+
+/* formatting --------  */
 .leiden .content {
     display: flex;
     flex-wrap: wrap;
