@@ -7,6 +7,9 @@
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
+
+    --light-rd: #FE206A;
+    --link-rd: #B7013E;
 }
 
 .container {
@@ -14,27 +17,23 @@
     flex-wrap: wrap;
 
     margin: 2% 3% 3% 2%;
-    padding-left: 1.5%;
+    padding: 0 1.5% 0 1.5%;
 
     justify-content: left;
-    width: 96%;
+    width: 90%;
 }
 
 .container h2 {
-    color: var(--theme-bl);
+    color: var(--theme-rd);
     margin-top: 20px;
 }
 
 .container h3 {
-    color: var(--bl-txt);
-}
-
-.container p {
-    color: var(--dark-bl);
+    color: var(--light-rd);
 }
 
 .container p a {
-    color: var(--dark-bl);
+    color: var(--link-rd);
 }
 
 .content {
@@ -42,19 +41,51 @@
     text-align: justify;
 }
 
-/* .about-rlo .content {
-
-} */
+.emphasis {
+    color: var(--light-rd);
+    /* font-style: italic; */
+}
 
 .go-to-rlo {
-    width: 95%;
+    width: 100%;
     display: block;
 }
 
 .go-to-rlo .content {
-    display: block;
+    display: flex;
 }
 
-.go-to-rlo img{
-    max-width: 300px;
+.go-to-rlo .text {
+    width: 48%;
+}
+
+.go-to-rlo .map{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .about-rlo .text {
+        width: 100%;
+    }
+
+    .about-rlo #school_icon {
+        display: none;
+    }
+
+    .about-rlo .image {
+        width: 100;
+    }
+
+    .go-to-rlo .text {
+        width: 100%;
+    }
+    
+    .go-to-rlo .map {
+        width: 100%;
+    }
 }
