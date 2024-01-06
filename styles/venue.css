@@ -70,6 +70,16 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    flex-direction: column;
+}
+
+.leiden h2.sub-heading {
+    color: var(--theme-bl);
+    width: 100%;
+}
+
+.leiden .emphasis {
+    color: var(--theme-bl);
 }
 
 .leiden .content {
