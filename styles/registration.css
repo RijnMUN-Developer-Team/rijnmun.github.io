@@ -13,6 +13,9 @@
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
+
+    --delegate: #0782DA;
+    --stoff: #02A768;
 }
 
 /* OLD CODE */
@@ -103,13 +106,21 @@
 .timeline li {
     margin: 5px 0;
     /* color: black; */
-    color: var(--dark-bl);
+    color: var(--theme-rd);
     list-style: none;
 } 
 
 .time {
     color: var(--bl-txt);
     font-weight: bold;
+}
+
+.stoff {
+    color: var(--stoff);
+}
+
+.delegate {
+    color: var(--delegate);
 }
 
 @media screen and (max-width: 800px) {
