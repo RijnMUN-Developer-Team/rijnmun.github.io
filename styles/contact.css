@@ -14,13 +14,17 @@
 
 .text {
     /* to ensure the two text boxes are exactly 50% and fits side by side */
-    width: 30%;
+    width: 40%;
     overflow-wrap: break-word;
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: auto;
+}
+
+.text .address, .text .contacts {
+    width: 80%;
 }
 
 .text h2 {
@@ -38,7 +42,7 @@
 
 .image {
     /* image takes up 70% of the page */
-    width: 70%;
+    width: 60%;
     margin: 2%;
 }
 
