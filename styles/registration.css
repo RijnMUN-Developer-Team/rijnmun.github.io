@@ -58,12 +58,6 @@
     margin: 1%;
     padding: 1%;
 }
-/* 
-.school-registration, .ind-registration {
-    width: 100%;
-    < margin: 1%;
-    padding: 1%; >
-} */
 
 .collapsible-content {
     /* border: 2px solid var(--theme-rd); */
@@ -109,8 +103,14 @@
 .timeline li {
     margin: 5px 0;
     /* color: black; */
-    color: var(--bl-txt);
+    color: var(--dark-bl);
+    list-style: none;
 } 
+
+.time {
+    color: var(--bl-txt);
+    font-weight: bold;
+}
 
 @media screen and (max-width: 800px) {
     .container {
