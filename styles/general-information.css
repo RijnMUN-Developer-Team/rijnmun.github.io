@@ -29,9 +29,9 @@
     justify-content: row;
 }
 
-.text {
+/* .text {
     width: 75%;
-}
+} */
 
 h2 {
     /* color: var(--theme-bl); */
@@ -74,7 +74,7 @@ h2 {
 }
 
 .page {
-    display: "block";
+    display: block;
     width: 96%;
     margin: 0 1.5% 1.5% 1.5%;
 
@@ -83,6 +83,7 @@ h2 {
     border-top: 10px solid var(--theme-rd);
 }
 
+/* general design of font in the whole page */
 .container a {
     text-decoration: none;
     color: var(--theme-rd);
@@ -92,19 +93,53 @@ h2 {
     text-decoration: underline;
 }
 
-#theme-text {
+.guidelines-content {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.guidelines-content .guidelines-list {
+    width: 50%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.guidelines-content .image {
+    width: 45%;
+    display: flex;
+    align-self: center;
+}
+
+.guidelines-content .image img {
+    width: 100%;
+    align-self: center;
+}
+
+/* #theme-text {
     font-style: italic;
     color: var(--theme-rd);
     font-weight: 500;
-}
+} */
 
 @media screen and (max-width: 800px) {
     .content {
         flex-direction: column;
     }
-    
-    .text {
-        width: 90vw;
+
+    .guidelines-content {
+        flex-direction: column;
+    }
+
+    .guidelines-content .guidelines-list {
+        width: 100%;
+    }
+
+    .guidelines-content .image {
+        width: 100%;
+        margin-top: 1.5%;
     }
 }
 
