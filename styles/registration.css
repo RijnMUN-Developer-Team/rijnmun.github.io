@@ -103,24 +103,32 @@
     color: var(--theme-bl);
 }
 
-.timeline li {
+/* .timeline li {
     margin: 5px 0;
-    /* color: black; */
     color: var(--theme-rd);
     list-style: none;
-} 
+}  */
 
 .time {
     color: var(--bl-txt);
     font-weight: bold;
+    padding-right: 30px;
+    padding-left: 10px;
 }
 
 .stoff {
-    color: var(--stoff);
+    /* color: var(--stoff); */
+    border-left: solid 3px var(--stoff);
 }
 
 .delegate {
-    color: var(--delegate);
+    /* color: var(--delegate); */
+    border-left: solid 3px var(--delegate);
+}
+
+.deadline {
+    /* color: var(--theme-rd); */
+    border-left: solid 3px var(--theme-rd);
 }
 
 @media screen and (max-width: 800px) {
