@@ -6,14 +6,14 @@
         <link rel="stylesheet" type="text/css" href="./styles/base.css">
         <link rel="stylesheet" type="text/css" href="./styles/mobile.css" media="screen and (max-width: 800px)">
         <link rel="stylesheet" href="./styles/index.css">
-        <link rel="icon" href="./images/logos/icon.ico">
+        <link id="tab_icon" rel="icon" src="./images/logos/icon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>RijnMUN</title>
     </head>
     <body>
         <header>
             <div class="logo_container">
-                <a href="/"><img class="logo" src="./images/logos/logo.png"></a>
+                <a href="/"><img class="logo" id="logo" id="logo" src="./images/logos/logo.png"></a>
             </div>
 
             <!-- dropdown for laptop version -->
@@ -95,6 +95,13 @@
                     
             }
 
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                const newColorScheme = event.matches ? "dark" : "light";
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
+                }
+            });
+
             previous = document.referrer;
             if (previous.includes("/undefined")) {
                 alert("You tried to access restricted content. This incident will be reported.");
@@ -108,6 +115,7 @@
                 <h1>Rijnlands<br>Model United Nations</h1>
                 <h3>[xxx] to [xxx] October 2024</h3>
             </div>
+            <button onclick="change()"></button>
             <div class="container">
                 <div class="message">
                     <p><span class="keywords">Dear MUN directors, advisors, aspiring delegates and student officers,</span>

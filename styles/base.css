@@ -21,6 +21,12 @@ body {
     margin: 0;
 }
 
+/* @media (prefers-color-scheme: dark) {
+    head#tab_icon {
+        content:url("/images/logos/icon_white.ico");
+    }
+} */
+
 /* DROPDWON MENU ----------------------------------------------------- */
 .menu {
     height: min-content;
