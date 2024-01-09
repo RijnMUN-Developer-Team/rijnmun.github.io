@@ -36,11 +36,11 @@
     text-decoration: underline;
 }
 
-.alan {
+.alan, .alan.goals ul li{
     color: #008000 !important;
 }
 
-.lenka {
+.lenka, .lenka.goals ul li{
     color: #800080 !important; 
 }
 
@@ -48,4 +48,12 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+.goals {
+    display: flex;
+}
+
+.alan.goals, .lenka.goals {
+    width: 50%;
 }
