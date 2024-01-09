@@ -96,13 +96,13 @@
             }
 
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
+                document.getElementById("tab_icon").href = "/images/logos/icon_light.ico";
             }
-            
+
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
                 const newColorScheme = event.matches ? "dark" : "light";
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
+                    document.getElementById("tab_icon").href = "/images/logos/icon_light.ico";
                 }
             });
 
