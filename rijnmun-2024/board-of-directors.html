@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/base.css">
         <link rel="stylesheet" type="text/css" href="../styles/mobile.css" media="screen and (max-width: 800px)">
         <link rel="stylesheet" type="text/css" href="../styles/bod.css">
-        <link rel="icon" href="../images/logos/icon.ico">
+        <link id="tab_icon" rel="icon" href="../images/logos/icon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="javascript" href="/countdown.js">
         <title>RijnMUN</title>
@@ -92,6 +92,17 @@
                     x.style.display = 'none'; 
                 }, 200, x)
             }
+
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.getElementById("tab_icon").href = "/images/logos/icon_light.ico";
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                const newColorScheme = event.matches ? "dark" : "light";
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.getElementById("tab_icon").href = "/images/logos/icon_light.ico";
+                }
+            });
         </script>
         <main>
 
