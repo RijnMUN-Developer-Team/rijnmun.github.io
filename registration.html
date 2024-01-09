@@ -197,6 +197,8 @@
                 const newColorScheme = event.matches ? "dark" : "light";
                 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    document.getElementById("tab_icon").href = "/images/logos/icon.ico";
                 }
             });
             </script>
