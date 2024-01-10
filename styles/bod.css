@@ -27,6 +27,11 @@
     margin: 0 0 15px 0;
 }
 
+.person {
+    margin-top: 3%;
+    justify-self: center;
+}
+
 .person img {
     width: 350px;
 }
