@@ -113,7 +113,7 @@
                     <p class="quote">All brilliant ideas can be traced back to Monday 1st January, 2024.</p>
                     <p>This page emotionally supports the RijnMUN website creators, and is intended purely for humoristic purposes</p>
                     <p style="font-weight: bold;" class="lenka">Always pull before editing (I think we both learned it the hard way-</p>
-                    <p>Merge conflict counter: <span class="alan">2</span> | <span class="lenka">1.5</span></p>
+                    <p>Merge conflict counter: <span class="alan">2</span> | <span class="lenka">2</span></p>
                     <p>Number of times re-cloned the repository: <span class="alan">0</span> | <span class="lenka">0</span></p>
                     <p class="lenka"><i>"Famous last words"</i>- wise words by Alan, multiple times in 2023, 2024, and possibly beyond (counter>> 2 times since beginning 2024</p>
 
@@ -268,7 +268,7 @@
                             <li><span class="lenka">"can you guys ever imagine aliens visitng earth? who's in physics higher here? correct me if I'm wrong, but aliens coming to earth is impossible! the universe is so big and it'll take them so long to travel!" "but miss, say if they can travel near the speed of light or if they are nearby, it wouldn't really take that far, like for example to Mars it's only a few years with human rockets- light travels from the sun to the earth in simply a few minutes!" "yeah but they would be so so so far away that they are impossible to reach us! and imagine if they spend 50 years to travel here! they would already be too old to do anything!" but who says their lifespan is just as long as human lifespan........ (cries as a stem kid</span></li>
                             <li><span class="lenka">"Use double-line spacing, following the MLA format" but MLA is a citation method????????</span></li>
                             <li><span class="lenka">"can you guys imagine?! people fearing computers small enough to inject into your body? doesn't that sound so funny?" (cries as a stem kid</span></li>
-                            <li><span class="alan">"if Elon Musk has 200 billion dollars and there are 10 billion people on earth, then he could give every person on earth a billion dollars and still have 190 billion dollars left" (cries in Karen math</span> <span class="lenka">>> oh gods.</span></li>
+                            <li><span class="alan">"if Elon Musk has 200 billion dollars and there are 10 billion people on earth, then he could give every person on earth a billion dollars and still have 190 billion dollars left" (cries in Karen math</span></li>
                         </ul>
                     </div>
                 </div> 
@@ -284,6 +284,9 @@
                 document.addEventListener('contextmenu', event => event.preventDefault());
 
                 // if the inspect element is opened, then redirect 
+                if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
+                    window.location.replace("/");
+                }
                 window.onresize = function () {
                     if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
                         window.location.replace("/");
