@@ -30,6 +30,52 @@
     font-size: 22px;
 }
 
+/* div of the left section */
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 46%;
+    margin: 1%;
+    padding: 1%;
+}
+
+.fees {
+    h2 {
+        color: var(--theme-bl);
+        margin-bottom: 0;
+    }
+
+    li {
+        list-style: none;
+        line-height: 25px;
+        font-weight: normal;
+        color: black;
+    }
+
+    span {
+        font-weight: bold;
+        color: var(--delegate);
+        padding: 0 10px 0;
+    }
+    
+    .delegate {
+        border-left: 5px solid var(--delegate);
+    }
+    
+    .stoff {
+        border-left: 5px solid var(--stoff);
+        
+    }
+    
+    .director {
+        border-left: 5px solid var(--theme-rd);
+    }
+
+    .other {
+        border-left: 5px solid black;
+    }
+}
+
 /* BANNER COLOURS HERE ------ */
 .collapsible-heading {
     /* background-color: var(--bl-txt);
@@ -53,15 +99,6 @@
     cursor: default;
 }
 
-/* badly placed- but the flex container for the two registration collapsibles */
-.info {
-    display: flex;
-    flex-direction: column;
-    width:56%;
-    margin: 1%;
-    padding: 1%;
-}
-
 .collapsible-content {
     /* border: 2px solid var(--theme-rd); */
     /* border: 2px solid var(--theme-gr); */
@@ -77,30 +114,27 @@
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-out;
-}
 
-/* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
-.collapsible-content p{
-    /* color: var(--theme-rd); */
-    /* color: var(--theme-gr); */
-    /* color: black; */
-    color: var(var(--dark-bl));
-    font-size: 16px;
-
+    /* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
+     p{
+        color: var(var(--dark-bl));
+        font-size: 16px;
+        text-align: justify;
+    }
 }
 
 /* < timeline  ------------------> */
 .timeline {
-    width: 36%;
+    width: 46%;
     margin: 1%;
     padding: 1%;
     padding-left: 3%;
 
     border-left: 5px solid var(--theme-bl);
-}
 
-.timeline h2 {
-    color: var(--theme-bl);
+    h2 {
+        color: var(--theme-bl);
+    }
 }
 
 /* .timeline li {
@@ -112,27 +146,28 @@
 .time {
     color: var(--bl-txt);
     font-weight: bold;
-    padding-right: 30px;
+    padding-right: 10px;
     padding-left: 10px;
-}
 
-.stoff {
-    /* color: var(--stoff); */
-    border-left: solid 5px var(--stoff);
-}
+    &.stoff {
+        border-left: solid 5px var(--stoff);
 
-.delegate {
-    /* color: var(--delegate); */
-    border-left: solid 5px var(--delegate);
-}
+    }
 
-.deadline {
-    /* color: var(--theme-rd); */
-    border-left: solid 5px var(--theme-rd);
-}
-
-.other {
-    border-left: solid 5px black;
+    &.delegate {
+        /* color: var(--delegate); */
+        border-left: solid 5px var(--delegate);
+    }
+    
+    &.deadline {
+        /* color: var(--theme-rd); */
+        border-left: solid 5px var(--theme-rd);
+    }
+    
+    &.other {
+        border-left: solid 5px black;
+    }
+    
 }
 
 .mailings {
@@ -146,7 +181,7 @@
     width: 75px;
     background-color: var(--theme-rd);
     /* border-radius: 10px; */
-    padding: 4px;
+    padding: 5px;
     color: white;
     text-decoration: none;
     margin: 1px;
