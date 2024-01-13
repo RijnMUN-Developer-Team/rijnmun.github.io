@@ -131,6 +131,33 @@
     border-left: solid 3px var(--theme-rd);
 }
 
+.other {
+    border-left: solid 3px black;
+}
+
+.mailings {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.mailing_btn {
+    width: 75px;
+    background-color: var(--theme-rd);
+    /* border-radius: 10px; */
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    margin: 1px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.mailing_btn:hover {
+    cursor: not-allowed;
+}
+
 @media screen and (max-width: 800px) {
     .container {
         flex-direction: column-reverse;
@@ -144,5 +171,14 @@
     .info {
         width: 90vw;
         padding-bottom: 20px;
+    }
+
+    .mailings {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mailing_btn {
+        margin-top: 10px;
     }
 }
