@@ -32,7 +32,7 @@
     margin-left: unset;
 }
 
-.text p, .text a {
+.text a {
     color:var(--bl-txt);
 }
 
