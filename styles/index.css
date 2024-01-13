@@ -7,34 +7,6 @@
     --dark-bl: #143152;
 }
 
-/* Top announcement banner */
-/* COMMENTED OUT because it now all falls under title, in case.css  */
-
-/* .title {
-    width: 100%;
-    display: block;
-    display: flex;
-    flex-direction: row;
-    padding: 3%;
-
-    background-color: var(--theme-bl);
-} */
-
-/* .main {
-    background-color: var(--theme-bl);
-    display: block;
-} */
-
-/* h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 55px;
-    color: white;
-    padding-left: 7%;
-    padding-bottom:1%;
-    width: 100%;
-    margin: 3%
-} */
-
 h3 {
     width: 98%;
     font-size: 30px;

@@ -118,21 +118,21 @@
 
 .stoff {
     /* color: var(--stoff); */
-    border-left: solid 3px var(--stoff);
+    border-left: solid 5px var(--stoff);
 }
 
 .delegate {
     /* color: var(--delegate); */
-    border-left: solid 3px var(--delegate);
+    border-left: solid 5px var(--delegate);
 }
 
 .deadline {
     /* color: var(--theme-rd); */
-    border-left: solid 3px var(--theme-rd);
+    border-left: solid 5px var(--theme-rd);
 }
 
 .other {
-    border-left: solid 3px black;
+    border-left: solid 5px black;
 }
 
 .mailings {
