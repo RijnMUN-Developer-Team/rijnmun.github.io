@@ -21,16 +21,19 @@
 }
 
 .container h2 {
-    color: var(--theme-rd);
+    /* color: var(--theme-rd); */
+    color: var(--theme-bl);
     margin: 10px 0 10px 0;
 }
 
 .container h3 {
-    color: var(--light-rd);
+    /* color: var(--light-rd); */
+    color: var(--theme-bl);
 }
 
 .container p a {
-    color: var(--link-rd);
+    /* color: var(--link-rd); */
+    color: var(--bl-txt);
 }
 
 .content {
@@ -39,7 +42,8 @@
 }
 
 .emphasis {
-    color: var(--light-rd);
+    /* color: var(--light-rd); */
+    color: var(--bl-txt);
     /* font-style: italic; */
 }
 
