@@ -397,7 +397,8 @@ h4 {
 }
 
 .copyright {
-    color: #cfcfcf;
+    /* color: #cfcfcf; */
+    color: #5B95D7; /* mid-blue */
     font-size: 14px;
     text-align: center;
     margin: unset;
