@@ -57,3 +57,14 @@
 .alan.goals, .lenka.goals {
     width: 50%;
 }
+
+.entertainment {
+    display: flex;
+    flex-direction: column;
+}
+
+.entertainment.games {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
