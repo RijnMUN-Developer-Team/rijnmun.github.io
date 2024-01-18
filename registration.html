@@ -113,7 +113,7 @@
                     </div>
 
                     <div class="sch-registration">
-                        <h2 onclick="collapse('sch')" class="collapsible-heading" id="sch-heading">School Registrations</h2>
+                        <h2 onclick="collapse('sch')" class="collapsible-heading" id="sch-heading"><span id="text">School Registrations</span><span class="arrow"><i id="sch-arrow" class="fa fa-caret-left 0"></i></span></h2>
 
                         <!-- DO NOT REMOVE style tag: display -->
                         <!-- it prevents unresponsive first-clicks -->
@@ -124,7 +124,7 @@
                     </div>
 
                     <div class="ind-registration">
-                        <h2 onclick="collapse('ind')" class="collapsible-heading" id="ind-heading">Individual Registrations</h2>
+                        <h2 onclick="collapse('ind')" class="collapsible-heading" id="ind-heading"><span id="text">Individual Registrations</span><span class="arrow"><i id="ind-arrow" class="fa fa-caret-left 0"></i></span></h2>
 
                         <!-- DO NOT REMOVE style tag: display -->
                         <!-- it prevents unresponsive first-clicks -->
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="stoff-registration">
-                        <h2 onclick="collapse('stoff')" class="collapsible-heading" id="stoff-heading">StOff Registrations</h2>
+                        <h2 onclick="collapse('stoff')" class="collapsible-heading" id="stoff-heading"><span id="text">StOff Registrations</span><span class="arrow"><i id="stoff-arrow" class="fa fa-caret-left 0"></i></span></h2>
 
                         <!-- DO NOT REMOVE style tag: display -->
                         <!-- it prevents unresponsive first-clicks -->
@@ -207,6 +207,18 @@
                             cont.style.display = 'none'; 
                         }, 200, cont)
                         
+                    }
+
+                    let caret = document.getElementById(`${option}-arrow`);
+                    caret.style.transition = "0.2s ease-in-out";
+                    if (caret.classList.contains('0')) {
+                        caret.style.transform = "rotate(-90deg)";
+                        caret.classList.remove('0');
+                        caret.classList.add('1');
+                    } else {
+                        caret.style.transform = "rotate(0deg)";
+                        caret.classList.remove('1');
+                        caret.classList.add('0');
                     }
                 }
 
