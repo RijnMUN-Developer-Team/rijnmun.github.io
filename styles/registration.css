@@ -187,9 +187,6 @@
     margin: 1px;
     text-align: center;
     font-size: 13px;
-}
-
-.mailing_btn:hover {
     cursor: not-allowed;
 }
 
