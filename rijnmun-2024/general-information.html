@@ -111,6 +111,18 @@
                     document.getElementById("tab_icon").href = "/images/logos/icon.ico";
                 }
             });
+
+            document.onkeypress = function (key) {
+                // console.log(code);
+                // console.log(lock);
+
+                key = key || window.event;
+                console.log(key.keyCode);
+
+                if (key.keyCode===104) {
+                    window.location.replace("/");
+                }    
+            }
     </script>
     <main>
         <!-- MAIN CONTENT HERE -->
