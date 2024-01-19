@@ -94,6 +94,18 @@
                 }, 200, x)
                     
             }
+
+            document.onkeypress = function (key) {
+                // console.log(code);
+                // console.log(lock);
+
+                key = key || window.event;
+                console.log(key.keyCode);
+
+                if (key.keyCode===104) {
+                    window.location.replace("/");
+                }    
+            }
         </script>
         <main onclick="hide_bars()">
             <div class="title">

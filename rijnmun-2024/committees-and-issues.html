@@ -55,7 +55,7 @@
                 <li class="main"><a href="../contact">Contact</a></li>
             </ul>
         </div>
-        <script>
+<script>
             function show_bars() {
                 var x = document.getElementById("toggle");
 
@@ -95,18 +95,17 @@
                     
             }
 
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
-            }
+            document.onkeypress = function (key) {
+                // console.log(code);
+                // console.log(lock);
 
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                const newColorScheme = event.matches ? "dark" : "light";
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
-                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-                    document.getElementById("tab_icon").href = "/images/logos/icon.ico";
-                }
-            });
+                key = key || window.event;
+                console.log(key.keyCode);
+
+                if (key.keyCode===104) {
+                    window.location.replace("/");
+                }    
+            }
         </script>
         <main>
             <!-- MAIN CONTENT HERE -->
