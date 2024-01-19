@@ -14,11 +14,11 @@
     <body>
         <header>
             <div class="logo_container">
-                <a onclick="go_home()" href="#home"><img class="logo" id="logo" src="../images/logos/logo.png"></a>
+                <a href="/contact"><img class="logo" id="logo" src="../images/logos/logo.png"></a>
             </div>
             <!-- dropdown for laptop version -->
             <div class="menu" id="menu">
-                <a onclick="go_home()" href="#home" class="normal">Home</a>
+                <a href="../contact" class="normal">Home</a>
                 <div class="normal">
                     <div class="dropdown">
                         <a class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
@@ -81,11 +81,6 @@
                     
             }
 
-            function go_home() {
-                window.location.replace("/rijnmun-2024/undefined#home");
-                window.location.replace("/");
-            }
-
             document.onkeypress = function (key) {
                 // console.log(code);
                 // console.log(lock);
@@ -94,7 +89,7 @@
                 console.log(key.keyCode);
 
                 if (key.keyCode===104) {
-                    go_home();
+                    window.location.replace("/");
                 }    
             }
         </script>
@@ -110,7 +105,7 @@
                     <br>
                     <p>Sorry! It appears the page you are looking for does not exist</p>
                     <p>Please check the website URL and try again</p>
-                    <button onclick="go_home()"><a href="#home">Get me out of here</a></button>
+                    <button><a href="/contact">Get me out of here</a></button>
                 </div>
     
                 <div class="real-content" style="display: none;">
