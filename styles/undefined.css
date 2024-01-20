@@ -55,7 +55,24 @@
 }
 
 .alan.goals, .lenka.goals {
-    width: 50%;
+    width: 48%;
+    margin: 1%;
+}
+
+.check::after {
+    content: '\2714';
+    color: #00c545;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 1em;
+}
+
+.cross::after {
+    content: '\274C';
+    color: #c50000;
+    font-size:14px;
+    font-weight: bold;
+    margin: 0 1em;
 }
 
 .entertainment {

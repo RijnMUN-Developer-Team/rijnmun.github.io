@@ -76,6 +76,7 @@
                     <br>
                     <p class="quote">WE ARE THE GODS OF RIJNMUN TECH</p>
                     <br>
+                    <p>Wanna do something but don't know what? Try shift + windows/command key :) <span class="lenka">(i hope it works-</span></p>
 
                     <div class="counters">
                         <ul>
@@ -83,6 +84,7 @@
                             <li>Merge conflict counter: <span class="alan">2</span> | <span class="lenka">1.5</span></li>
                             <li>Number of times re-cloned the repository: <span class="alan">1</span> | <span class="lenka">0</span></li>
                             <li class="lenka"><i>"Famous last words"</i>- wise words by Alan, multiple times in 2023, 2024, and possibly beyond (counter>> 4 times since beginning 2024</li>
+                            <li>If you are thinking about how much you love this csp page add to the counter (if you're happy and you know it csp version): <span class="alan">0</span> | <span class="lenka">1</span></li>
                         </ul>
                     </div>
                     <div class="fears alan" style="display: flex; justify-content: center;">
@@ -183,7 +185,7 @@
                     <p class="list-title">Goals for 2024 <span class="lenka">(i can't believe we didn't think of this sooner)</span><span class="alan"> >> neither can I, this is amazing lmao</span></p>
                     <div class="goals">
                         <div class="alan goals">
-                            <ul>
+                            <span>
                                 <li style="list-style-type: none;">this list is ordered by random importance, as I have no clue rlly (go ahead and add stuff if u want)</li>
                                 <li>mantaining this page (it is like a child at this point <span class="lenka">>> literally</span></li>
                                 <li>having fun in Nice</li>
@@ -206,15 +208,15 @@
                                 <li>pull off a successful prank on Thomas (I already know exactly what to do</li>
                                 <li>successful play, international evening, and other TC events <span class="lenka">>> ofc ofc, sounds like a true TC member lmao</span></li>
                                 <li>get better at limiting myself (as in not trying to do too much at once</li>
-                            </ul>
+                            </span>
                         </div>
 
                         <div class="lenka goals">
-                            <ul>
+                            <span>
                                 <li style="list-style: none;">in order of increasing unlikeliness (alan if u have good ones for me feel free to add on to them lol)</li>
                                 <li>maintaining the CSP till at least RijnMUN ends, regardless of what happens to this website <span class="alan">oh yeah definitely</span></li>
-                                <li>get into second round informatics olympiad</li>
-                                <li>make new friends</li>
+                                <li class="check">get into second round informatics olympiad</li>
+                                <li class="check">make new friends</li>
                                 <li>successful RijnMUN :)</li>
                                 <li>doing at least one stupid/funny thing every day (? kinda ambitious ngl) <span class="alan"> (dw, I have faith in your abilities lmao</span> <span class="lenka">>> damn is this suppose to be a compliment?</span></li>
                                 <li>visit universities or cool places <span class="alan"> >> I wanna go with u</span> <span class="lenka">>> idk i'll always try to get u with us too especially cuz nowadays you're actually old enough to claim it as a career-benefitting thing(finally) but first we need to find somewhere cool to visit :)</span><span class="alan"> yayyy</span></li>
@@ -237,7 +239,7 @@
                                 <li>getting into the IOI Dutch team</li>
                                 <li>don't foget anything i was gonna say to alan</li>
                                 <li>Get a boyfriend <span class="alan">If you do, I expect about a million texts and a formal message that you want to show up in the history books 100 years from now</span></li>
-                            </ul>
+                            </span>
                         </div>
                     </div>
 
@@ -248,6 +250,10 @@
                             <li><span class="lenka">"Use double-line spacing, following the MLA format" but MLA is a citation method????????</span></li>
                             <li><span class="lenka">"can you guys imagine?! people fearing computers small enough to inject into your body? doesn't that sound so funny?" (cries as a stem kid</span></li>
                             <li><span class="alan">"if Elon Musk has 200 billion dollars and there are 10 billion people on earth, then he could give every person on earth a billion dollars and still have 190 billion dollars left" (cries in Karen math</span> <span class="lenka">>> basic math left the room</span></li>
+                            <li><span class="lenka">"Who takes physics here? If you eat pasta and antipasta(i?) at the same time, what happens?" "Well antimatter is also affected by gravity so theoretically...(theoretical physics hypothesis omitted)"</span></li>
+                            <li><span class="lenka">"Next time you need a program to automate something, like help write emails or whatever, just make it an informatica olympiade problem"</span></li>
+                            <li><span class="lenka">"You know what a nice [informatics] problem could be? Write a program that can be compiled as different languages :D" "Good idea, but no."</span></li>
+
                         </ul>
                     </div>
 
@@ -288,7 +294,7 @@
                         window.location.replace("/");
                     }
                 }
-
+                
                 // a (index 0, keycode 97)
                 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -368,6 +374,19 @@
                     document.getElementById('title').innerHTML = "Error 404: Page Not Found";
                     document.getElementsByClassName("real-content")[0].style.display = "none";
                     document.getElementsByClassName("cover")[0].style.display = "block";
+                }
+
+                // more hidden buttons :)
+                document.onkeydown = function surprise(e) {
+                    e = e || window.event;
+
+                    // ensures only accessed if page unlocked
+                    if (e.metaKey === true && e.shiftKey === true && lock.length > 0) {
+
+                        // feel free to change the link regularly so it's a surprise every time lol
+                        // oh and alan, if you do read this, ask me about how i chose the keys (it was so much more complicated than you'd imagine-)
+                        window.location.replace('https://i.pinimg.com/236x/e1/51/4e/e1514ea92651fcded8e25778c1f60319.jpg');
+                    }
                 }
              </script>
         </main>
