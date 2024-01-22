@@ -66,9 +66,12 @@ h3 {
     color: var(--bl-txt);
     font-size: 19px;
     text-align: center;
-    font-weight: 500;
-    /* font-weight: 550; */
+    /* font-weight: 500; */
     line-height: 30px;
+
+    /* for open sans ----  */
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 .message {
@@ -78,8 +81,12 @@ h3 {
 }
 
 .keywords {
-    font-weight: 800;
+    /* font-weight: 800; */
     margin-top: unset;
+
+    /* for open sans------  */
+    font-weight: 600;
+    font-style: italic;
 }
 
 .container {
