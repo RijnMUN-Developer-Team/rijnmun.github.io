@@ -128,49 +128,106 @@
                 <div class="row1">
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label">Julie Lodereau</p>
-                        <p class="img_label role-title">Secretary General</p>
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label">Julie Lodereau</p>
+                                <p class="img_label role-title">Secretary General</p>
+                            </div>
+                            <div class="label-logo">
+                                <img src="/images/BoD-photos/sector-logos/RijnMUN_SG_logo.jpeg" alt="">
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label" id="creator-support"><span onclick="teleport()">Alan</span> Gil Forza, Beatriz Soares, Emily Hanlon, <span onclick="teleport()">Lenka</span> Huang, Julie Lodereau</p>
-                        <p class="img_label role-title">RijnMUN Secretariat</p>
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label" id="creator-support"><span onclick="teleport()">Alan</span> Gil Forza, Beatriz Soares, Emily Hanlon, <span onclick="teleport()">Lenka</span> Huang, Julie Lodereau</p>
+                                <p class="img_label role-title">RijnMUN Secretariat</p>
+                            </div>
+                            
+                            <div class="label-logo">
+                                <img src="/images/BoD-photos/grey.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row2">
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label">Emily Hanlon, Olivia Alwayn, Ruben van Zuijlen, Alice Rinalducci, Samantha van Ingen
-                        </p>
-                        <p class="img_label role-title">Management</p>
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label">Emily Hanlon, Olivia Alwayn, Ruben van Zuijlen, Alice Rinalducci, Samantha van Ingen</p>
+                                <p class="img_label role-title">Management</p>
+                            </div>
+
+                            <div class="label-logo">
+                                <img src="/images/BoD-photos/grey.png" alt="">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label">Alan Gil Forza, Toyo Chupin, Dori Kovacs, Shuyao (Charlotte) Zhao, Thomas Lin, Magdalena Rok
-                        </p>
-                        <p class="img_label role-title">Finance</p>
+                        <img class="finance-logo" widht="50" src="/images/BoD-photos/sector-logos/RijnMUN_finance_logo.jpeg" alt="RijnMUN 2024 Finance Logo">
+                        
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label">Alan Gil Forza, Toyo Chupin, Dori Kovacs, Shuyao (Charlotte) Zhao, Thomas Lin, Magdalena Rok</p>
+                                <p class="img_label role-title">Finance</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label">Lenka Huang, Ruby O’Regan, Kiran van Brandenburg, Alexander Graham</p>
-                        <p class="img_label role-title">Communication</p>
+
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label">Lenka Huang, Ruby O’Regan, Kiran van Brandenburg, Alexander Graham</p>
+                                <p class="img_label role-title">Communication</p>
+                            </div>
+
+                            <div class="label-logo">
+                                <img src="/images/BoD-photos/sector-logos/RijnMUN_comms_logo.png" alt="RijnMUN 2024 Communications Logo">
+                            </div>
+                        </div>
+                        
                     </div>
 
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label">Beatriz Soares, Janneke Veerman, Sieger Pols, Sabriel van Ingen, Tanvi Sharma</p>
-                        <p class="img_label role-title">Hospitality</p>
+
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label">Beatriz Soares, Janneke Veerman, Sieger Pols, Sabriel van Ingen, Tanvi Sharma</p>
+                                <p class="img_label role-title">Hospitality</p>
+                            </div>
+
+                            <div class="label-logo">
+                                <img src="/images/BoD-photos/grey.png" alt="">
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="person">
                         <img src="/images/BoD-photos/grey.png" alt="">
-                        <p class="img_label"> Hannelore Coppens, Owen Schouten, Daire Coyle, Elena Fernandez de Paz, Kashvi Sutar, Mania Vaseghi
-                        </p>
-                        <p class="img_label role-title">Press & Publicity</p>
+
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label"> Hannelore Coppens, Owen Schouten, Daire Coyle, Elena Fernandez de Paz, Kashvi Sutar, Mania Vaseghi</p>
+                                <p class="img_label role-title">Press & Publicity</p>
+                            </div>
+
+                            <div class="label-logo">
+                                <img src="/images/BoD-photos/sector-logos/RijnMUN_pub+press_logo.jpeg" alt="">
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -184,23 +241,23 @@
         </main>
         <script>
 
-            if ((window.outerHeight - window.innerHeight) > 150 || (window.outerWidth - window.innerWidth) > 100) {
-                window.location.replace("/");
-            }
-            window.onresize = function () {
-                if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
-                    window.location.replace("/");
-                }
-            }
+            // if ((window.outerHeight - window.innerHeight) > 150 || (window.outerWidth - window.innerWidth) > 100) {
+            //     window.location.replace("/");
+            // }
+            // window.onresize = function () {
+            //     if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
+            //         window.location.replace("/");
+            //     }
+            // }
 
-            if (screen.availWidth < 1000) {
-                console.log(screen.availWidth);
-                document.getElementById("creator-support").innerHTML = "Alan Gil Forza, Emily Hanlon, Lenka Huang and Julie LodereauTarana Saha | RijnMUN Secretariat";
-            }         
+            // if (screen.availWidth < 1000) {
+            //     console.log(screen.availWidth);
+            //     document.getElementById("creator-support").innerHTML = "Alan Gil Forza, Emily Hanlon, Lenka Huang and Julie LodereauTarana Saha | RijnMUN Secretariat";
+            // }         
             
-            function teleport() {
-                window.location.replace("./undefined");
-            }
+            // function teleport() {
+            //     window.location.replace("./undefined");
+            // }
 
         </script>
 

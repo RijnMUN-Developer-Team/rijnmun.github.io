@@ -35,14 +35,47 @@
     color: var(--theme-bl);
 }
 
+img.finance-logo {
+    opacity: 0.8;
+    position: relative;
+    top: -50px;
+    z-index: 100;
+    max-width: 50px;
+    height: 50px;
+}
+
 .person {
     margin-top: 3%;
     justify-self: center;
+    width: 350px;
+
+    img {
+        width: 350px;
+    }
+
+    .label-content {
+        display: flex;
+        width: 100%;
+
+        .label-text {
+            width: 75%;
+        }
+
+        .label-logo {
+            width: 25%;
+            display: flex;
+
+            img {
+                width: 100%;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+
+
 }
 
-.person img {
-    width: 350px;
-}
 
 @media screen and (max-width: 800px) {
     .container {
