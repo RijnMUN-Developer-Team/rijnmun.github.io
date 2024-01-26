@@ -13,7 +13,8 @@ h3 {
     /* align-self: end; */
     text-align: end;
     justify-self: end;
-    color: #5cd6ff;
+    /* color: #5cd6ff; */
+    color: #ade1f2f2;
     margin: 1%;
 }
 
@@ -97,6 +98,8 @@ h3 {
     flex-direction: row;
 }
 
+/* sidebar ------------------ */
+
 .sidebar {
     position: -webkit-sticky;
     position: sticky;
@@ -113,6 +116,11 @@ h3 {
 
 .sidebar h4 {
     margin-bottom: unset;
+}
+
+.sidebar .date {
+    margin: 5px 0 5px 0;
+    font-size: 14px;
 }
 
 .sidebar div {
