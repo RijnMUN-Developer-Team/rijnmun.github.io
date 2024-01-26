@@ -127,6 +127,10 @@ h3 {
     padding-bottom: 20px;
 }
 
+.sidebar .news {
+    padding-bottom: 0;
+}
+
 .side_insta {
     width: 25px;
     height: 25px;
