@@ -85,3 +85,72 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.anim {
+    width: 80px;
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 500px;
+}
+
+.b { 
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.b:nth-child(4n+1) {
+    animation: wave 2s ease .0s infinite;
+}
+
+.b:nth-child(4n+2) {
+    animation: wave 2s ease .2s infinite;
+}
+
+.b:nth-child(4n+3) {
+    animation: wave 2s ease .4s infinite;
+}
+
+.b:nth-child(4n+4) {
+    animation: wave 2s ease .6s infinite;
+    margin-right: 0;
+}
+
+@keyframes wave {
+    0% { top: 0; opacity: 1;}
+    50% { top: 30px; opacity: .2;}
+    100% { top: 0; opacity: 1;}
+}
+
+.dna { 
+    transform: rotateZ(90deg);
+    width: 30px;
+    height: 100px;
+}
+.dna .element { 
+    display: block; 
+    border-left: 5px solid rgb(35, 199, 231); 
+    border-right: 5px solid rgb(35, 199, 231); 
+    border-top: dotted 2px rgb(29, 146, 170);
+    margin-top: 4px;
+    width: 5rem; 
+    height: 0.5rem; 
+    /* perspective: 1000px;  */
+    animation: rotate 5s infinite linear; 
+    animation-delay: calc(var(--i) * 0.2s); 
+} 
+
+@keyframes rotate { 
+    100% { transform: rotateY(360deg); }
+}
+
+.animations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
