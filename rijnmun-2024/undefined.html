@@ -432,8 +432,12 @@
                             // if unlocked
                             if (code.length == 0) {
                                 // unlock
-                                show_content();
-
+                                let wish = prompt("What page do you want to go to?", "Home");
+                                if (wish == "csp") {
+                                    show_content();
+                                } else {
+                                    window.location.replace("/");
+                                }
                                 // forms lock
                                 lock = formKey('finite');
                             }
