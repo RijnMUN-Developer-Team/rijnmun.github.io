@@ -148,6 +148,16 @@ h3 {
     top: 6px;
 }
 
+.side_link, .side_link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.side_link:hover {
+    text-decoration: underline;
+}
+
+
 /* Mobile support */
 
 @media screen and (max-width: 800px) {
