@@ -446,8 +446,9 @@
 
                         } else {
                             // if mistype, return home
-                            window.location.replace("/");
-                            console.log("returning home, wrong code");
+                            // window.location.replace("/");
+                            // console.log("returning home, wrong code");
+                            freak_out()
                         }
 
                     } else {
@@ -467,8 +468,9 @@
 
                         } else {
                             // if mistype, return home
-                            window.location.replace("/");
-                            console.log("returning home, wrong lock");
+                            // window.location.replace("/");
+                            // console.log("returning home, wrong lock");
+                            freak_out()
                         }
 
                     }
@@ -525,7 +527,39 @@
                         }
                     }
                 }
-             </script>
+
+                const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+                const freak_out = async () => {
+                    document.getElementById('surprise').style.display = "block"
+                    document.querySelector('header').style.display = "none"
+                    document.querySelector('main').style.display = "none"
+                    document.querySelector('footer').style.display = "none"
+                    document.querySelector('html').style.backgroundColor = "black"
+                    document.querySelector('head').innerHTML = '<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Security Protocol</title>'
+                    await sleep(2000)
+                    document.getElementById('surprise').innerHTML = "Fetching data..."
+                    await sleep(2000)
+                    document.getElementById('surprise').innerHTML = "Fetching data...<br>Data fetched. Connecting to server..."
+                    await sleep(2000)
+                    a = Math.floor(Math.random()*1000)
+                    b = Math.floor(Math.random()*1000)
+                    c = Math.floor(Math.random()*1000)
+                    d = Math.floor(Math.random()*1000)
+                    document.getElementById('surprise').innerHTML = `Fetching data...<br>Data fetched. Connecting to server...<br>Connected to server ${a}.${b}.${c}.${d}`
+                    await sleep(500)
+                    document.getElementById('surprise').innerHTML = `Fetching data...<br>Data fetched. Connecting to server...<br>Connected to server ${a}.${b}.${c}.${d}<br>Sending data...`
+                    await sleep(2000)
+                    document.getElementById('surprise').innerHTML = `Fetching data...<br>Data fetched. Connecting to server...<br>Connected to server ${a}.${b}.${c}.${d}<br>Sending data...<br>Transmission complete`
+                    await sleep(2000)
+                    document.getElementById('surprise').innerHTML = `Fetching data...<br>Data fetched. Connecting to server...<br>Connected to server ${a}.${b}.${c}.${d}<br>Sending data...<br>Transmission complete <br>Closing connection and wiping traces...`
+                    await sleep(2000)
+                    document.getElementById('surprise').innerHTML = `Fetching data...<br>Data fetched. Connecting to server...<br>Connected to server ${a}.${b}.${c}.${d}<br>Sending data...<br>Transmission complete <br>Closing connection and wiping traces...<br>Thank you for submitting your personal data`
+                    await sleep(6000)
+                    document.getElementById('surprise').innerHTML = `Fetching data...<br>Data fetched. Connecting to server...<br>Connected to server ${a}.${b}.${c}.${d}<br>Sending data...<br>Transmission complete <br>Closing connection and wiping traces...<br>Thank you for submitting your personal data<br>Redirecting back to home page...`
+                    await sleep(1000)
+                    window.location.replace("/")
+                }
+            </script>
         </main>
         <footer>
             <div class="f_container">
@@ -621,5 +655,6 @@
             </div>
             <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
         </footer>
+        <p id="surprise" style="display: none; color: rgb(0, 154, 0); font-family: 'Courier New', Courier, monospace;"></p>
     </body>
 </html>
