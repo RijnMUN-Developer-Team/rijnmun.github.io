@@ -23,7 +23,7 @@
     font-style: italic;
     font-size: 16px;
 
-    max-width: 350px;
+    max-width: 400px;
     text-wrap: pretty;
     margin: 10px 0;
     color: var(--bl-txt);
@@ -35,14 +35,14 @@
     color: var(--theme-bl);
 }
 
-img.watermark {
+/* img.watermark {
     opacity: 0.8;
     position: relative;
     top: -65px; right: -285px;
     z-index: 100;
     max-width: 60px;
     height: 60px;
-}
+} */
 
 .person {
     margin-top: 3%;
@@ -58,7 +58,7 @@ img.watermark {
         width: 100%;
 
         .label-text {
-            width: 75%;
+            width: 95%;
         }
 
         .label-logo {
