@@ -14,11 +14,11 @@
     <body>
         <header>
             <div class="logo_container">
-                <a href="/contact"><img class="logo" id="logo" src="../images/logos/logo.png"></a>
+                <a href="/"><img class="logo" id="logo" src="../images/logos/logo.png"></a>
             </div>
             <!-- dropdown for laptop version -->
             <div class="menu" id="menu">
-                <a href="../contact" class="normal">Home</a>
+                <a href="/" class="normal">Home</a>
                 <div class="normal">
                     <div class="dropdown">
                         <a class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
@@ -50,7 +50,7 @@
                 console.log(key.keyCode);
 
                 if (key.keyCode===104) {
-                    window.location.replace("/contact");
+                    window.location.replace("/");
                 }    
             }
         </script>
@@ -66,7 +66,7 @@
                     <br>
                     <p>Sorry! It appears the page you are looking for does not exist</p>
                     <p>Please check the website URL and try again</p>
-                    <button><a href="/contact">Get me out of here</a></button>
+                    <button><a href="/">Get me out of here</a></button>
                 </div>
     
                 <div class="real-content" style="display: none;">
@@ -376,7 +376,7 @@
 
                     <button onclick="chaos()">Click me for chaos :)</button>
                     <button class="alan"><a href="https://neal.fun" class="alan">ALL HAIL THE POWER OF NEAL</a></button>
-                    <audio controls><source src="../other/csp1.m4a" type="audio/m4a"></audio>
+                    <!-- <audio controls><source src="../other/csp1.m4a" type="audio/m4a"></audio> -->
                     <!-- <div class="entertainment">
                         <h2 class="quote">In case we are ever bored in class:</h2>
                         <div class="games">
@@ -401,7 +401,7 @@
                 // SECURITY ----------------------------------------
                 // shut off page to mobile/tablet users
                 if (screen.availWidth < 1000) { 
-                   window.location.replace("/contact");
+                   window.location.replace("/");
                 }
 
                 // stop right click

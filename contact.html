@@ -111,11 +111,6 @@
                 }
             });
 
-            previous = document.referrer;
-            if (previous.includes("/undefined")) {
-                window.location.replace("/");
-            }
-
             document.onkeypress = function (key) {
                 // console.log(code);
                 // console.log(lock);
