@@ -511,6 +511,14 @@
 
                 // SPECIAL CONTENT -------------------------------------------
 
+                let docTitle = document.title;
+                window.addEventListener ("blur", () =>{
+                    document.title = "Come back plz 🥲"
+                })
+                window.addEventListener ("focus", () =>{
+                    document.title = docTitle
+                })
+
                 // more hidden buttons :)
                 document.onkeydown = function surprise(e) {
                     e = e || window.event;
