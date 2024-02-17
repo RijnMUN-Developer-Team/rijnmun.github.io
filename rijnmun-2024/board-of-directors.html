@@ -144,7 +144,7 @@
                         <!-- watermark -->
                         <div class="label-content">
                             <div class="label-text">
-                                <p class="img_label" id="creator-support"><span onclick="teleport()">Alan</span> Gil Forza, Beatriz Soares, Emily Hanlon, <span onclick="teleport()">Lenka</span> Huang, Julie Lodereau</p>
+                                <p class="img_label">Alan Gil Forza, Beatriz Soares, Emily Hanlon, Lenka Huang, Julie Lodereau</p>
                                 <p class="img_label role-title">RijnMUN Secretariat</p>
                             </div>
                         </div>
@@ -222,28 +222,6 @@
                 
             </div>
         </main>
-        <script>
-
-            if ((window.outerHeight - window.innerHeight) > 150 || (window.outerWidth - window.innerWidth) > 100) {
-                window.location.replace("/");
-            }
-            window.onresize = function () {
-                if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
-                    window.location.replace("/");
-                }
-            }
-
-            if (screen.availWidth < 1000) {
-                console.log(screen.availWidth);
-                document.getElementById("creator-support").innerHTML = "Alan Gil Forza, Emily Hanlon, Lenka Huang and Julie LodereauTarana Saha | RijnMUN Secretariat";
-            }         
-            
-            function teleport() {
-                window.location.replace("./undefined");
-            }
-
-        </script>
-
         <footer>
             <div class="f_container">
                 <div class="f">
