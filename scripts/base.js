@@ -93,24 +93,88 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 });
 
 var countDownDate = new Date("Oct 12, 2024 8:00:00").getTime();
+// let doc_days = document.getElementById('days')
+// let doc_hours = document.getElementById('hours')
+// let doc_mins = document.getElementById('minutes')
+// let doc_secs = document.getElementById('seconds')
+var prev_days
+var prev_hours
+var prev_mins
 var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("days").innerHTML = "00";
-    document.getElementById("hours").innerHTML = "00";
-    document.getElementById("minutes").innerHTML = "00";
-    document.getElementById("seconds").innerHTML = "00";
-  }
+    if (days != prev_days) {
+        document.getElementById('days').style.transition = "all 0.2s linear"
+        document.getElementById('days').style.transform = "translateY(15px) rotateX(-45deg)"
+        document.getElementById('days').style.opacity = "0"
+    } 
+    if (hours != prev_hours) {
+        document.getElementById('hours').style.transition = "all 0.2s linear"
+        document.getElementById('hours').style.transform = "translateY(15px) rotateX(-45deg)"
+        document.getElementById('hours').style.opacity = "0"
+    } 
+    if (minutes != prev_mins) {
+        document.getElementById('minutes').style.transition = "all 0.2s linear"
+        document.getElementById('minutes').style.transform = "translateY(15px) rotateX(-45deg)"
+        document.getElementById('minutes').style.opacity = "0"
+    }
+    document.getElementById('seconds').style.transition = "all 0.2s linear"
+    document.getElementById('seconds').style.transform = "translateY(15px) rotateX(-45deg)"
+    document.getElementById('seconds').style.opacity = "0"
+    setTimeout(() => {
+        if (days != prev_days) {
+            document.getElementById('days').innerHTML = days
+        } 
+        if (hours != prev_hours) {
+            document.getElementById('hours').innerHTML = hours
+        } 
+        if (minutes != prev_mins) {
+            document.getElementById('minutes').innerHTML = minutes
+        }
+        document.getElementById('seconds').innerHTML = seconds
+    }, "200")
+    setTimeout(() => {
+        if (days != prev_days) {
+            document.getElementById('days').style.transform = "translateY(-15px) rotateX(45deg)"
+        } 
+        if (hours != prev_hours) {
+            document.getElementById('hours').style.transform = "translateY(-15px) rotateX(45deg)"
+        } 
+        if (minutes != prev_mins) {
+            document.getElementById('minutes').style.transform = "translateY(-15px) rotateX(45deg)"
+        }
+        document.getElementById('seconds').style.transform = "translateY(-15px) rotateX(45deg)"
+    }, "300")
+    setTimeout(() => {
+        if (days != prev_days) {
+            document.getElementById('days').style.transform = "translateY(0px) rotateX(0deg)"
+            document.getElementById('days').style.opacity = "1"
+            prev_days = days
+        } 
+        if (hours != prev_hours) {
+            document.getElementById('hours').style.transform = "translateY(0px) rotateX(0deg)"
+            document.getElementById('hours').style.opacity = "1"
+            prev_hours = hours
+        } 
+        if (minutes != prev_mins) {
+            document.getElementById('minutes').style.transform = "translateY(0px) rotateX(0deg)"
+            document.getElementById('minutes').style.opacity = "1"
+            prev_mins = minutes
+        }
+        document.getElementById('seconds').style.transform = "translateY(0px) rotateX(0deg)"
+        document.getElementById('seconds').style.opacity = "1"
+    }, "500")
+    
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById('days').innerHTML = "00";
+      document.getElementById('hours').innerHTML = "00";
+      document.getElementById('minutes').innerHTML = "00";
+      document.getElementById('seconds').innerHTML = "00";
+    }
 }, 1000);
