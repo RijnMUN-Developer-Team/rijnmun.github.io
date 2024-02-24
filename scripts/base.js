@@ -51,6 +51,15 @@ function hide_bars() {
     // }
 
     x.style.height = 0;
+    bar1.style.transition = "0.5s ease-in-out"
+    bar2.style.transition = "0.5s ease-in-out"
+    bar3.style.transition = "0.5s ease-in-out"
+    bar1.style.transform = "rotate(0deg)"
+    bar2.style.transform = "rotate(0deg)"
+    bar3.style.transform = "rotate(0deg)"
+    bar1.style.setProperty('--i', '0')
+    bar2.style.setProperty('--i', '9')
+    bar3.style.setProperty('--i', '18')
 
     setTimeout(function(){
         x.style.display = 'none'; 
