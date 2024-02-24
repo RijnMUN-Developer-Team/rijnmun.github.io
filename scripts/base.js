@@ -108,6 +108,9 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    // updates seconds here (without transformations)
+    document.getElementById("seconds").innerHTML = seconds;
+
     if (days != prev_days) {
         document.getElementById('days').style.transition = "all 0.2s linear"
         document.getElementById('days').style.transform = "translateY(15px) rotateX(-45deg)"
@@ -123,9 +126,9 @@ var x = setInterval(function() {
         document.getElementById('minutes').style.transform = "translateY(15px) rotateX(-45deg)"
         document.getElementById('minutes').style.opacity = "0"
     }
-    document.getElementById('seconds').style.transition = "all 0.2s linear"
-    document.getElementById('seconds').style.transform = "translateY(15px) rotateX(-45deg)"
-    document.getElementById('seconds').style.opacity = "0"
+    // document.getElementById('seconds').style.transition = "all 0.2s linear"
+    // document.getElementById('seconds').style.transform = "translateY(15px) rotateX(-45deg)"
+    // document.getElementById('seconds').style.opacity = "0"
     setTimeout(() => {
         if (days != prev_days) {
             if (days < 10) {
@@ -152,7 +155,7 @@ var x = setInterval(function() {
             var temp = seconds
             seconds = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
         }
-        document.getElementById('seconds').innerHTML = seconds
+        // document.getElementById('seconds').innerHTML = seconds
     }, "200")
     setTimeout(() => {
         if (days != prev_days) {
@@ -164,7 +167,7 @@ var x = setInterval(function() {
         if (minutes != prev_mins) {
             document.getElementById('minutes').style.transform = "translateY(-15px) rotateX(45deg)"
         }
-        document.getElementById('seconds').style.transform = "translateY(-15px) rotateX(45deg)"
+        // document.getElementById('seconds').style.transform = "translateY(-15px) rotateX(45deg)"
     }, "300")
     setTimeout(() => {
         if (days != prev_days) {
@@ -185,8 +188,8 @@ var x = setInterval(function() {
             // prev_mins = parseInt(toString(minutes))
             prev_mins = minutes
         }
-        document.getElementById('seconds').style.transform = "translateY(0px) rotateX(0deg)"
-        document.getElementById('seconds').style.opacity = "1"
+        // document.getElementById('seconds').style.transform = "translateY(0px) rotateX(0deg)"
+        // document.getElementById('seconds').style.opacity = "1"
     }, "500")
     
     if (distance < 0) {
