@@ -128,13 +128,29 @@ var x = setInterval(function() {
     document.getElementById('seconds').style.opacity = "0"
     setTimeout(() => {
         if (days != prev_days) {
+            if (days < 10) {
+                var temp = days
+                days = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+            }
             document.getElementById('days').innerHTML = days
         } 
         if (hours != prev_hours) {
+            if (hours < 10) {
+                var temp = hours
+                hours = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+            }
             document.getElementById('hours').innerHTML = hours
         } 
         if (minutes != prev_mins) {
+            if (minutes < 10) {
+                var temp = minutes
+                minutes = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+            }
             document.getElementById('minutes').innerHTML = minutes
+        }
+        if (seconds < 10) {
+            var temp = seconds
+            seconds = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
         }
         document.getElementById('seconds').innerHTML = seconds
     }, "200")
@@ -154,16 +170,19 @@ var x = setInterval(function() {
         if (days != prev_days) {
             document.getElementById('days').style.transform = "translateY(0px) rotateX(0deg)"
             document.getElementById('days').style.opacity = "1"
+            // prev_days = parseInt(toString(days))
             prev_days = days
         } 
         if (hours != prev_hours) {
             document.getElementById('hours').style.transform = "translateY(0px) rotateX(0deg)"
             document.getElementById('hours').style.opacity = "1"
+            // prev_hours = parseInt(toString(hours))
             prev_hours = hours
         } 
         if (minutes != prev_mins) {
             document.getElementById('minutes').style.transform = "translateY(0px) rotateX(0deg)"
             document.getElementById('minutes').style.opacity = "1"
+            // prev_mins = parseInt(toString(minutes))
             prev_mins = minutes
         }
         document.getElementById('seconds').style.transform = "translateY(0px) rotateX(0deg)"
