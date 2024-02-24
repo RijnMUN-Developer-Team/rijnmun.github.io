@@ -230,6 +230,16 @@ header {
     text-decoration: none;
 }
 
+.bar {
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: black;
+    position: relative;
+    top: calc(var(--i)*1px);
+}
+
 /* TITLE DESIGN of every page -------------------------*/
 /* old code */
 /* 

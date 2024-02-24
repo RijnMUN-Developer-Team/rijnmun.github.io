@@ -150,3 +150,10 @@ h1 {
 .socials {
     width: 90vw;
 }
+
+.logo {
+    width: 90px;
+    padding: unset;
+    padding-top: 10px;
+    padding-left: 10px;
+}
