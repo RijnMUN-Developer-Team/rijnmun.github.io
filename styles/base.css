@@ -466,3 +466,13 @@ h4 {
     width: 37px;
     height: 42px;
 }
+
+.secs, .mins, .hours {
+    display: flex;
+    justify-content: center;
+    p {
+
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 530;
+    }
+}

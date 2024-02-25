@@ -100,6 +100,10 @@ var countDownDate = new Date("Oct 12, 2024 8:00:00").getTime();
 var prev_days
 var prev_hours
 var prev_mins
+var prev_sec = '7'
+var min_prev = '7'
+var hour_prev = '7'
+var sec_li = []
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -108,95 +112,138 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    function transition(element, part) {
+        if (part == 1) {
+            document.getElementById(element).style.transition = "all 0.2s linear"
+            document.getElementById(element).style.transform = "translateY(15px) rotateX(-45deg)"
+            document.getElementById(element).style.opacity = "0"
+        } else if (part == 2) {
+            document.getElementById(element).style.transform = "translateY(-15px) rotateX(45deg)"
+        } else if (part == 3) {
+            document.getElementById(element).style.transform = "translateY(0px) rotateX(0deg)"
+            document.getElementById(element).style.opacity = "1"
+        }
+    }
+
     // updates seconds here (without transformations)
-    document.getElementById("seconds").innerHTML = seconds;
+    // document.getElementById("seconds").innerHTML = seconds;
+    if (days < 10) {
+        var temp = days
+        days = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+    }
+    if (hours < 10) {
+        var temp = hours
+        hours = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+    }
+    hour_li = hours.toString().split('')
+    if (minutes < 10) {
+        var temp = minutes
+        minutes = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+    }
+    min_li = minutes.toString().split('')
+    if (seconds < 10) {
+        var temp = seconds
+        seconds = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
+    }
+    sec_li = seconds.toString().split('')
+
+    console.log(sec_li)
+    console.log(min_li)
+    console.log(hour_li)
+    // console.log()
+    // console.log()
 
     if (days != prev_days) {
-        document.getElementById('days').style.transition = "all 0.2s linear"
-        document.getElementById('days').style.transform = "translateY(15px) rotateX(-45deg)"
-        document.getElementById('days').style.opacity = "0"
+        transition('days', 1)
     } 
     if (hours != prev_hours) {
-        document.getElementById('hours').style.transition = "all 0.2s linear"
-        document.getElementById('hours').style.transform = "translateY(15px) rotateX(-45deg)"
-        document.getElementById('hours').style.opacity = "0"
+        if (hour_li[0] != hour_prev) {
+            transition('hr1', 1)
+        }
+        transition('hr2', 1)
     } 
     if (minutes != prev_mins) {
-        document.getElementById('minutes').style.transition = "all 0.2s linear"
-        document.getElementById('minutes').style.transform = "translateY(15px) rotateX(-45deg)"
-        document.getElementById('minutes').style.opacity = "0"
+        if (min_li[0] != min_prev){
+            transition('min1', 1)
+        }
+        transition('min2', 1)
     }
-    // document.getElementById('seconds').style.transition = "all 0.2s linear"
-    // document.getElementById('seconds').style.transform = "translateY(15px) rotateX(-45deg)"
-    // document.getElementById('seconds').style.opacity = "0"
+    if (sec_li[0]  != prev_sec) {
+        transition('sec1', 1)
+    }
+    transition('sec2', 1)
+
     setTimeout(() => {
-        if (days != prev_days) {
-            if (days < 10) {
-                var temp = days
-                days = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
-            }
-            document.getElementById('days').innerHTML = days
-        } 
-        if (hours != prev_hours) {
-            if (hours < 10) {
-                var temp = hours
-                hours = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
-            }
-            document.getElementById('hours').innerHTML = hours
-        } 
-        if (minutes != prev_mins) {
-            if (minutes < 10) {
-                var temp = minutes
-                minutes = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
-            }
-            document.getElementById('minutes').innerHTML = minutes
-        }
-        if (seconds < 10) {
-            var temp = seconds
-            seconds = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
-        }
-        // document.getElementById('seconds').innerHTML = seconds
+
+        document.getElementById('days').innerHTML = days
+        document.getElementById('hr1').innerText = hour_li[0]
+        document.getElementById('hr2').innerText = hour_li[1]
+        document.getElementById('min1').innerText = min_li[0]
+        document.getElementById('min2').innerText = min_li[1]
+        document.getElementById('sec1').innerText = sec_li[0]
+        document.getElementById('sec2').innerText = sec_li[1]
     }, "200")
+
+
     setTimeout(() => {
         if (days != prev_days) {
-            document.getElementById('days').style.transform = "translateY(-15px) rotateX(45deg)"
+            transition('days', 2)
         } 
         if (hours != prev_hours) {
-            document.getElementById('hours').style.transform = "translateY(-15px) rotateX(45deg)"
+            if (hour_li[0] != hour_prev) {
+                transition('hr1', 2)
+            }
+            transition('hr2', 2)
         } 
         if (minutes != prev_mins) {
-            document.getElementById('minutes').style.transform = "translateY(-15px) rotateX(45deg)"
+            if (min_li[0] != min_prev) {
+                transition('min1', 2)
+            }
+            transition('min2', 2)
         }
-        // document.getElementById('seconds').style.transform = "translateY(-15px) rotateX(45deg)"
+        if (sec_li[0] != prev_sec) {
+            transition('sec1', 2)
+        }
+        transition('sec2', 2)
     }, "300")
+
+
     setTimeout(() => {
         if (days != prev_days) {
-            document.getElementById('days').style.transform = "translateY(0px) rotateX(0deg)"
-            document.getElementById('days').style.opacity = "1"
-            // prev_days = parseInt(toString(days))
+            transition('days', 3)
             prev_days = days
         } 
         if (hours != prev_hours) {
-            document.getElementById('hours').style.transform = "translateY(0px) rotateX(0deg)"
-            document.getElementById('hours').style.opacity = "1"
-            // prev_hours = parseInt(toString(hours))
+            if (hour_li[0] != hour_prev) {
+                transition('hr1', 3)
+            }
+            transition('hr2', 3)
+            hour_prev = hour_li[0]
             prev_hours = hours
         } 
         if (minutes != prev_mins) {
-            document.getElementById('minutes').style.transform = "translateY(0px) rotateX(0deg)"
-            document.getElementById('minutes').style.opacity = "1"
-            // prev_mins = parseInt(toString(minutes))
+            if (min_li[0] != min_prev){
+                transition('min1', 3)
+            }
+            transition('min2', 3)
+            min_prev = min_li[0]
             prev_mins = minutes
         }
-        // document.getElementById('seconds').style.transform = "translateY(0px) rotateX(0deg)"
-        // document.getElementById('seconds').style.opacity = "1"
+        if (sec_li[0] != prev_sec) {
+            transition('sec1', 3)
+            prev_sec = sec_li[0]
+        }
+        transition('sec2', 3)
     }, "500")
     
     if (distance < 0) {
-      clearInterval(x);
-      document.getElementById('days').innerHTML = "00";
-      document.getElementById('hours').innerHTML = "00";
-      document.getElementById('minutes').innerHTML = "00";
-      document.getElementById('seconds').innerHTML = "00";
+        clearInterval(x);
+        document.getElementById('days').innerHTML = "00";
+        document.getElementById('hr1').innerText = "0"
+        document.getElementById('hr2').innerText = "0"
+        document.getElementById('min1').innerText = "0"
+        document.getElementById('min2').innerText = "0"
+        document.getElementById('sec1').innerText = "0"
+        document.getElementById('sec2').innerText = "0"
     }
 }, 1000);
