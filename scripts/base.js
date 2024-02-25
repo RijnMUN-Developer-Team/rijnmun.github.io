@@ -100,15 +100,20 @@ var countDownDate = new Date("Oct 12, 2024 8:00:00").getTime();
 var prev_days
 var prev_hours
 var prev_mins
-var prev_sec = '7'
-var min_prev = '7'
-var hour_prev = '7'
+var prev_sec
+var min_prev
+var hour_prev
+var day_prev_0
+var day_prev_1
 var sec_li = []
+var min_li = []
+var hour_li = []
+var day_li = []
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))+1; // the +1 is to accomodate for Dutch time zone (UTC+1)
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -131,6 +136,7 @@ var x = setInterval(function() {
         var temp = days
         days = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
     }
+    day_li = days.toString().split('')
     if (hours < 10) {
         var temp = hours
         hours = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
@@ -154,7 +160,13 @@ var x = setInterval(function() {
     // console.log()
 
     if (days != prev_days) {
-        transition('days', 1)
+        if (day_li[0] != day_prev_0) {
+            transition('day1', 1)
+        }
+        if (day_li[1] != day_prev_1) {
+            transition('day2', 1)
+        }
+        transition('day3', 1)
     } 
     if (hours != prev_hours) {
         if (hour_li[0] != hour_prev) {
@@ -174,8 +186,9 @@ var x = setInterval(function() {
     transition('sec2', 1)
 
     setTimeout(() => {
-
-        document.getElementById('days').innerHTML = days
+        document.getElementById('day1').innerHTML = day_li[0]
+        document.getElementById('day2').innerHTML = day_li[1]
+        document.getElementById('day3').innerHTML = day_li[2]
         document.getElementById('hr1').innerText = hour_li[0]
         document.getElementById('hr2').innerText = hour_li[1]
         document.getElementById('min1').innerText = min_li[0]
@@ -187,7 +200,13 @@ var x = setInterval(function() {
 
     setTimeout(() => {
         if (days != prev_days) {
-            transition('days', 2)
+            if (day_li[0] != day_prev_0) {
+                transition('day1', 2)
+            }
+            if (day_li[1] != day_prev_1) {
+                transition('day2', 2)
+            }
+            transition('day3', 2)
         } 
         if (hours != prev_hours) {
             if (hour_li[0] != hour_prev) {
@@ -210,7 +229,15 @@ var x = setInterval(function() {
 
     setTimeout(() => {
         if (days != prev_days) {
-            transition('days', 3)
+            if (day_li[0] != day_prev_0) {
+                transition('day1', 3)
+            }
+            if (day_li[1] != day_prev_1) {
+                transition('day2', 3)
+            }
+            transition('day3', 3)
+            day_prev_0 = day_li[0]
+            day_prev_1 = day_li[1]
             prev_days = days
         } 
         if (hours != prev_hours) {
@@ -238,7 +265,9 @@ var x = setInterval(function() {
     
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById('days').innerHTML = "00";
+        document.getElementById('day1').innerHTML = "0"
+        document.getElementById('day2').innerHTML = "0"
+        document.getElementById('day3').innerHTML = "0"
         document.getElementById('hr1').innerText = "0"
         document.getElementById('hr2').innerText = "0"
         document.getElementById('min1').innerText = "0"

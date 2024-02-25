@@ -467,7 +467,7 @@ h4 {
     height: 42px;
 }
 
-.secs, .mins, .hours {
+.secs_div, .mins_div, .hours_div, .days_div {
     display: flex;
     justify-content: center;
     p {
