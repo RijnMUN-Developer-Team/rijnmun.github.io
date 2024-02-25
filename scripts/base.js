@@ -137,6 +137,9 @@ var x = setInterval(function() {
         days = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
     }
     day_li = days.toString().split('')
+    if (days < 100) {
+        day_li = ["", day_li[0], day_li[1]]
+    }
     if (hours < 10) {
         var temp = hours
         hours = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
