@@ -119,7 +119,7 @@ var x = setInterval(function() {
 
     function transition(element, part) {
         if (part == 1) {
-            document.getElementById(element).style.transition = "all 0.2s linear"
+            document.getElementById(element).style.transition = "all 0.1s linear"
             document.getElementById(element).style.transform = "translateY(15px) rotateX(-45deg)"
             document.getElementById(element).style.opacity = "0"
         } else if (part == 2) {
