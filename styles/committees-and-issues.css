@@ -72,7 +72,7 @@ h2 {
 .pc-btn a {
     width: 75px;
     background-color: var(--theme-rd);
-    /* border-radius: 10px; */
+    border-radius: 2px;
     padding: 4px;
     color: white;
     text-decoration: none;
