@@ -156,9 +156,9 @@ var x = setInterval(function() {
     }
     sec_li = seconds.toString().split('')
 
-    console.log(sec_li)
-    console.log(min_li)
-    console.log(hour_li)
+    // console.log(sec_li)
+    // console.log(min_li)
+    // console.log(hour_li)
     // console.log()
     // console.log()
 
