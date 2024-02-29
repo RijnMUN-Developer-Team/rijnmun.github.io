@@ -92,7 +92,10 @@
 
     /* makes sure bottom of banner is connected to info-div */
     margin-bottom: 0;
-
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -113,11 +116,12 @@
     display: none;
     padding: 0 3%;
     font-size: 18px;
-
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     /* < for animation > */
     height: 0;
     overflow: hidden;
-    transition: height 0.2s ease-out;
+    transition: all 0.2s ease-out;
 
     /* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
      p{
@@ -184,7 +188,7 @@
 .mailing_btn {
     width: 75px;
     background-color: var(--theme-rd);
-    /* border-radius: 10px; */
+    border-radius: 3px;
     padding: 5px;
     color: white;
     text-decoration: none;

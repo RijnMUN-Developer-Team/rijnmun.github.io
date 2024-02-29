@@ -4,14 +4,17 @@ function collapse(option) {
 
     if (cont.style.display === 'none') {
         // shows text on click
-
+        heading.style.borderBottomLeftRadius = "0"
+        heading.style.borderBottomRightRadius = "0"
         cont.style.display = 'block';
-        cont.style.height = cont.scrollHeight + "px";                  
+        cont.style.height = cont.scrollHeight + "px";       
+
             
     } else {
         // closes text on click
         cont.style.height= 0;
-        
+        heading.style.borderBottomLeftRadius = "5px"
+        heading.style.borderBottomRightRadius = "5px"
         // pausing code for animation
         setTimeout(function(){
             cont.style.display = 'none'; 
