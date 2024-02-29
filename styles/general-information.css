@@ -116,6 +116,8 @@ h2 {
 .guidelines-content .image img {
     width: 100%;
     align-self: center;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
 }
 
 /* #theme-text {
