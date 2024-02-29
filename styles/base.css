@@ -115,7 +115,10 @@ body {
 }
 
 .dropdown-content {
-    display: none;
+    /* display: none; */
+    /* height: 0; */
+    opacity: 0%;
+    transition: opacity 0.2s /*, height 0.2s */;
     position: absolute;
     margin-top: 12px;
     background-color: var(--theme-wh);
@@ -136,7 +139,7 @@ body {
     font-weight: 500;
     padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    display: none;
     text-align: left;
 }
   
@@ -147,9 +150,13 @@ body {
 
 .dropdown:hover .dropdown-content {
     z-index: 999;
-    display: block;
+    /* display: block; */
+    /* height: fit-content; */
+    opacity: 100%;
+    transition: opacity 0.2s /*, height 0.2s */;
     /* border-top: 5px solid var(--theme-rd); */
     border: none;
+    a { display: block; }
 }
 
 /* text in upper banner becomes theme-red on hover */
