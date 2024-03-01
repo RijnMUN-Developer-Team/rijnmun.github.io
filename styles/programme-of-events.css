@@ -43,8 +43,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 20px;
 
     .item {
+        /* width: 30%; for the wider .item version */
         width: 25%;
         div p {
             padding-left: 15px;
@@ -62,6 +64,9 @@
     padding: 0 1.5%;
 
     padding-left: 10px;
+
+    font-size: 20px;
+    /* font-size: 24px; for the wider .item version */
 }
 
 .container li, .container a {
