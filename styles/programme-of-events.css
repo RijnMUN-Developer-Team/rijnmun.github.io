@@ -21,6 +21,21 @@
     justify-content: center;
     /* to align with title banner  */
     padding: 2% 3% 3% 2%;
+    flex-wrap: wrap;
+
+    .disclaimer {
+        background-color: var(--light-bl);
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        #disclaimer {
+            display: flex;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 .agenda {
@@ -28,8 +43,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
     .item {
-        width: 23%;
+        width: 25%;
         div p {
             padding-left: 15px;
         }
@@ -77,6 +93,12 @@
         flex-wrap: wrap;
         justify-content: start;
         padding: 2% 0;
+
+        .disclaimer {
+            width: 90vw;
+            margin: auto;
+            padding: 0 5px;
+        }
 
         #disclaimer {
             margin: 4.5%;
