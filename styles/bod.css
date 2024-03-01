@@ -26,13 +26,15 @@
     max-width: 400px;
     text-wrap: pretty;
     margin: 10px 0;
-    color: var(--bl-txt);
+    /* color: var(--bl-txt); */
+    color: #fff;
 }
 
 .img_label.role-title {
     font-weight: 700;
     margin: 0 0 15px 0;
-    color: var(--theme-bl);
+    /* color: var(--theme-bl); */
+    color: #fff;
 }
 
 /* img.watermark {
@@ -51,17 +53,23 @@
 
     img {
         width: 350px;
+        border-radius: 10px 10px 0 0;
     }
 
     .label-content {
         display: flex;
-        width: 100%;
+        position: relative;
+        top: -4px; left: 1px;
+        width: 348px;
+        background-color: rgba(35, 86, 144, 0.75);
+        border-radius: 0 0 10px 10px;
 
         .label-text {
             width: 95%;
+            padding-left: 15px;
         }
 
-        .label-logo {
+        /* .label-logo {
             width: 25%;
             display: flex;
 
@@ -70,7 +78,7 @@
                 align-self: center;
                 justify-self: center;
             }
-        }
+        } */
     }
 
 

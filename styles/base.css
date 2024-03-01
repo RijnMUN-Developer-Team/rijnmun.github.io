@@ -408,6 +408,11 @@ h4 {
     padding-right: 7%;
 }
 
+/* .map_div iframe {
+    border-radius: 5px;
+} */
+/* This doesn't render all the borders, so I'll look into it later */
+
 /* Countdown timer */
 
 .countdown {
