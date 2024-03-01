@@ -70,10 +70,14 @@
 
 @media screen and (max-width: 800px) {
     .container {
-        width: 90vw;
+        width: 100vw;
         flex-wrap: wrap;
         justify-content: start;
-        padding-left: unset;
+        padding: 2% 0;
+
+        #disclaimer {
+            margin: 4.5%;
+        }
     }
 
     /* .sat, .sun {
@@ -86,8 +90,15 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+
         .item {
+            width: 100%;
             margin-bottom: 20px;
+
+            .info {
+                width: 95%;
+                margin-left: 15px;
+            }
         }
     }
 }
