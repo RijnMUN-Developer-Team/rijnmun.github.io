@@ -114,6 +114,8 @@
 
 .leiden img {
     width: 100%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
 }
 
 .leiden .image .label {
@@ -128,6 +130,11 @@
 .leiden .label .author {
     font-weight: normal;
     font-size: 12px;
+}
+
+.go-to-rlo .map iframe {
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
 }
 
 /* mobile support --------- */
