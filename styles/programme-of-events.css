@@ -30,6 +30,9 @@
     justify-content: space-around;
     .item {
         width: 23%;
+        div p {
+            padding-left: 15px;
+        }
     }
 }
 
