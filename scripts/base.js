@@ -92,7 +92,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     }
 });
 
-var countDownDate = new Date("Oct 12, 2024 8:00:00").getTime();
+var countDownDate = new Date("Oct 11, 2024 12:00:00").getTime();
 // let doc_days = document.getElementById('days')
 // let doc_hours = document.getElementById('hours')
 // let doc_mins = document.getElementById('minutes')
