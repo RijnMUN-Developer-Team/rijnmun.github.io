@@ -44,6 +44,8 @@
     /* margin order: top/bottom left-right */
     /* 1.5% just to align with the banner title */
     padding: 0 1.5%;
+
+    padding-left: 10px;
 }
 
 .container li, .container a {
