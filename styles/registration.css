@@ -143,6 +143,11 @@
     h2 {
         color: var(--theme-bl);
     }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0 5px;
+    }
 }
 
 /* .timeline li {

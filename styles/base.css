@@ -8,6 +8,10 @@
     --bg-rd: #B20000;
     --hov-rd: #cb2323;
 
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+
     color-scheme: light !important;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -511,8 +515,15 @@ h4 {
     right: 20px; bottom: 20px;
     opacity: 0%;
     transition: all 0.5s;
-    background-color: #444;
+
+    /* background-color: #444; */
+    background-color: var(--theme-rd);
+    /* background-color: var(--mid-bl); */
+    /* background-color: var(--hov-rd); */
+    box-shadow: 2px 2px 2px #444;
+
     border-radius: 50%;
+
     i {
         color: #fff;
         margin: 10px;

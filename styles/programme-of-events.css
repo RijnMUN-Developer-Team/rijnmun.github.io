@@ -10,9 +10,14 @@
     /* --theme-yw: #FAB800; */
     /* --theme-yw: #EBC700; */
 
+    --disclaimer-bg: #FED7E4; /* used to be light-bl */
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
+
+    --delegate: #0782DA;
+    --stoff: #02A768;
+    --general: black;
 }
 
 .container {
@@ -24,9 +29,10 @@
     flex-wrap: wrap;
 
     .disclaimer {
-        background-color: var(--light-bl);
+        background-color: var(--disclaimer-bg);
         border-radius: 5px;
         padding: 5px 10px;
+
         #disclaimer {
             display: flex;
             min-width: 70vw;
@@ -55,7 +61,8 @@
         /* width: 30%; for the wider .item version */
         width: 25%;
         div p {
-            padding-left: 15px;
+            padding-left: 7px;
+            color: var(--dark-bl);
         }
     }
 }
@@ -91,11 +98,40 @@
     /* list-style-type: none; */
     padding-left: 7px;
     list-style: none;
+    color: var(--dark-bl);
 }
 
-.time {
-    font-weight: bold;
+.info table {
+    border-collapse: separate;
+
+    /* spacing between borders: left/right top/down */
+    border-spacing: 0 10px;
+
+    td {
+
+        padding-left: 10px; /* identical to padding left of date h2 */
+
+        /* adding left borders ----------  */
+        &.stoff {
+            border-left: 5px solid var(--stoff);
+        }
+
+        &.delegates {
+            border-left: 5px solid var(--delegate);
+        }
+
+        &.general {
+            border-left: 5px solid var(--general);
+        }
+    }
+
+    .time {
+        font-weight: bold;
+        color: var(--bl-txt);
+    }
 }
+
+
 
 
 @media screen and (max-width: 800px) {
