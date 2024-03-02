@@ -279,3 +279,17 @@ var x = setInterval(function() {
         document.getElementById('sec2').innerText = "0"
     }
 }, 1000);
+
+window.addEventListener("scroll", function(){
+    if(window.scrollY < 470){
+        document.getElementById('scrollup').style.opacity = 0
+        document.getElementById('scrollup').onclick = null;
+    } else {
+        document.getElementById('scrollup').style.opacity = 1
+        document.getElementById('scrollup').setAttribute('onclick', "scroll_up()");
+    }
+});
+
+function scroll_up() {
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+}
