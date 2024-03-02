@@ -17,8 +17,8 @@
 
 .container {
     width: calc(100vw*0.96);
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     /* to align with title banner  */
     padding: 2% 3% 3% 2%;
     flex-wrap: wrap;
@@ -27,12 +27,18 @@
         background-color: var(--light-bl);
         border-radius: 5px;
         padding: 5px 10px;
-
         #disclaimer {
             display: flex;
+            min-width: 70vw;
+            max-width: 90vw;
+            align-items: center;
+
+            i {
+                margin-left: 10px;
+            }
 
             span {
-                margin-left: 10px;
+                margin-left: 15px;
             }
         }
     }
@@ -102,11 +108,19 @@
         .disclaimer {
             width: 90vw;
             margin: auto;
-            padding: 0 5px;
+            padding: 2px 2px;
         }
 
         #disclaimer {
             margin: 4.5%;
+
+            i {
+                padding-right: 5px;
+            }
+
+            span {
+                padding-left: 10px;
+            }
         }
     }
 
