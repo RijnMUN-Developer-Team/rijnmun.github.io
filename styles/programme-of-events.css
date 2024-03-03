@@ -107,8 +107,7 @@
     /* spacing between borders: left/right top/down */
     border-spacing: 0 10px;
 
-    td {
-
+    tr td {
         padding-left: 10px; /* identical to padding left of date h2 */
 
         /* adding left borders ----------  */
@@ -128,6 +127,7 @@
     .time {
         font-weight: bold;
         color: var(--bl-txt);
+        /* width: 1rem !important; */
     }
 }
 

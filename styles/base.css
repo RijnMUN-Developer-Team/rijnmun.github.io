@@ -517,7 +517,8 @@ h4 {
     transition: all 0.5s;
 
     /* background-color: #444; */
-    background-color: var(--theme-rd);
+    /* background-color: var(--theme-rd); */
+    background-color: var(--bg-rd);
     /* background-color: var(--mid-bl); */
     /* background-color: var(--hov-rd); */
     box-shadow: 2px 2px 2px #444;
