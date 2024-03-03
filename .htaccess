@@ -1,1 +1,4 @@
 ErrorDocument 404 /404.html
+Order Allow,Deny
+Deny from 192.168.*.*
+Allow from all
