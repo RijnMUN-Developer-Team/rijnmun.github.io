@@ -17,6 +17,44 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* javascript alert thing */
+
+header {
+    display: none !important;
+}
+
+footer {
+    display: none;
+}
+
+main {
+    display: none;
+}
+
+#js_alert {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    div {
+        width: 300px;
+        height: 200px;
+        background-color: #074c9c;
+        opacity: 0.95;
+        border-radius: 20px;
+        box-shadow: 0px 0px 40px #074c9c;
+        h2 {
+            padding: 10px;
+            padding-bottom: unset;
+        }
+        p {
+            padding: 10px;
+            padding-top: unset;
+        }
+    }
+}
+
 /* font test ----------------- */
 h1, h2, h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

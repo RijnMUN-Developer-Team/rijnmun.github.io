@@ -1,0 +1,129 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+
+    --bg-red: #B20000;
+    --light-rd: #FF0A5C;
+    --hov-rd: #dc2525;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* shorthand: top right bottom left */
+    margin: 2% 3% 3% 2%;
+    padding: 0 1.5% 0 1.5%;
+
+    justify-content: left;
+    width: auto;
+}
+
+h2.sub-heading {
+    color: var(--bl-txt);
+    padding-left: 15px;
+    border-left: 5px solid var(--theme-rd);
+}
+
+.section {
+    width: 100%;
+}
+
+.thank-you-text {
+    color: var(--dark-bl);
+    text-align: justify;
+}
+
+.name {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.people {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.person {
+    display: flex;
+    margin: 15px;
+    width: 48%;
+    margin: 5px;
+}
+
+.photo {
+    /* this is making the dimensions look weird */
+    /* width: 20%; */
+    /* padding-right: 15px; */
+    border: 3px solid var(--theme-bl);
+
+    /* clockwise from top left corner  */
+    border-radius: 5px 0px 0px 5px;
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+.text {
+    width: 80%;
+    padding-left: 15px;
+    background-color: var(--theme-bl);
+    color: var(--light-bl);
+
+    border-radius: 0px 5px 5px 0px;
+}
+
+.text .name {
+    font-size: 20px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.expertise {
+    font-weight: thin;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+.description {
+    font-weight: 300;
+}
+
+/* the tablet version with the guest speakers one at a time, horizontal  */
+@media screen and (max-width: 800px) and (min-width: 500px) {
+
+    .person {
+        width: 100%;
+    }
+}
+
+
+/* the phone version  */
+@media screen and (max-width: 500px) {
+
+    .person {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .photo {
+        display: flex;
+        width: 100%;
+        border-radius: 5px 5px 0px 0px;
+        justify-content: center;
+    }
+
+    .text {
+        width: 100%;
+        border-radius: 0px 0px 5px 5px;
+    }
+}

@@ -1,3 +1,12 @@
+window.onload = () => {
+    document.querySelector('header').style = "display: flex !important;";
+    document.querySelector('footer').style = "display: block !important;";    
+    document.querySelector('main').style = "display: block !important;";
+    document.getElementById('js_alert').style.display = "none";
+    // document.querySelector('header.menu').style = "display: block !important;"
+    // document.querySelector('header.logo_container').style = "display: block !important;"
+}
+
 function show_bars() {
     var x = document.getElementById("toggle");
     let bar1 = document.getElementById('bar1')
