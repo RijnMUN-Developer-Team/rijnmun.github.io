@@ -38,6 +38,8 @@ h2 {
     text-decoration: none;
     /* color: var(--bl-txt); */
     color: black;
+    padding-bottom: 8px;
+    padding-top: 2.5px;
 }
 
 .all-committees {
