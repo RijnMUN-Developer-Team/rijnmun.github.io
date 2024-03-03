@@ -285,7 +285,7 @@ window.addEventListener("scroll", function(){
         document.getElementById('scrollup').style.opacity = 0
         document.getElementById('scrollup').onclick = null;
     } else {
-        document.getElementById('scrollup').style.opacity = 1
+        document.getElementById('scrollup').style.opacity = 0.9
         document.getElementById('scrollup').setAttribute('onclick', "scroll_up()");
     }
 });

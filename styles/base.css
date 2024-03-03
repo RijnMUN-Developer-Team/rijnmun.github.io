@@ -521,9 +521,9 @@ h4 {
     background-color: var(--bg-rd);
     /* background-color: var(--mid-bl); */
     /* background-color: var(--hov-rd); */
-    box-shadow: 2px 2px 2px #444;
+    box-shadow: 3px 3px 4px #444;
 
-    border-radius: 50%;
+    border-radius: 30%;
 
     i {
         color: #fff;
