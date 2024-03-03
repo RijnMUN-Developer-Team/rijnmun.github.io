@@ -71,7 +71,8 @@ h2 {
 }
 
 .btns button:hover {
-    background-color: #c32b2b;
+    background-color: #bf3d3d;
+    cursor: pointer;
 }
 
 .page {
