@@ -293,3 +293,13 @@ window.addEventListener("scroll", function(){
 function scroll_up() {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
 }
+
+// spam email protection
+// const el33 = document.querySelectorAll(".f_container > .f > .ftr > ul > li > div.at");
+function email() {
+    let recipient="rijnmunsecretariat";
+    let at = String.fromCharCode(64);
+    let dotcom="gmail.com";
+    let mail="mailto:";
+    window.open(mail+recipient+at+dotcom);
+}
