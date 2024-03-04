@@ -1,12 +1,12 @@
+// removes the "enable javascript" alert ------------------------------
 window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
     document.getElementById('js_alert').style.display = "none";
-    // document.querySelector('header.menu').style = "display: block !important;"
-    // document.querySelector('header.logo_container').style = "display: block !important;"
 }
 
+// transition for mobile support settings ------------------------
 function show_bars() {
     var x = document.getElementById("toggle");
     let bar1 = document.getElementById('bar1')
@@ -76,6 +76,7 @@ function hide_bars() {
         
 }
 
+// h key returns to home --------------------------------
 document.onkeypress = function (key) {
     // console.log(code);
     // console.log(lock);
@@ -88,6 +89,7 @@ document.onkeypress = function (key) {
     }    
 }
 
+// change the icon to white when the system is in dark mode
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
 }
@@ -100,6 +102,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
         document.getElementById("tab_icon").href = "/images/logos/icon.ico";
     }
 });
+
+// COUNTDOWN TIMER -------------------------------------------------
 
 var countDownDate = new Date("Oct 11, 2024 12:00:00").getTime();
 // let doc_days = document.getElementById('days')
@@ -289,6 +293,7 @@ var x = setInterval(function() {
     }
 }, 1000);
 
+// go to top arrow --------------------------------------------
 window.addEventListener("scroll", function(){
     if(window.scrollY < 470){
         document.getElementById('scrollup').style.opacity = 0
@@ -303,7 +308,7 @@ function scroll_up() {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
 }
 
-// spam email protection
+// spam email protection------------------------------------
 // const el33 = document.querySelectorAll(".f_container > .f > .ftr > ul > li > div.at");
 function email() {
     let recipient="rijnmunsecretariat";

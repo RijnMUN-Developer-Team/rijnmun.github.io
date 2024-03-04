@@ -32,28 +32,34 @@ main {
 }
 
 #js_alert {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    div {
-        width: 300px;
-        height: 200px;
-        background-color: #074c9c;
-        opacity: 0.95;
-        border-radius: 20px;
-        box-shadow: 0px 0px 40px #074c9c;
-        h2 {
-            padding: 10px;
-            padding-bottom: unset;
-        }
-        p {
-            padding: 10px;
-            padding-top: unset;
-        }
+    position: absolute;
+    top: calc(50% - 110px); left: calc(50% - 200px);
+    width: 400px;
+    height: 220px;
+    background-color: var(--theme-bl);
+    /* opacity: 0.9; */
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 45px 40px #074c9c; */
+    animation: moveX 7s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate;
+    h2 {
+        text-align: center;
+        padding: 10px;
+        padding-bottom: unset;
+        color: #fff;
+    }
+    p {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        padding-top: unset;
+        color: #fff;
     }
 }
+
+/* DVD form logo style animation */
+@keyframes moveX { from { left: 0; } to { left: calc(100% - 400px); } }
+
+@keyframes moveY { from { top: 0; } to { top: calc(100% - 220px); } }
 
 /* font test ----------------- */
 h1, h2, h3 {
