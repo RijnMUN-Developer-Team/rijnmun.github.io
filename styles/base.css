@@ -40,7 +40,7 @@ main {
     /* opacity: 0.9; */
     border-radius: 20px;
     /* box-shadow: 0px 0px 45px 40px #074c9c; */
-    animation: moveX 7s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate;
+    /* animation: moveX 7s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate; */
     h2 {
         text-align: center;
         padding: 10px;
@@ -57,9 +57,9 @@ main {
 }
 
 /* DVD form logo style animation */
-@keyframes moveX { from { left: 0; } to { left: calc(100% - 400px); } }
+/* @keyframes moveX { from { left: 0; } to { left: calc(100% - 400px); } }
 
-@keyframes moveY { from { top: 0; } to { top: calc(100% - 220px); } }
+@keyframes moveY { from { top: 0; } to { top: calc(100% - 220px); } } */
 
 /* font test ----------------- */
 h1, h2, h3 {
