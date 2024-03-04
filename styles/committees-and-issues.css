@@ -33,14 +33,14 @@ h2 {
     color: var(--bl-txt);
 }
 
-.pc-txt ul li {
-    list-style-type: disc;
-    text-decoration: none;
+/* .pc-txt ul li {
+    list-style-type: disc; */
+    /* text-decoration: none; */
     /* color: var(--bl-txt); */
-    color: black;
+    /* color: black;
     padding-bottom: 8px;
     padding-top: 2.5px;
-}
+} */
 
 .all-committees {
     padding-top: 20px;
@@ -58,15 +58,20 @@ h2 {
     display: block;
 }
 
-.txt-btn-rel {
+.txt-btn-rel table {
+    width: 100%;
+}
+
+.txt-btn-rel table tr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .pc-txt {
-    width: 59%;
-    padding: 1.5%;
+    /* width: 100%; */
+    padding: 0.5%;
+    padding-left: 16px;
     /* text-align: center; */
     text-align: left;
 }
