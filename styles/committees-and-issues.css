@@ -81,6 +81,7 @@ h2 {
     margin: 1px;
     text-align: center;
     font-size: 13px;
+    cursor: pointer;
 }
 
 .pc-btn a:hover {
