@@ -32,11 +32,12 @@
     margin-left: unset;
 }
 
-.text a {
+.text a, .contacts div.at {
     color:var(--bl-txt);
+    text-decoration: underline;
 }
 
-.text a:hover {
+.text a:hover, .contacts div.at:hover {
     color: var(--theme-rd);
 }
 
