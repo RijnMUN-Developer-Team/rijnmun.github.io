@@ -582,6 +582,6 @@ h4 {
     }
 
     &:hover {
-        cursor: pointer;
+        cursor: default;
     }
 }

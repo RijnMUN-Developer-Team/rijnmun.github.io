@@ -298,9 +298,11 @@ window.addEventListener("scroll", function(){
     if(window.scrollY < 470){
         document.getElementById('scrollup').style.opacity = 0
         document.getElementById('scrollup').onclick = null;
+        document.getElementById('scrollup').style.cursor = "default"
     } else {
         document.getElementById('scrollup').style.opacity = 0.9
         document.getElementById('scrollup').setAttribute('onclick', "scroll_up()");
+        document.getElementById('scrollup').style.cursor = "pointer"
     }
 });
 
