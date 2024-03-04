@@ -21,7 +21,7 @@
 /* OLD CODE */
 .container {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     /* < alignment with title > */
     padding-left: 2%;
 }
@@ -37,8 +37,8 @@
     width: 46%;
     margin: 1%;
     padding: 1%;
-    border-left: 5px solid var(--theme-bl);
-    padding-left: 3%;
+    /* border-left: 5px solid var(--theme-bl); */
+    /* padding-left: 3%; */
 }
 
 .fees {
@@ -138,7 +138,8 @@
     width: 46%;
     margin: 1%;
     padding: 1%;
-
+    padding-left: 3%;
+    border-left: 5px solid var(--theme-bl);
     h2 {
         color: var(--theme-bl);
     }
