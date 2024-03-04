@@ -580,4 +580,8 @@ h4 {
         padding-right: 1px;
         padding-left: 1px;
     }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
