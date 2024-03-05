@@ -12,6 +12,14 @@ html {
     overflow-x: hidden;
 }
 
+.logo {
+    width: 90px;
+    /* padding: unset; */
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: auto;
+}
+
 .title {
     width: 100vw;
     overflow-wrap: normal;
@@ -154,9 +162,3 @@ h1 {
     width: 90vw;
 }
 
-.logo {
-    width: 90px;
-    padding: unset;
-    padding-top: 10px;
-    padding-left: 10px;
-}
