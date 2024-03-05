@@ -31,6 +31,10 @@ h2 {
     font-size: 15px;
     font-weight: 300;
     color: var(--bl-txt);
+
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    letter-spacing: 0.5px;
 }
 
 /* .pc-txt ul li {
@@ -69,12 +73,14 @@ h2 {
 }
 
 .pc-txt {
-    /* width: 100%; */
+    width: 100%;
     padding: 0.5%;
     padding-left: 16px;
     /* text-align: center; */
     text-align: left;
     display: flex;
+    font-weight: 600;
+
     p {
         margin: unset;
         width: 85%;
