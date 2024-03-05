@@ -105,6 +105,7 @@
 
     .sun {
         grid-area: sunday;
+        width: 75%;
     }
 
     .item {
@@ -133,14 +134,20 @@
     .key-heading h2 {
         writing-mode: vertical-rl;
         text-orientation: upright;
-        padding-left: 5px;
+        padding: 5px;
+        /* transition: all 0.2s linear; */
     }
 
     .key-cont {
         /* normally hidden till panel opened?  */
         width: 0;
 
-        transition: width 0.2s ease-in;
+        position: absolute;
+        right: -10px;
+
+        transition: all 0.4s linear;
+
+        padding-top: 10px;
 
         p {
             width: fit-content;
