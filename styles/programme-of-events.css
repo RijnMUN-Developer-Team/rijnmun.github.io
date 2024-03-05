@@ -22,8 +22,8 @@
 }
 
 .container {
-    width: calc(100vw*0.96);
-    /* display: flex; */
+    width: calc(80vw*0.96);
+    display: flex;
     /* justify-content: center; */
     /* to align with title banner  */
     padding: 2% 3% 3% 2%;
@@ -38,6 +38,7 @@
             display: flex;
             min-width: 70vw;
             max-width: 90vw;
+            /* width: 90vw; */
             align-items: center;
 
             i {
@@ -78,7 +79,7 @@
     
     grid-template-areas: 
     "friday saturday sunday"
-    "friday-info none key";
+    "friday-info none none";
 
     .fri {
         grid-area: friday;
@@ -101,38 +102,62 @@
         grid-area: sunday;
     }
 
-    .color-key {
-        justify-self: end;
-        width: 50%;
-        border-top: 3px solid var(--theme-bl);
-        padding-left: 20px;
-        
-        justify-items: end;
-        grid-area: key;
-        p {
-            width: fit-content;
-        }
-        /* p:first-of-type {
-            margin-top: unset;
-        } */
-        .stoff {
-            border-left: 5px solid var(--stoff);
-            padding-left: 15px;
-        }
-        .delegates {
-            border-left: 5px solid var(--delegate);
-            padding-left: 15px;
-        }
-        .general {
-            border-left: 5px solid var(--general);
-            padding-left: 15px;
-        }
-    }
-
     .item {
         margin-bottom: unset;
     }
 }
+
+
+.color-key {
+    justify-self: end;
+    /* display: flex; */
+    position:-webkit-sticky;
+    position: sticky;
+    top: 10px;
+    right: 10px;
+
+    width: auto;
+    height: auto;
+
+    z-index: 1000;
+
+    /* border-top: 3px solid var(--theme-bl);
+    padding-left: 20px; */
+}
+/* .key-heading {
+    padding-top: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    
+} */
+
+/* justify-items: end;
+grid-area: key; */
+/* .key-cont {
+    normally hidden till panel opened? 
+    display: none;
+    p {
+        width: fit-content;
+    }
+    p:first-of-type {
+        margin-top: unset;
+    }
+    .stoff {
+        border-left: 5px solid var(--stoff);
+        padding-left: 15px;
+    }
+    .delegates {
+        border-left: 5px solid var(--delegate);
+        padding-left: 15px;
+    }
+    .general {
+        border-left: 5px solid var(--general);
+        padding-left: 15px;
+    }
+} */
 
 .container h2 {
     color: var(--theme-bl);
@@ -230,6 +255,15 @@
         text-align: left;
     } */
 
+    .color-key {
+        width: none;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 50px;
+        right: 10px;
+        z-index: 2;
+    }
+
     .agenda {
         width: 100%;
         display: flex;
@@ -244,8 +278,6 @@
                 margin-left: 15px;
             }
         }
-        .color-key {
-            width: calc(100% - 20px);
-        }
+        
     }
 }
