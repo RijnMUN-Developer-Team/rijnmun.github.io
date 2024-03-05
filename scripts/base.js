@@ -3,7 +3,7 @@ window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
-    document.getElementById('js_alert').style.display = "none";
+    document.getElementById('js_alert').style = "display: none !important;";
 }
 
 // transition for mobile support settings ------------------------
