@@ -66,14 +66,14 @@ h3 {
 .message p {
     margin-top: unset;
     color: var(--bl-txt);
-    font-size: 19px;
+    font-size: 18px;
     text-align: center;
     /* font-weight: 500; */
-    line-height: 30px;
+    line-height: 28px;
 
     /* for open sans ----  */
     font-weight: 400;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
 }
 
 .message {
