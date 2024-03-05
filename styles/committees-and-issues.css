@@ -74,6 +74,11 @@ h2 {
     padding-left: 16px;
     /* text-align: center; */
     text-align: left;
+    display: flex;
+    p {
+        margin: unset;
+        width: 85%;
+    }
 }
 
 .pc-btn a {
@@ -86,6 +91,7 @@ h2 {
     margin: 1px;
     text-align: center;
     font-size: 13px;
+    align-self: start;
     cursor: pointer;
 }
 
@@ -146,6 +152,10 @@ h2 {
     .all-committees {
         padding-left: unset;
         margin-left: unset;
+    }
+
+    .pc-txt p {
+        width: 95%;
     }
 
 }
