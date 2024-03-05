@@ -22,12 +22,16 @@
 }
 
 .container {
-    width: calc(80vw*0.96);
+    /* width: calc(80vw*0.96); */
+    width: calc(100vw * 0.94);
     display: flex;
     /* justify-content: center; */
     /* to align with title banner  */
     padding: 2% 3% 3% 2%;
     flex-wrap: wrap;
+
+    /* don't remove this; the position relative does the sticky bar magic and don't question it ----  */
+    position: relative;
 
     .disclaimer {
         background-color: var(--disclaimer-bg);
@@ -70,6 +74,7 @@
 } */
 
 .agenda {
+    /* width: 90vw; */
     display: grid;
     grid-template-columns: repeat(3, 0.9fr);
     grid-template-rows: 1.9fr 0.9fr;
@@ -107,57 +112,58 @@
     }
 }
 
+.color-key-parent {
+    width: fit-content;
+    height: calc(100% - 100px); /*how much subtracted controls how far down the sticky can go*/
+    top: 30px;
+    right: 5px;
+    position: absolute;
+}
 
 .color-key {
-    justify-self: end;
-    /* display: flex; */
     position:-webkit-sticky;
     position: sticky;
     top: 10px;
-    right: 10px;
+    right: 0px;
+    bottom: 30px;
 
-    width: auto;
-    height: auto;
+    z-index: 2;
+    cursor: pointer;
 
-    z-index: 1000;
+    .key-heading h2 {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-left: 5px;
+    }
 
-    /* border-top: 3px solid var(--theme-bl);
-    padding-left: 20px; */
+    .key-cont {
+        /* normally hidden till panel opened?  */
+        width: 0;
+
+        transition: width 0.2s ease-in;
+
+        p {
+            width: fit-content;
+        }
+
+        p:first-of-type {
+            margin-top: unset;
+        }
+        .stoff {
+            border-left: 5px solid var(--stoff);
+            padding-left: 15px;
+        }
+        .delegates {
+            border-left: 5px solid var(--delegate);
+            padding-left: 15px;
+        }
+        .general {
+            border-left: 5px solid var(--general);
+            padding-left: 15px;
+        }
+    }
 }
-/* .key-heading {
-    padding-top: 10px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-    
-} */
 
-/* justify-items: end;
-grid-area: key; */
-/* .key-cont {
-    normally hidden till panel opened? 
-    display: none;
-    p {
-        width: fit-content;
-    }
-    p:first-of-type {
-        margin-top: unset;
-    }
-    .stoff {
-        border-left: 5px solid var(--stoff);
-        padding-left: 15px;
-    }
-    .delegates {
-        border-left: 5px solid var(--delegate);
-        padding-left: 15px;
-    }
-    .general {
-        border-left: 5px solid var(--general);
-        padding-left: 15px;
-    }
-} */
 
 .container h2 {
     color: var(--theme-bl);
@@ -255,14 +261,14 @@ grid-area: key; */
         text-align: left;
     } */
 
-    .color-key {
+    /* .color-key {
         width: none;
         position: sticky;
         position: -webkit-sticky;
         top: 50px;
         right: 10px;
         z-index: 2;
-    }
+    } */
 
     .agenda {
         width: 100%;
@@ -278,6 +284,10 @@ grid-area: key; */
                 margin-left: 15px;
             }
         }
-        
+
+        /* .color-key {
+            width: 100%;
+        }
+         */
     }
 }

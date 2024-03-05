@@ -1,3 +1,22 @@
+function openKey() {
+    let keyTitle = document.getElementsByClassName("key-heading")[0];
+    let cont = document.getElementsByClassName("key-cont")[0];
+    
+    if (cont.style.display == "none") {
+        // open
+        cont.style.display = "block";
+        cont.style.width = cont.scrollWidth + "px";
+
+    } else {
+        //close
+        cont.style.width = 0;
+
+        setTimeout(function(){
+            cont.style.display = 'none'; 
+        }, 200, cont)
+    }
+}
+
 function panel() {
     let cont = document.getElementsByClassName("key-cont")[0];
     let bar1 = document.getElementById('bar1')
