@@ -360,8 +360,22 @@
          */
         .col-key-parent {
             position: relative;
-            left: 5px; bottom: 10px;
+            left: 0px; bottom: 10px;
             width: 70vw;
+            background-color: #fff;
+            .color-key {
+                border: unset;
+                padding-left: unset;
+                h2 {
+                    margin-left: unset;
+                }
+                p {
+                    margin-left: 12px;
+                }
+            }
+            i {
+                display: none;
+            }
         }
     }
 }
