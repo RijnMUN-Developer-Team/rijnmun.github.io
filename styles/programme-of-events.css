@@ -83,7 +83,7 @@
     
     grid-template-areas: 
     "friday saturday sunday"
-    "friday-info none key";
+    "friday-info party-info key";
 
     .fri {
         grid-area: friday;
@@ -93,6 +93,9 @@
         grid-area: friday-info;
         margin-left: 10px;
         width: 80%;
+
+        text-align: justify;
+
         p {
             margin-top: unset;
         }
@@ -100,6 +103,13 @@
 
     .sat {
         grid-area: saturday;
+    }
+
+    .sat-party-info {
+        grid-area: party-info;
+        text-align: justify;
+        width: 80%;
+        margin-left: 10px;
     }
 
     .sun {
