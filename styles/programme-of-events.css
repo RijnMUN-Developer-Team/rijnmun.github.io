@@ -276,6 +276,10 @@
     }
 }
 
+#scrollup {
+    display: none !important;
+}
+
 @media screen and (max-width: 800px) {
     .container {
         width: 90vw;

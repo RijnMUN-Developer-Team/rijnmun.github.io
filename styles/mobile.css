@@ -168,30 +168,3 @@ h1 {
 
 
 /* scrollup button */
-#scrollup {
-    display: block;
-    position: fixed;
-    right: 20px; bottom: 20px;
-    opacity: 0%;
-    transition: all 0.5s;
-
-    /* background-color: #444; */
-    /* background-color: var(--theme-rd); */
-    background-color: var(--bg-rd);
-    /* background-color: var(--mid-bl); */
-    /* background-color: var(--hov-rd); */
-    box-shadow: 3px 3px 4px #444;
-
-    border-radius: 30%;
-
-    i {
-        color: #fff;
-        margin: 10px;
-        padding-right: 1px;
-        padding-left: 1px;
-    }
-
-    &:hover {
-        cursor: default;
-    }
-}
