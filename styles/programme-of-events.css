@@ -106,36 +106,44 @@
         grid-area: sunday;
     }
 
-    .color-key {
-        
+    .col-key-parent {
         position: sticky;
         right: 0; bottom: 10px;
         justify-self: end;
-        width: 50%;
-        border: 3px solid var(--theme-bl);
-        border-radius: 10px;
-        padding-left: 20px;
-        background-color: whitesmoke;
-        
-        justify-items: end;
         grid-area: key;
-        p {
-            width: fit-content;
+        width: 60%;
+        .color-key {
+            border: 3px solid var(--theme-bl);
+            border-radius: 10px;
+            padding-left: 20px;
+            background-color: whitesmoke;
+
+            justify-items: end;
+            grid-area: key;
+            p {
+                width: fit-content;
+            }
+
+            /* p:first-of-type {
+                margin-top: unset;
+            } */
+            .stoff {
+                border-left: 5px solid var(--stoff);
+                padding-left: 15px;
+            }
+            .delegates {
+                border-left: 5px solid var(--delegate);
+                padding-left: 15px;
+            }
+            .general {
+                border-left: 5px solid var(--general);
+                padding-left: 15px;
+            }
         }
-        /* p:first-of-type {
-            margin-top: unset;
-        } */
-        .stoff {
-            border-left: 5px solid var(--stoff);
-            padding-left: 15px;
-        }
-        .delegates {
-            border-left: 5px solid var(--delegate);
-            padding-left: 15px;
-        }
-        .general {
-            border-left: 5px solid var(--general);
-            padding-left: 15px;
+        i {
+            position: absolute;
+            right: 10px; bottom: 10px;
+            z-index: 100;
         }
     }
 
@@ -270,26 +278,29 @@
 
 @media screen and (max-width: 800px) {
     .container {
-        width: 100vw;
+        width: 90vw;
         flex-wrap: wrap;
         justify-content: start;
-        padding: 2% 0;
+        padding: 0;
 
         .disclaimer {
             width: 90vw;
-            margin: auto;
-            padding: 2px 2px;
+            /* margin: auto; */
+            padding: 2px;
+            margin-left: 10px;
+            margin-right: unset;
+            margin-top: 10px;
         }
 
         #disclaimer {
-            margin: 4.5%;
-
+            /* margin: 4.5%; */
             i {
                 padding-right: 5px;
             }
 
             span {
                 padding-left: 10px;
+                width: 60vw;
             }
         }
     }
@@ -328,5 +339,10 @@
             width: 100%;
         }
          */
+        .col-key-parent {
+            position: relative;
+            left: 5px; bottom: 10px;
+            width: 70vw;
+        }
     }
 }

@@ -295,14 +295,23 @@ var x = setInterval(function() {
 
 // go to top arrow --------------------------------------------
 window.addEventListener("scroll", function(){
+    console.log(window.scrollY)
     if(window.scrollY < 470){
-        document.getElementById('scrollup').style.opacity = 0
-        document.getElementById('scrollup').onclick = null;
-        document.getElementById('scrollup').style.cursor = "default"
-    } else {
-        document.getElementById('scrollup').style.opacity = 0.9
-        document.getElementById('scrollup').setAttribute('onclick', "scroll_up()");
-        document.getElementById('scrollup').style.cursor = "pointer"
+        let scroll = document.getElementById('scrollup')
+        scroll.style.opacity = 0
+        scroll.onclick = null;
+        scroll.style.cursor = "default"
+        // setTimeout(function() {
+            // scroll.style = "display: none;"
+        // }, 500)
+    } else if(window.scrollY > 470) {
+        let scroll = document.getElementById('scrollup')
+        // scroll.style = "display: block;"
+        // setTimeout(function(){
+        scroll.style.opacity = 0.9
+        scroll.setAttribute('onclick', "scroll_up()");
+        scroll.style.cursor = "pointer"
+        // }, 10)
     }
 });
 
