@@ -295,7 +295,6 @@ var x = setInterval(function() {
 
 // go to top arrow --------------------------------------------
 window.addEventListener("scroll", function(){
-    console.log(window.scrollY)
     if(window.scrollY < 470){
         let scroll = document.getElementById('scrollup')
         scroll.style.opacity = 0
