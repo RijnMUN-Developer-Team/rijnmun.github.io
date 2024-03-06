@@ -112,11 +112,12 @@
         justify-self: end;
         grid-area: key;
         width: 60%;
+
         .color-key {
             border: 3px solid var(--theme-bl);
             border-radius: 10px;
             padding-left: 20px;
-            background-color: whitesmoke;
+            background-color: white;
 
             justify-items: end;
             grid-area: key;
