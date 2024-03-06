@@ -23,7 +23,7 @@
 
 .container {
     /* width: calc(80vw*0.96); */
-    width: calc(100vw * 0.94);
+    width: calc(100vw * 0.96);
     display: flex;
     /* justify-content: center; */
     /* to align with title banner  */
@@ -40,9 +40,9 @@
 
         #disclaimer {
             display: flex;
-            min-width: 70vw;
-            max-width: 90vw;
-            /* width: 90vw; */
+            /* min-width: 70vw; */
+            /* max-width: 90vw; */
+            width: calc(100vw * 0.94);
             align-items: center;
 
             i {
@@ -74,17 +74,16 @@
 } */
 
 .agenda {
-    /* width: 90vw; */
     display: grid;
     grid-template-columns: repeat(3, 0.9fr);
     grid-template-rows: 1.9fr 0.9fr;
 
-    grid-column-gap: 30px;
+    grid-column-gap: 40px;
     grid-row-gap: 15px;
     
     grid-template-areas: 
     "friday saturday sunday"
-    "friday-info none none";
+    "friday-info none key";
 
     .fri {
         grid-area: friday;
@@ -93,7 +92,7 @@
     .fri-optional-info {
         grid-area: friday-info;
         margin-left: 10px;
-
+        width: 80%;
         p {
             margin-top: unset;
         }
@@ -105,17 +104,50 @@
 
     .sun {
         grid-area: sunday;
-        width: 75%;
+    }
+
+    .color-key {
+        
+        position: sticky;
+        right: 0; bottom: 10px;
+        justify-self: end;
+        width: 50%;
+        border: 3px solid var(--theme-bl);
+        border-radius: 10px;
+        padding-left: 20px;
+        background-color: whitesmoke;
+        
+        justify-items: end;
+        grid-area: key;
+        p {
+            width: fit-content;
+        }
+        /* p:first-of-type {
+            margin-top: unset;
+        } */
+        .stoff {
+            border-left: 5px solid var(--stoff);
+            padding-left: 15px;
+        }
+        .delegates {
+            border-left: 5px solid var(--delegate);
+            padding-left: 15px;
+        }
+        .general {
+            border-left: 5px solid var(--general);
+            padding-left: 15px;
+        }
     }
 
     .item {
         margin-bottom: unset;
+        width: 80%;
     }
 }
-
+/* 
 .color-key-parent {
     width: fit-content;
-    height: calc(100% - 100px); /*how much subtracted controls how far down the sticky can go*/
+    height: calc(100% - 100px);
     top: 30px;
     right: 5px;
     position: absolute;
@@ -135,11 +167,11 @@
         writing-mode: vertical-rl;
         text-orientation: upright;
         padding: 5px;
-        /* transition: all 0.2s linear; */
+        transition: all 0.2s linear;
     }
 
     .key-cont {
-        /* normally hidden till panel opened?  */
+        normally hidden till panel opened? 
         width: 0;
 
         position: absolute;
@@ -169,7 +201,7 @@
             padding-left: 15px;
         }
     }
-}
+} */
 
 
 .container h2 {
