@@ -30,25 +30,25 @@ h3 {
     justify-content: end;
     width: fit-content;    
     margin-left: 1.5%;
+}
 
-    a {
-        padding: 10px;
-        margin: 5px;
-        text-decoration: none;
-        border-radius: 3px;
-        font-size: 14px;
-        font-weight: 600px;
+.btns a {
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600px;
 
-        background-color: var(--theme-bl);
-        color: var(--theme-wh);
-        border: 2px solid var(--theme-wh);
-    }
+    background-color: var(--theme-bl);
+    color: var(--theme-wh);
+    border: 2px solid var(--theme-wh);
+}
 
-    a:hover {
-        border: 2px solid #EBFAFF;
-        color: var(--theme-bl);
-        background: #EBFAFF;
-    }
+.btns a:hover {
+    border: 2px solid #EBFAFF;
+    color: var(--theme-bl);
+    background: #EBFAFF;
 }
 
 /* Mobile support */
@@ -165,43 +165,41 @@ h3 {
 .sidebar .news {
     padding-bottom: 0;
     margin: 15px 0;
-
-    .news-title {
-        margin: 0px;
-        font-weight: 600;
-        font-style: italic;
-        /* letter-spacing: 0.5px; */
-        /* text-wrap: balance; */ /* <- this type of wrapping is also kinda nice tho ngl */
-        text-wrap: stable; 
-    }
-
-    .news-date {
-        text-align: right;
-        margin: 0px;
-        font-weight: 400;
-        font-size: 12px;
-    }
-
-    .news-details {
-
-        font-size: 14px;
-        margin: 5px 0;
-        color: var(--news-text);
-
-        a {
-            color: inherit;
-        }
-
-        a:hover {
-            color: var(--theme-rd);
-        }
-    }
 }
 
-.news-socials {
-    p {
-        margin: 10px 0;
-    }
+.sidebar .news .news-title {
+    margin: 0px;
+    font-weight: 600;
+    font-style: italic;
+    /* letter-spacing: 0.5px; */
+    /* text-wrap: balance; */ /* <- this type of wrapping is also kinda nice tho ngl */
+    text-wrap: stable; 
+}
+
+.sidebar .news .news-date {
+    text-align: right;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.sidebar .news .news-details {
+    font-size: 14px;
+    margin: 5px 0;
+    color: var(--news-text);
+}
+
+.sidebar .news .news-details a {
+    color: inherit;
+}
+
+.sidebar .news .news-details a:hover {
+    color: var(--theme-rd);
+}
+
+
+.news-socials p {
+    margin: 10px 0;
 }
 
 .side_insta {

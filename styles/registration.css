@@ -41,51 +41,51 @@
     /* padding-left: 3%; */
 }
 
-.fees {
-    h2 {
-        color: var(--theme-bl);
-        margin-bottom: 0;
-    }
-
-    li {
-        list-style: none;
-        line-height: 25px;
-        font-weight: normal;
-        color: black;
-    }
-
-    table tr td {
-        padding-right: 20px;
-    }
-
-    span {
-        font-weight: bold;
-        color: var(--delegate);
-        padding: 0 10px 0;
-    }
-    
-    .delegate {
-        border-left: 5px solid var(--delegate);
-    }
-    
-    .stoff {
-        border-left: 5px solid var(--stoff);
-        
-    }
-    
-    .director {
-        border-left: 5px solid var(--theme-rd);
-    }
-
-    .other {
-        border-left: 5px solid black;
-        margin-bottom: 10px
-    }
-
-    .fee-info {
-        font-size: 14px;
-    }
+/* FEES CLASS ----------------------- */
+.fees h2 {
+    color: var(--theme-bl);
+    margin-bottom: 0;
 }
+
+.fees li {
+    list-style: none;
+    line-height: 25px;
+    font-weight: normal;
+    color: black;
+}
+
+.fees table tr td {
+    padding-right: 20px;
+}
+
+.fees span {
+    font-weight: bold;
+    color: var(--delegate);
+    padding: 0 10px 0;
+}
+
+.fees .delegate {
+    border-left: 5px solid var(--delegate);
+}
+
+.fees .stoff {
+    border-left: 5px solid var(--stoff);
+    
+}
+
+.fees .director {
+    border-left: 5px solid var(--theme-rd);
+}
+
+.fees .other {
+    border-left: 5px solid black;
+    margin-bottom: 10px
+}
+
+.fees .fee-info {
+    font-size: 14px;
+}
+
 
 /* BANNER COLOURS HERE ------ */
 .collapsible-heading {
@@ -169,27 +169,26 @@
     color: var(--bl-txt);
     font-weight: bold;
     padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 10px;  
+}
 
-    &.stoff {
-        border-left: solid 5px var(--stoff);
+.time.stoff {
+    border-left: solid 5px var(--stoff);
 
-    }
+}
 
-    &.delegate {
-        /* color: var(--delegate); */
-        border-left: solid 5px var(--delegate);
-    }
-    
-    &.deadline {
-        /* color: var(--theme-rd); */
-        border-left: solid 5px var(--theme-rd);
-    }
-    
-    &.other {
-        border-left: solid 5px black;
-    }
-    
+.time.delegate {
+    /* color: var(--delegate); */
+    border-left: solid 5px var(--delegate);
+}
+
+.time.deadline {
+    /* color: var(--theme-rd); */
+    border-left: solid 5px var(--theme-rd);
+}
+
+.time.other {
+    border-left: solid 5px black;
 }
 
 .mailings {

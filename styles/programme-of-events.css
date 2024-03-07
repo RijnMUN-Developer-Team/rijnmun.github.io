@@ -32,28 +32,28 @@
 
     /* don't remove this; the position relative does the sticky bar magic and don't question it ----  */
     position: relative;
+}
 
-    .disclaimer {
-        background-color: var(--disclaimer-bg);
-        border-radius: 5px;
-        padding: 5px 10px;
+.container .disclaimer {
+    background-color: var(--disclaimer-bg);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
 
-        #disclaimer {
-            display: flex;
-            /* min-width: 70vw; */
-            /* max-width: 90vw; */
-            width: calc(100vw * 0.94);
-            align-items: center;
+.container .disclaimer #disclaimer {
+    display: flex;
+    /* min-width: 70vw; */
+    /* max-width: 90vw; */
+    width: calc(100vw * 0.94);
+    align-items: center;
+}
 
-            i {
-                margin-left: 10px;
-            }
+.container .disclaimer #disclaimer i {
+    margin-left: 10px;
+}
 
-            span {
-                margin-left: 15px;
-            }
-        }
-    }
+.container .disclaimer #disclaimer span {
+    margin-left: 15px;
 }
 
 /* display flex version ---------------  */
@@ -84,89 +84,90 @@
     grid-template-areas: 
     "friday saturday sunday"
     "friday-info party-info key";
-
-    .fri {
-        grid-area: friday;
-    }
-
-    .fri-optional-info {
-        grid-area: friday-info;
-        margin-left: 10px;
-        width: 80%;
-
-        text-align: justify;
-
-        p {
-            margin-top: unset;
-        }
-    }
-
-    .sat {
-        grid-area: saturday;
-    }
-
-    .sat-party-info {
-        grid-area: party-info;
-        text-align: justify;
-        width: 80%;
-        margin-left: 10px;
-    }
-
-    .sun {
-        grid-area: sunday;
-    }
-
-    .col-key-parent {
-        position: sticky;
-        right: 0; bottom: 10px;
-        justify-self: end;
-        grid-area: key;
-        width: 60%;
-
-        .color-key {
-            border: 3px solid var(--theme-bl);
-            border-radius: 10px;
-            padding-left: 20px;
-            background-color: white;
-
-            justify-items: end;
-            grid-area: key;
-            p {
-                width: fit-content;
-            }
-
-            /* p:first-of-type {
-                margin-top: unset;
-            } */
-            .stoff {
-                border-left: 5px solid var(--stoff);
-                padding-left: 15px;
-            }
-            .delegates {
-                border-left: 5px solid var(--delegate);
-                padding-left: 15px;
-            }
-            .general {
-                border-left: 5px solid var(--general);
-                padding-left: 15px;
-            }
-        }
-        i {
-            position: absolute;
-            right: 10px; bottom: 10px;
-            z-index: 100;
-        }
-
-        #eye {
-            cursor: pointer;
-        }
-    }
-
-    .item {
-        margin-bottom: unset;
-        width: 80%;
-    }
 }
+
+.agenda .fri {
+    grid-area: friday;
+}
+
+.agenda .fri-optional-info {
+    grid-area: friday-info;
+    margin-left: 10px;
+    width: 80%;
+
+    text-align: justify;
+}
+
+.agenda .fri-optional-info p {
+    margin-top: unset;
+}
+    
+
+.agenda .sat {
+    grid-area: saturday;
+}
+
+.agenda .sat-party-info {
+    grid-area: party-info;
+    text-align: justify;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.agenda .sun {
+    grid-area: sunday;
+}
+
+.agenda .col-key-parent {
+    position: sticky;
+    right: 0; bottom: 10px;
+    justify-self: end;
+    grid-area: key;
+    width: 60%;
+}
+
+.agenda .col-key-parent .color-key {
+    border: 3px solid var(--theme-bl);
+    border-radius: 10px;
+    padding-left: 20px;
+    background-color: white;
+
+    justify-items: end;
+    grid-area: key;
+}
+
+.agenda .col-key-parent .color-key p {
+    width: fit-content;
+}
+
+.agenda .col-key-parent .color-key .stoff {
+    border-left: 5px solid var(--stoff);
+    padding-left: 15px;
+}
+.agenda .col-key-parent .color-key .delegates {
+    border-left: 5px solid var(--delegate);
+    padding-left: 15px;
+}
+.agenda .col-key-parent .color-key .general {
+    border-left: 5px solid var(--general);
+    padding-left: 15px;
+}
+        
+.agenda .col-key-parent i {
+    position: absolute;
+    right: 10px; bottom: 10px;
+    z-index: 100;
+}
+
+.agenda .col-key-parent #eye {
+    cursor: pointer;
+}
+
+.agenda .item {
+    margin-bottom: unset;
+    width: 80%;
+}
+
 /* 
 .color-key-parent {
     width: fit-content;
@@ -267,28 +268,30 @@
     /* spacing between borders: left/right top/down */
     border-spacing: 0 10px;
 
-    tr td {
-        padding-left: 10px; /* identical to padding left of date h2 */
+    
+}
 
-        /* adding left borders ----------  */
-        &.stoff {
-            border-left: 5px solid var(--stoff);
-        }
+.info table tr td {
+    padding-left: 10px; /* identical to padding left of date h2 */
+}
 
-        &.delegates {
-            border-left: 5px solid var(--delegate);
-        }
+/* adding left borders ----------  */
+.info table tr td.stoff {
+    border-left: 5px solid var(--stoff);
+}
 
-        &.general {
-            border-left: 5px solid var(--general);
-        }
-    }
+.info table tr td.delegates {
+    border-left: 5px solid var(--delegate);
+}
 
-    .time {
-        font-weight: bold;
-        color: var(--bl-txt);
-        /* width: 1rem !important; */
-    }
+.info table tr td.general {
+    border-left: 5px solid var(--general);
+}
+
+.info table tr td.time {
+    font-weight: bold;
+    color: var(--bl-txt);
+    /* width: 1rem !important; */
 }
 
 #scrollup {
@@ -301,81 +304,66 @@
         flex-wrap: wrap;
         justify-content: start;
         padding: 0;
-
-        .disclaimer {
-            width: 90vw;
-            /* margin: auto; */
-            padding: 2px;
-            margin-left: 10px;
-            margin-right: unset;
-            margin-top: 10px;
-        }
-
-        #disclaimer {
-            /* margin: 4.5%; */
-            i {
-                padding-right: 5px;
-            }
-
-            span {
-                padding-left: 10px;
-                width: 60vw;
-            }
-        }
     }
 
-    /* .sat, .sun {
-        width: 98%;
-        margin: 1%;
-        text-align: left;
-    } */
+    .container .disclaimer {
+        width: 90vw;
+        /* margin: auto; */
+        padding: 2px;
+        margin-left: 10px;
+        margin-right: unset;
+        margin-top: 10px;
+    }
 
-    /* .color-key {
-        width: none;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 50px;
-        right: 10px;
-        z-index: 2;
-    } */
+    .container #disclaimer i {
+        padding-right: 5px;
+    }
+
+    .container #disclaimer span {
+        padding-left: 10px;
+        width: 60vw;
+    }
 
     .agenda {
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
 
-        .item {
-            width: 100%;
-            margin-bottom: 20px;
+    .agenda .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-            .info {
-                width: 95%;
-                margin-left: 15px;
-            }
-        }
+    .agenda .item .info {
+        width: 95%;
+        margin-left: 15px;
+    }
+        
 
         /* .color-key {
             width: 100%;
         }
          */
-        .col-key-parent {
-            position: relative;
-            left: 0px; bottom: 10px;
-            width: 70vw;
-            background-color: #fff;
-            .color-key {
-                border: unset;
-                padding-left: unset;
-                h2 {
-                    margin-left: unset;
-                }
-                p {
-                    margin-left: 12px;
-                }
-            }
-            i {
-                display: none;
-            }
-        }
+    .agenda .col-key-parent {
+        position: relative;
+        left: 0px; bottom: 10px;
+        width: 70vw;
+        background-color: #fff;
     }
+
+    .agenda .col-key-parent .color-key {
+        border: unset;
+        padding-left: unset;
+    }
+    .agenda .col-key-parent .color-key h2 {
+        margin-left: unset;
+    }
+    .agenda .col-key-parent .color-keyp {
+        margin-left: 12px;
+    }
+            
+    .agenda i {
+        display: none;
+    } 
 }

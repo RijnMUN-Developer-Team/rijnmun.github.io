@@ -102,10 +102,12 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
 
+    
+}
+
+.menu a {
     /* for open sans -----  */
-    a {
-        font-weight: 700;
-    }
+    font-weight: 700;
 }
 
 .menu a.normal, a.current {
@@ -575,14 +577,17 @@ h4 {
 
     border-radius: 30%;
 
-    i {
-        color: #fff;
-        margin: 10px;
-        padding-right: 1px;
-        padding-left: 1px;
-    }
-
-    &:hover {
-        cursor: default;
-    }
+    
 }
+
+#scrollup:hover {
+    cursor: default;
+}
+
+#scrollup i {
+    color: #fff;
+    margin: 10px;
+    padding-right: 1px;
+    padding-left: 1px;
+}
+

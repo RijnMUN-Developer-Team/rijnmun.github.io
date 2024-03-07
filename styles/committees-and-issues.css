@@ -81,10 +81,12 @@ h2 {
     display: flex;
     font-weight: 600;
 
-    p {
-        margin: unset;
-        width: 85%;
-    }
+    
+}
+
+.pc-txt p {
+    margin: unset;
+    width: 85%;
 }
 
 .pc-btn a {
