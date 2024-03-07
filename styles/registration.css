@@ -47,12 +47,12 @@
         margin-bottom: 0;
     }
 
-    li {
+    /* li {
         list-style: none;
         line-height: 25px;
         font-weight: normal;
         color: black;
-    }
+    } */
 
     span {
         font-weight: bold;
