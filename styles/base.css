@@ -560,7 +560,7 @@ h4 {
 
 /* scrollup button */
 #scrollup {
-    /* display: block; */
+    display: block;
     position: fixed;
     right: 20px; bottom: 20px;
     opacity: 0%;
