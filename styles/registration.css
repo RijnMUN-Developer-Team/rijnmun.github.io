@@ -47,12 +47,16 @@
         margin-bottom: 0;
     }
 
-    /* li {
+    li {
         list-style: none;
         line-height: 25px;
         font-weight: normal;
         color: black;
-    } */
+    }
+
+    table tr td {
+        padding-right: 20px;
+    }
 
     span {
         font-weight: bold;
