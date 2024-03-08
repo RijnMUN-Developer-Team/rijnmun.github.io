@@ -133,13 +133,22 @@
     height: 0;
     overflow: hidden;
     transition: all 0.2s ease-out;
+}
 
-    /* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
-     p{
-        color: var(var(--dark-bl));
-        font-size: 16px;
-        text-align: justify;
-    }
+/* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
+.collapsible-content p{
+    color: var(--dark-bl);
+    font-size: 16px;
+    text-align: justify;
+}
+
+.collapsible-content a {
+    color: inherit;
+    font-weight: inherit;
+}
+
+.collapsible-content a:hover {
+    color: var(--theme-rd);
 }
 
 /* < timeline  ------------------> */
