@@ -54,6 +54,7 @@ h1 {
     /* padding-right: 10px; */
     color: black;
     /* padding-bottom: 10px; */
+    margin: unset;
     padding: 10px;
 }
 
