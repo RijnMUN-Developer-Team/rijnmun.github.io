@@ -1,0 +1,24 @@
+{
+    "short-name": "RijnMUN",
+    "name": "Rijnlands Lyceum Oegstgeest Model United Nations",
+    "icons": [
+        {
+            "src": "/mskbl_icon_192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/mskbl_icon_512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "id": "/index",
+    "start_url": "/index",
+    "display" : "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#235690",
+
+}
