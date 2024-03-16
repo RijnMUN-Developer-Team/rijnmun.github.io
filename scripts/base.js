@@ -91,15 +91,15 @@ document.onkeypress = function (key) {
 
 // change the icon to white when the system is in dark mode
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.getElementById("tab_icon").href = "/icon_white.ico";
+    document.getElementById("tab_icon").href = "/favicon_white.ico";
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     const newColorScheme = event.matches ? "dark" : "light";
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.getElementById("tab_icon").href = "/icon_white.ico";
+        document.getElementById("tab_icon").href = "/favicon_white.ico";
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.getElementById("tab_icon").href = "/icon.ico";
+        document.getElementById("tab_icon").href = "/favicon.ico";
     }
 });
 
