@@ -147,7 +147,7 @@ h2 {
     color: var(--dark-bl);
 }
 
-.sidebar h4 {
+.sidebar h3 {
     margin-bottom: unset;
     letter-spacing: 0.5px;
     font-size: 18px;
