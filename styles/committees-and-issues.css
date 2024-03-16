@@ -80,8 +80,12 @@ h2 {
     text-align: left;
     display: flex;
     font-weight: 600;
+}
 
-    
+.pc-txt ul {
+    margin: unset;
+    padding: unset;
+    /* padding-left: 15px; */
 }
 
 .pc-txt p {

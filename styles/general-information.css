@@ -87,12 +87,12 @@ h2 {
 
 /* general design of font in the whole page */
 .container a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--theme-rd);
 }
 
 .container a:hover {
-    text-decoration: underline;
+    color: var(--bg-red);
 }
 
 .guidelines-content {
@@ -120,6 +120,14 @@ h2 {
     align-self: center;
     border-radius: 20px;
     box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
+}
+
+.guidelines-list ul, .delegate-info ul, .chair-info ul {
+    padding: unset;
+    margin: unset;
+    li {
+        padding-top: 8px;
+    }
 }
 
 /* .housing-banner {
