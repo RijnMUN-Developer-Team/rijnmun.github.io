@@ -4,7 +4,7 @@ window.onload = () => {
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
 
-    if (window.matchMedia("only screen and (min-width: 768px) and (max-width: 1023px)").matches) {
+    if (window.matchMedia("only screen and (min-width: 768px)").matches) {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
