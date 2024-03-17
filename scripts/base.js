@@ -3,11 +3,15 @@ window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
-
-    if (window.matchMedia("only screen and (min-width: 768px)").matches) {
+    if (isMobile) {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
+
+function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+  }
 
 // transition for mobile support settings ------------------------
 function show_bars() {
