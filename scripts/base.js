@@ -12,13 +12,7 @@ function show_bars() {
     let bar1 = document.getElementById('bar1')
     let bar2 = document.getElementById('bar2')
     let bar3 = document.getElementById('bar3')
-    // if (x.className === "toggle") {
-    //     x.className += " responsive";
-    // } else {
-    //     x.className = "toggle";
-    // }
-    
-    // the responsive class name is no longer used
+
     if (x.style.display === 'none') {
         x.style.display = 'block';
         x.style.height = x.scrollHeight + "px";
@@ -88,20 +82,6 @@ document.onkeypress = function (key) {
         window.location.replace("/");
     }    
 }
-
-// change the icon to white when the system is in dark mode
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.querySelector("link[rel='shortcut icon']").href = "/favicon_white.ico";
-}
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    const newColorScheme = event.matches ? "dark" : "light";
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("link[rel='shortcut icon']").href = "/favicon_white.ico";
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        document.querySelector("link[rel='shortcut icon']").href = "/favicon.ico";
-    }
-});
 
 // COUNTDOWN TIMER -------------------------------------------------
 
