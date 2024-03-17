@@ -3,6 +3,11 @@
     "name": "RijnMUN",
     "icons": [
         {
+            "src": "/favicon.ico",
+            "type": "image/x-icon",
+            "sizes": "96x96"
+        },
+        {
             "src": "/mskbl_icon_192.png",
             "type": "image/png",
             "sizes": "192x192",
