@@ -4,7 +4,6 @@ window.onload = () => {
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
     if (navigator.userAgentData.mobile) {
-        alert("mobile detected")
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
