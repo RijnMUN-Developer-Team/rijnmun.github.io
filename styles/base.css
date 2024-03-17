@@ -1,5 +1,10 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
+/* @font-face {
+    font-family: 'Open Sans';
+    
+} */
+
 :root {
     --theme-bl: #235690;
     --theme-rd: #D90148;
