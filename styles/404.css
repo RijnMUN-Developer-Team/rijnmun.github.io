@@ -21,7 +21,7 @@ main {
     margin-bottom: 5%;
 }
 /* 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     main {
         padding-left: 10px;
         padding-right: 10px;

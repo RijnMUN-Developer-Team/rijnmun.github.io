@@ -307,3 +307,23 @@ function email() {
     let mail="mailto:";
     window.open(mail+recipient+at+dotcom);
 }
+
+// tablet support for navbar
+// let dropbtn = document.getElementById("dropbtn");
+// if (window.matchMedia("only screen and (min-width: 768px) and (max-width: 1023px)").matches) {
+//  // alert("this is a tablet");
+//     dropbtn.href = null;
+//     dropbtn.onclick = "dropdown_toggle()"
+// } else {
+//     dropbtn.onclick = null;
+// }
+
+// function dropdown_toggle() {
+//     let dropcont = document.getElementsByClassName("dropdown-content");
+//     let droplnk = document.querySelectorAll(".dropdown-content a");
+//     if (droplnk.style.display == "none") {
+//         dropcont.style = "z-index: 999; opacity: 100%; transition: opacity 0.2s; border: none; a { display: block; }";
+//     } else {
+//         dropcont.style = "z-index: 0; opacity: 0%; transition: opacity 0.2s; a { display: none; }";
+//     }
+// }

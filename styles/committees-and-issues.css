@@ -118,7 +118,7 @@ h2 {
     margin-right: 10px;
 }
 /* for smaller screens */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 767px){
     .title h1 {
         width: unset;
         padding: 5%;

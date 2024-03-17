@@ -101,7 +101,7 @@ h2.sub-heading {
 }
 
 /* the tablet version with the guest speakers one at a time, horizontal  */
-@media screen and (max-width: 800px) and (min-width: 500px) {
+@media screen and (max-width: 768px) and (min-width: 500px) {
     .person {
         width: 100%;
     }
@@ -109,7 +109,7 @@ h2.sub-heading {
 
 
 /* the phone version  */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
 
     .container {
         margin-left: unset;

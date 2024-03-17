@@ -53,7 +53,7 @@
     box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
     .container {
         flex-direction: column;
     }
