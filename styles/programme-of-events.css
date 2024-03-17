@@ -42,6 +42,7 @@
 
 .container .disclaimer #disclaimer {
     display: flex;
+    justify-content: space-evenly;
     /* min-width: 70vw; */
     /* max-width: 90vw; */
     width: calc(100vw * 0.94);
@@ -50,10 +51,13 @@
 
 .container .disclaimer #disclaimer i {
     margin-left: 10px;
+    /* width: 10%; */
 }
 
 .container .disclaimer #disclaimer span {
     margin-left: 15px;
+    width: 95%;
+    margin-right: 10px;
 }
 
 /* display flex version ---------------  */
@@ -315,14 +319,16 @@
         margin-top: 10px;
     }
 
-    .container #disclaimer i {
-        padding-right: 5px;
+    .container .disclaimer #disclaimer i {
+        padding-right: 10px;
     }
 
-    .container #disclaimer span {
-        padding-left: 10px;
-        width: 60vw;
-    }
+    .container .disclaimer #disclaimer span {
+        /* padding-left: 10px; */
+        width: 80%;
+        margin: unset;
+        margin-right: 5px;
+    } 
 
     .agenda {
         width: 100%;

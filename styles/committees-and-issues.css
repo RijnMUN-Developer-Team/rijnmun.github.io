@@ -169,5 +169,8 @@ h2 {
     .pc-txt p {
         width: 95%;
     }
-
+    
+    .pc-txt ul {
+        margin-left: 10px;
+    }
 }

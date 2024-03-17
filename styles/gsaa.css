@@ -39,6 +39,7 @@ h2.sub-heading {
 .thank-you-text {
     color: var(--dark-bl);
     text-align: justify;
+    padding-left: 2.5%;
 }
 
 .name {
@@ -109,6 +110,15 @@ h2.sub-heading {
 
 /* the phone version  */
 @media screen and (max-width: 500px) {
+
+    .container {
+        margin-left: unset;
+        padding-left: unset;
+    }
+
+    .thank-you-text {
+        padding-left: 2.5%;
+    }
 
     .person {
         flex-wrap: wrap;
