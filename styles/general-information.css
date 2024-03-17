@@ -36,6 +36,9 @@
 h2 {
     /* color: var(--theme-bl); */
     color: var(--theme-rd);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 22px;
 }
 
 .container p, .container li {
@@ -98,15 +101,19 @@ h2 {
 .guidelines-content {
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .guidelines-content .guidelines-list {
     width: 50%;
     text-align: justify;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
+}
+
+.guidelines-list ul li:first-of-type {
+    margin-top: unset;
 }
 
 .guidelines-content .image {
@@ -125,9 +132,7 @@ h2 {
 .guidelines-list ul, .delegate-info ul, .chair-info ul {
     padding: unset;
     margin: unset;
-    li {
-        padding-top: 8px;
-    }
+    padding-right: 30px;
 }
 
 /* .housing-banner {
