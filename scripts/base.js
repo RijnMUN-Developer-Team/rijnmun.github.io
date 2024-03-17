@@ -3,7 +3,7 @@ window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
-    if (navigator.userAgentData.mobile) {
+    if (navigator.userAgentData.mobile && window.matchMedia("(min-width: 768px)").matches) {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
