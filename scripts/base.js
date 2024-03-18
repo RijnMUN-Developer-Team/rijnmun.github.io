@@ -1,9 +1,11 @@
+
 // removes the "enable javascript" alert ------------------------------
 window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
-    if (navigator.userAgentData.mobile && window.matchMedia("(min-width: 768px)").matches) {
+    const isTablet = /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(navigator.userAgent);
+    if (isTablet) {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
