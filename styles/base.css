@@ -343,7 +343,7 @@ h1 {
 
     /* DONT DARE CHANGE THE PADDING NOR THE MARGIN OR ELSE ALL THE CONTAINERS IN ALL THE PAGES WILL BE MIS-LIGNED */
     /* change with caution! */
-    margin: 1.5%;
+    margin: 2.5%;
 }
 
 /* FOOTER DESIGN ----------------------------- */
@@ -377,6 +377,7 @@ footer {
     flex-direction: row;
     justify-content: start;
     padding: 5px;
+    line-height: normal;
 }
 
 .ftr a {
@@ -399,6 +400,7 @@ footer {
 h4 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: unset;
+    margin-bottom: 20px;
 }
 
 .map {
@@ -424,6 +426,7 @@ h4 {
     flex-direction: row;
     justify-content: start;
     padding: 5px;
+    line-height: normal;
 }
 
 .ft a {
@@ -474,6 +477,7 @@ h4 {
 
 .countdown {
     width: 300px;
+    padding-top: 20px;
 }
 
 .timer {
@@ -485,6 +489,10 @@ h4 {
 
 .tm_tbl {
     text-align: center;
+}
+
+.countdown tr {
+    height: 50px;
 }
 
 .countdown td {
