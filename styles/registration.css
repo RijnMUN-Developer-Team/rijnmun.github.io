@@ -28,6 +28,7 @@
 
 .container h2 {
     font-size: 22px;
+    padding-bottom: 15px;
 }
 
 /* div of the left section */
@@ -47,27 +48,24 @@
     margin-bottom: 0;
 }
 
-.fees li {
-    list-style: none;
-    line-height: 25px;
-    font-weight: normal;
-    color: black;
-}
-
-.fees ul {
-    padding: unset;
-    margin: unset;
-    margin-top: 5px;
-}
-
-.fees table tr td {
+/* .fees table tr td {
     padding-right: 20px;
+} */
+
+.fees table {
+    border-collapse: separate;
+    border-spacing: 0 3px;
 }
 
-.fees span {
+.fees table, .fees tbody, .fees tr {
+    width: 50%;
+}
+
+.fees tr td:first-of-type {
     font-weight: bold;
     color: var(--bl-txt);
-    padding: 0 10px 0;
+    /* padding: 7px 0 7px 10px; */
+    padding: 5px 0 5px 10px;
 }
 
 .fees .delegate {
@@ -76,7 +74,6 @@
 
 .fees .stoff {
     border-left: 5px solid var(--stoff);
-    
 }
 
 .fees .director {
@@ -88,10 +85,22 @@
     margin-bottom: 10px
 }
 
+/* all the fee info styling here ---  */
+
 .fees .fee-info {
     font-size: 14px;
 }
 
+.fees li {
+    list-style: none;
+    line-height: 25px;
+    font-weight: normal;
+    color: black;
+}
+
+.fees ul {
+    margin-top: 5px;
+}
 
 /* BANNER COLOURS HERE ------ */
 .collapsible-heading {
@@ -102,10 +111,8 @@
     background-color: var(--mid-bl);
     color: var(--theme-wh);
 
-    /* background-color: var(--theme-wh); */
-    /* color:var(--bl-txt); */
-
-    padding: 2%;
+    padding: 15px;
+    margin-top: 15px;
 
     /* makes sure bottom of banner is connected to info-div */
     margin-bottom: 0;
@@ -146,6 +153,7 @@
     color: var(--dark-bl);
     font-size: 16px;
     text-align: justify;
+    padding: 10px 0; /* shorthand: top/bottom right/left */
 }
 
 .collapsible-content a {
@@ -157,6 +165,10 @@
     color: var(--theme-rd);
 }
 
+.disclaimer p {
+    padding-top: 15px;
+}
+
 /* < timeline  ------------------> */
 .timeline {
     width: 46%;
@@ -164,21 +176,24 @@
     padding: 1%;
     padding-left: 3%;
     border-left: 5px solid var(--theme-bl);
-    h2 {
-        color: var(--theme-bl);
-    }
-
-    table {
-        border-collapse: separate;
-        border-spacing: 0 5px;
-    }
 }
 
-/* .timeline li {
-    margin: 5px 0;
-    color: var(--theme-rd);
-    list-style: none;
-}  */
+.timeline h2 {
+    color: var(--theme-bl);
+}
+
+.timeline p {
+    padding-bottom: 10px;
+}
+
+.timeline table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.timeline table tbody tr td {
+    padding: 5px 10px 5px 10px;
+}
 
 .time {
     color: var(--bl-txt);

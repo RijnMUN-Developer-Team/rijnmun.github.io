@@ -30,6 +30,11 @@
 .text h2 {
     color: var(--theme-bl);
     margin-left: unset;
+    padding-bottom: 15px;
+}
+
+.text p {
+    padding: 5px 0 5px 0;
 }
 
 .text a, .contacts div.at {

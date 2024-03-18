@@ -28,8 +28,10 @@
 
 h2.sub-heading {
     color: var(--bl-txt);
-    padding-left: 15px;
     border-left: 5px solid var(--theme-rd);
+    font-size: 24px;
+    padding: 6px 0px 6px 15px;
+    margin: 25px 0 15px 0;
 }
 
 .section {
@@ -40,6 +42,7 @@ h2.sub-heading {
     color: var(--dark-bl);
     text-align: justify;
     padding-left: 2.5%;
+    line-height: normal;
 }
 
 .name {

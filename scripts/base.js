@@ -53,10 +53,6 @@ function show_bars() {
 function hide_bars() {
     var x = document.getElementById("toggle");
 
-    // if (x.className != "toggle") {
-    //     x.className = "toggle"
-    // }
-
     x.style.height = 0;
     bar1.style.transition = "0.5s ease-in-out"
     bar2.style.transition = "0.5s ease-in-out"
@@ -76,8 +72,6 @@ function hide_bars() {
 
 // h key returns to home --------------------------------
 document.onkeypress = function (key) {
-    // console.log(code);
-    // console.log(lock);
 
     key = key || window.event;
     console.log(key.keyCode);
@@ -90,10 +84,6 @@ document.onkeypress = function (key) {
 // COUNTDOWN TIMER -------------------------------------------------
 
 var countDownDate = new Date("Oct 11, 2024 12:00:00").getTime();
-// let doc_days = document.getElementById('days')
-// let doc_hours = document.getElementById('hours')
-// let doc_mins = document.getElementById('minutes')
-// let doc_secs = document.getElementById('seconds')
 var prev_days
 var prev_hours
 var prev_mins
@@ -128,7 +118,6 @@ var x = setInterval(function() {
     }
 
     // updates seconds here (without transformations)
-    // document.getElementById("seconds").innerHTML = seconds;
     if (days < 10) {
         var temp = days
         days = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
@@ -152,12 +141,6 @@ var x = setInterval(function() {
         seconds = temp.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})
     }
     sec_li = seconds.toString().split('')
-
-    // console.log(sec_li)
-    // console.log(min_li)
-    // console.log(hour_li)
-    // console.log()
-    // console.log()
 
     if (days != prev_days) {
         if (day_li[0] != day_prev_0) {
@@ -284,17 +267,11 @@ window.addEventListener("scroll", function(){
         scroll.style.opacity = 0
         scroll.onclick = null;
         scroll.style.cursor = "default"
-        // setTimeout(function() {
-            // scroll.style = "display: none;"
-        // }, 500)
     } else if(window.scrollY > 470) {
         let scroll = document.getElementById('scrollup')
-        // scroll.style = "display: block;"
-        // setTimeout(function(){
         scroll.style.opacity = 0.9
         scroll.setAttribute('onclick', "scroll_up()");
         scroll.style.cursor = "pointer"
-        // }, 10)
     }
 });
 
@@ -303,7 +280,6 @@ function scroll_up() {
 }
 
 // spam email protection------------------------------------
-// const el33 = document.querySelectorAll(".f_container > .f > .ftr > ul > li > div.at");
 function email() {
     let recipient="rijnmunsecretariat";
     let at = String.fromCharCode(64);

@@ -17,7 +17,12 @@
     font-style: italic;
 }
 
+.container {
+    padding-bottom: 20px;
+}
+
 h2 {
+    font-size: 24px;
     color: var(--theme-bl);
     font-style: italic;
     border-left: var(--theme-rd) solid 5px;
@@ -91,13 +96,14 @@ h2 {
 .pc-txt p {
     margin: unset;
     width: 85%;
+    line-height: normal;
 }
 
 .pc-btn a {
     width: 75px;
     background-color: var(--theme-rd);
     border-radius: 2px;
-    padding: 4px;
+    padding: 6px;
     color: white;
     text-decoration: none;
     margin: 1px;

@@ -22,10 +22,8 @@
 }
 
 .container {
-    /* width: calc(80vw*0.96); */
     width: calc(100vw * 0.96);
     display: flex;
-    /* justify-content: center; */
     /* to align with title banner  */
     padding: 2% 3% 3% 2%;
     flex-wrap: wrap;
@@ -37,21 +35,21 @@
 .container .disclaimer {
     background-color: var(--disclaimer-bg);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px;
+    margin-bottom: 25px;
+    width: calc(100% - 10px);
 }
 
 .container .disclaimer #disclaimer {
     display: flex;
     justify-content: space-evenly;
-    /* min-width: 70vw; */
-    /* max-width: 90vw; */
     width: calc(100vw * 0.94);
     align-items: center;
+    padding: 20px 5px 20px 5px;
 }
 
 .container .disclaimer #disclaimer i {
     margin-left: 10px;
-    /* width: 10%; */
 }
 
 .container .disclaimer #disclaimer span {
@@ -59,23 +57,6 @@
     width: 95%;
     margin-right: 10px;
 }
-
-/* display flex version ---------------  */
-/* .agenda {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 20px;
-
-    .item {
-        width: 25%;
-        div p {
-            padding-left: 7px;
-            color: var(--dark-bl);
-        }
-    }
-} */
 
 .agenda {
     display: grid;
@@ -95,6 +76,7 @@
 }
 
 .agenda .fri-optional-info {
+    line-height: normal;
     grid-area: friday-info;
     margin-left: 10px;
     width: 80%;
@@ -112,6 +94,7 @@
 }
 
 .agenda .sat-party-info {
+    line-height: normal;
     grid-area: party-info;
     text-align: justify;
     width: 80%;
@@ -128,6 +111,7 @@
     justify-self: end;
     grid-area: key;
     width: 60%;
+    height: fit-content;
 }
 
 .agenda .col-key-parent .color-key {
@@ -135,9 +119,22 @@
     border-radius: 10px;
     padding-left: 20px;
     background-color: white;
-
-    justify-items: end;
     grid-area: key;
+
+    height: 100%;
+
+    h2 {
+        margin: 10px 0 16px 0;
+    }
+
+    p {
+        margin: 8px 0 8px 0;
+        padding: 3px 0 3px 0;
+    }
+
+    p:last-of-type {
+        margin: 8px 0 15px 0;
+    }
 }
 
 .agenda .col-key-parent .color-key p {
@@ -172,79 +169,19 @@
     width: 80%;
 }
 
-/* 
-.color-key-parent {
-    width: fit-content;
-    height: calc(100% - 100px);
-    top: 30px;
-    right: 5px;
-    position: absolute;
-}
-
-.color-key {
-    position:-webkit-sticky;
-    position: sticky;
-    top: 10px;
-    right: 0px;
-    bottom: 30px;
-
-    z-index: 2;
-    cursor: pointer;
-
-    .key-heading h2 {
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        padding: 5px;
-        transition: all 0.2s linear;
-    }
-
-    .key-cont {
-        normally hidden till panel opened? 
-        width: 0;
-
-        position: absolute;
-        right: -10px;
-
-        transition: all 0.4s linear;
-
-        padding-top: 10px;
-
-        p {
-            width: fit-content;
-        }
-
-        p:first-of-type {
-            margin-top: unset;
-        }
-        .stoff {
-            border-left: 5px solid var(--stoff);
-            padding-left: 15px;
-        }
-        .delegates {
-            border-left: 5px solid var(--delegate);
-            padding-left: 15px;
-        }
-        .general {
-            border-left: 5px solid var(--general);
-            padding-left: 15px;
-        }
-    }
-} */
-
-
 .container h2 {
     color: var(--theme-bl);
-    /* text-decoration: underline; */
     border-left: 5px solid var(--theme-rd);
 
     /* margin order: top/bottom left-right */
-    /* 1.5% just to align with the banner title */
-    padding: 0 1.5%;
+    padding-top: 7px;
+    padding-bottom: 7px;
 
     padding-left: 10px;
 
-    font-size: 20px;
-    /* font-size: 24px; for the wider .item version */
+    margin-bottom: 10px;
+
+    font-size: 21px;
 }
 
 .container li, .container a {
@@ -252,12 +189,6 @@
     line-height: 150%;
     font-size: 16px;
 }
-
-/* 
-.sat, .sun {
-    width: 48%;
-    margin: 1%;
-} */
 
 .agenda li {
     /* list-style-type: none; */
@@ -276,7 +207,7 @@
 }
 
 .info table tr td {
-    padding-left: 10px; /* identical to padding left of date h2 */
+    padding: 3px 0 3px 10px;
 }
 
 /* adding left borders ----------  */
@@ -295,7 +226,6 @@
 .info table tr td.time {
     font-weight: bold;
     color: var(--bl-txt);
-    /* width: 1rem !important; */
 }
 
 #scrollup {
@@ -312,11 +242,15 @@
 
     .container .disclaimer {
         width: 90vw;
-        /* margin: auto; */
         padding: 2px;
         margin-left: 10px;
         margin-right: unset;
         margin-top: 10px;
+    }
+    
+    .container .disclaimer #disclaimer {
+        /* DO NOT MESS WITH THIS */
+        width: calc(calc(100vw * 0.94) - 25px);
     }
 
     .container .disclaimer #disclaimer i {
@@ -324,7 +258,6 @@
     }
 
     .container .disclaimer #disclaimer span {
-        /* padding-left: 10px; */
         width: 80%;
         margin: unset;
         margin-right: 5px;
@@ -345,17 +278,15 @@
         width: 95%;
         margin-left: 15px;
     }
-        
 
-        /* .color-key {
-            width: 100%;
-        }
-         */
     .agenda .col-key-parent {
         position: relative;
         left: 0px; bottom: 10px;
         width: 70vw;
         background-color: #fff;
+        .color-key p.stoff, .color-key p.delegates, .color-key p.general {
+            margin-left: 15px;
+        }
     }
 
     .agenda .col-key-parent .color-key {
@@ -367,8 +298,7 @@
     }
     .agenda .col-key-parent .color-keyp {
         margin-left: 12px;
-    }
-            
+    }           
     .agenda i {
         display: none;
     } 

@@ -36,6 +36,10 @@ main {
     display: none;
 }
 
+p {
+    line-height: normal;
+}
+
 #js_alert {
     position: absolute;
     top: calc(50% - 110px); left: calc(50% - 200px);
@@ -530,7 +534,7 @@ h4 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 30px;
+    /* padding-top: 30px; */
 }
 
 .socials h4 {

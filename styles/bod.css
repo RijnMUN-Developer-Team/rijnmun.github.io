@@ -22,29 +22,18 @@
 .img_label {
     font-style: italic;
     font-size: 16px;
-
+    line-height: normal;
     max-width: 400px;
     text-wrap: pretty;
     margin: 10px 0;
-    /* color: var(--bl-txt); */
     color: #fff;
 }
 
 .img_label.role-title {
     font-weight: 700;
     margin: 0 0 15px 0;
-    /* color: var(--theme-bl); */
     color: #fff;
 }
-
-/* img.watermark {
-    opacity: 0.8;
-    position: relative;
-    top: -65px; right: -285px;
-    z-index: 100;
-    max-width: 60px;
-    height: 60px;
-} */
 
 .person {
     margin-top: 3%;
@@ -65,25 +54,12 @@
     width: 348px;
     background-color: rgba(35, 86, 144, 0.8);
     border-radius: 0 0 10px 10px;
-
-    
 }
 
 .person .label-content .label-text {
     width: 95%;
     padding-left: 15px;
 }
-
-/* .person .label-content .label-logo {
-    width: 25%;
-    display: flex;
-
-    img {
-        width: 100%;
-        align-self: center;
-        justify-self: center;
-    }
-} */
 
 
 @media screen and (max-width: 767px) {
