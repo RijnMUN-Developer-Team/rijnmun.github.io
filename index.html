@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="light">
-        <meta name="robots" content="index, follow, no-snippet">
+        <meta name="robots" content="index, follow">
         <meta property="og:type" content="wesbite">
         <meta property="og:title" content="RijnMUN 2024">
         <meta property="og:url" content="https://www.rijnmun.org/">
@@ -27,15 +27,64 @@
         <title>RijnMUN 2024</title>
 
 
-        <!-- theoretically this should allow a sitename to appear in search results  -->
-        <script type="application/ld+json">
-            {
+        <!-- application/ld+json unused code that may be needed later -->
+        <!-- {
                 "@context" : "https://schema.org",
                 "@type" : "WebSite",
                 "name" : "Rijnlands Lyceum Oegstgeest Model United Nations",
                 "alternateName": "RijnMUN 2024",
                 "url" : "https://www.rijnmun.org/"  
-            }
+            }, -->
+
+        <!--  "performer": {
+                    "@type": "PerformingGroup",
+                    "name": "RijnMUN"
+                }, -->
+
+        <!-- theoretically this should allow a sitename to appear in search results  -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": "Rijnlands Lyceum Oegstgeest Model United Nations",
+                "alternateName": "RijnMUN 2024",
+                "startDate": "2024-10-11",
+                "endDate": "2024-10-13",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Rijnlands Lyceum Oegstgeest",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Apollolaan 1",
+                    "addressLocality": "Oegstgeest",
+                    "postalCode": "2341 BA",
+                    "addressRegion": "Oegstgeest",
+                    "addressCountry": "NL"
+                  }
+                },
+                "image": [
+                    "https://www.rijnmun.org/images/logo.webp",
+                    "https://www.rijnmun.org/images/rlo/rlo_front.webp",
+                    "https://www.rijnmun.org/images/mun/comun-photo1.webp",
+                    "https://www.rijnmun.org/images/mun/comun-photo2.webp"
+                ],
+                "description": "Rijnlands Lyceum Oegstgeest Model United Nations (RijnMUN) is a 3-day beginner conference aimed at introducing high school students into the wonderful world of MUN. It will be a low-cost conference that takes place at Het Rijnlands Lyceum Oegstgeest and will consist of both workshops and debates designed for complete beginners.",
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://www.rijnmun.org/registration",
+                  "price": "30",
+                  "priceCurrency": "EUR",
+                  "availability": "https://schema.org/InStock",
+                  "validFrom": "2024-05-06"
+                },
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Rijnlands Lyceum Oegstgeest Model United Nations",
+                  "url": "https://www.rijnmun.org"
+                }
+              }
         </script>
     </head>
     <body>
