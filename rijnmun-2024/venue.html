@@ -1,223 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light">
+        <meta name="robots" content="index, follow">
+        <meta property="og:type" content="wesbite">
+        <meta property="og:title" content="Venue">
+        <meta property="og:url" content="https://www.rijnmun.org/rijnmun-2024/venue">
+        <meta property="og:site_name" content="RijnMUN">
+        <meta name="theme-color" content="#23569090">
+        <meta name="description" content="Venue information for the RijnMUN 2024 conference">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" href="/images/favicon.ico" sizes="96x96">
+        <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#23569090">
-    <meta name="description" content="Venue information for the RijnMUN 2024 conference">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
+        <!-- preloading the fonts ---- -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
 
-    <!-- preloading the fonts ---- -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="/styles/venue.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/scripts/base.js"></script>
+        <title>RijnMUN | Venue</title>
+    </head>
 
-    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="/styles/base.css">
-    <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
-    <link rel="stylesheet" type="text/css" href="/styles/venue.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/scripts/base.js"></script>
-    <title>RijnMUN | Venue</title>
-</head>
-
-<body>
-    <header>
-        <div class="logo_container">
-            <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
-        </div>
-        <!-- dropdown for laptop version -->
-        <div class="menu" id="menu">
-            <a href="/" class="normal">Home</a>
-            <div class="current">
-                <div class="dropdown">
-                    <a id="dropbtn" class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
-                    <div class="dropdown-content">
-                        <a href="/rijnmun-2024/general-information">General Information</a>
-                        <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
-                        <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
-                        <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
-                        <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
-                        <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+    <body>
+        <header>
+            <div class="logo_container">
+                <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
+            </div>
+            <!-- dropdown for laptop version -->
+            <div class="menu" id="menu">
+                <a href="/" class="normal">Home</a>
+                <div class="current">
+                    <div class="dropdown">
+                        <a id="dropbtn" class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
+                        <div class="dropdown-content">
+                            <a href="/rijnmun-2024/general-information">General Information</a>
+                            <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
+                            <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
+                            <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
+                            <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
+                            <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+                        </div>
                     </div>
                 </div>
+                <a class="normal" href="/registration">Registration</a>
+                <a class="normal" href="/contact">Contact</a>
+                <p class="icon" onclick="show_bars()" style="height: 30px;">
+                    <span id="bar1" class="bar" style="--i:0"></span>
+                    <span id="bar2" class="bar" style="--i:9"></span>
+                    <span id="bar3" class="bar" style="--i:18"></span>
+                </p>
             </div>
-            <a class="normal" href="/registration">Registration</a>
-            <a class="normal" href="/contact">Contact</a>
-            <p class="icon" onclick="show_bars()" style="height: 30px;">
-                <span id="bar1" class="bar" style="--i:0"></span>
-                <span id="bar2" class="bar" style="--i:9"></span>
-                <span id="bar3" class="bar" style="--i:18"></span>
-            </p>
+        </header>
+        <!-- dropdown for phone version -->
+        <div class="toggle" id="toggle" style="display:none;">
+            <ul>
+                <li class="main"><a href="/">Home</a></li>
+                <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2024</a></li>
+                <ul><li>
+                    <a href="/rijnmun-2024/general-information">General Information</a>
+                    <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
+                    <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
+                    <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
+                    <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
+                    <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+                </li></ul>
+                <li class="main"><a href="/registration">Registration</a></li>
+                
+                <li class="main"><a href="/contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
-    <!-- dropdown for phone version -->
-    <div class="toggle" id="toggle" style="display:none;">
-        <ul>
-            <li class="main"><a href="/">Home</a></li>
-            <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2024</a></li>
-            <ul><li>
-                <a href="/rijnmun-2024/general-information">General Information</a>
-                <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
-                <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
-                <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
-                <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
-                <a href="/rijnmun-2024/venue">Venue & Leiden</a>
-            </li></ul>
-            <li class="main"><a href="/registration">Registration</a></li>
-            
-            <li class="main"><a href="/contact">Contact</a></li>
-        </ul>
-    </div>
-    <noscript><div id="js_alert">
-        <h2>JavaScript Disabled</h2>
-        <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
-    </div></noscript>
-    <main>
-        <!-- MAIN CONTENT HERE -->
-        <div class="title">
-            <h1>Venue & Leiden</h1>
-        </div>
-
-        <div class="container">
-            <h2 class="sub-heading">About RLO</h2>
-            <div class="about-rlo">
-                <div class="content">
-                    <div class="text">
-                        <p><a href="https://www.rlo.nl/" target="_blank">Het Rijnlands Lyceum Oegstgeest</a> is part of the Het Rijnlands Lyceum Foundation first established in 1936. RLO was first founded in 1956 as a Dutch secondary school. It soon founded its TTO (bilingual) education
-                        and IB programs, where 2024 marks the 40<sup>th</sup> anniversary of the IB's establishment in RLO. </p>
-                        <p>Having HAVO, VWO, gymnasium, TTO and IB programs all under the same roof, Het Rijnlands Lyceum
-                        Oegstgeest is a unique and diverse place for students to be in. Having over 1400 students, amongst them 
-                        350 of which are international students from over 40 countries and 150 staff members, RLO is home to many wonderful opportunities.</p>
-                    </div>
-                    <div class="image">
-                        <img src="/images/rlo/rlo.webp" alt="RLO icon" id="school_icon" style="padding-left: 20px; width: 150px;">            
-                    </div>
-                </div>
+        <noscript><div id="js_alert">
+            <h2>JavaScript Disabled</h2>
+            <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
+        </div></noscript>
+        <main>
+            <!-- MAIN CONTENT HERE -->
+            <div class="title">
+                <h1>Venue & Leiden</h1>
             </div>
 
-            <h2 class="sub-heading">Travelling to RLO</h2>
-            <div class="go-to-rlo">
-                <div class="content">
-                    <div class="text">
-                    <p>The conference will be hosted at <span class="emphasis">Het Rijnlands Lyceum Oegstgeest</span>, at the address <a href="https://maps.app.goo.gl/eAHMe1EkFLLd3BHS7" target="_blank">Apollolaan 1, 2341 BA Oegstgeest</a></p>
-                        <h3>By car</h3>
-                        <p>RLO is located near <span class="emphasis">Exit 7: Oegstgeest | Rijnsburg</span> on the A44. Please note that there are limited parking spaces around the school.</p>
-
-                        <h3>By public transport</h3>
-                        <p>RLO is a 10-minute walk from the bus stop <span class="emphasis">Leidsebuurt</span>. Visitors are recommended to take a train to <span class="emphasis">Leiden Centraal</span> followed by either bus 20, 21 or 57 to the bus station Leidsebuurt.</p>
-                        <p>We recommend using an app such as <a href="https://9292.nl/" target="_blank">9292.nl</a> or <a href="https://ns.nl" target="_blank">ns.nl</a> to assist your travel planning with public transport.</p>
-                    </div>
-
-                    <div class="map">
-                        <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4322673051342!2d4.459184910469585!3d52.181014961157025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1snl!2snl!4v1704560329055!5m2!1snl!2snl" style="border:0;" allowfullscreen="" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>       
-            </div>
-
-            <div class="leiden">
-                <h2 class="sub-heading">About Leiden</h2>
-                <div class="content">
-                    <div class="half">
+            <div class="container">
+                <h2 class="sub-heading">About RLO</h2>
+                <div class="about-rlo">
+                    <div class="content">
                         <div class="text">
-                            <p>Leiden is a beautiful city with a rich history and academic life. The city houses the oldest university in the Netherlands- <span class="emphasis">Leiden University</span>, which was founded in 1575 and is now a leading research university with seven different faculties. It now houses over 29,000 students and 6500 staff members from around the world.</p>
+                            <p><a href="https://www.rlo.nl/" target="_blank">Het Rijnlands Lyceum Oegstgeest</a> is part of the Het Rijnlands Lyceum Foundation first established in 1936. RLO was first founded in 1956 as a Dutch secondary school. It soon founded its TTO (bilingual) education
+                            and IB programs, where 2024 marks the 40<sup>th</sup> anniversary of the IB's establishment in RLO. </p>
+                            <p>Having HAVO, VWO, gymnasium, TTO and IB programs all under the same roof, Het Rijnlands Lyceum
+                            Oegstgeest is a unique and diverse place for students to be in. Having over 1400 students, amongst them 
+                            350 of which are international students from over 40 countries and 150 staff members, RLO is home to many wonderful opportunities.</p>
                         </div>
-    
                         <div class="image">
-                            <img src="/images/leiden/leiden-uni-academiegebouw.webp" alt="Het Academiegebouw">
-                            <p class="label">Het Academigebouw in Rapenburg, Leiden <span class="author">(Rudolphous, Wikipedia Commons)</span></p>
+                            <img src="/images/rlo/rlo.webp" alt="RLO icon" id="school_icon" style="padding-left: 20px; width: 150px;">            
                         </div>
                     </div>
+                </div>
 
-                    <div class="half">
+                <h2 class="sub-heading">Travelling to RLO</h2>
+                <div class="go-to-rlo">
+                    <div class="content">
                         <div class="text">
-                            <p>In Leiden, you can also find over 2800 <span class="emphasis">historical monuments</span> if you know where to look for them. These monuments range from courtyards, city gates, gardens to mills.<br><a href="https://www.visitleiden.nl/nl/cultuur/monumenten" target="_blank">Learn more</a> about monument in Leiden.</p>
+                        <p>The conference will be hosted at <span class="emphasis">Het Rijnlands Lyceum Oegstgeest</span>, at the address <a href="https://maps.app.goo.gl/eAHMe1EkFLLd3BHS7" target="_blank">Apollolaan 1, 2341 BA Oegstgeest</a></p>
+                            <h3>By car</h3>
+                            <p>RLO is located near <span class="emphasis">Exit 7: Oegstgeest | Rijnsburg</span> on the A44. Please note that there are limited parking spaces around the school.</p>
+
+                            <h3>By public transport</h3>
+                            <p>RLO is a 10-minute walk from the bus stop <span class="emphasis">Leidsebuurt</span>. Visitors are recommended to take a train to <span class="emphasis">Leiden Centraal</span> followed by either bus 20, 21 or 57 to the bus station Leidsebuurt.</p>
+                            <p>We recommend using an app such as <a href="https://9292.nl/" target="_blank">9292.nl</a> or <a href="https://ns.nl" target="_blank">ns.nl</a> to assist your travel planning with public transport.</p>
                         </div>
 
-                        <div class="image">
-                            <img src="/images/leiden/leiden-korenbeursbrug.webp" alt="Korenbeursbrug, Leiden">
-                            <p class="label">Koornbrug <span class="author">(PeteBobb, Wikipedia Commons)</span></p>
+                        <div class="map">
+                            <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4322673051342!2d4.459184910469585!3d52.181014961157025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1snl!2snl!4v1704560329055!5m2!1snl!2snl" style="border:0;" allowfullscreen="" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>       
+                </div>
+
+                <div class="leiden">
+                    <h2 class="sub-heading">About Leiden</h2>
+                    <div class="content">
+                        <div class="half">
+                            <div class="text">
+                                <p>Leiden is a beautiful city with a rich history and academic life. The city houses the oldest university in the Netherlands- <span class="emphasis">Leiden University</span>, which was founded in 1575 and is now a leading research university with seven different faculties. It now houses over 29,000 students and 6500 staff members from around the world.</p>
+                            </div>
+        
+                            <div class="image">
+                                <img src="/images/leiden/leiden-uni-academiegebouw.webp" alt="Het Academiegebouw">
+                                <p class="label">Het Academigebouw in Rapenburg, Leiden <span class="author">(Rudolphous, Wikipedia Commons)</span></p>
+                            </div>
+                        </div>
+
+                        <div class="half">
+                            <div class="text">
+                                <p>In Leiden, you can also find over 2800 <span class="emphasis">historical monuments</span> if you know where to look for them. These monuments range from courtyards, city gates, gardens to mills.<br><a href="https://www.visitleiden.nl/nl/cultuur/monumenten" target="_blank">Learn more</a> about monument in Leiden.</p>
+                            </div>
+
+                            <div class="image">
+                                <img src="/images/leiden/leiden-korenbeursbrug.webp" alt="Korenbeursbrug, Leiden">
+                                <p class="label">Koornbrug <span class="author">(PeteBobb, Wikipedia Commons)</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="scrollup">
-            <i class="fa fa-arrow-up fa-2x"></i>
-        </div>
-    </main>
-    <footer>
-        <div class="f_container">
-            <div class="f">
-                <div class="ft">
-                    <h4>GENERAL</h4>
-                    <ul class="f_important">
-                        <li>
-                            <a href="/rijnmun-2024/programme-of-events">Agenda</a>
-                        </li>
-                        <li>
-                            <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">Guidelines</a>
-                        </li>
-                        <li>
-                            <a href="/rijnmun-2024/committees-and-issues">Research</a>
-                        </li>
-                        <li>
-                            <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ftr">
-                    <h4>CONTACT</h4>
-                    <ul class="f_contact">
-                        <li>
-                            <i class="fa fa-institution"></i>
-                            <p>
-                                RijnMUN
-                            </p>
-                        </li>
-                        <li>
-                            <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
-                            <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
-                                Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
-                            </a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope"></i>
-                            <div class="at" onclick="email()">&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#115;&#101;&#99;&#114;&#101;&#116;&#97;&#114;&#105;&#97;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</div>
-                        </li>
-                        <li>
-                            <span class="spc>"><i class="fa fa-globe"></i></span>
-                            <a href="/">
-                                rijnmun.org
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="timer">
-                    <h4>COUNTDOWN TO RIJNMUN</h4>
-                    <div class="countdown">
-                        <table class="tm_tbl">
-                            <tr><td id="days"><div class="days_div"><p id="day1"></p><p id="day2"></p><p id="day3"></p></div></td><td id="hours"><div class="hours_div"><p id="hr1"></p><p id="hr2"></p></div></td><td id="minutes"><div class="mins_div"><p id="min1"></p><p id="min2"></p></div></td><td id="seconds"><div class="secs_div"><p id="sec1"></p><p id="sec2"></p></div></td></tr>
-                            <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
-                        </table>
+            <div id="scrollup">
+                <i class="fa fa-arrow-up fa-2x"></i>
+            </div>
+        </main>
+        <footer>
+            <div class="f_container">
+                <div class="f">
+                    <div class="ft">
+                        <h4>GENERAL</h4>
+                        <ul class="f_important">
+                            <li>
+                                <a href="/rijnmun-2024/programme-of-events">Agenda</a>
+                            </li>
+                            <li>
+                                <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">Guidelines</a>
+                            </li>
+                            <li>
+                                <a href="/rijnmun-2024/committees-and-issues">Research</a>
+                            </li>
+                            <li>
+                                <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="socials">
-                        <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp"></a>
-                        <h4>FOLLOW US</h4>
-                        <a href="https://www.tiktok.com/@rijn_mun" target="_blank"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp"></a>
+                    <div class="ftr">
+                        <h4>CONTACT</h4>
+                        <ul class="f_contact">
+                            <li>
+                                <i class="fa fa-institution"></i>
+                                <p>
+                                    RijnMUN
+                                </p>
+                            </li>
+                            <li>
+                                <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
+                                <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
+                                    Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <div class="at" onclick="email()">&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#115;&#101;&#99;&#114;&#101;&#116;&#97;&#114;&#105;&#97;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</div>
+                            </li>
+                            <li>
+                                <span class="spc>"><i class="fa fa-globe"></i></span>
+                                <a href="/">
+                                    rijnmun.org
+                                </a>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="timer">
+                        <h4>COUNTDOWN TO RIJNMUN</h4>
+                        <div class="countdown">
+                            <table class="tm_tbl">
+                                <tr><td id="days"><div class="days_div"><p id="day1"></p><p id="day2"></p><p id="day3"></p></div></td><td id="hours"><div class="hours_div"><p id="hr1"></p><p id="hr2"></p></div></td><td id="minutes"><div class="mins_div"><p id="min1"></p><p id="min2"></p></div></td><td id="seconds"><div class="secs_div"><p id="sec1"></p><p id="sec2"></p></div></td></tr>
+                                <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
+                            </table>
+                        </div>
+                        <div class="socials">
+                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp"></a>
+                            <h4>FOLLOW US</h4>
+                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map_div">
+                    <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482451157!2d4.4591849122980225!3d52.181011671857384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1709380750374!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="map_div">
-                <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482451157!2d4.4591849122980225!3d52.181011671857384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1709380750374!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-        <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
-    </footer>
-</body>
+            <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
+        </footer>
+    </body>
 
 </html>

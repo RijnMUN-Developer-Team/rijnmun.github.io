@@ -1,234 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#23569090">
-    <meta name="description" content="General information about Model United Nations and RijnMUN 2024">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light">
+        <meta name="robots" content="index, follow">
+        <meta property="og:type" content="wesbite">
+        <meta property="og:title" content="General Information">
+        <meta property="og:url" content="https://www.rijnmun.org/rijnmun-2024/general-information">
+        <meta property="og:site_name" content="RijnMUN">
+        <meta name="theme-color" content="#23569090">
+        <meta name="description" content="General information about Model United Nations and RijnMUN 2024">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" href="/images/favicon.ico" sizes="96x96">
+        <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
 
-    <!-- preloading the fonts ---- -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+        <!-- preloading the fonts ---- -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
 
-    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="/styles/base.css">
-    <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
-    <link rel="stylesheet" type="text/css" href="/styles/general-information.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/scripts/base.js"></script>
-    <script src="/scripts/general-information.js"></script>
-    <title>RijnMUN | General Information</title>
-</head>
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="/styles/general-information.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/scripts/base.js"></script>
+        <script src="/scripts/general-information.js"></script>
+        <title>RijnMUN | General Information</title>
+    </head>
 
-<body>
-    <header>
-        <div class="logo_container">
-            <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
-        </div>
-        <!-- dropdown for laptop version -->
-        <div class="menu" id="menu">
-            <a href="/" class="normal">Home</a>
-            <div class="current">
-                <div class="dropdown">
-                    <a id="dropbtn" class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
-                    <div class="dropdown-content">
-                        <a href="/rijnmun-2024/general-information">General Information</a>
-                        <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
-                        <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
-                        <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
-                        <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
-                        <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+    <body>
+        <header>
+            <div class="logo_container">
+                <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
+            </div>
+            <!-- dropdown for laptop version -->
+            <div class="menu" id="menu">
+                <a href="/" class="normal">Home</a>
+                <div class="current">
+                    <div class="dropdown">
+                        <a id="dropbtn" class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
+                        <div class="dropdown-content">
+                            <a href="/rijnmun-2024/general-information">General Information</a>
+                            <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
+                            <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
+                            <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
+                            <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
+                            <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+                        </div>
                     </div>
                 </div>
+                <a class="normal" href="/registration">Registration</a>
+                <a class="normal" href="/contact">Contact</a>
+                <p class="icon" onclick="show_bars()" style="height: 30px;">
+                    <span id="bar1" class="bar" style="--i:0"></span>
+                    <span id="bar2" class="bar" style="--i:9"></span>
+                    <span id="bar3" class="bar" style="--i:18"></span>
+                </p>
             </div>
-            <a class="normal" href="/registration">Registration</a>
-            <a class="normal" href="/contact">Contact</a>
-            <p class="icon" onclick="show_bars()" style="height: 30px;">
-                <span id="bar1" class="bar" style="--i:0"></span>
-                <span id="bar2" class="bar" style="--i:9"></span>
-                <span id="bar3" class="bar" style="--i:18"></span>
-            </p>
-        </div>
-    </header>
-    <!-- dropdown for phone version -->
-    <div class="toggle" id="toggle" style="display:none;">
-        <ul>
-            <li class="main"><a href="/">Home</a></li>
-            <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2024</a></li>
-            <ul><li>
-                <a href="/rijnmun-2024/general-information">General Information</a>
-                <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
-                <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
-                <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
-                <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
-                <a href="/rijnmun-2024/venue">Venue & Leiden</a>
-            </li></ul>
-            <li class="main"><a href="/registration">Registration</a></li>
-            
-            <li class="main"><a href="/contact">Contact</a></li>
-        </ul>
-    </div>
-    <noscript><div id="js_alert">
-        <h2>JavaScript Disabled</h2>
-        <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
-    </div></noscript>
-    <main>
-        <!-- MAIN CONTENT HERE -->
-        <div class="title">
-            <h1>General Information</h1>
-        </div>
-
-
-        <div class="container">
-            <!-- <div class="housing-banner"><p class="text"><i class="fa fa-info-circle fa-lg"></i>Please note that RijnMUN does not provide housing for any delegates or other visitors attending RijnMUN 2024</p></div> -->
-            <div class="about">
-                <p>Model United Nations (MUN) is an educational simulation where students take on the role of a country's representative (known as a <i>delegate</i>) and debate on current global issues with other delegates. Students will be given real-world issues with the goal of reaching a solution together with other delegates during the conference, each debating from the perspective of their representing countries. Debates will be moderated by <i>student officers</i>, who are experienced MUN students selected by the RijnMUN Board of Directors.</p>
-
-                <p>MUN is for all students of any age between 14-18, any race, religion, gender, etc. As an educational model of the United Nations, participants can improve their public speaking skills, critical thinking, as well as honing their knowledge about international relations and real issues in the global community. </p>
+        </header>
+        <!-- dropdown for phone version -->
+        <div class="toggle" id="toggle" style="display:none;">
+            <ul>
+                <li class="main"><a href="/">Home</a></li>
+                <li class="main"><a href="/rijnmun-2024/general-information">RijnMUN 2024</a></li>
+                <ul><li>
+                    <a href="/rijnmun-2024/general-information">General Information</a>
+                    <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
+                    <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
+                    <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
+                    <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
+                    <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+                </li></ul>
+                <li class="main"><a href="/registration">Registration</a></li>
                 
-                <p>RijnMUN is a Model United Nations conference hosted by students of Het Rijnlands Lyceum Oegstgeest.
-                It is a small conference aimed for high-school beginner delegates to familiarize themselves with the MUN
-                rules of procedure and to get involved with the MUN community. RijnMUN follows the THIMUN rules of
-                procedures, which can be found on the <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-11-General-Rules-of-Procedure.pdf" target="_blank">THIMUN website</a>.</p>
-                <p>Please note that housing for delegates, staff, and any other visitors will not be provided by RijnMUN 2024.</p>
+                <li class="main"><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <noscript><div id="js_alert">
+            <h2>JavaScript Disabled</h2>
+            <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
+        </div></noscript>
+        <main>
+            <!-- MAIN CONTENT HERE -->
+            <div class="title">
+                <h1>General Information</h1>
             </div>
 
-            <div class="btns">
-                <button id="guidelines-btn" onclick="openTab('guidelines')" style="background-color: var(--theme-rd);">Guidelines</button>
-                <!-- <button id="theme-btn" onclick="openTab('theme')">Theme</button> -->
-                <button id="guides-btn" onclick="openTab('guides')">MUN Guides</button>
 
-            </div>
+            <div class="container">
+                <!-- <div class="housing-banner"><p class="text"><i class="fa fa-info-circle fa-lg"></i>Please note that RijnMUN does not provide housing for any delegates or other visitors attending RijnMUN 2024</p></div> -->
+                <div class="about">
+                    <p>Model United Nations (MUN) is an educational simulation where students take on the role of a country's representative (known as a <i>delegate</i>) and debate on current global issues with other delegates. Students will be given real-world issues with the goal of reaching a solution together with other delegates during the conference, each debating from the perspective of their representing countries. Debates will be moderated by <i>student officers</i>, who are experienced MUN students selected by the RijnMUN Board of Directors.</p>
 
-            <div id="guidelines" class="page">
-                <h2>Guidelines</h2>
-                <div class="guidelines-content">
-                    <div class="guidelines-list">
-                        <!-- <span class="guidelines-list"> -->
-                        <ul>
-                            <li>All must abide by the <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">THIMUN guidelines</a> on top of the following RijnMUN specific guidelines below:</li>
-                            <li>Delegates must respect all other staff and delegates associated with the conference;</li>
-                            <li>Visitors will only be allowed into the conference with a badge, which will be distributed on the first day upon arrival;</li>
-                            <li>All people associated with RijnMUN must treat the building and corresponding properties with respect and care. Anyone caught in violation of this rule will be held accountable by the RijnMUN Board of Directors, who will decide upon appropriate consequences;</li>
-                            <li>Wear appropriate attire. Males shall wear a suit, tie, and formal footwear, while female delegates are expected to wear formal clothing, for example a blouse and appropriate length skirt. </li>
-                        </ul>
-                        <!-- </span> -->
-                    </div>
-    
-                    <div class="image">
-                        <img src="/images/mun/comun-photo1.webp" alt="Model United Nations">
-                    </div>
-                </div> 
-            </div>
-
-            <!-- <div id="theme" class="page" style="display:none;">
-                <h2>Theme</h2>
-                <p>The theme for RijnMUN 2024 is <span id="theme-text">[theme here]</span>, which represents [...]</p>
-            </div> -->
-
-            <div id="guides" class="page" style="display:none;">
-                <div class="delegate-info">
-                    <h2>How can I be part of (Rijn)MUN?</h2>
-                    <ul>
-                        <li><a href="/registration">Register for RijnMUN!</a> We are a beginner-friendly conference and in the three-day event you will receive workshops to help you find your way in the MUN community! Make sure you follow all the steps in the registration page.</li>
-                        <li>Check out the issues you will be discussing in your committee on the <a href="/rijnmun-2024/committees-and-issues.html">Committees and Issues</a> page. Make sure to read the research reports your chairs have written for you.</li>
-                        <li><a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-4-Research-and-Preparation.pdf">Find out more about the country which you are representing</a>: we recommend using the <a href="https://www.cia.gov/the-world-factbook/" target="_blank">CIA World Factbook</a> or the list of <a href="https://www.un.org/en/about-us/member-states" target="_blank">UN member states</a> as a starting point!</li>
-                        <li>Understand the stance of your country on the issues that you will be discussing. Is your country in favor or against a certain solution? Are there already alliances with certain countries in order to solve the issue?</li>
-                        <li>Prepare clauses, <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-7-Draft-Resolutions.pdf" target="_blank">resolutions</a> and or <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-5-Developing-a-Policy.pdf" target="_blank">policy statements</a>: check out the <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">guides</a> provided by the THIMUN foundation to help you!</li>
-                    </ul>
+                    <p>MUN is for all students of any age between 14-18, any race, religion, gender, etc. As an educational model of the United Nations, participants can improve their public speaking skills, critical thinking, as well as honing their knowledge about international relations and real issues in the global community. </p>
+                    
+                    <p>RijnMUN is a Model United Nations conference hosted by students of Het Rijnlands Lyceum Oegstgeest.
+                    It is a small conference aimed for high-school beginner delegates to familiarize themselves with the MUN
+                    rules of procedure and to get involved with the MUN community. RijnMUN follows the THIMUN rules of
+                    procedures, which can be found on the <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-11-General-Rules-of-Procedure.pdf" target="_blank">THIMUN website</a>.</p>
+                    <p>Please note that housing for delegates, staff, and any other visitors will not be provided by RijnMUN 2024.</p>
                 </div>
+
+                <div class="btns">
+                    <button id="guidelines-btn" onclick="openTab('guidelines')" style="background-color: var(--theme-rd);">Guidelines</button>
+                    <!-- <button id="theme-btn" onclick="openTab('theme')">Theme</button> -->
+                    <button id="guides-btn" onclick="openTab('guides')">MUN Guides</button>
+
+                </div>
+
+                <div id="guidelines" class="page">
+                    <h2>Guidelines</h2>
+                    <div class="guidelines-content">
+                        <div class="guidelines-list">
+                            <!-- <span class="guidelines-list"> -->
+                            <ul>
+                                <li>All must abide by the <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">THIMUN guidelines</a> on top of the following RijnMUN specific guidelines below:</li>
+                                <li>Delegates must respect all other staff and delegates associated with the conference;</li>
+                                <li>Visitors will only be allowed into the conference with a badge, which will be distributed on the first day upon arrival;</li>
+                                <li>All people associated with RijnMUN must treat the building and corresponding properties with respect and care. Anyone caught in violation of this rule will be held accountable by the RijnMUN Board of Directors, who will decide upon appropriate consequences;</li>
+                                <li>Wear appropriate attire. Males shall wear a suit, tie, and formal footwear, while female delegates are expected to wear formal clothing, for example a blouse and appropriate length skirt. </li>
+                            </ul>
+                            <!-- </span> -->
+                        </div>
         
-                <div class="chair-info" id="chair-info">
-                    <h2>How could I become a (good) chair at RijnMUN?</h2>
-                    <ul>
-                        <li>Are you a motivated and organized person? Have you at least participated in two conferences and is ready for a new challenge? <a href="/registration.html">Apply to be a chair</a>!</li>
-                        <li>Pre-Conference preparation: understand the <a href="/rijnmun-2024/committees-and-issues.html" target="_blank">issues</a> being debated in your committee</li>
-                        <li>Pre-Conference preparation: write a coherent research report before the research report deadline, following  <!-- <a href="" target="_blank"> -->tips and guidelines<!--</a>--> set by the RijnMUN BoD.</li>
-                        <li>Pre-Conference preparation: familiarize yourself with the <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-11-General-Rules-of-Procedure.pdf" target="_blank"> THIMUN Rules of Procedures</a></li>
-                        <li>During the Conference: set a good example for your committee, ensuring fruitful and productive debates.</li>
-                        <li>General tip: be confident in your ability to chair!</li>
-                    </ul>
+                        <div class="image">
+                            <img src="/images/mun/comun-photo1.webp" alt="Model United Nations">
+                        </div>
+                    </div> 
                 </div>
-            </div>
-        </div>
-        <div id="scrollup">
-            <i class="fa fa-arrow-up fa-2x"></i>
-        </div>
-    </main>
-    <footer>
-        <div class="f_container">
-            <div class="f">
-                <div class="ft">
-                    <h4>GENERAL</h4>
-                    <ul class="f_important">
-                        <li>
-                            <a href="/rijnmun-2024/programme-of-events">Agenda</a>
-                        </li>
-                        <li>
-                            <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">Guidelines</a>
-                        </li>
-                        <li>
-                            <a href="/rijnmun-2024/committees-and-issues">Research</a>
-                        </li>
-                        <li>
-                            <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="ftr">
-                    <h4>CONTACT</h4>
-                    <ul class="f_contact">
-                        <li>
-                            <i class="fa fa-institution"></i>
-                            <p>
-                                RijnMUN
-                            </p>
-                        </li>
-                        <li>
-                            <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
-                            <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
-                                Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
-                            </a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope"></i>
-                            <div class="at" onclick="email()">&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#115;&#101;&#99;&#114;&#101;&#116;&#97;&#114;&#105;&#97;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</div>
-                        </li>
-                        <li>
-                            <span class="spc>"><i class="fa fa-globe"></i></span>
-                            <a href="/">
-                                rijnmun.org
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="timer">
-                    <h4>COUNTDOWN TO RIJNMUN</h4>
-                    <div class="countdown">
-                        <table class="tm_tbl">
-                            <tr><td id="days"><div class="days_div"><p id="day1"></p><p id="day2"></p><p id="day3"></p></div></td><td id="hours"><div class="hours_div"><p id="hr1"></p><p id="hr2"></p></div></td><td id="minutes"><div class="mins_div"><p id="min1"></p><p id="min2"></p></div></td><td id="seconds"><div class="secs_div"><p id="sec1"></p><p id="sec2"></p></div></td></tr>
-                            <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
-                        </table>
+
+                <!-- <div id="theme" class="page" style="display:none;">
+                    <h2>Theme</h2>
+                    <p>The theme for RijnMUN 2024 is <span id="theme-text">[theme here]</span>, which represents [...]</p>
+                </div> -->
+
+                <div id="guides" class="page" style="display:none;">
+                    <div class="delegate-info">
+                        <h2>How can I be part of (Rijn)MUN?</h2>
+                        <ul>
+                            <li><a href="/registration">Register for RijnMUN!</a> We are a beginner-friendly conference and in the three-day event you will receive workshops to help you find your way in the MUN community! Make sure you follow all the steps in the registration page.</li>
+                            <li>Check out the issues you will be discussing in your committee on the <a href="/rijnmun-2024/committees-and-issues.html">Committees and Issues</a> page. Make sure to read the research reports your chairs have written for you.</li>
+                            <li><a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-4-Research-and-Preparation.pdf">Find out more about the country which you are representing</a>: we recommend using the <a href="https://www.cia.gov/the-world-factbook/" target="_blank">CIA World Factbook</a> or the list of <a href="https://www.un.org/en/about-us/member-states" target="_blank">UN member states</a> as a starting point!</li>
+                            <li>Understand the stance of your country on the issues that you will be discussing. Is your country in favor or against a certain solution? Are there already alliances with certain countries in order to solve the issue?</li>
+                            <li>Prepare clauses, <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-7-Draft-Resolutions.pdf" target="_blank">resolutions</a> and or <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-5-Developing-a-Policy.pdf" target="_blank">policy statements</a>: check out the <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">guides</a> provided by the THIMUN foundation to help you!</li>
+                        </ul>
                     </div>
-                    <div class="socials">
-                        <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp"></a>
-                        <h4>FOLLOW US</h4>
-                        <a href="https://www.tiktok.com/@rijn_mun" target="_blank"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp"></a>
+            
+                    <div class="chair-info" id="chair-info">
+                        <h2>How could I become a (good) chair at RijnMUN?</h2>
+                        <ul>
+                            <li>Are you a motivated and organized person? Have you at least participated in two conferences and is ready for a new challenge? <a href="/registration.html">Apply to be a chair</a>!</li>
+                            <li>Pre-Conference preparation: understand the <a href="/rijnmun-2024/committees-and-issues.html" target="_blank">issues</a> being debated in your committee</li>
+                            <li>Pre-Conference preparation: write a coherent research report before the research report deadline, following  <!-- <a href="" target="_blank"> -->tips and guidelines<!--</a>--> set by the RijnMUN BoD.</li>
+                            <li>Pre-Conference preparation: familiarize yourself with the <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-11-General-Rules-of-Procedure.pdf" target="_blank"> THIMUN Rules of Procedures</a></li>
+                            <li>During the Conference: set a good example for your committee, ensuring fruitful and productive debates.</li>
+                            <li>General tip: be confident in your ability to chair!</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="map_div">
-                <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482451157!2d4.4591849122980225!3d52.181011671857384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1709380750374!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="scrollup">
+                <i class="fa fa-arrow-up fa-2x"></i>
             </div>
-        </div>
-        <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
-    </footer>
-</body>
+        </main>
+        <footer>
+            <div class="f_container">
+                <div class="f">
+                    <div class="ft">
+                        <h4>GENERAL</h4>
+                        <ul class="f_important">
+                            <li>
+                                <a href="/rijnmun-2024/programme-of-events">Agenda</a>
+                            </li>
+                            <li>
+                                <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank">Guidelines</a>
+                            </li>
+                            <li>
+                                <a href="/rijnmun-2024/committees-and-issues">Research</a>
+                            </li>
+                            <li>
+                                <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ftr">
+                        <h4>CONTACT</h4>
+                        <ul class="f_contact">
+                            <li>
+                                <i class="fa fa-institution"></i>
+                                <p>
+                                    RijnMUN
+                                </p>
+                            </li>
+                            <li>
+                                <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
+                                <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7">
+                                    Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <div class="at" onclick="email()">&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#115;&#101;&#99;&#114;&#101;&#116;&#97;&#114;&#105;&#97;&#116;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</div>
+                            </li>
+                            <li>
+                                <span class="spc>"><i class="fa fa-globe"></i></span>
+                                <a href="/">
+                                    rijnmun.org
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timer">
+                        <h4>COUNTDOWN TO RIJNMUN</h4>
+                        <div class="countdown">
+                            <table class="tm_tbl">
+                                <tr><td id="days"><div class="days_div"><p id="day1"></p><p id="day2"></p><p id="day3"></p></div></td><td id="hours"><div class="hours_div"><p id="hr1"></p><p id="hr2"></p></div></td><td id="minutes"><div class="mins_div"><p id="min1"></p><p id="min2"></p></div></td><td id="seconds"><div class="secs_div"><p id="sec1"></p><p id="sec2"></p></div></td></tr>
+                                <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
+                            </table>
+                        </div>
+                        <div class="socials">
+                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp"></a>
+                            <h4>FOLLOW US</h4>
+                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map_div">
+                    <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482451157!2d4.4591849122980225!3d52.181011671857384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1709380750374!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
+        </footer>
+    </body>
 
 </html>
