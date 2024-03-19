@@ -179,7 +179,7 @@ body {
     opacity: 0%;
     position: absolute;
     margin-top: 12px;
-    background-color: var(--theme-wh);
+    background-color: var(--bg-rd);
     min-width: 160px;
     box-shadow: 5px 10px 7px 2px rgba(0,0,0,0.2);
     z-index: 0;
