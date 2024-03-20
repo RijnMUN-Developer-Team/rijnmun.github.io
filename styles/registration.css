@@ -18,6 +18,12 @@
     --stoff: #02A768;
 }
 
+@counter-style dash {
+    system: cyclic;
+    symbols: "–";
+    suffix: " ";
+}
+
 /* OLD CODE */
 .container {
     display: flex;
@@ -88,18 +94,36 @@
 /* all the fee info styling here ---  */
 
 .fees .fee-info {
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.fees .layout {
+    display: flex;
+    ul {
+        padding-left: 20px;
+        margin-left: 20px;
+        width: 50%;
+        list-style: dash;
+    }
+    @media screen and (max-width: 950px) {
+        display: flex;
+        flex-direction: column;
+        table, ul {
+            width: auto;
+        }
+        ul {
+            margin-left: unset;
+            padding-left: unset;
+            margin-top: 5px;
+            list-style: none;
+        }
+    }
 }
 
 .fees li {
-    list-style: none;
     line-height: 25px;
     font-weight: normal;
     color: black;
-}
-
-.fees ul {
-    margin-top: 5px;
 }
 
 /* BANNER COLOURS HERE ------ */
@@ -219,6 +243,40 @@
 
 .time.other {
     border-left: solid 5px black;
+}
+
+.cancelation-info {
+    /* position: sticky; */
+    /* bottom: 12px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-bl);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    i {
+        padding-right: 10px;
+        padding-left: 10px;
+        color: var(--theme-rd);
+        font-size: 30px;
+    }
+    p {
+        /* text-align: center; */
+        padding: unset;
+        font-weight: bold;
+    }
+    ul {
+        padding: 10px;
+        /* width: calc(100% - 50px); */
+    }
+
+    ul li {
+        font-size: 92%;
+        margin: 8px 0 0 15px;
+        list-style: dash;
+    }
 }
 
 .mailings {
