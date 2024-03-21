@@ -48,9 +48,32 @@ h2 {
     margin: 8px;
 }
 
+
+
 .about {
     margin: 1.5%;
     text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.about .image {
+    width: 30%;
+    height: auto;
+    align-self: center;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+}
+
+.about .text {
+    width: 65%;
+    margin: 10px;
 }
 
 .btns {
@@ -159,6 +182,28 @@ h2 {
 @media screen and (max-width: 767px) {
     .content {
         flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    .about p {
+        width: 98%;
+        text-wrap: wrap;
+        order: 1;
+    }
+
+    .about .text {
+        width: 98%;
+        margin: unset;
+    }
+
+    .about .image {
+        width: 96%;
+        align-self: start;
+        margin: 5px;
     }
 
     .guidelines-content {
