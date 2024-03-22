@@ -147,13 +147,11 @@ body {
     /* font-weight: 700; */
 }
 
-.logo {
-    width: 130px;
+header .logo_container img.logo {
+    width: 120px;
     height: auto;
     float: left;
-    padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 0 0 0 20px;
 }
 
 .logo_container {
