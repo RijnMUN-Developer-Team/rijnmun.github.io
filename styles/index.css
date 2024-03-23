@@ -153,14 +153,19 @@ h2 {
     font-size: 18px;
 }
 
+.sidebar h4 {
+    margin-bottom: 5px;
+}
+
 .sidebar .date {
     margin: 5px 0 5px 0;
     font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
-.sidebar div {
+/* .sidebar div {
     padding-bottom: 10px;
-}
+} */
 
 .sidebar .news-item {
     padding-bottom: 0;
@@ -172,8 +177,7 @@ h2 {
     font-weight: 600;
     font-style: italic;
     /* letter-spacing: 0.5px; */
-    /* text-wrap: balance; */ /* <- this type of wrapping is also kinda nice tho ngl */
-    text-wrap: stable; 
+    text-wrap: wrap;
 }
 
 .sidebar .news-item .news-date {
