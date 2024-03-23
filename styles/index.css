@@ -201,10 +201,14 @@ h2 {
     color: var(--theme-rd);
 }
 
-
 .news-socials p {
-    margin: 10px 0;
+    /* margin: 10px 0; old code */
+
+    /* code added for showing icons only ------ */
+    width: fit-content;
+    margin: 0;
 }
+
 
 .side_insta {
     width: 25px;
@@ -223,14 +227,14 @@ h2 {
     top: 6px;
 }
 
-.side_link, .side_link:visited {
+/* .side_link, .side_link:visited {
     text-decoration: none;
     color: black;
 }
 
 .side_link:hover {
     text-decoration: underline;
-}
+} */
 
 
 /* Mobile support */
