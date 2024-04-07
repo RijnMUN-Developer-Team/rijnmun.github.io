@@ -66,7 +66,7 @@ h2 {
         padding: 5%;
         padding-left: 2%;
         padding-bottom: none;
-        font-size: 50px;
+        /* font-size: 50px; why does mobile have larger titles than laptop?? 50px is kinda too big for a phone i think*/
     }    
 
     h2 {

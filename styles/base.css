@@ -1,10 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
-/* @font-face {
-    font-family: 'Open Sans';
-    
-} */
-
 :root {
     --theme-bl: #235690;
     --theme-rd: #D90148;
@@ -343,6 +338,7 @@ h1 {
     /* padding-left: 7%; */
     /* padding-bottom: 1%; */
     width: 90%;
+    line-height: 50px;
 
     /* DONT DARE CHANGE THE PADDING NOR THE MARGIN OR ELSE ALL THE CONTAINERS IN ALL THE PAGES WILL BE MIS-LIGNED */
     /* change with caution! */
