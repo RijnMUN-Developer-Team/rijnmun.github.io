@@ -32,6 +32,11 @@
     padding-bottom: 15px;
 }
 
+/* for the h2 titles that are not collapsible headings */
+.container h2[id=''] {
+    color: var(--theme-bl);
+}
+
 /* div of the left section */
 .left-div {
     display: flex;
@@ -179,7 +184,7 @@
     background-color: var(--light-bl);
     border-radius: 10px;
     padding: 10px;
-    margin: 20px 0 0 0;
+    margin-top: 20px;
     
 }
 
@@ -191,17 +196,15 @@
 }
 
 .cancelation-info p {
-    /* text-align: center; */
     padding: unset;
     font-weight: bold;
 }
 
 .cancelation-info ul {
     padding: 10px;
-    /* width: calc(100% - 50px); */
 }
 
-ul li {
+.cancelation-info ul li {
     font-size: 92%;
     margin: 8px 0 0 15px;
     list-style: dash;
@@ -216,42 +219,35 @@ ul li {
     border-left: 5px solid var(--theme-bl);
 }
 
-.timeline h2 {
-    color: var(--theme-bl);
-}
-
 .timeline p {
     padding-bottom: 10px;
 }
 
 .timeline table {
     border-collapse: separate;
-    border-spacing: 0 5px;
+    border-spacing: 0 5px; /* left/right top/bottom */
 }
 
 .timeline table tbody tr td {
     padding: 5px 10px 5px 10px;
+    line-height: 20px;
 }
 
 .time {
     color: var(--bl-txt);
     font-weight: bold;
-    padding-right: 10px;
-    padding-left: 10px;  
+    padding: 10px 0;
 }
 
 .time.stoff {
     border-left: solid 5px var(--stoff);
-
 }
 
 .time.delegate {
-    /* color: var(--delegate); */
     border-left: solid 5px var(--delegate);
 }
 
 .time.deadline {
-    /* color: var(--theme-rd); */
     border-left: solid 5px var(--theme-rd);
 }
 
