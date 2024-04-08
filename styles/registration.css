@@ -4,12 +4,6 @@
     --theme-wh: white;
     --bl-txt: #0269B3;
 
-    /* other possible colours */
-    /* --theme-gr: #01895D; */
-    /* --light-gr: #b3e3d4; */
-    /* --theme-yw: #FAB800; */
-    /* --theme-yw: #EBC700; */
-
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
@@ -25,11 +19,11 @@
     suffix: " ";
 }
 
-/* OLD CODE */
 .container {
     display: flex;
     flex-direction: row;
-    /* < alignment with title > */
+
+    /* alignment with title */
     padding-left: 2%;
 }
 
@@ -39,14 +33,12 @@
 }
 
 /* div of the left section */
-.info {
+.left-div {
     display: flex;
     flex-direction: column;
     width: 46%;
     margin: 1%;
     padding: 1%;
-    /* border-left: 5px solid var(--theme-bl); */
-    /* padding-left: 3%; */
 }
 
 /* FEES CLASS ----------------------- */
@@ -54,10 +46,6 @@
     color: var(--theme-bl);
     margin-bottom: 0;
 }
-
-/* .fees table tr td {
-    padding-right: 20px;
-} */
 
 .fees table {
     border-collapse: separate;
@@ -68,10 +56,10 @@
     width: 50%;
 }
 
+/* label of the conference fees */
 .fees tr td:first-of-type {
     font-weight: bold;
     color: var(--bl-txt);
-    /* padding: 7px 0 7px 10px; */
     padding: 5px 0 5px 10px;
 }
 
@@ -92,20 +80,10 @@
     margin-bottom: 10px
 }
 
-/* all the fee info styling here ---  */
-
-.fees .fee-info {
-    font-size: 15px;
-}
-
+/* FEE INFO STYLING ---  */
 .fees .layout {
     display: flex;
-    ul {
-        padding-left: 20px;
-        margin-left: 20px;
-        width: 50%;
-        list-style: dash;
-    }
+
     @media screen and (max-width: 950px) {
         display: flex;
         flex-direction: column;
@@ -121,18 +99,23 @@
     }
 }
 
+.fees .layout ul {
+    padding-left: 20px;
+    margin-left: 20px;
+    width: 50%;
+    list-style: dash;
+}
+
 .fees li {
     line-height: 25px;
     font-weight: normal;
     color: black;
+    font-size: 15px;
+
 }
 
-/* BANNER COLOURS HERE ------ */
+/* ALL COLLAPOSIBLE DESIGN HERE ----------------- */
 .collapsible-heading {
-    /* background-color: var(--bl-txt);
-    color: var(--theme-wh); */
-
-    /* background-color: var(--theme-gr); */
     background-color: var(--mid-bl);
     color: var(--theme-wh);
 
@@ -141,10 +124,8 @@
 
     /* makes sure bottom of banner is connected to info-div */
     margin-bottom: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -152,28 +133,24 @@
 
 .collapsible-heading:hover {
     text-decoration: underline;
-    cursor: default;
 }
 
 .collapsible-content {
-    /* border: 2px solid var(--theme-rd); */
-    /* border: 2px solid var(--theme-gr); */
-    /* background-color: var(--light-gr); */
     background-color: var(--light-bl);
+    font-size: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     /* initiall closed */
     display: none;
     padding: 0 3%;
-    font-size: 18px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+
     /* < for animation > */
     height: 0;
     overflow: hidden;
     transition: all 0.2s ease-out;
 }
 
-/* COLLAPSIBLE TEXT COLOUR ------- CHANG HERE ---------------  */
 .collapsible-content p{
     color: var(--dark-bl);
     font-size: 16px;
@@ -190,11 +167,47 @@
     color: var(--theme-rd);
 }
 
-.disclaimer p {
-    padding-top: 15px;
+/* CANCELLATION INFO HERE ------------------ */
+
+.cancelation-info {
+    /* position: sticky; */
+    /* bottom: 12px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-bl);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    
 }
 
-/* < timeline  ------------------> */
+.cancelation-info i {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: var(--theme-rd);
+    font-size: 30px;
+}
+
+.cancelation-info p {
+    /* text-align: center; */
+    padding: unset;
+    font-weight: bold;
+}
+
+.cancelation-info ul {
+    padding: 10px;
+    /* width: calc(100% - 50px); */
+}
+
+ul li {
+    font-size: 92%;
+    margin: 8px 0 0 15px;
+    list-style: dash;
+}
+
+/* TIMELINE HERE --------------- */
 .timeline {
     width: 46%;
     margin: 1%;
@@ -246,45 +259,7 @@
     border-left: solid 5px black;
 }
 
-.cancelation-info {
-    /* position: sticky; */
-    /* bottom: 12px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--light-bl);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 0 0 0;
-    
-}
-
-.cancelation-info i {
-    padding-right: 10px;
-    padding-left: 10px;
-    color: var(--theme-rd);
-    font-size: 30px;
-}
-
-.cancelation-info p {
-    /* text-align: center; */
-    padding: unset;
-    font-weight: bold;
-}
-
-.cancelation-info ul {
-    padding: 10px;
-    /* width: calc(100% - 50px); */
-}
-
-ul li {
-    font-size: 92%;
-    margin: 8px 0 0 15px;
-    list-style: dash;
-}
-
-/* mailings ---------------  */
+/* MAILINGS -------------------  */
 
 .mailings {
     display: flex;
@@ -325,7 +300,7 @@ a.mailing_btn[href=""] {
         border-left: unset;
     }
 
-    .info {
+    .left-div {
         width: 90vw;
         padding-bottom: 20px;
     }
