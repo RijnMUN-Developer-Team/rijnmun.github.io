@@ -1,4 +1,3 @@
-
 // removes the "enable javascript" alert ------------------------------
 window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";

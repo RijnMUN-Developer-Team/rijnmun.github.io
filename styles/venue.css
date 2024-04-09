@@ -14,11 +14,13 @@
 
     /* shorthand: top right bottom left */
     margin: 2% 3% 3% 2%;
-    padding: 0 1.5% 0 1.5%;
+    padding: 0 1.5%;
 
     justify-content: left;
     width: auto;
 }
+
+/* css for the top red section -------------- */
 
 .container h2 {
     font-size: 20px;
@@ -30,23 +32,19 @@
     font-size: 18px;
     margin: 13px 0 8px 0;
     color: var(--light-rd);
-    /* color: var(--theme-bl); */
 }
 
 .container p a {
     color: var(--link-rd);
-    /* color: var(--bl-txt); */
-}
-
-.content {
-    display: flex;
-    text-align: justify;
 }
 
 .emphasis {
     color: var(--light-rd);
-    /* color: var(--bl-txt); */
-    /* font-style: italic; */
+}
+
+.about-rlo {
+    display: flex;
+    text-align: justify;
 }
 
 /* travel info css------------- */
@@ -59,7 +57,7 @@
     padding-bottom: 20px;
 }
 
-.go-to-rlo .content {
+.go-to-rlo {
     display: flex;
 }
 
@@ -72,6 +70,12 @@
     margin-top: 10px;
     margin-bottom: 20px;
     padding-left: 20px;
+}
+
+.go-to-rlo .map iframe {
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
+    height: 100%;
 }
 
 /* about leiden ------------- */
@@ -129,8 +133,6 @@
 
 .leiden .image .label {
     font-style: italic;
-    font-size: 14px;
-    font-weight: bold;
     line-height: 20px;
     text-wrap: wrap;
     width: 100%;
@@ -141,30 +143,21 @@
     font-size: 12px;
 }
 
-.go-to-rlo .map iframe {
-    border-radius: 20px;
-    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
-    height: 100%;
-}
-
 /* mobile support --------- */
 @media screen and (max-width: 767px) {
-    .content {
+
+    .about-rlo, .go-to-rlo, .content {
         flex-direction: column;
     }
 
     /* about rlo section ------------- */
 
-    .about-rlo .text {
+    .about-rlo .text, .about-rlo .image {
         width: 100%;
     }
 
     .about-rlo #school_icon {
         display: none;
-    }
-
-    .about-rlo .image {
-        width: 100;
     }
 
     /* travel advice section ------------- */
@@ -178,9 +171,10 @@
         margin-bottom: 1px;
         padding-left: 0;
         width: 100%;
-        iframe {
-            box-shadow: none;
-        }
+    }
+
+    .go-to-rlo .map iframe{
+        box-shadow: none;
     }
 
     /* about leiden section ----------- */
