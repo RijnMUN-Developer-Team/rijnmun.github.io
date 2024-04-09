@@ -32,8 +32,8 @@
     padding-bottom: 15px;
 }
 
-/* for the h2 titles that are not collapsible headings */
-.container h2[id=''] {
+/* for the h2 titles that are not collapsible headings (aka doesn't have an id)*/
+.container h2:not([id]) {
     color: var(--theme-bl);
 }
 
@@ -48,7 +48,6 @@
 
 /* FEES CLASS ----------------------- */
 .fees h2 {
-    color: var(--theme-bl);
     margin-bottom: 0;
 }
 
