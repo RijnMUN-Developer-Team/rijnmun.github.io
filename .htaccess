@@ -1,5 +1,3 @@
 ErrorDocument 404 /404.html
-<Files scripts/csp.js>
-Order deny,allow
-Deny from all
-</Files>
+RewriteEngine On
+RewriteRule ^scripts/csp.js$ - [F,L]
