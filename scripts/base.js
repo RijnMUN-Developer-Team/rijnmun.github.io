@@ -38,7 +38,9 @@ window.addEventListener('contextmenu', (e) => {
     if (highlight != "") {
         document.getElementById("funcs").innerHTML += `<p id="temp" onclick="navigator.clipboard.writeText(${copyHighlightedText()})">Copy</p>`
     }
-    let difY = (rcmenu.childElementCount * 26) + 20
+    let difYa = (document.getElementById("links").childElementCount * 26) + 10
+    let difYb = (document.getElementById("funcs").childElementCount * 26)
+    let difY = difYa + difYb + 20
     let mouseX = e.pageX
     let mouseY = e.pageY - difY
     if (mouseX > window.innerWidth-200) {
