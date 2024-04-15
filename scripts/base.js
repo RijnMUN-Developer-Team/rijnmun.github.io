@@ -8,9 +8,58 @@ window.onload = () => {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
-// stop right click
-document.addEventListener('contextmenu', event => event.preventDefault());
+// custom right click (without dev tools)
+function getHighlightedText() {
+    var text = "";
+    if (window.getSelection) {
+      text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+      text = document.selection.createRange().text;
+    }
+    return text;
+}
 
+function copyHighlightedText() {
+    var text = "";
+    if (window.getSelection) {
+      text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+      text = document.selection.createRange().text;
+    }
+    navigator.clipboard.writeText(text); // Add to clipboard
+    return text;
+}
+
+window.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+    let rcmenu = document.getElementById("rcmenu")
+    let highlight = ""
+    highlight = getHighlightedText()
+    if (highlight != "") {
+        rcmenu.innerHTML += `<p id="temp" onclick="navigator.clipboard.writeText(${copyHighlightedText()})">Copy</p>`
+    }
+    let difY = (rcmenu.childElementCount * 26) + 20
+    let mouseX = e.pageX
+    let mouseY = e.pageY - difY
+    if (mouseX > window.innerWidth-200) {
+        mouseX -= 200
+    }
+    if (mouseY < difY) {
+        mouseY += difY
+    }
+    rcmenu.style = `position: absolute; top: ${mouseY}px; left: ${mouseX}px`
+    rcmenu.style.display = "block"
+})
+
+window.addEventListener('click', (e) => {
+    document.getElementById("rcmenu").style.display = "none"
+    let highlight = ""
+    highlight = getHighlightedText()
+    if (highlight == "") {
+        let removed_child = rcmenu.removeChild(document.getElementById("temp"))
+        highlight = ""
+    }
+})
 
 // transition for mobile support settings ------------------------
 function show_bars() {

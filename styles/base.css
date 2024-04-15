@@ -597,3 +597,42 @@ h4 {
     padding-left: 1px;
 }
 
+
+/* CUSTOM CONTEXT MENU */
+.rcmenu {
+    width: 200px;
+    position: absolute;
+    display: none;
+    @media (prefers-color-scheme: light) {
+        background-color: #ccc;
+        color: #000;
+    }
+    @media (prefers-color-scheme: dark) {
+        background-color: #333;
+        color: #fff;
+    }
+    padding: 10px;
+    border-radius: 7px;
+    p {
+        padding: 5px 5px 5px 7px;
+        text-decoration: none;
+        margin: unset;
+        @media (prefers-color-scheme: light) {
+            color: #000;
+        }
+        @media (prefers-color-scheme: dark) {
+            color: #fff;
+        }
+        font-size: 14px;
+    }
+    p:hover {
+        border-radius: 7px;
+        cursor: pointer;
+        @media (prefers-color-scheme: light) {
+            background-color: #aaa;
+        }
+        @media (prefers-color-scheme: dark) {
+            background-color: #555;
+        }
+    }
+}
