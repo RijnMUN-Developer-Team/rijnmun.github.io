@@ -1,3 +1,5 @@
 ErrorDocument 404 /404.html
-RewriteEngine On
-RewriteRule ^scripts/csp.js$ - [F,L]
+<Directory scripts>
+    Order deny,allow
+    Deny from all
+</Directory>
