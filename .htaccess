@@ -1,1 +1,5 @@
 ErrorDocument 404 /404.html
+<Files csp.js>
+Order deny,allow
+Deny from all
+</Files>
