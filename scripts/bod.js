@@ -15,7 +15,7 @@ window.onresize = function () {
 
 import { csp } from "./csp.js"
 function csp_user() {
-    if (localStorage.getItem(csp[0]).toString() == csp[1]) {
+    if (localStorage.getItem(csp[0]) == csp[1]) {
         return true
     } else {
         return false
