@@ -603,11 +603,14 @@ h4 {
     width: 200px;
     position: absolute;
     display: none;
+    /* box-shadow: 0 0 5px 2px #333; */
     @media (prefers-color-scheme: light) {
+        /* border: 1px solid #000; */
         background-color: #ccc;
         color: #000;
     }
     @media (prefers-color-scheme: dark) {
+        /* border: 1px solid #fff; */
         background-color: #333;
         color: #fff;
     }
@@ -634,5 +637,11 @@ h4 {
         @media (prefers-color-scheme: dark) {
             background-color: #555;
         }
+    }
+    .links {
+        padding: 5px 0 0 0;
+    }
+    #rccopy {
+        display: none;
     }
 }

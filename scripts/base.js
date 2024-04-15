@@ -36,7 +36,7 @@ window.addEventListener('contextmenu', (e) => {
     let highlight = ""
     highlight = getHighlightedText()
     if (highlight != "") {
-        rcmenu.innerHTML += `<p id="temp" onclick="navigator.clipboard.writeText(${copyHighlightedText()})">Copy</p>`
+        document.getElementById("funcs").innerHTML += `<p id="temp" onclick="navigator.clipboard.writeText(${copyHighlightedText()})">Copy</p>`
     }
     let difY = (rcmenu.childElementCount * 26) + 20
     let mouseX = e.pageX
@@ -56,7 +56,7 @@ window.addEventListener('click', (e) => {
     let highlight = ""
     highlight = getHighlightedText()
     if (highlight == "") {
-        let removed_child = rcmenu.removeChild(document.getElementById("temp"))
+        let removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
         highlight = ""
     }
 })
