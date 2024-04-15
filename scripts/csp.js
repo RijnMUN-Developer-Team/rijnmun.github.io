@@ -1,0 +1,1 @@
+export let csp = ["_csp_auth++", "884hfiqo4hju7dfgs736wgfs83hd"]

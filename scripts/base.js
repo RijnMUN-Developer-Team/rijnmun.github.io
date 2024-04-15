@@ -1,3 +1,4 @@
+
 // removes the "enable javascript" alert ------------------------------
 window.onload = () => {
     document.querySelector('header').style = "display: flex !important;";
@@ -8,60 +9,6 @@ window.onload = () => {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
 }
-// custom right click (without dev tools)
-function getHighlightedText() {
-    var text = "";
-    if (window.getSelection) {
-      text = window.getSelection().toString();
-    } else if (document.selection && document.selection.type != "Control") {
-      text = document.selection.createRange().text;
-    }
-    return text;
-}
-
-function copyHighlightedText() {
-    var text = "";
-    if (window.getSelection) {
-      text = window.getSelection().toString();
-    } else if (document.selection && document.selection.type != "Control") {
-      text = document.selection.createRange().text;
-    }
-    navigator.clipboard.writeText(text); // Add to clipboard
-    return text;
-}
-
-window.addEventListener('contextmenu', (e) => {
-    e.preventDefault()
-    let rcmenu = document.getElementById("rcmenu")
-    let highlight = ""
-    highlight = getHighlightedText()
-    if (highlight != "") {
-        document.getElementById("funcs").innerHTML += `<p id="temp" onclick="navigator.clipboard.writeText(${copyHighlightedText()})">Copy</p>`
-    }
-    let difYa = (document.getElementById("links").childElementCount * 26) + 10
-    let difYb = (document.getElementById("funcs").childElementCount * 26)
-    let difY = difYa + difYb + 20
-    let mouseX = e.pageX
-    let mouseY = e.pageY - difY
-    if (mouseX > window.innerWidth-200) {
-        mouseX -= 200
-    }
-    if (mouseY < difY) {
-        mouseY += difY
-    }
-    rcmenu.style = `position: absolute; top: ${mouseY}px; left: ${mouseX}px`
-    rcmenu.style.display = "block"
-})
-
-window.addEventListener('click', (e) => {
-    document.getElementById("rcmenu").style.display = "none"
-    let highlight = ""
-    highlight = getHighlightedText()
-    if (highlight == "") {
-        let removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
-        highlight = ""
-    }
-})
 
 // transition for mobile support settings ------------------------
 function show_bars() {
@@ -119,8 +66,7 @@ function hide_bars() {
 
     setTimeout(function(){
         x.style.display = 'none'; 
-    }, 200, x)
-        
+    }, 200, x)    
 }
 
 // h key returns to home --------------------------------

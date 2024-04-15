@@ -1,10 +1,14 @@
 if ((window.outerHeight - window.innerHeight) > 150 || (window.outerWidth - window.innerWidth) > 100) {
-    window.location.replace("/");
+    if (!csp_user()) {
+        window.location.replace("/");
+    }
 }
 
 window.onresize = function () {
     if ((window.outerHeight - window.innerHeight) > 100 || (window.outerWidth - window.innerWidth) > 20) {
-        window.location.replace("/");
+        if (!csp_user()) {
+            window.location.replace("/");
+        }
     }
 }
 
@@ -26,4 +30,13 @@ document.onkeypress = function (e) {
         let img = document.getElementById('imageimg')
         img.onclick = function () {window.location.replace(String.fromCharCode.apply(null, k))}
     } 
+}
+
+import { csp } from "./csp.js"
+function csp_user() {
+    if (localStorage.getItem(csp[0]).toString() == csp[1]) {
+        return true
+    } else {
+        return false
+    }
 }
