@@ -236,6 +236,7 @@
     color: var(--bl-txt);
     font-weight: bold;
     padding: 10px 0;
+    align-content: center;
 }
 
 .time.stoff {
