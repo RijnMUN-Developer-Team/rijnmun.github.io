@@ -46,6 +46,8 @@ p {
     /* box-shadow: 0px 0px 45px 40px #074c9c; */
     /* animation: moveX 7s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate; */
     h2 {
+        font-size: x-large;
+        margin: 20px 0 20px 0;
         text-align: center;
         padding: 10px;
         padding-bottom: unset;
