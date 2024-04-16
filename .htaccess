@@ -2,4 +2,5 @@ ErrorDocument 404 /404.html
 <Directory scripts>
     Order deny,allow
     Deny from all
+    Allow from none
 </Directory>
