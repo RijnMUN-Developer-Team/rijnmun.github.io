@@ -28,7 +28,22 @@ function copyHighlightedText() {
     return text;
 }
 
-let setup = false
+function highlightQuery() {
+    var text = "";
+    if (window.getSelection) {
+      text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+      text = document.selection.createRange().text;
+    }
+    let query = "https://www.google.com/search?q="
+    text = text.replace(/ /g, "+")
+    query = query + text
+    query = query.replace("\n", "")
+    console.log(query)
+    return query
+}
+
+// let setup = false
 
 window.addEventListener('contextmenu', (e) => {
     e.preventDefault()
@@ -39,8 +54,10 @@ window.addEventListener('contextmenu', (e) => {
     let rcmenu = document.getElementById("rcmenu")
     let highlight = ""
     highlight = getHighlightedText()
-    if (highlight != "") {
+    let test = document.getElementById("temp")
+    if (highlight != "" && !test) {
         document.getElementById("funcs").innerHTML += `<p id="temp" onclick="navigator.clipboard.writeText(${copyHighlightedText()})">Copy</p>`
+        document.getElementById("funcs").innerHTML += `<p id="temp" onclick="window.open('${highlightQuery()}')">Look up</p>`
     }
     let difYa = (document.getElementById("links").childElementCount * 26) + 10
     let difYb = (document.getElementById("funcs").childElementCount * 26)
@@ -63,6 +80,7 @@ window.addEventListener('click', (e) => {
     highlight = getHighlightedText()
     if (highlight == "") {
         let removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
+        removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
         highlight = ""
     }
 })
