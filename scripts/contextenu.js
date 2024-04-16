@@ -39,7 +39,6 @@ function highlightQuery() {
     text = text.replace(/ /g, "+")
     query = query + text
     query = query.replace("\n", "")
-    console.log(query)
     return query
 }
 
