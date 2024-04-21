@@ -1,3 +1,4 @@
 ErrorDocument 404 /404.html
-RewriteEngine On
-RewriteRule ^scripts/csp\.js$ - [F]
+Redirect /scripts/csp.js /index.html
+// RewriteEngine On
+// RewriteRule ^scripts/csp\.js$ - [F]
