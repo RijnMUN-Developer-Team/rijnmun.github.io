@@ -157,7 +157,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-.sidebar .date {
+.sidebar #date {
     margin: 5px 0 5px 0;
     font-size: 14px;
     letter-spacing: 0.5px;

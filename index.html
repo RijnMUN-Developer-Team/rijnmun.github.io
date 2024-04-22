@@ -24,6 +24,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
+        <script src="/scripts/index.js"></script>
         <script type="module" src="/scripts/contextenu.js"></script>
         <title>RijnMUN 2024</title>
 
@@ -199,7 +200,7 @@
                 <div class="sidebar">
                     <div>
                         <h4>LATEST NEWS</h4>
-                        <p class="date">Last updated: 10/04/2024</p>
+                        <p id="date">Last updated: 10/04/2024</p>
 
                         <div class="news-item">
                             <p class="news-title">FIRST Mailing Sent!</p>
@@ -240,6 +241,11 @@
                         <div style="padding-bottom: unset;"><p><img alt="Instagram" src="/images/logos/instagram_black.webp" class="side_insta"> <a class="side_link" href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank">@rijn.mun</a></p></div>
                         <div style="padding-bottom: unset;"><p><img alt="TikTok" src="/images/logos/tiktok_black.webp" class="side_tiktok"> <a class="side_link" href="https://www.tiktok.com/@rijn_mun" target="_blank">@rijn_mun</a></p></div>
                     </div> -->
+
+                    <script>
+                        let lastUpdated = new Date(document.lastModified);
+                        document.getElementById("date").innerHTML = `Last Updated: ${String(lastUpdated.getDate()).padStart(2, '0')}/${String(lastUpdated.getMonth()+1).padStart(2, '0')}/${lastUpdated.getFullYear()}`;
+                    </script>
                 </div>
             </div>
             <div id="scrollup">
