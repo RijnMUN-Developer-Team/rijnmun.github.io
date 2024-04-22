@@ -12,6 +12,13 @@
     --light-bl: #cedff3;
     --dark-bl: #143152;
 
+    --rcmenu-light-bg: #ccc;
+    --rcmenu-light-text: #000;
+    --rcmenu-light-hover: #aaa;
+    --rcmenu-dark-bg: #333;
+    --rcmenu-dark-text: #fff;
+    --rcmenu-dark-hover: #555;
+
     color-scheme: light !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-display: swap;
@@ -608,13 +615,13 @@ h4 {
     /* box-shadow: 0 0 5px 2px #333; */
     @media (prefers-color-scheme: light) {
         /* border: 1px solid #000; */
-        background-color: #ccc;
-        color: #000;
+        background-color: var(--rcmenu-dark-bg);
+        color: var(--rcmenu-light-text);
     }
     @media (prefers-color-scheme: dark) {
         /* border: 1px solid #fff; */
-        background-color: #333;
-        color: #fff;
+        background-color: var(--rcmenu-dark-bg);
+        color: var(--rcmenu-dark-text);
     }
     padding: 10px;
     border-radius: 7px;
@@ -623,10 +630,10 @@ h4 {
         text-decoration: none;
         margin: unset;
         @media (prefers-color-scheme: light) {
-            color: #000;
+            color: var(--rcmenu-light-text);
         }
         @media (prefers-color-scheme: dark) {
-            color: #fff;
+            color: var(--rcmenu-dark-hover);
         }
         font-size: 14px;
     }
@@ -634,10 +641,10 @@ h4 {
         border-radius: 7px;
         cursor: pointer;
         @media (prefers-color-scheme: light) {
-            background-color: #aaa;
+            background-color: var(--rcmenu-light-hover);
         }
         @media (prefers-color-scheme: dark) {
-            background-color: #555;
+            background-color: var(--rcmenu-dark-hover);
         }
     }
     .links {
