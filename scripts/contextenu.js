@@ -78,8 +78,12 @@ window.addEventListener('click', (e) => {
     let highlight = ""
     highlight = getHighlightedText()
     if (highlight == "") {
-        let removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
-        removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
+        try {
+          let removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp"))
+          removed_child = document.getElementById("funcs").removeChild(document.getElementById("temp")) 
+        } catch (error) {
+          // irrelevant
+        };
         highlight = ""
     }
 })

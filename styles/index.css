@@ -172,7 +172,7 @@ h2 {
     margin: 15px 0;
 }
 
-.sidebar .news-item .news-title {
+.sidebar .news-title {
     margin: 0px;
     font-weight: 600;
     font-style: italic;
@@ -180,26 +180,47 @@ h2 {
     text-wrap: wrap;
 }
 
-.sidebar .news-item .news-date {
+.sidebar .news-date {
     text-align: right;
     margin: 0px;
     font-weight: 400;
     font-size: 12px;
 }
 
-.sidebar .news-item .news-details {
+.sidebar .news-details {
     font-size: 14px;
     margin: 5px 0;
     color: var(--news-text);
 }
 
-.sidebar .news-item .news-details a {
+.sidebar .news-details a {
     color: inherit;
 }
 
-.sidebar .news-item .news-details a:hover {
+.sidebar .news-details a:hover {
     color: var(--theme-rd);
 }
+
+.sidebar .news-toggle {
+    text-align: center;
+    font-size: 14px;
+}
+
+.sidebar .news-toggle .toggle-cont:hover {
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.sidebar #news-overflow {
+    display: none;
+    height: 0px;
+    overflow-y: hidden;
+    /* transition: height 0.5s linear; */
+}
+
+/* .sidebar #nws-ovrflw-arrw {
+    transition: rotate 0.5s linear;
+} */
 
 .news-socials p {
     /* margin: 10px 0; old code */
