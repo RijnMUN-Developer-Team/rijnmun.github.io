@@ -5,7 +5,7 @@
 let news_overflow_toggled = false;
 
 function toggle_news_overflow() {
-    let toggle_cont = document.getElementsByClassName("news-toggle")
+    let toggle_cont = document.getElementById("news-toggle-cont")
     let overflow_content = document.getElementById("news-overflow")
     let overflow_toggle = document.getElementById("news-toggle")
     let overflow_arrow = document.getElementById("nws-ovrflw-arrw")
