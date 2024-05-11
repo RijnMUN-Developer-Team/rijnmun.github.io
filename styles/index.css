@@ -219,9 +219,9 @@ h2 {
     transition: height 0.2s linear;
 }
 
-/* .sidebar #nws-ovrflw-arrw {
-    transition: rotate 0.5s linear;
-} */
+.sidebar #nws-ovrflw-arrw {
+    transition: rotate 0.2s linear;
+}
 
 .news-socials p {
     /* margin: 10px 0; old code */
