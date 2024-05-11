@@ -11,20 +11,29 @@ function toggle_news_overflow() {
     let overflow_arrow = document.getElementById("nws-ovrflw-arrw")
 
     if (news_overflow_toggled) {
-        overflow_content.style.display = "none";
-        overflow_content.style.height = "0px";
+        // transitioning the arrow
         overflow_toggle.innerHTML = "Show more ";
         toggle_cont.style = "padding: 0 0 0 0;"
         overflow_arrow.style = "rotate: 0deg;";
         news_overflow_toggled = false;
+
+        // closing the panel
+        overflow_content.style.height = "0px";
+
+        setTimeout(function() {
+          overflow_content.style.display = "none";
+        }, 200, overflow_content)
+
+
     } else {
-        overflow_content.style.display = "block";
-        setTimeout(() => {
-          overflow_content.style.height = "100%";
-        }, 10); 
+        // transitioning the arrow
         overflow_toggle.innerHTML = "Show less ";
         toggle_cont.style = "padding: 10px 0 0 0;"
         overflow_arrow.style = "rotate: -180deg;";
         news_overflow_toggled = true;
+
+        // opening the panel
+        overflow_content.style.display = "block";
+        overflow_content.style.height = overflow_content.scrollHeight + "px";
     }
   }
