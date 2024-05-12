@@ -43,6 +43,7 @@ h2.sub-heading {
     text-align: justify;
     padding-left: 2.5%;
     line-height: normal;
+    padding-top: 8px;
 }
 
 .name {
