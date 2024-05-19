@@ -1,7 +1,8 @@
 // USEFUL CONTSTANTS -------------------------------
 // html elements on the page (names ending with el)
 let BOXESel = document.getElementsByClassName("box");
-let WIN_COUNTERel = document.getElementById("win-counter");
+let WIN_COUNTER_HUMANel = document.getElementById("win-counter-human");
+let WIN_COUNTER_COMPel = document.getElementById("win-counter-comp");
 let STATUSel = document.getElementById("status");
 
 // for computational purposes
@@ -38,8 +39,12 @@ function choose_player_img() {
 // ON STARTUP --------------------------------------------
 
 // sets wins in local storage to 0 if it doesn't exist yet
-if (localStorage.getItem('win-counter') === null) {
-    localStorage.setItem('win-counter', 0);
+if (localStorage.getItem('win-counter-human') === null) {
+    localStorage.setItem('win-counter-human', 0);
+}
+
+if (localStorage.getItem('win-counter-comp') === null) {
+    localStorage.setItem('win-counter-comp', 0);
 }
 
 // HTML/CSS STUFF -----------------------------------
@@ -50,7 +55,8 @@ function reset_board_visually() {
     }
 
     // start game setup
-    WIN_COUNTERel.innerHTML = `Wins: ${localStorage.getItem('win-counter')}`;
+    WIN_COUNTER_HUMANel.innerHTML = `Your wins: ${localStorage.getItem('win-counter-human')}`;
+    WIN_COUNTER_COMPel.innerHTML = `Computer's wins: ${localStorage.getItem('win-counter-comp')}`;
 
     if (CUR_PLAYER === 1) {
         STATUSel.innerHTML = `You start!`;
@@ -247,10 +253,15 @@ function finish() {
         if (winner === 1) {
             STATUSel.innerHTML = `You win!`;
             // update local storage
-            localStorage.setItem('win-counter', parseInt(localStorage.getItem('win-counter'))+1);
+            localStorage.setItem('win-counter-human', parseInt(localStorage.getItem('win-counter-human'))+1);
+            
+            setTimeout(function() {
+                alert('CONGRATULATIONS! You have just won against the RijnMUN Tic-Tac-Toe Bot. \nThe DSG of Communications, who coded this tic-tac-toe, is quite impressed that you have beaten it, especially considering she has never managed to do so herself. It would be great if you can send her a screenshot to show her that the impossible has now been achieved.\n\nLenka\nDSG of Communications');
+            }, 100)
 
         } else {
             STATUSel.innerHTML = 'Computer wins!!';
+            localStorage.setItem('win-counter-comp', parseInt(localStorage.getItem('win-counter-comp'))+1);
         }
 
     } else if (game_ends(BOARD) === true) {
