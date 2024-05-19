@@ -90,16 +90,20 @@ function reset() {
     reset_computations();
     choose_player_img();
 
+    console.log(`${CUR_PLAYER} starting...`);
+
     if (CUR_PLAYER === 1) {
         player_move();
     
     } else {
         computer_move();
     }
+    
 }
 
 function box_clicked(box_index) {
     // player clicks the box
+    console.log("box clicked");
 
     // if move valid
     if (return_all_valid_moves(BOARD).includes(box_index)) {
@@ -222,6 +226,8 @@ function return_all_valid_moves(board) {
 function computer_move() {
     // turns off player clicking
     remove_boxes_clickable();
+
+    console.log("computer thinking...")
 
     // doing random moves
     // valid_moves = return_all_valid_moves(BOARD);
