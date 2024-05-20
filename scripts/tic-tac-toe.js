@@ -1,6 +1,7 @@
 // USEFUL CONTSTANTS -------------------------------
 // html elements on the page (names ending with el)
 let BOXESel = document.getElementsByClassName("box");
+let GAMES_PLAYED_COUNTERel = document.getElementById("games-counter");
 let WIN_COUNTER_HUMANel = document.getElementById("win-counter-human");
 let WIN_COUNTER_COMPel = document.getElementById("win-counter-comp");
 let STATUSel = document.getElementById("status");
@@ -47,6 +48,10 @@ if (localStorage.getItem('win-counter-comp') === null) {
     localStorage.setItem('win-counter-comp', 0);
 }
 
+if (localStorage.getItem('games-played-counter') === null) {
+    localStorage.setItem('games-played-counter', 0);
+}
+
 // HTML/CSS STUFF -----------------------------------
 function reset_board_visually() {
     // resets the boxes back to blank
@@ -55,6 +60,7 @@ function reset_board_visually() {
     }
 
     // start game setup
+    GAMES_PLAYED_COUNTERel.innerHTML = `Games Played: ${localStorage.getItem('games-played-counter')}`;
     WIN_COUNTER_HUMANel.innerHTML = `Your wins: ${localStorage.getItem('win-counter-human')}`;
     WIN_COUNTER_COMPel.innerHTML = `Computer's wins: ${localStorage.getItem('win-counter-comp')}`;
 
@@ -86,8 +92,14 @@ function reset() {
 
     CUR_PLAYER = (-1) ** Math.floor(Math.random()*3); /* generates a random number either player -1 or player 1 */
 
+    // if the board was touched, count that as a game played
+    if (BOARD.includes(-1) || BOARD.includes(1)) {
+        localStorage.setItem('games-played-counter', parseInt(localStorage.getItem('games-played-counter'))+1);
+    }
+
     reset_board_visually();
     reset_computations();
+
     choose_player_img();
 
     if (CUR_PLAYER === 1) {
