@@ -1,4 +1,4 @@
 ErrorDocument 404 /404.html
-Redirect /scripts/csp.js /index.html
+Redirect 301 /scripts/csp.js http://www.rijnmun.org/
 // RewriteEngine On
 // RewriteRule ^scripts/csp\.js$ - [F]
