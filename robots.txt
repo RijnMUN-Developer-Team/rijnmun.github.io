@@ -1,7 +1,9 @@
 # This file allows crawlers to find the sitemap
 sitemap: https://www.rijnmun.org/sitemap.xml
 
-User-agent: Googlebot-Image
+User-agent: *
 Disallow: /*.webp$
 Disallow: /*.png$
 Disallow: /extras/
+Disallow: /*.css
+Disallow: /*.js
