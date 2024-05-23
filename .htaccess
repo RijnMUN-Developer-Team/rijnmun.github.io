@@ -1,4 +1,7 @@
 ErrorDocument 404 /404.html
-Redirect 301 /scripts/csp.js http://www.rijnmun.org/
-// RewriteEngine On
-// RewriteRule ^scripts/csp\.js$ - [F]
+<Files /scripts/csp.js>
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /csp
+Require valid-user
+</Files>
