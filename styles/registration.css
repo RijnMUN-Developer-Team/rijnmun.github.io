@@ -171,6 +171,10 @@
     color: var(--theme-rd);
 }
 
+#for-rlo-students {
+    color: var(--theme-rd);
+}
+
 /* CANCELLATION INFO HERE ------------------ */
 
 .cancelation-info {
