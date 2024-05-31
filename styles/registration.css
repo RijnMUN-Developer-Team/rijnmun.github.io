@@ -8,6 +8,10 @@
     --light-bl: #cedff3;
     --dark-bl: #143152;
 
+    --rlo-mid-rd: #f6588d;
+    --rlo-light-rd: #fcd9e4;
+    --rlo-dark-rd: #370113;
+
     --delegate: #0782DA;
     --stoff: #02A768;
     --bg-rd: #B20000;
@@ -173,6 +177,20 @@
 
 #for-rlo-students {
     color: var(--theme-rd);
+}
+
+/* RLO REGISTRATION CONTENT Colours --------------------- */
+
+#rlo-heading {
+    background-color: var(--rlo-mid-rd);
+}
+
+#rlo-registration-info {
+    background-color: var(--rlo-light-rd);
+}
+
+#rlo-registration-info p {
+    color: var(--rlo-dark-rd);
 }
 
 /* CANCELLATION INFO HERE ------------------ */
