@@ -296,8 +296,8 @@
     .agenda .col-key-parent .color-key h2 {
         margin-left: unset;
     }
-    .agenda .col-key-parent .color-keyp {
-        margin-left: 12px;
+    .agenda .col-key-parent .color-key p {
+        margin: 12px;
     }           
     .agenda i {
         display: none;

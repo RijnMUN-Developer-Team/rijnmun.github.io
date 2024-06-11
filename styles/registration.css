@@ -332,4 +332,14 @@ a.mailing_btn[href=""] {
     .mailing_btn {
         margin-top: 10px;
     }
+    
+    .layout table {
+        width: 100%; 
+    }
+
+    .layout ul {
+        margin: unset !important;
+        /* padding: unset !important; */
+        width: calc(100% - 3%) !important;
+    }
 }

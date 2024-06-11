@@ -158,7 +158,7 @@ h2 {
 
     .pc-btn {
         padding-right: unset;
-        margin-right: unset;
+        margin-right: 5px;
         padding-left: 5%;
     }
 
@@ -178,5 +178,9 @@ h2 {
     
     .pc-txt ul {
         margin-left: 10px;
+    }
+
+    .per-committee h3 {
+        width: calc(100% - 20px);
     }
 }

@@ -79,7 +79,7 @@ p, a {
 /* ------------------------ */
 
 html {
-    max-width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
     background-color: white !important;
     scroll-behavior: smooth;
