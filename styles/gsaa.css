@@ -54,54 +54,58 @@ h2.sub-heading {
 .people {
     display: flex;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 .person {
     display: flex;
-    margin: 15px;
-    width: 48%;
+    width: 100%;
     margin: 5px;
-}
-
-.photo {
-    /* this is making the dimensions look weird */
-    /* width: 20%; */
-    /* padding-right: 15px; */
-    border: 3px solid var(--theme-bl);
-
-    /* clockwise from top left corner  */
-    border-radius: 5px 0px 0px 5px;
-    
+    background: var(--theme-bl);
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .photo img {
     border-radius: 5px;
+    max-width: 100%;
+    min-height: 100%;
 }
 
 .text {
     width: 80%;
-    padding-left: 15px;
+    padding: 15px;
     background-color: var(--theme-bl);
     color: var(--light-bl);
 
     border-radius: 0px 5px 5px 0px;
 }
 
+.text .committee {
+    margin-bottom: unset;
+    /* font-style: italic; */
+    font-weight: 400;
+    font-size: 18px;
+} 
+
 .text .name {
-    font-size: 20px;
+    font-size: 40px;
     margin-bottom: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
 }
 
-.expertise {
+.text .expertise {
     font-weight: thin;
     font-style: italic;
     letter-spacing: 1px;
     margin-top: 0;
+
+    margin-bottom: 15px;
 }
 
-.description {
-    font-weight: 300;
+.text .description {
+    font-weight: 400;
+    line-height: 1.5em;
 }
 
 /* the tablet version with the guest speakers one at a time, horizontal  */
