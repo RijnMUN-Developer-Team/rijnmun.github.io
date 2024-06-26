@@ -66,6 +66,10 @@ h2.sub-heading {
     border-radius: 5px;
 }
 
+.photo, .text {
+    height: fit-content;
+}
+
 .photo img {
     border-radius: 5px;
     max-width: 100%;
