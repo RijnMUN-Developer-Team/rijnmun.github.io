@@ -73,7 +73,7 @@ function hide_bars() {
 document.onkeypress = function (key) {
 
     key = key || window.event;
-    console.log(key.keyCode);
+    // console.log(key.keyCode);
 
     if (key.keyCode===104) {
         window.location.replace("/");

@@ -1,11 +1,11 @@
-// import { csp } from "./csp.js"
-// function csp_user() {
-//     if (localStorage.getItem(csp[0]) == csp[1]) {
-//         return true
-//     } else {
-//         return false
-//     }
-// }
+import { csp } from "./csp.js"
+function csp_user() {
+    if (localStorage.getItem(csp[0]) == csp[1]) {
+        return true
+    } else {
+        return false
+    }
+}
 // custom right click (without dev tools)
 function getHighlightedText() {
   var text = "";
@@ -53,12 +53,18 @@ function highlightQuery() {
 
 // let setup = false
 
+// window.addEventListener('keypress', (e) => {
+//   console.log(e)
+// }, {passive:true})
+
 window.addEventListener('contextmenu', (e) => {
   e.preventDefault()
-  // if (csp_user() && !setup) {
-  //     document.getElementById("funcs").innerHTML += `<p id="csp_only" onclick="document.dispatchEvent(new KeyboardEvent('type',{'key': 'F12', 'keyCode': 123, 'which': 123, 'code': 'F12', 'location': 0, 'altKey': false, 'ctrlKey': false, 'metaKey': false, 'shiftKey': false, 'repeat': false }))">Inspect</p>`
-  //     setup = true
-  // }
+  if (csp_user()) {
+      // document.getElementById("funcs").innerHTML += `<p id="temp" onclick="window.dispatchEvent(new KeyboardEvent('keypress',{'keycode': 102}))">Inspect</p>`
+      // document.getElementById("funcs").innerHTML += `<p id="temp" onclick="window.dispatchEvent(new KeyboardEvent('keypress',{'isTrusted': true, 'key': 'F12', 'keyCode': 123, 'which': 123, 'code': 'F12', 'location': 0, 'altKey': false, 'ctrlKey': false, 'metaKey': false, 'shiftKey': false, 'repeat': false }))">Inspect</p>`
+      // document.getElementById("funcs").innerHTML += `<p id="temp" onclick="window.dispatchEvent(new KeyboardEvent('keypress',{'key': 'c','keyCode': 67,'which': 67,'code': 'KeyC','location': 0,'altKey': false,'ctrlKey': true,'metaKey': false,'shiftKey': true,'repeat': false}))">Inspect</p>`
+      // document.getElementById("funcs").innerHTML += `<p id="temp" onclick="window.dispatchEvent(new KeyboardEvent('keypress',{'key': 'c','keyCode': 67,'which': 67,'code': 'KeyC','location': 0,'altKey': false,'ctrlKey': false,'metaKey': true,'shiftKey': true,'repeat': false}))">Inspect</p>`
+  }
   // let link_available = checkIfOverLink(e)
   let rcmenu = document.getElementById("rcmenu")
   let highlight = ""
