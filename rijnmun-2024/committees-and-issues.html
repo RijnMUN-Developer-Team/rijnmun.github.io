@@ -171,7 +171,7 @@
                                 <a href="" target="_blank" rel="noopener noreferrer">HRC03</a>
                             </div> -->
                             <table>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Protecting the rights of women in Afghanistan and the Middle East</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">HRC01</a></td></tr>
+                                <tr><td class="pc-txt"><ul><li></li></ul><p>Protecting the rights of women in Afghanistan and the Middle East</p></td><td class="pc-btn"><a href="/uploads/research_reports/HRC01_SanviChoudhary.pdf" target="_blank" rel="noopener noreferrer">HRC01</a></td></tr>
                                 <tr><td class="pc-txt"><ul><li></li></ul><p>Combatting state supported enforced disappearances within conflict zones</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">HRC02</a></td></tr>
                                 <tr><td class="pc-txt"><ul><li></li></ul><p>Addressing mass displacement due to conflict</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">HRC02</a></td></tr>
                             </table>
@@ -204,10 +204,13 @@
                         let researchReportButtons = document.querySelectorAll("td.pc-btn > a");
 
                         researchReportButtons.forEach((element) => {
-                            element.removeAttribute("href");
-                            element.removeAttribute("target");
-                            element.onclick = function () {
+                            // console.log(element.getAttribute("href"));
+                            if (element.getAttribute("href") == "") {
+                                element.removeAttribute("href");
+                                element.removeAttribute("target");
+                                element.onclick = function () {
                                 alert("Our chairs are still busy writing the research reports for you ;)");
+                                }
                             }
                         })
                     </script>
