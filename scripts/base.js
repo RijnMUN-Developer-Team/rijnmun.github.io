@@ -260,25 +260,23 @@ var x = setInterval(function() {
 }, 1000);
 
 // go to top arrow --------------------------------------------
-// disabled (temporarily) due to chatbot feature
+window.addEventListener("scroll", function(){
+    if(window.scrollY < 470){
+        let scroll = document.getElementById('scrollup')
+        scroll.style.opacity = 0
+        scroll.onclick = null;
+        scroll.style.cursor = "default"
+    } else if(window.scrollY > 470) {
+        let scroll = document.getElementById('scrollup')
+        scroll.style.opacity = 0.9
+        scroll.setAttribute('onclick', "scroll_up()");
+        scroll.style.cursor = "pointer"
+    }
+});
 
-// window.addEventListener("scroll", function(){
-//     if(window.scrollY < 470){
-//         let scroll = document.getElementById('scrollup')
-//         scroll.style.opacity = 0
-//         scroll.onclick = null;
-//         scroll.style.cursor = "default"
-//     } else if(window.scrollY > 470) {
-//         let scroll = document.getElementById('scrollup')
-//         scroll.style.opacity = 0.9
-//         scroll.setAttribute('onclick', "scroll_up()");
-//         scroll.style.cursor = "pointer"
-//     }
-// });
-
-// function scroll_up() {
-//     window.scroll({top: 0, left: 0, behavior: 'smooth'});
-// }
+function scroll_up() {
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+}
 
 // spam email protection------------------------------------
 function email() {
