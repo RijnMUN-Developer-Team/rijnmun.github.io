@@ -93,7 +93,7 @@
                 <div class="all-committees">
 
                     <div class="per-committee">
-                        <h2>GA1 - International Security and Disarmement</h2>
+                        <h2><span>GA1 - International Security and Disarmement</span><i class="fa fa-caret-left debate-resos-arrow" id="arrow-GA1" onclick="toggleResos('GA1')"></i></h2>
                         <h3>Chaired by <span title="Gymnasium Haganum"><i>Vikram Klassens</i></span> and <span title="Gymnasium Haganum"><i>Edward Connor</i></span></h3>
                         <div class="txt-btn-rel">
                             <table>
@@ -102,20 +102,26 @@
                             </table>
                         </div>
                         
-                        <div class="debate-resos-arrow" id="arrow-GA1" onclick="toggleResos('GA1')">
-                            <i> (arrow with rotation plz :) </i>
-                        </div>
+                        <!-- <div class="debate-resos-arrow" id="arrow-GA1" onclick="toggleResos('GA1')">
+                            <i class="fa fa-caret-left"></i>
+                        </div> -->
                         <div style="display: none" class="debate-in-session" id="resos-GA1">
-                            <h4>Approved Resolutions</h4>
-                            <p class="reso-link"><a href="/">US GA101#2</a></p>
-                            <p class="reso-link"><a href="/">China GA101#1</a></p>
+                            <div class="approved-resos">
+                                <h4>Approved Resolutions</h4>
+                                <p class="reso-link"><a href="/">US GA101#2</a></p>
+                                <p class="reso-link"><a href="/">China GA101#1</a></p>
+                            </div>
 
-                            <h4>Resolution in Debate</h4>
-                            <p class="reso-link reso-debated"><a href="/">Switzerland GA101#3</a></p>
+                            <div class="in-process-resos">
+                                <h4>Resolution in Debate</h4>
+                                <p class="reso-link reso-debated"><a href="/">Switzerland GA101#3</a></p>
+                            </div>
 
-                            <h4>Passed Resolutions</h4>
-                            <p class="reso-link"><a href="/">Germany GA101#4</a></p>
-                            <p class="reso-link"><a href="/">Vietnam GA101#5</a></p>
+                            <div class="passed-resos">
+                                <h4>Passed Resolutions</h4>
+                                <p class="reso-link"><a href="/">Germany GA101#4</a></p>
+                                <p class="reso-link"><a href="/">Vietnam GA101#5</a></p>
+                            </div>
 
                         </div>
                     </div>

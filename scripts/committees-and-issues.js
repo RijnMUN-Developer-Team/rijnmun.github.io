@@ -1,16 +1,17 @@
+
 function toggleResos(committee) {
-    let cont = document.getElementById(`resos-${committee}`);
-    let arrow = document.getElementById(`arrow-${committee}`);
+    const cont = document.getElementById(`resos-${committee}`);
+    const arrow = document.getElementById(`arrow-${committee}`);
 
     if (cont.style.display == "none") {
         // open the reso div
-
-        cont.style.display = "block";
+        arrow.style.transform = 'rotate(-90deg)';
+        cont.style.display = "flex";
         cont.style.height = cont.scrollHeight + "px";
     } else {
         // close the reso div
-        cont.style.height = 0;
-        
+        arrow.style.transform = 'rotate(0deg)';
+        cont.style.height = '0px';
         setTimeout(function() {
             cont.style.display = "none";
         }, 200, cont)
