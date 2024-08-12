@@ -3,6 +3,10 @@
     --theme-rd: #D90148;
     --theme-wh: white;
     --bl-txt: #0269B3;
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
 }
 
 .title h3 {
@@ -123,6 +127,52 @@ h2 {
     justify-content: center;
     margin-right: 10px;
 }
+
+.debate-resos-arrow {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--theme-rd);
+}
+
+.debate-in-session {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+    width: calc(100% - 40px);
+
+    border-left: 5px solid var(--mid-bl);
+    border-right: 5px solid var(--mid-bl);
+    /* padding-left: 20px;
+    padding-right: 20px; */
+
+    text-align: center;
+
+    /* margin left/right is same as padding of the issues bullet points!  */
+    margin: 10px 16px 0 16px;
+}
+
+.debate-in-session h4 {
+    font-weight: 500;
+    color: var(--dark-bl);
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.debate-in-session .reso-link a {
+    color: var(--bl-txt);
+    text-decoration: none;
+    margin: 3px 0;
+}
+
+.debate-in-session .reso-link.reso-debated a:hover {
+    color: var(--theme-rd);
+}
+
+.debate-in-session .reso-link a:hover, .debate-in-session .reso-link.reso-debated a:hover {
+    text-decoration: underline;
+}
+
 /* for smaller screens */
 @media screen and (max-width: 767px){
     .title h1 {
