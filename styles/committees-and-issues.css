@@ -7,6 +7,8 @@
     --mid-bl: #5B95D7;
     --light-bl: #cedff3;
     --dark-bl: #143152;
+
+    --mid-rd: #e55c89;
 }
 
 .title h3 {
@@ -142,8 +144,11 @@ h2 {
     transition: all 0.2s ease-out;
     width: calc(100% - 40px);
     padding: 0 0 10px 0;
-    border-left: 5px solid var(--mid-bl);
-    border-right: 5px solid var(--mid-bl);
+    /* border-left: 5px solid var(--mid-bl);
+    border-right: 5px solid var(--mid-bl); */
+
+    border-left: 5px solid var(--mid-rd);
+    border-right: 5px solid var(--mid-rd);
     /* padding-left: 20px;
     padding-right: 20px; */
 
@@ -166,7 +171,7 @@ h2 {
     margin: 3px 0;
 }
 
-.debate-in-session .reso-link.reso-debated a:hover {
+.debate-in-session .reso-link.reso-debated a {
     color: var(--theme-rd);
 }
 
