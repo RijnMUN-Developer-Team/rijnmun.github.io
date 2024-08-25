@@ -65,12 +65,16 @@ h2.sub-heading {
     padding: 20px 30px;
     border-radius: 5px;
     height: fit-content;
+
+    max-height: 10%;
 }
 
 .photo {
     display: flex;
-    height: 100%;
-    width: 30%;
+    height: calc(100% - 40px);
+    /* width: calc(100% - 60px); */
+    max-height: calc(100% - 40px);
+    max-width: calc(100% - 60px);
     margin: auto 0;
     align-items: center;
 }
@@ -78,9 +82,8 @@ h2.sub-heading {
 .photo img {
     border-radius: 5px;
     max-height: 100%;
-    /* max-width: 100%; */
     min-width: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
     height: auto;
     width: auto;
 }
@@ -123,9 +126,14 @@ h2.sub-heading {
     line-height: 1.5em;
 }
 
-/* tablet version  */
-@media screen and (max-width: 1150px) {
+.text .description a {
+    color: var(--light-bl);
+    text-decoration: none;
+    font-style: italic;
+}
 
+.text .description a:hover {
+    color: var(--theme-wh);
 }
 
 /* the phone version  */
@@ -147,11 +155,9 @@ h2.sub-heading {
     }
 
     .person {
-        /* flex-wrap: wrap; */
         height: fit-content;
         width: 100%;
         padding: 10px;
-        /* max-height: 400px; */
         flex-direction: column;
     }
 
@@ -164,15 +170,23 @@ h2.sub-heading {
         padding: 5px;
     }
 
-    .person .photo {
-        margin: 0 0 15px 0;
+    .photo {
+        margin-bottom: 15px;
         display: flex;
-        width: 100%;
-        height: auto;
+
+        /* width: calc(100% - 20px); */
+        max-width: calc(100% - 20px);
+        height: 10%;
+        max-height: 50%;
+
         border-radius: 5px 5px 0px 0px;
         justify-content: center;
-        img {
-            width: 100%;
-        }
+    }
+
+    .photo img {
+        height: fit-content;
+        width: fit-content;
+        max-height: 100%;
+        max-width: 100%;
     }
 }
