@@ -23,7 +23,8 @@
     font-style: italic;
     font-size: 16px;
     line-height: normal;
-    max-width: 400px;
+    /* max-width: 400px; */
+    overflow: wrap;
     text-wrap: pretty;
     margin: 10px 0;
     color: #fff;
@@ -38,26 +39,26 @@
 .person {
     margin-top: 3%;
     justify-self: center;
-    width: 350px;
+    width: min-content;
   
 }
 
 .person img {
-    width: 350px;
+    height: 300px;
     border-radius: 10px 10px 0 0;
 }
 
 .person .label-content {
     display: flex;
     position: relative;
-    top: -4px; left: 1px;
-    width: 348px;
+    top: -4px;
+    /* width: 350px; */
     background-color: rgba(35, 86, 144, 0.8);
     border-radius: 0 0 10px 10px;
 }
 
 .person .label-content .label-text {
-    width: 95%;
+    width: auto;
     padding-left: 15px;
 }
 
