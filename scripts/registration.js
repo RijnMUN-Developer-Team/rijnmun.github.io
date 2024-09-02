@@ -8,8 +8,24 @@ function collapse(option) {
         heading.style.borderBottomRightRadius = "0"
         cont.style.display = 'block';
         cont.style.height = cont.scrollHeight + "px";       
-
-            
+        const conts = ['sch', 'ind', 'stoff', 'rlo']
+        conts.forEach(opt => {
+            if (opt != option) {
+                let temp_cont = document.getElementById(`${opt}-registration-info`);
+                let temp_heading = document.getElementById(`${opt}-heading`);
+                temp_cont.style.height= 0;
+                temp_heading.style.borderBottomLeftRadius = "5px"
+                temp_heading.style.borderBottomRightRadius = "5px"
+                setTimeout(function(){
+                    temp_cont.style.display = 'none'; 
+                }, 200, cont)
+                let temp_caret = document.getElementById(`${opt}-arrow`);
+                temp_caret.style.transition = "0.2s ease-in-out";
+                temp_caret.style.transform = "rotate(0deg)";
+                temp_caret.classList.remove('1');
+                temp_caret.classList.add('0');
+            }
+        })
     } else {
         // closes text on click
         cont.style.height= 0;
