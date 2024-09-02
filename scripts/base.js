@@ -82,7 +82,7 @@ document.onkeypress = function (key) {
 
 // COUNTDOWN TIMER -------------------------------------------------
 
-var countDownDate = new Date("Oct 11, 2024 12:00:00").getTime();
+var countDownDate = new Date("Oct 11, 2024 11:30:00").getTime();
 var prev_days
 var prev_hours
 var prev_mins
