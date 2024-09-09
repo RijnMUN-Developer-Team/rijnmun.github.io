@@ -25,8 +25,9 @@
         <link rel="stylesheet" type="text/css" href="/styles/committees-and-issues.css" media="screen">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
-        <script src="/scripts/committees-and-issues.js"></script>
+        <script type="module" src="/scripts/committees-and-issues.js"></script>
         <script type="module" src="/scripts/contextenu.js"></script>
+        <script src="/scripts/cai_funcs.js"></script>
         <title>RijnMUN | Committees and Issues</title>
     </head>
     <body>
@@ -106,18 +107,18 @@
                             <i class="fa fa-caret-left"></i>
                         </div> -->
                         <div style="display: none" class="debate-in-session" id="resos-GA1">
-                            <div class="approved-resos">
+                            <div class="approved-resos resos" id="approved-GA1">
                                 <h4>Approved Resolutions</h4>
                                 <p class="reso-link"><a href="/">US GA101#2</a></p>
                                 <p class="reso-link"><a href="/">China GA101#1</a></p>
                             </div>
 
-                            <div class="in-process-resos">
+                            <div class="active-resos resos" id="active-GA1">
                                 <h4>Resolution in Debate</h4>
                                 <p class="reso-link reso-debated"><a href="/">Switzerland GA101#3</a></p>
                             </div>
 
-                            <div class="passed-resos">
+                            <div class="passed-resos resos" id="passed-GA1">
                                 <h4>Passed Resolutions</h4>
                                 <p class="reso-link"><a href="/">Germany GA101#4</a></p>
                                 <p class="reso-link"><a href="/">Vietnam GA101#5</a></p>

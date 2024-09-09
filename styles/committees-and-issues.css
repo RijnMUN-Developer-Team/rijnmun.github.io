@@ -136,6 +136,14 @@ h2 {
     color: var(--theme-rd);
 }
 
+.debate-resos-arrow:hover {
+    cursor: pointer;
+}
+
+.resos {
+    max-width: 33%;
+}
+
 .debate-in-session {
     display: none;
     justify-content: space-evenly;
