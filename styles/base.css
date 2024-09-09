@@ -503,6 +503,7 @@ h4 {
     padding-right: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 530;
+    align-content: center;
 }
 
 .timer h4 {
