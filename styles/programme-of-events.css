@@ -22,10 +22,10 @@
 }
 
 .container {
-    width: calc(100vw * 0.96);
+    width: 95%;
     display: flex;
     /* to align with title banner  */
-    padding: 2% 3% 3% 2%;
+    padding: 2% 3% 0 2%;
     flex-wrap: wrap;
 
     /* don't remove this; the position relative does the sticky bar magic and don't question it ----  */
@@ -58,7 +58,7 @@
     margin-right: 10px;
 }
 
-.agenda {
+/* .agenda {
     display: grid;
     grid-template-columns: repeat(3, 0.9fr);
     grid-template-rows: 1.9fr;
@@ -69,17 +69,27 @@
     grid-template-areas: 
     "friday saturday sunday"
     "friday-info party-info key";
-}
+} */
 
-.agenda .fri {
+/* .agenda .fri {
     grid-area: friday;
+} */
+
+.agenda {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    div.item {
+        margin: 20px;
+        max-width: 33%;
+    }
 }
 
 .agenda .fri-optional-info {
     line-height: normal;
-    grid-area: friday-info;
-    margin-left: 10px;
-    width: 80%;
+    /* grid-area: friday-info; */
+    margin: 10px 0 0 10px;
+    width: 75%;
 
     text-align: justify;
 }
@@ -88,35 +98,38 @@
     margin-top: unset;
 }
     
-
+/* 
 .agenda .sat {
     grid-area: saturday;
-}
+} */
 
 .agenda .sat-party-info {
     line-height: normal;
-    grid-area: party-info;
+    /* grid-area: party-info; */
     text-align: justify;
-    width: 80%;
-    margin-left: 10px;
+    width: 75%;
+    margin: 10px 0 0 10px;
 }
-
+/* 
 .agenda .sun {
     grid-area: sunday;
-}
+} */
 
 .col-key-parent {
-    position: sticky;
-    left: calc(100% - 260px); bottom: 10px;
+    position: fixed !important;
+    /* left: calc(100% - 235px);  */
+    right: 20px;
+    bottom: 10px;
     grid-area: key;
     /* width: 60%; */
-    width: 250px;
+    width: 230px;
     height: fit-content;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 .col-key-parent .color-key {
     border: 3px solid var(--theme-bl);
+    /* border: 3px solid #000; */
     border-radius: 10px;
     padding-left: 20px;
     background-color: white;
@@ -127,6 +140,9 @@
 
     h2 {
         margin: 10px 0 16px 0;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
     }
 
     p {
@@ -136,6 +152,9 @@
 
     p:last-of-type {
         margin: 8px 0 15px 0;
+    }
+    #collapsible-cols {
+        transition: all 0.2s ease-in-out;
     }
 }
 
@@ -161,19 +180,20 @@
 }
 
 .col-key-parent i {
-    position: absolute;
-    right: 10px; bottom: 10px;
+    /* position: absolute;
+    right: 10px; bottom: 10px; */
     z-index: 100;
-    padding: 0 0 10px;
+    /* transition: all 0.2s ease-in-out; */
+    /* padding: 0 0 10px; */
 }
 
-.col-key-parent #eye {
+.col-key-parent #arrow {
     cursor: pointer;
 }
 
 .agenda .item {
     margin-bottom: unset;
-    width: 80%;
+    /* width: 80%; */
 }
 
 h2 {
