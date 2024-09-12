@@ -56,5 +56,7 @@ document.addEventListener('scroll', (e) => {
     const key = document.getElementById('key-parent')
     if (window.scrollY > height - footer) {
         key.style.bottom = `${10 + window.scrollY - (height - footer)}px`
+    } else {
+        key.style.bottom = `10px`
     }
 })
