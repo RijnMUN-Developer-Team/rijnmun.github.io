@@ -18,7 +18,7 @@
     --delegate: #0782DA;
     --stoff: #02A768;
     --general: #FF8629;
-
+    --mundir: #d76dd7;
 }
 
 .container {
@@ -61,7 +61,7 @@
 .agenda {
     display: grid;
     grid-template-columns: repeat(3, 0.9fr);
-    grid-template-rows: 1.9fr 0.9fr;
+    grid-template-rows: 1.9fr;
 
     grid-column-gap: 40px;
     grid-row-gap: 15px;
@@ -105,21 +105,23 @@
     grid-area: sunday;
 }
 
-.agenda .col-key-parent {
+.col-key-parent {
     position: sticky;
-    right: 0; bottom: 10px;
-    justify-self: end;
+    left: calc(100% - 260px); bottom: 10px;
     grid-area: key;
-    width: 60%;
+    /* width: 60%; */
+    width: 250px;
     height: fit-content;
+    margin: 0 0 10px 0;
 }
 
-.agenda .col-key-parent .color-key {
+.col-key-parent .color-key {
     border: 3px solid var(--theme-bl);
     border-radius: 10px;
     padding-left: 20px;
     background-color: white;
     grid-area: key;
+    /* padding: 0 0 10px 20px; */
 
     height: 100%;
 
@@ -137,30 +139,35 @@
     }
 }
 
-.agenda .col-key-parent .color-key p {
+.col-key-parent .color-key p {
     width: fit-content;
 }
 
-.agenda .col-key-parent .color-key .stoff {
+.col-key-parent .color-key .stoff {
     border-left: 5px solid var(--stoff);
     padding-left: 15px;
 }
-.agenda .col-key-parent .color-key .delegates {
+.col-key-parent .color-key .delegates {
     border-left: 5px solid var(--delegate);
     padding-left: 15px;
 }
-.agenda .col-key-parent .color-key .general {
+.col-key-parent .color-key .general {
     border-left: 5px solid var(--general);
     padding-left: 15px;
 }
-        
-.agenda .col-key-parent i {
+.col-key-parent .color-key .mundir {
+    border-left: 5px solid var(--mundir);
+    padding-left: 15px;
+}
+
+.col-key-parent i {
     position: absolute;
     right: 10px; bottom: 10px;
     z-index: 100;
+    padding: 0 0 10px;
 }
 
-.agenda .col-key-parent #eye {
+.col-key-parent #eye {
     cursor: pointer;
 }
 
@@ -169,7 +176,7 @@
     width: 80%;
 }
 
-.container h2 {
+h2 {
     color: var(--theme-bl);
     border-left: 5px solid var(--theme-rd);
 
@@ -221,6 +228,10 @@
 
 .info table tr td.general {
     border-left: 5px solid var(--general);
+}
+
+.info table tr td.mundir {
+    border-left: 5px solid var(--mundir);
 }
 
 .info table tr td.time {
