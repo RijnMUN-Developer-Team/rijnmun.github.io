@@ -50,13 +50,15 @@ function  toggle_col_key() {
     }
 }
 
-document.addEventListener('scroll', (e) => {
-    const footer = Math.floor(document.querySelector('footer').getBoundingClientRect().height)
-    const height = Math.floor(document.querySelector('html').getBoundingClientRect().height - window.innerHeight)
-    const key = document.getElementById('key-parent')
-    if (window.scrollY > height - footer) {
-        key.style.bottom = `${10 + window.scrollY - (height - footer)}px`
-    } else {
-        key.style.bottom = `10px`
-    }
-})
+if (!(window.screenX === 0 && navigator.maxTouchPoints > 0 && screen.availWidth < 1000)) {
+    document.addEventListener('scroll', (e) => {
+        const footer = Math.floor(document.querySelector('footer').getBoundingClientRect().height)
+        const height = Math.floor(document.querySelector('html').getBoundingClientRect().height - window.innerHeight)
+        const key = document.getElementById('key-parent')
+        if (window.scrollY > height - footer) {
+            key.style.bottom = `${10 + window.scrollY - (height - footer)}px`
+        } else {
+            key.style.bottom = `10px`
+        }
+    })
+}

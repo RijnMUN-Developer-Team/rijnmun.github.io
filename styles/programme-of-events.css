@@ -300,9 +300,10 @@ h2 {
         flex-direction: column;
     }
 
-    .agenda .item {
+    .agenda div.item {
         width: 100%;
-        margin-bottom: 20px;
+        max-width: unset;
+        margin: 0 0 20px 0;
     }
 
     .agenda .item .info {
@@ -310,8 +311,8 @@ h2 {
         margin-left: 15px;
     }
 
-    .agenda .col-key-parent {
-        position: relative;
+    .col-key-parent {
+        position: relative !important;
         left: 0px; bottom: 10px;
         width: 70vw;
         background-color: #fff;
@@ -320,17 +321,23 @@ h2 {
         }
     }
 
-    .agenda .col-key-parent .color-key {
+    .col-key-parent .color-key {
         border: unset;
         padding-left: unset;
     }
-    .agenda .col-key-parent .color-key h2 {
+    .col-key-parent .color-key h2 {
         margin-left: unset;
     }
-    .agenda .col-key-parent .color-key p {
+    .col-key-parent .color-key p {
         margin: 12px;
     }           
-    .agenda i {
+    i#arrow {
         display: none;
-    } 
+    }
+    .color-key #collapsible-cols {
+        display: block !important;
+    }
+    .agenda .fri-optional-info, .agenda .sat-party-info {
+        width: 90%;
+    }
 }
