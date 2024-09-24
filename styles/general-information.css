@@ -145,7 +145,7 @@ h2 {
 
 .guidelines-content {
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
 }
 
 .guidelines-content .guidelines-list {
