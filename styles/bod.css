@@ -13,7 +13,7 @@
 .row1, .row2 {
     /* padding-top: 5%;
     margin-left: 1.5%; */
-    padding: 2% 3%;
+    padding: 2% 3% 2% 3%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -68,5 +68,18 @@
         padding-top: 15px;
         flex-direction: column;
         justify-content: unset;
+    }
+    .row1 {
+        margin-bottom: unset;
+        padding-bottom: unset;
+    }
+    .row2 {
+        margin-top: unset;
+        padding-top: unset;
+    }
+    .person img {
+        height: auto;
+        width: 94vw;
+        border-radius: 10px 10px 0 0;
     }
 }

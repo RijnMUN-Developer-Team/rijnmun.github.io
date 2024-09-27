@@ -91,5 +91,7 @@ document.onkeypress = function (e) {
                 }
             }, 10)
         }
+    } else if (e.key == "Enter") {
+        window.location.reload()
     }
 }   

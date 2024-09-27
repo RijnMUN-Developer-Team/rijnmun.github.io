@@ -40,9 +40,31 @@ h2 {
 .container p, .container li {
     color: var(--dark-bl);
     line-height: 22px;
-    list-style: none;
+    /* list-style: none; */
     margin: 8px;
     text-align: justify;
+}
+
+.guidelines-list li, #guides li{
+    list-style: none;
+}
+
+.resources-left li {
+    margin: 0 0 0 20px !important;
+}
+
+#resources-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .resources-left {
+        width: 45%;
+    }
+    .resources-right {
+        width: 40%;
+        border-left: 5px solid var(--bg-red);
+        padding-left: 5%;
+    }
 }
 
 /* top about text ------------------- */
@@ -123,7 +145,7 @@ h2 {
 
 .guidelines-content {
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
 }
 
 .guidelines-content .guidelines-list {
@@ -220,6 +242,22 @@ h2 {
     .guidelines-content .image {
         width: 100%;
         margin-top: 1.5%;
+    }
+    #resources-cont {
+        flex-direction: column;
+        justify-content: unset;
+        .resources-left, .resources-right {
+            border: none;
+            width: 100%;
+            padding: unset;
+        }
+        .resources-right {
+            padding-top: 10px;
+            border-top: 5px solid var(--bg-red);
+        }
+        .resources-left {
+            padding-bottom: 10px;
+        }
     }
 }
 
