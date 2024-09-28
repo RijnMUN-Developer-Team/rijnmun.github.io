@@ -45,32 +45,11 @@ let categories = {
 //     })
 // })
 
-function handleClientLoad() {
-    gapi.load('client:auth2', {
-      callback: function () {
-        gapi.client.init({
-          apiKey: KEY,
-          clientId: ID,
-          discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?v=v4']
-        }).then(function () {
-          // API is ready
-        });
-      }
-    })
-}
 
-function getData() {
-    gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: SRC,
-      range: 'A1:S87'
-    }).then(function (response) {
-      var data = response.result.values;
-      // Process the data
-      console.log(data);
-    }, function (err) {
-      console.error('Error:', err);
-    });
-  }
 
-handleClientLoad()
-getData()  
+// Test to get the raw data from within the iframe itself. Now working yet, but I have small hopes
+// document.addEventListener('DOMContentLoaded', () => {
+//     const raw_sheet = document.getElementById('raw-timeline')
+//     let table = document.querySelector('body div#sheets-viewport div div table.waffle tbody')
+//     console.log(table)
+// })
