@@ -1,8 +1,5 @@
 const last_row = 87
 const link = "https://docs.google.com/spreadsheets/d/18yXyhI0yQshZ4fUWypPzGXWJNaUNKwJBkXcEXavWxPI/pubhtml?gid=0&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range="
-const KEY = window.atob("QUl6YVN5Q054czY0eE1faEZfdEZtNkJaNDZ1S1BPcE1jZzZrVUpJ")
-const ID = window.atob("ODEyMTY5NTM2OTQzLXUzazg2aDl1NWRucTVidGRmZzlkNnZnZ2V2Y21naXVlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29t")
-const SRC = window.atob("MTh5WHloSTB5UXNoWjRmVVd5cFB6R1hXSk5hVU5Ld0pCa1hjRVhhdld4UEk")
 
 let categories = {
     0: {'name': 'BOD', 'column': 'C'},
@@ -44,33 +41,3 @@ let categories = {
 //         // document.getElementById('timeline').contentWindow.location.reload()
 //     })
 // })
-
-function handleClientLoad() {
-    gapi.load('client:auth2', {
-      callback: function () {
-        gapi.client.init({
-          apiKey: KEY,
-          clientId: ID,
-          discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?v=v4']
-        }).then(function () {
-          // API is ready
-        });
-      }
-    })
-}
-
-function getData() {
-    gapi.client.sheets.spreadsheets.values.get({
-      spreadsheetId: SRC,
-      range: 'A1:S87'
-    }).then(function (response) {
-      var data = response.result.values;
-      // Process the data
-      console.log(data);
-    }, function (err) {
-      console.error('Error:', err);
-    });
-  }
-
-handleClientLoad()
-getData()  

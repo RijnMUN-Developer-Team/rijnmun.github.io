@@ -13,9 +13,19 @@
 
 #timeline {
     width: calc(100vw - 30px);
-    height: calc(60vh - 30px);
+    height: calc(70vh - 30px);
     justify-self: center;
     margin: 10px;
     border: 5px solid #333;
     border-radius: 10px;
+}
+
+.filtered-timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.timeline-snippet {
+    width: 107px;
+    height: 60vh;
 }
