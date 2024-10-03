@@ -49,8 +49,9 @@ h2 {
     list-style: none;
 }
 
-.resources-left li {
+.resources-right li {
     margin: 0 0 0 20px !important;
+    list-style: '– ';
 }
 
 #resources-cont {
