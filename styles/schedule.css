@@ -1,0 +1,60 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#timeline {
+    width: calc(100vw - 30px);
+    height: calc(80vh - 30px);
+    justify-self: center;
+    margin: 10px;
+    border: 5px solid #333;
+    border-radius: 10px;
+    /* iframe {
+        zoom: 1;
+        -ms-zoom: 1;
+        transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+    } */
+}
+
+.filtered-timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.timeline-snippet {
+    width: 107px;
+    height: 60vh;
+}
+#scale {
+    display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+    #scale {
+        display: block;
+    }
+    #timeline {
+        width: unset;
+    }
+    /* #timeline iframe {
+        zoom: 1;
+        -ms-zoom: 1;
+        transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+    } */
+}

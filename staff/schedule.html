@@ -4,8 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="color-scheme" content="light">
+        <meta name="robots" content="noindex">
+        <meta property="og:type" content="wesbite">
+        <meta property="og:title" content="RijnMUN 2024">
+        <meta property="og:url" content="https://www.rijnmun.org/staff/schedule">
         <meta name="theme-color" content="#23569090">
-        <link rel="manifest" href="/manifest.json">
         <link rel="icon" href="/images/favicon.ico" sizes="96x96">
 
         <!-- preloading the fonts ---- -->
@@ -14,49 +17,44 @@
 
         <link rel="stylesheet" type="text/css" href="/styles/reset.css">
         <link rel="stylesheet" type="text/css" href="/styles/base.css">
-        <link rel="stylesheet" type="text/css" href="/styles/hangman.css">
-        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 800px)">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="/styles/schedule.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
-        <script src="/scripts/dispatch_key.js"></script>
-        <script src="/scripts/contextenu.js"></script>
-        <script type="module" src="/scripts/hangman.js"></script>
-        <script type="module" src="/scripts/hangman_null.js"></script>
-        <!-- <script type="module" src="/scripts/words.js"></script> -->
-        <title>RijnMUN Hangman</title>
-
-        <script type="module" src="/scripts/bod.js"></script>
+        <!-- <script src="/staff/schedule.js"></script> -->
+        <script type="module" src="/scripts/contextenu.js"></script>
+        <title>RijnMUN | Staff</title>
     </head>
     <body>
         <header data-nosnippet>
-        <div class="logo_container">
-            <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
-        </div>
+            <div class="logo_container">
+                <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
+            </div>
 
-        <!-- dropdown for laptop version -->
-        <div class="menu" id="menu">
-            <a href="/" class="normal">Home</a>
-            <div class="normal">
-                <div class="dropdown">
-                    <a id="dropbtn" class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
-                    <div class="dropdown-content">
-                        <a href="/rijnmun-2024/general-information">General Information</a>
-                        <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
-                        <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
-                        <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
-                        <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
-                        <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+            <!-- dropdown for laptop version -->
+            <div class="menu" id="menu">
+                <a href="/" class="current">Home</a>
+                <div class="normal">
+                    <div class="dropdown">
+                        <a id="dropbtn" class="dropbtn" href="/rijnmun-2024/general-information">RijnMUN 2024</a>
+                        <div class="dropdown-content">
+                            <a href="/rijnmun-2024/general-information">General Information</a>
+                            <a href="/rijnmun-2024/committees-and-issues">Committees and Issues</a>
+                            <a href="/rijnmun-2024/programme-of-events">Programme of Events</a>
+                            <a href="/rijnmun-2024/board-of-directors">Board of Directors</a>
+                            <a href="/rijnmun-2024/speakers-and-advisors">Guest Speakers & Advisors</a>
+                            <a href="/rijnmun-2024/venue">Venue & Leiden</a>
+                        </div>
                     </div>
                 </div>
+                <a class="normal" href="/registration">Registration</a>
+                <a class="normal" href="/contact">Contact</a>
+                <p class="icon" onclick="show_bars()" style="height: 30px;">
+                        <span id="bar1" class="bar" style="--i:0"></span>
+                        <span id="bar2" class="bar" style="--i:9"></span>
+                        <span id="bar3" class="bar" style="--i:18"></span>
+                </p>
             </div>
-            <a class="normal" href="/registration">Registration</a>
-            <a class="normal" href="/contact">Contact</a>
-            <p class="icon" onclick="show_bars()" style="height: 30px;">
-                <span id="bar1" class="bar" style="--i:0"></span>
-                <span id="bar2" class="bar" style="--i:9"></span>
-                <span id="bar3" class="bar" style="--i:18"></span>
-            </p>
-        </div>
         </header>  
         <!-- dropdown for phone version -->
         <div class="toggle" id="toggle" style="display:none;">
@@ -72,6 +70,7 @@
                     <a href="/rijnmun-2024/venue">Venue & Leiden</a>
                 </li></ul>
                 <li class="main"><a href="/registration">Registration</a></li>
+                
                 <li class="main"><a href="/contact">Contact</a></li>
             </ul>
         </div>
@@ -81,78 +80,38 @@
         </div></noscript>
         <main onclick="hide_bars()">
             <div class="title">
-                <h1>Hangman</h1>
-                <h2 id="score"></h2>
+                <h1>RijnMUN Staff Schedule</h1>
             </div>
             <div class="container">
-                <div class="game" id="game">
-                    <div class="stickman" id="stickman">
-                        <div class="drawing">
-                            <div id="top"></div>
-                            <div id="center">
-                                <div id="side"></div>
-                                <div id="inside">
-                                    <div id="row1">
-                                        <div id="diagonal"></div>
-                                        <div id="rope"></div>
-                                    </div>
-                                    <div id="row2">
-                                        <div id="head"></div>
-                                    </div>
-                                    <div id="row3">
-                                        <div id="left_arm"></div>
-                                        <div id="body"></div>
-                                        <div id="right_arm"></div>
-                                    </div>
-                                    <div id="row4">
-                                        <div id="left_leg"></div>
-                                        <div id="right_leg"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="bottom"></div>
-                        </div>
-                    </div>
-                    <div class="word_area" id="word_area">
-                        <div class="msg" id="msg"></div>
-                        <div class="word" id="word"></div>
-                        <div class="new_game" id="new_game">
-                            <button onclick="window.location.reload()">New Game</button>
-                        </div>
-                    </div>
-                    <div class="guessed" id="guessed">
-                        <p class="char" id="chara" onclick="press_key('a')">A</p>
-                        <p class="char" id="charb" onclick="press_key('b')">B</p>
-                        <p class="char" id="charc" onclick="press_key('c')">C</p>
-                        <p class="char" id="chard" onclick="press_key('d')">D</p>
-                        <p class="char" id="chare" onclick="press_key('e')">E</p>
-                        <p class="char" id="charf" onclick="press_key('f')">F</p>
-                        <p class="char" id="charg" onclick="press_key('g')">G</p>
-                        <p class="char" id="charh" onclick="press_key('h')">H</p>
-                        <p class="char" id="chari" onclick="press_key('i')">I</p>
-                        <p class="char" id="charj" onclick="press_key('j')">J</p>
-                        <p class="char" id="chark" onclick="press_key('k')">K</p>
-                        <p class="char" id="charl" onclick="press_key('l')">L</p>
-                        <p class="char" id="charm" onclick="press_key('m')">M</p>
-                        <p class="char" id="charn" onclick="press_key('n')">N</p>
-                        <p class="char" id="charo" onclick="press_key('o')">O</p>
-                        <p class="char" id="charp" onclick="press_key('p')">P</p>
-                        <p class="char" id="charq" onclick="press_key('q')">Q</p>
-                        <p class="char" id="charr" onclick="press_key('r')">R</p>
-                        <p class="char" id="chars" onclick="press_key('s')">S</p>
-                        <p class="char" id="chart" onclick="press_key('t')">T</p>
-                        <p class="char" id="charu" onclick="press_key('u')">U</p>
-                        <p class="char" id="charv" onclick="press_key('v')">V</p>
-                        <p class="char" id="charw" onclick="press_key('w')">W</p>
-                        <p class="char" id="charx" onclick="press_key('x')">X</p>
-                        <p></p>
-                        <p></p>
-                        <p class="char" id="chary" onclick="press_key('y')">Y</p>
-                        <p class="char" id="charz" onclick="press_key('z')">Z</p>
-                    </div>
-                </div>
-
-            </div>
+                <!-- <input type="number" name="scale" id="timeline-scale" value="0.75" max="1" min="0" step="0.05"> -->
+                <select name="scale" id="scale" onchange="set_scale(this.value)">
+                    <option value="1">1.00</option>
+                    <option value="0.95">0.95</option>
+                    <option value="0.9">0.90</option>
+                    <option value="0.85">0.85</option>
+                    <option value="0.8">0.80</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.7">0.70</option>
+                    <option value="0.65">0.65</option>
+                    <option value="0.6">0.60</option>
+                    <option value="0.55">0.55</option>
+                    <option value="0.5">0.50</option>
+                    <option value="0.45">0.45</option>
+                    <option value="0.4">0.40</option>
+                    <option value="0.35">0.35</option>
+                    <option value="0.3">0.30</option>
+                    <option value="0.25">0.25</option>
+                </select>
+                <script>
+                    function set_scale(value) {
+                        scale = parseFloat(value)
+                        const timeline = document.getElementById('timeline')
+                        // timeline.style = `zoom: ${scale}; -ms-zoom: ${scale}; transform: scale(${scale}); -moz-transform: scale(${scale}); -o-transform: scale(${scale}); -webkit-transform: scale(${scale});`
+                        let height_factor = scale ** -1
+                        timeline.style = `zoom: ${scale}; -ms-zoom: ${scale}; height: calc(calc(70vh - 30px) * ${height_factor});`
+                    }
+                </script>
+                <iframe id="timeline" style="zoom: 1; -ms-zoom: 1;" src="https://docs.google.com/spreadsheets/d/18yXyhI0yQshZ4fUWypPzGXWJNaUNKwJBkXcEXavWxPI/pubhtml?gid=0&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:U87"></iframe>
             </div>
             <div id="scrollup">
                 <i class="fa fa-arrow-up fa-2x"></i>
@@ -181,13 +140,10 @@
                                 <a href="/uploads/RijnMUN_Delegate_Handbook.pdf" target="_blank" rel="noopener noreferrer">Handbook</a>
                             </li>
                             <li>
-                                <a href="/rijnmun-2024/general-information?tab=resources">Resources</a>
+                                <a href="/rijnmun-2024/committees-and-issues">Research</a>
                             </li>
                             <li>
                                 <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="/uploads/RijnMUN 2024 Resolution Template.odt" target="_blank" rel="noopener noreferrer">Resolution Template</a>
                             </li>
                         </ul>
                     </div>
@@ -227,9 +183,9 @@
                             </table>
                         </div>
                         <div class="socials">
-                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp" title="Follow us @rijn.mun on Instagram!"></a>
+                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp" title="Follow us @rijn.mun on Instagram!"></a>
                             <h4>FOLLOW US</h4>
-                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp" title="Follow @rijn_mun on TikTok!"></a>
+                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank" rel="noopener noreferrer"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp" title="Follow @rijn_mun on TikTok!"></a>
                         </div>
                     </div>
                 </div>
