@@ -144,6 +144,11 @@ h2 {
     max-width: 33%;
 }
 
+.no-resos {
+    /* color: var(--dark-bl); */
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .debate-in-session {
     display: none;
     justify-content: space-evenly;
