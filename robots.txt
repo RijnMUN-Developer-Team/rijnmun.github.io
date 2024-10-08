@@ -7,3 +7,5 @@ Disallow: /*.png$
 Disallow: /extras/
 Disallow: /*.css
 Disallow: /*.js
+Disallow: /staff/*
+Disallow: /scripts/*

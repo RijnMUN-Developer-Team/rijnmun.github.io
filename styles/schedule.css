@@ -41,6 +41,12 @@
     display: none;
 }
 
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px 10px 10px 10px;
+}
 
 @media screen and (max-width: 767px) {
     #scale {
@@ -48,6 +54,13 @@
     }
     #timeline {
         width: unset;
+    }
+    #links {
+        flex-direction: column;
+        justify-content: start;
+        a {
+            margin: 10px;
+        }
     }
     /* #timeline iframe {
         zoom: 1;
