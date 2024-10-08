@@ -13,7 +13,7 @@
 
 #timeline {
     width: calc(100vw - 30px);
-    height: calc(70vh - 30px);
+    height: calc(80vh - 30px);
     justify-self: center;
     margin: 10px;
     border: 5px solid #333;
@@ -45,6 +45,9 @@
 @media screen and (max-width: 767px) {
     #scale {
         display: block;
+    }
+    #timeline {
+        width: unset;
     }
     /* #timeline iframe {
         zoom: 1;

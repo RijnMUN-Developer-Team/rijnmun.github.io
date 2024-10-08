@@ -107,10 +107,11 @@
                         scale = parseFloat(value)
                         const timeline = document.getElementById('timeline')
                         // timeline.style = `zoom: ${scale}; -ms-zoom: ${scale}; transform: scale(${scale}); -moz-transform: scale(${scale}); -o-transform: scale(${scale}); -webkit-transform: scale(${scale});`
-                        timeline.style = `zoom: ${scale}; -ms-zoom: ${scale};`
+                        let height_factor = scale ** -1
+                        timeline.style = `zoom: ${scale}; -ms-zoom: ${scale}; height: calc(calc(70vh - 30px) * ${height_factor});`
                     }
                 </script>
-                <iframe id="timeline" style="zoom: 1; -ms-zoom: 1;" src="https://docs.google.com/spreadsheets/d/18yXyhI0yQshZ4fUWypPzGXWJNaUNKwJBkXcEXavWxPI/pubhtml?gid=0&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:S87"></iframe>
+                <iframe id="timeline" style="zoom: 1; -ms-zoom: 1;" src="https://docs.google.com/spreadsheets/d/18yXyhI0yQshZ4fUWypPzGXWJNaUNKwJBkXcEXavWxPI/pubhtml?gid=0&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:U87"></iframe>
             </div>
             <div id="scrollup">
                 <i class="fa fa-arrow-up fa-2x"></i>
