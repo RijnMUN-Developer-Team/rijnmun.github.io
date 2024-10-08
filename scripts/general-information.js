@@ -12,3 +12,17 @@ function openTab(name) {
     document.getElementById(name).style.display = "block";
     btn.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--theme-rd");
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('tab')) {
+        const tab = searchParams.get('tab')
+        if (tab == 'guidelines') {
+            openTab('guidelines')
+        } else if (tab == 'guides') {
+            openTab('guides')
+        } else if (tab == 'resources') {
+            openTab('resources')
+        }
+    }
+})
