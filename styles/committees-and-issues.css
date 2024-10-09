@@ -73,6 +73,10 @@ h2 {
     display: block;
 }
 
+.txt-btn-rel {
+    padding: 0 0 10px 0;
+}
+
 .txt-btn-rel table {
     width: 100%;
 }
@@ -156,19 +160,21 @@ h2 {
     overflow: hidden;
     transition: all 0.2s ease-out;
     width: calc(100% - 40px);
-    padding: 0 0 10px 0;
     /* border-left: 5px solid var(--mid-bl);
     border-right: 5px solid var(--mid-bl); */
-
+    
     border-left: 5px solid var(--mid-rd);
     border-right: 5px solid var(--mid-rd);
     /* padding-left: 20px;
     padding-right: 20px; */
-
+    
     text-align: center;
-
+    
     /* margin left/right is same as padding of the issues bullet points!  */
-    margin: 10px 16px 0 16px;
+    margin: 0 16px 0 16px;
+    div {
+        padding: 0 0 10px 0;
+    }
 }
 
 .debate-in-session h4 {

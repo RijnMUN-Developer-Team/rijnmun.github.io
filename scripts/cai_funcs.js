@@ -6,13 +6,14 @@ function toggleResos(committee) {
         // open the reso div
         arrow.style.transform = 'rotate(-90deg)';
         cont.style.display = "flex";
-        cont.style.height = cont.scrollHeight + "px";
+        cont.style.height = (cont.scrollHeight + 15)+ "px";
+        // cont.style.height = "auto";
     } else {
         // close the reso div
         arrow.style.transform = 'rotate(0deg)';
         cont.style.height = '0px';
         setTimeout(function() {
             cont.style.display = "none";
-        }, 200, cont)
+        }, 200)
     }
 }
