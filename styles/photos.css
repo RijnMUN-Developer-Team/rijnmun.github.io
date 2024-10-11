@@ -1,0 +1,39 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+
+    --mid-rd: #e55c89;
+}
+
+.title h3 {
+    width: 98%;
+    padding-top: 10px;
+    font-size: 20px;
+    /* align-self: end; */
+    text-align: end;
+    justify-self: end;
+    color: #5cd6ff;
+    margin: 1%;
+    font-style: italic;
+}
+
+.container {
+    padding-bottom: 20px;
+    margin: 2% 3% 3% 4.5%;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--theme-bl);
+    border-left: var(--theme-rd) solid 5px;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-bottom: unset; 
+}
+
