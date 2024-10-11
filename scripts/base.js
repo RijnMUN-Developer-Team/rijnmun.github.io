@@ -105,9 +105,9 @@ var hour_li = []
 var day_li = []
 var x = setInterval(function() {
     var now = new Date().getTime();
-    var distance = countDownDate - now;
+    var distance = now - countDownDate;
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))+2; // the +2 is to accomodate for Dutch time zone (UTC+1 +1 for daylight saving time)
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // the +2 is to accomodate for Dutch time zone (UTC+1 +1 for daylight saving time)
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -176,14 +176,14 @@ var x = setInterval(function() {
     transition('sec2', 1)
 
     setTimeout(() => {
-        document.getElementById('day1').innerHTML = day_li[0]
+        document.getElementById('day1').innerHTML = '+' + day_li[0]
         document.getElementById('day2').innerHTML = day_li[1]
         document.getElementById('day3').innerHTML = day_li[2]
-        document.getElementById('hr1').innerText = hour_li[0]
+        document.getElementById('hr1').innerText = '+' + hour_li[0]
         document.getElementById('hr2').innerText = hour_li[1]
-        document.getElementById('min1').innerText = min_li[0]
+        document.getElementById('min1').innerText ='+' + min_li[0]
         document.getElementById('min2').innerText = min_li[1]
-        document.getElementById('sec1').innerText = sec_li[0]
+        document.getElementById('sec1').innerText = '+' + sec_li[0]
         document.getElementById('sec2').innerText = sec_li[1]
     }, "200")
 
