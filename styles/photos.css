@@ -34,6 +34,26 @@ h2 {
     border-left: var(--theme-rd) solid 5px;
     padding-left: 15px;
     margin-top: 40px;
-    margin-bottom: unset; 
+    margin-bottom: 20px; 
 }
 
+.conference-day {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conference-photos {
+    max-height: 400px;
+    max-width: 400px;
+
+    margin: 15px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 500px)  {
+    .conference-photos {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+}

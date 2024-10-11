@@ -25,7 +25,6 @@
         <link rel="stylesheet" type="text/css" href="/styles/photos.css" media="screen">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
-        <script src="/scripts/photos.js"></script>
         <title>RijnMUN | Photos</title>
     </head>
     <body>
@@ -88,14 +87,16 @@
             </div>
             
             <div class="container">
-                <p id="info">Original files of these photos will be made accessible after the conference.</p>
+                <p id="info">Original files of these photos will be made accessible after the conference. For any requests regarding these photos please contact us.</p>
 
                 <h2>Day 1</h2>
-                <div class="day" id="day1">
-
-                </div>
+                <!-- photos are automated into the divs through js  -->
+                <div class="conference-day" id="conference-day1"></div>
 
             </div>
+
+            <script src="/scripts/photos.js"></script>
+
             <div id="scrollup">
                 <i class="fa fa-arrow-up fa-2x"></i>
             </div>
