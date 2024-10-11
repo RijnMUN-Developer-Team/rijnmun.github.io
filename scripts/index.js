@@ -13,7 +13,6 @@ function toggle_news_overflow() {
     if (news_overflow_toggled) {
         // transitioning the arrow
         overflow_toggle.innerHTML = "Show more ";
-        toggle_cont.style = "padding: 0 0 0 0;"
         overflow_arrow.style = "rotate: 0deg;";
         news_overflow_toggled = false;
 
@@ -23,6 +22,8 @@ function toggle_news_overflow() {
         setTimeout(function() {
           overflow_content.style.display = "none";
         }, 200, overflow_content)
+        toggle_cont.style = "padding: 0 0 0 0;"
+
 
 
     } else {

@@ -218,7 +218,9 @@ h2 {
     height: 0px;
     overflow-y: hidden;
 
-    transition: height 0.2s linear;
+    /* transition: height 0.2s linear; */
+    transition: height 0.2s ease-in-out;
+
 }
 
 .sidebar #nws-ovrflw-arrw {
