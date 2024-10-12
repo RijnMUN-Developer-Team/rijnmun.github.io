@@ -48,6 +48,13 @@ h2 {
     letter-spacing: 0.5px;
 }
 
+.container h4 {
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--theme-bl);
+}
+
 /* .pc-txt ul li {
     list-style-type: disc; */
     /* text-decoration: none; */
