@@ -60,6 +60,11 @@ export const resos = {
             {
                 "name": "Colombia GA302 #2",
                 "link": "/uploads/resolutions/GA3/GA302_2.pdf"
+            },
+
+            {
+                "name": "Chad GA301 #3",
+                "link": "/uploads/resolutions/GA3/GA301_3.pdf"
             }
 
         ],
