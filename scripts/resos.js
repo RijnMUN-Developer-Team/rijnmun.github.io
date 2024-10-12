@@ -45,7 +45,12 @@ export const resos = {
             {
                 "name": "Ukraine GA301 #1",
                 "link": "/uploads/resolutions/GA3/GA301_1.pdf"
-              }
+              },
+
+            {
+            "name": "Kenya GA302 #1",
+            "link": "/uploads/resolutions/GA3/GA302_1.pdf"
+            }
 
         ],
         "active": [
