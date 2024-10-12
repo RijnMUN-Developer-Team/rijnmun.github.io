@@ -27,7 +27,7 @@ export const resos = {
         "approved": [
           {
             "name": "UK GA101 #1",
-            "link": "/uploads/resolutions/GA101/GA101_1.pdf"
+            "link": "/uploads/resolutions/GA1/GA101_1.pdf"
           }
 
         ],
