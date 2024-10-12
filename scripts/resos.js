@@ -71,7 +71,12 @@ export const resos = {
             {
                 "name": "USA GA402 #1",
                 "link": "/uploads/resolutions/GA4/GA402_1.pdf"
-              }
+              },
+
+            {
+            "name": "Republic of Korea GA402 #2",
+            "link": "/uploads/resolutions/GA4/GA402_2.pdf"
+            }
 
         ],
         "active": [
