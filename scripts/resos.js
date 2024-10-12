@@ -50,6 +50,11 @@ export const resos = {
         ],
         "active": [
 
+            {
+                "name": "Ukraine GA301 #1",
+                "link": "https://l1nk.dev/rWi1i"
+            }
+
         ],
         "passed": [
 
