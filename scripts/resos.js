@@ -55,6 +55,11 @@ export const resos = {
             {
                 "name": "Morocco GA301 #2",
                 "link": "/uploads/resolutions/GA3/GA301_2.pdf"
+            },
+
+            {
+                "name": "Colombia GA302 #2",
+                "link": "/uploads/resolutions/GA3/GA302_2.pdf"
             }
 
         ],
