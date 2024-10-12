@@ -103,16 +103,17 @@ export const resos = {
     },
     "HRC": {
         "approved": [
-            {
-                "name": "Brazil HRC01 #1",
-                "link": "/uploads/resolutions/HRC/HRC01_1.pdf"
-              }
 
         ],
         "active": [
 
         ],
         "passed": [
+
+            {
+                "name": "Brazil HRC01 #1",
+                "link": "/uploads/resolutions/HRC/HRC01_1.pdf"
+            }
 
         ]
     },
