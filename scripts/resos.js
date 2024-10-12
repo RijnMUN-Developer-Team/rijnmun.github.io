@@ -25,8 +25,13 @@ export const resos = {
         // for testing, needs to be reset when deployed
         // easy way to update the resos during the conference (?)
         "approved": [
-          
+          {
+            "name": "UK GA101 #1",
+            "link": "/uploads/resolutions/GA101/GA101_1.pdf"
+          }
+
         ],
+
         "active": [
 
         ],
