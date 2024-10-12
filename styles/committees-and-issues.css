@@ -203,6 +203,7 @@ h2 {
 
 .debate-in-session .reso-link a:hover, .debate-in-session .reso-link.reso-debated a:hover {
     text-decoration: underline;
+    color: var(--theme-rd);
 }
 
 .per-committee h2 {
