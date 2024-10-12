@@ -44,7 +44,7 @@ h2 {
 
 .conference-photos {
     max-height: 400px;
-    max-width: 400px;
+    max-width: min(600px, calc(50% - 30px));
 
     margin: 15px;
     object-fit: cover;
