@@ -128,10 +128,6 @@ export const resos = {
     },
     "HRC": {
         "approved": [
-            {
-                "name": "Yemen HRC02 #1",
-                "link": "/uploads/resolutions/HRC/HRC02_1.pdf"
-            }
 
         ],
         "active": [
@@ -142,6 +138,11 @@ export const resos = {
             {
                 "name": "Brazil HRC01 #1",
                 "link": "/uploads/resolutions/HRC/HRC01_1.pdf"
+            },
+
+            {
+                "name": "Yemen HRC02 #1",
+                "link": "/uploads/resolutions/HRC/HRC02_1.pdf"
             }
 
         ]
