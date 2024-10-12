@@ -76,6 +76,11 @@ export const resos = {
             {
             "name": "Republic of Korea GA402 #2",
             "link": "/uploads/resolutions/GA4/GA402_2.pdf"
+            },
+
+            {
+                "name": "Afghanistan GA402 #3",
+                "link": "/uploads/resolutions/GA4/GA402_3.pdf"
             }
 
         ],
