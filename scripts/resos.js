@@ -50,6 +50,11 @@ export const resos = {
             {
             "name": "Kenya GA302 #1",
             "link": "/uploads/resolutions/GA3/GA302_1.pdf"
+            },
+
+            {
+                "name": "Morocco GA301 #2",
+                "link": "/uploads/resolutions/GA3/GA301_2.pdf"
             }
 
         ],
