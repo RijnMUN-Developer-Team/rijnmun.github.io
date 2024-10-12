@@ -68,6 +68,11 @@ export const resos = {
     "GA4": {
         "approved": [
 
+            {
+                "name": "USA GA402 #1",
+                "link": "/uploads/resolutions/GA4/GA402_1.pdf"
+              }
+
         ],
         "active": [
 
