@@ -95,7 +95,12 @@ export const resos = {
 
             {
                 "name": "The Netherlands GA401 #1",
-                "link": "/uploads/resolutions/GA4/GA401_#1.pdf"
+                "link": "/uploads/resolutions/GA4/GA401_1.pdf"
+            },
+
+            {
+                "name": "Russia GA401 #2",
+                "link": "/uploads/resolutions/GA4/GA401_2.pdf"
             }
 
         ],
