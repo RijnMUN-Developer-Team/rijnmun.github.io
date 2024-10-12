@@ -42,6 +42,11 @@ export const resos = {
     "GA3": {
         "approved": [
 
+            {
+                "name": "Ukraine GA301 #1",
+                "link": "/uploads/resolutions/GA3/GA301_1.pdf"
+              }
+
         ],
         "active": [
 
