@@ -63,7 +63,7 @@ export const resos = {
             },
 
             {
-                "name": "Colombia GA301 #4",
+                "name": "UAE GA301 #4",
                 "link": "/uploads/resolutions/GA3/GA301_4.pdf"
             }
 
