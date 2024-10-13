@@ -14,21 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
             approved_cont.innerHTML += `<p class="no-resos">None found</p>`
         } else {
             for (const approved_reso of resos[`${committee}`].approved) {
-                approved_cont.innerHTML += `<p class="reso-link"><a href="${approved_reso.link}">${approved_reso.name}</a></p>`
+                approved_cont.innerHTML += `<p class="reso-link"><a target="_blank" href="${approved_reso.link}">${approved_reso.name}</a></p>`
             }
         }
         if (resos[`${committee}`].active.length == 0) {
             active_cont.innerHTML += `<p class="no-resos">None found</p>`
         } else {
             for (const active_reso of resos[`${committee}`].active) {
-                active_cont.innerHTML += `<p class="reso-link"><a href="${active_reso.link}">${active_reso.name}</a></p>`
+                active_cont.innerHTML += `<p class="reso-link"><a target="_blank" href="${active_reso.link}">${active_reso.name}</a></p>`
             }
         }
         if (resos[`${committee}`].passed.length == 0) {
             passed_cont.innerHTML += `<p class="no-resos">None found</p>`
         } else {
             for (const passed_reso of resos[`${committee}`].passed) {
-                passed_cont.innerHTML += `<p class="reso-link"><a href="${passed_reso.link}">${passed_reso.name}</a></p>`
+                passed_cont.innerHTML += `<p class="reso-link"><a target="_blank" href="${passed_reso.link}">${passed_reso.name}</a></p>`
             }
         }
     })

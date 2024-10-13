@@ -89,7 +89,7 @@ export const resos = {
             }
 
             // {
-            //     "name": "Colombia GA302 #1",
+            //     "name": "Colombia GA302 #2",
             //     "link": "https://l1nk.dev/rWi1i"
             // }
 
