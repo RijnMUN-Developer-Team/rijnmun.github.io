@@ -120,7 +120,7 @@ export const resos = {
             },
 
             {
-                "name": "Russia GA401 #3",
+                "name": "Republic of Korea GA401 #3",
                 "link": "/uploads/resolutions/GA4/GA401_3.pdf"
             }
 
