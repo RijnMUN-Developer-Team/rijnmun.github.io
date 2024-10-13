@@ -38,6 +38,11 @@ export const resos = {
           {
             "name": "Saudi Arabia GA102 #1",
             "link": "/uploads/resolutions/GA1/GA102_1.pdf"
+          },
+
+          {
+            "name": "Norway GA101 #3",
+            "link": "/uploads/resolutions/GA1/GA101_3.pdf"
           }
 
         ],
