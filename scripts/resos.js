@@ -81,17 +81,17 @@ export const resos = {
             },
 
             {
-                "name": "Colombia GA302 #1",
-                "link": "https://l1nk.dev/rWi1i"
-            },
-
-            {
                 "name": "Chad GA301 #3",
                 "link": "https://acesse.one/eKCwy"
             }
 
         ],
         "passed": [
+
+            {
+                "name": "Colombia GA302 #1",
+                "link": "https://l1nk.dev/rWi1i"
+            },
 
         ]
     },
