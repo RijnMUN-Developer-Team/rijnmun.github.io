@@ -168,6 +168,11 @@ export const resos = {
         ],
         "active": [
 
+            {
+                "name": "SC01 #1",
+                "link": "https://tinyurl.com/2e9mbkmf"
+            }
+
         ],
         "passed": [
 
