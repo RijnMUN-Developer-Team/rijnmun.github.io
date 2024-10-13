@@ -171,13 +171,18 @@ export const resos = {
         ],
         "active": [
 
-            {
-                "name": "SC01 #1",
-                "link": "https://tinyurl.com/2e9mbkmf"
-            }
-
         ],
         "passed": [
+
+            {
+                "name": "SC01 #1",
+                "link": "/uploads/resolutions/SC/SC01_1.pdf"
+            },
+
+            {
+                "name": "SC02 #1",
+                "link": "/uploads/resolutions/SC/SC02_1.pdf"
+            }
 
         ]
     }
