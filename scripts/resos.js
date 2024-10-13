@@ -105,8 +105,8 @@ export const resos = {
               },
 
             {
-            "name": "Republic of Korea GA402 #2",
-            "link": "/uploads/resolutions/GA4/GA402_2.pdf"
+                "name": "Republic of Korea GA402 #2",
+                "link": "/uploads/resolutions/GA4/GA402_2.pdf"
             },
 
             {
@@ -122,6 +122,11 @@ export const resos = {
             {
                 "name": "Russia GA401 #2",
                 "link": "/uploads/resolutions/GA4/GA401_2.pdf"
+            },
+
+            {
+                "name": "Russia GA401 #3",
+                "link": "/uploads/resolutions/GA4/GA401_3.pdf"
             }
 
         ],
