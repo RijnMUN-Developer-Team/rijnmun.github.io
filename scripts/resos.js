@@ -53,11 +53,6 @@ export const resos = {
         "approved": [
 
             {
-                "name": "Ukraine GA301 #1",
-                "link": "/uploads/resolutions/GA3/GA301_1.pdf"
-              },
-
-            {
                 "name": "Kenya GA302 #1",
                 "link": "/uploads/resolutions/GA3/GA302_1.pdf"
             },
@@ -68,8 +63,8 @@ export const resos = {
             },
 
             {
-                "name": "Colombia GA302 #2",
-                "link": "/uploads/resolutions/GA3/GA302_2.pdf"
+                "name": "Colombia GA301 #4",
+                "link": "/uploads/resolutions/GA3/GA301_4.pdf"
             }
 
         ],
