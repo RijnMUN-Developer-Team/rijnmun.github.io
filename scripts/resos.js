@@ -86,12 +86,12 @@ export const resos = {
             {
                 "name": "Ukraine GA301 #1",
                 "link": "/uploads/resolutions/GA3/GA301_1"
-            }
+            },
 
-            // {
-            //     "name": "Colombia GA302 #2",
-            //     "link": "https://l1nk.dev/rWi1i"
-            // }
+            {
+                "name": "Colombia GA302 #2",
+                "link": "/uploads/resolutions/GA3/GA302_2"
+            }
 
         ]
     },
