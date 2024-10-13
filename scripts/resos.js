@@ -95,6 +95,7 @@ export const resos = {
 
         ]
     },
+
     "GA4": {
         "approved": [
 
@@ -133,6 +134,10 @@ export const resos = {
     },
     "HRC": {
         "approved": [
+            {
+                "name": "Ukraine HRC03 #1",
+                "link": "/uploads/resolutions/HRC/HRC03_1.pdf"
+            }
 
         ],
         "active": [
