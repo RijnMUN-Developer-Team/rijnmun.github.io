@@ -76,11 +76,6 @@ export const resos = {
         "active": [
 
             {
-                "name": "Ukraine GA301 #1",
-                "link": "https://l1nk.dev/rWi1i"
-            },
-
-            {
                 "name": "Chad GA301 #3",
                 "link": "https://acesse.one/eKCwy"
             }
@@ -89,9 +84,14 @@ export const resos = {
         "passed": [
 
             {
-                "name": "Colombia GA302 #1",
-                "link": "https://l1nk.dev/rWi1i"
-            },
+                "name": "Ukraine GA301 #1",
+                "link": "/uploads/resolutions/GA3/GA301_1"
+            }
+
+            // {
+            //     "name": "Colombia GA302 #1",
+            //     "link": "https://l1nk.dev/rWi1i"
+            // }
 
         ]
     },
