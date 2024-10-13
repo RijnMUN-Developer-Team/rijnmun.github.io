@@ -58,8 +58,8 @@ export const resos = {
               },
 
             {
-            "name": "Kenya GA302 #1",
-            "link": "/uploads/resolutions/GA3/GA302_1.pdf"
+                "name": "Kenya GA302 #1",
+                "link": "/uploads/resolutions/GA3/GA302_1.pdf"
             },
 
             {
@@ -70,11 +70,6 @@ export const resos = {
             {
                 "name": "Colombia GA302 #2",
                 "link": "/uploads/resolutions/GA3/GA302_2.pdf"
-            },
-
-            {
-                "name": "Chad GA301 #3",
-                "link": "/uploads/resolutions/GA3/GA301_3.pdf"
             }
 
         ],
@@ -88,6 +83,11 @@ export const resos = {
             {
                 "name": "Colombia GA302 #1",
                 "link": "https://l1nk.dev/rWi1i"
+            },
+
+            {
+                "name": "Chad GA301 #3",
+                "link": "https://acesse.one/eKCwy"
             }
 
         ],
