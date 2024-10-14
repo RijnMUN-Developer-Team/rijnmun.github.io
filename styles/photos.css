@@ -37,6 +37,14 @@ h2 {
     margin-bottom: 20px; 
 }
 
+p a {
+    color: var(--theme-bl);
+}
+
+p a:hover {
+    color: var(--theme-rd);
+}
+
 .conference-day {
     display: flex;
     flex-wrap: wrap;
