@@ -1,5 +1,5 @@
 // number of photos; index 0 is day 1, index 1 is day 2...etc
-const num_photos = [17, 54, 26]
+const num_photos = [17, 64, 26]
 // const num_photos = [10]
 let image = ''
 
