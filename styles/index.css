@@ -115,8 +115,9 @@ h2 {
 }
 
 #closing-video {
-    width: 100%;
-    height: auto;
+    width: 60vw;
+    height: calc(60vw * calc(315/560));
+    border-radius: 10px;
 }
 
 .keywords {
