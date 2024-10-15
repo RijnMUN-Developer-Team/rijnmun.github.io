@@ -114,6 +114,11 @@ h2 {
     justify-content: center;
 }
 
+#closing-video {
+    width: 100%;
+    height: auto;
+}
+
 .keywords {
     /* font-weight: 800; */
     margin-top: unset;
