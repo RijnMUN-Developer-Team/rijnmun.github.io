@@ -74,23 +74,23 @@ export const resos = {
 
         ],
         "active": [
-
-            {
-                "name": "Chad GA301 #3",
-                "link": "https://acesse.one/eKCwy"
-            }
-
+            
         ],
         "passed": [
-
+            
             {
                 "name": "Ukraine GA301 #1",
                 "link": "/uploads/resolutions/GA3/GA301_1"
             },
-
+            
             {
                 "name": "Colombia GA302 #2",
                 "link": "/uploads/resolutions/GA3/GA302_2"
+            },
+            
+            {
+                "name": "Chad GA301 #3",
+                "link": "/uploads/resolutions/GA301_3.pdf"
             }
 
         ]
@@ -131,13 +131,13 @@ export const resos = {
 
         ],
         "active": [
-            {
-                "name": "Republic of Korea GA401 #3",
-                "link": "https://tinyurl.com/3tefvh7b"
-            }
+
         ],
         "passed": [
-
+            {
+                "name": "Republic of Korea GA401 #3",
+                "link": "/uploads/resolutions/GA401_3.pdf"
+            }
         ]
     },
     "HRC": {
