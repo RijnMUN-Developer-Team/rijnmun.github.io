@@ -8,9 +8,14 @@
     --light-bl: #cedff3;
     --dark-bl: #143152;
 
-    --rlo-mid-rd: #f6588d;
+    --rlo-mid-rd: #db094f;
+    /* --rlo-mid-rd: #f6588d; */
     --rlo-light-rd: #fcd9e4;
-    --rlo-dark-rd: #370113;
+    --rlo-dark-rd: #3b0316;
+
+    --bod-light-gr: #dcfff2;
+    --bod-dark-gr: #012719;
+    --bod-mid-gr: #02A768;
 
     --delegate: #0782DA;
     --stoff: #02A768;
@@ -181,16 +186,30 @@
 
 /* RLO REGISTRATION CONTENT Colours --------------------- */
 
-#rlo-heading {
+#rlo-heading{
     background-color: var(--rlo-mid-rd);
 }
 
-#rlo-registration-info {
+#rlo-registration-info{
     background-color: var(--rlo-light-rd);
 }
 
-#rlo-registration-info p {
+#rlo-registration-info p{
     color: var(--rlo-dark-rd);
+}
+
+/* BOD REGISTRATION CONTENT Colours --------------------- */
+
+#bod-heading{
+    background-color: var(--bod-mid-gr);
+}
+
+#bod-registration-info{
+    background-color: var(--bod-light-gr);
+}
+
+#bod-registration-info p{
+    color: var(--bod-dark-gr);
 }
 
 /* CANCELLATION INFO HERE ------------------ */
