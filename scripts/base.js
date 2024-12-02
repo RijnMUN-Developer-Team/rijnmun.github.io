@@ -1,6 +1,7 @@
 
 // removes the "enable javascript" alert ------------------------------
 window.onload = () => {
+    document.querySelector('body').innerHTML += footerHTML
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
@@ -288,10 +289,83 @@ function scroll_up() {
 
 // spam email protection------------------------------------
 function email() {
-    let recipient="rijnmunsecretariat";
+    let recipient="info";
     let at = String.fromCharCode(64);
-    let dotcom="gmail.com";
+    let dotcom="rijnmun.org";
     let mail="mailto:";
     window.open(mail+recipient+at+dotcom);
 }
 
+const footerHTML = `
+        <footer data-nosnippet>
+            <div class="f_container">
+                <div class="f">
+                    <div class="ft">
+                        <h4>GENERAL</h4>
+                        <ul class="f_important">
+                            <li>
+                                <a href="/rijnmun-2024/programme-of-events">Agenda</a>
+                            </li>
+                            <li>
+                                <a href="/uploads/RijnMUN_Delegate_Handbook.pdf" target="_blank" rel="noopener noreferrer">Handbook</a>
+                            </li>
+                            <li>
+                                <a href="/rijnmun-2024/general-information?tab=resources">Resources</a>
+                            </li>
+                            <li>
+                                <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="/uploads/RijnMUN 2024 Resolution Template.odt" target="_blank" rel="noopener noreferrer">Resolution Template</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ftr">
+                        <h4>CONTACT</h4>
+                        <ul class="f_contact">
+                            <li>
+                                <i class="fa fa-institution"></i>
+                                <p>
+                                    RijnMUN
+                                </p>
+                            </li>
+                            <li>
+                                <span class="spc"><i class="fa fa-home" style="font-size: 18px;"></i></span>
+                                <a class="adress" href="https://maps.app.goo.gl/dN1XhpLJ43wm5kVo7" target="_blank" rel="noopener noreferrer">
+                                    Apollolaan 1, 2341 BA<br>Oegstgeest, The Netherlands
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <div class="at" onclick="email()">&#105;&#110;&#102;&#111;&#64;&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#46;&#111;&#114;&#103;</div>
+                            </li>
+                            <li>
+                                <span class="spc>"><i class="fa fa-globe"></i></span>
+                                <a href="/">
+                                    www.rijnmun.org
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timer">
+                        <h4 title="Oh the pain that has gone into creating this countdown-">COUNTDOWN TO RIJNMUN</h4>
+                        <div class="countdown">
+                            <table class="tm_tbl">
+                                <tr><td id="days"><div class="days_div"><p id="day1"></p><p id="day2"></p><p id="day3"></p></div></td><td id="hours"><div class="hours_div"><p id="hr1"></p><p id="hr2"></p></div></td><td id="minutes"><div class="mins_div"><p id="min1"></p><p id="min2"></p></div></td><td id="seconds"><div class="secs_div"><p id="sec1"></p><p id="sec2"></p></div></td></tr>
+                                <tr><td class="days">Days</td><td class="hours">Hours</td><td class="minutes">Minutes</td><td class="seconds">Seconds</td></tr>
+                            </table>
+                        </div>
+                        <div class="socials">
+                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp" title="Follow us @rijn.mun on Instagram!"></a>
+                            <h4>FOLLOW US</h4>
+                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank" rel="noopener noreferrer"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp" title="Follow @rijn_mun on TikTok!"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="map_div">
+                    <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482451157!2d4.4591849122980225!3d52.181011671857384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1709380750374!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
+        </footer>
+`
