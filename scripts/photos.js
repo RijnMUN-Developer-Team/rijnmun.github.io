@@ -34,7 +34,7 @@ async function download() {
     const imageBlog = await image.blob()
     const imageURL = URL.createObjectURL(imageBlog)
     // const date = new Date()
-    const imageName = `RijnMUN 2024 Image Download`
+    const imageName = `RijnMUN 2025 Image Download`
 
     const link = document.createElement('a')
     link.href = imageURL

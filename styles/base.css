@@ -133,7 +133,7 @@ body {
     text-underline-offset: 5px;
 }
 
-/* ensures the RijnMUN 2024 btn also changes colour when hovered */
+/* ensures the RijnMUN 2025 btn also changes colour when hovered */
 .dropbtn:hover, .dropbtn:focus {
     color: var(--theme-rd)
 }

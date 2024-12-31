@@ -91,7 +91,7 @@ document.onkeypress = function (key) {
 
 // COUNTDOWN TIMER -------------------------------------------------
 
-var countDownDate = new Date("Oct 11, 2024 11:30:00").getTime();
+var countDownDate = new Date("Oct 10, 2025 11:30:00").getTime();
 var prev_days
 var prev_hours
 var prev_mins
@@ -106,7 +106,11 @@ var hour_li = []
 var day_li = []
 var x = setInterval(function() {
     var now = new Date().getTime();
-    var distance = now - countDownDate;
+    // count up
+    // var distance = now - countDownDate; 
+
+    // count down
+    var distance = countDownDate - now;
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // the +2 is to accomodate for Dutch time zone (UTC+1 +1 for daylight saving time)
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -304,13 +308,13 @@ const footerHTML = `
                         <h4>GENERAL</h4>
                         <ul class="f_important">
                             <li>
-                                <a href="/rijnmun-2024/programme-of-events">Agenda</a>
+                                <a href="/rijnmun-2025/programme-of-events">Agenda</a>
                             </li>
                             <li>
                                 <a href="/uploads/RijnMUN_Delegate_Handbook.pdf" target="_blank" rel="noopener noreferrer">Handbook</a>
                             </li>
                             <li>
-                                <a href="/rijnmun-2024/general-information?tab=resources">Resources</a>
+                                <a href="/rijnmun-2025/general-information?tab=resources">Resources</a>
                             </li>
                             <li>
                                 <a href="/uploads/RijnMUN Privacy Policy.pdf">Privacy Policy</a>
@@ -366,6 +370,6 @@ const footerHTML = `
                     <iframe title="Location of Het Rijnlands Lyceum Oegstgeest" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.4324482451157!2d4.4591849122980225!3d52.181011671857384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c7261b8f7c3d%3A0x90ba89f8621db50!2sRijnlands%20Lyceum%20Oegstgeest!5e0!3m2!1sen!2snl!4v1709380750374!5m2!1sen!2snl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <p class="copyright"><i>© RijnMUN 2024, all rights reserved</i></p>
+            <p class="copyright"><i>© RijnMUN 2025, all rights reserved</i></p>
         </footer>
 `
