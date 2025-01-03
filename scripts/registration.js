@@ -54,11 +54,11 @@ function collapse(option) {
 document.addEventListener('DOMContentLoaded', () => {
     const url = new URL(document.location.toString())
     if (url.searchParams.has('opt')) {
-        // const heading = document.getElementById(`${url.searchParams.get('opt')}-heading`).getBoundingClientRect()
         setTimeout(() => {
+            const heading = document.getElementsByClassName(url.searchParams.get('opt') + '-registration')[0]
+            heading.scrollIntoView({behavior: 'smooth'})
             collapse(url.searchParams.get('opt'))
-            // window.scrollTo({top: heading.bottom, behavior: "smooth"})
-        }, 100)
+        }, 1000)
     }
 })
 
