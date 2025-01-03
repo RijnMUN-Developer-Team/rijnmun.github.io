@@ -51,6 +51,17 @@ function collapse(option) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const url = new URL(document.location.toString())
+    if (url.searchParams.has('opt')) {
+        // const heading = document.getElementById(`${url.searchParams.get('opt')}-heading`).getBoundingClientRect()
+        setTimeout(() => {
+            collapse(url.searchParams.get('opt'))
+            // window.scrollTo({top: heading.bottom, behavior: "smooth"})
+        }, 100)
+    }
+})
+
 // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 // document.getElementById("tab_icon").href = "/images/logos/icon_white.ico";
 // }
