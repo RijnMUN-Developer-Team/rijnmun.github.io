@@ -2,6 +2,12 @@
 // let lastUpdated = new Date(document.lastModified);
 // document.getElementById("date").innerHTML = `Last Updated: ${String(lastUpdated.getDate()).padStart(2, '0')}/${String(lastUpdated.getMonth()+1).padStart(2, '0')}/${lastUpdated.getFullYear()}`;
 
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelectorAll('div#news-overflow div').length < 1) {
+    document.getElementById('news-toggle-cont').style.display = 'none'
+  }
+})
+
 let news_overflow_toggled = false;
 
 function toggle_news_overflow() {
