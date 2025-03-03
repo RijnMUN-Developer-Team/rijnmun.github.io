@@ -181,14 +181,18 @@ var x = setInterval(function() {
     transition('sec2', 1)
 
     setTimeout(() => {
-        document.getElementById('day1').innerHTML = '+' + day_li[0]
+        // document.getElementById('day1').innerHTML = '+' + day_li[0] // countup
+        document.getElementById('day1').innerHTML = day_li[0] // countdown
         document.getElementById('day2').innerHTML = day_li[1]
         document.getElementById('day3').innerHTML = day_li[2]
-        document.getElementById('hr1').innerText = '+' + hour_li[0]
+        // document.getElementById('hr1').innerText = '+' + hour_li[0] // countup
+        document.getElementById('hr1').innerText = hour_li[0] // countdown
         document.getElementById('hr2').innerText = hour_li[1]
-        document.getElementById('min1').innerText ='+' + min_li[0]
+        // document.getElementById('min1').innerText ='+' + min_li[0] // countup
+        document.getElementById('min1').innerText =min_li[0] // countdown
         document.getElementById('min2').innerText = min_li[1]
-        document.getElementById('sec1').innerText = '+' + sec_li[0]
+        // document.getElementById('sec1').innerText = '+' + sec_li[0] // count up
+        document.getElementById('sec1').innerText = sec_li[0] // count down
         document.getElementById('sec2').innerText = sec_li[1]
     }, "200")
 
