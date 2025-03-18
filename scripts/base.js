@@ -314,9 +314,12 @@ const footerHTML = `
                             <li>
                                 <a href="/rijnmun-2025/programme-of-events">Agenda</a>
                             </li>
-                            <li>
-                                <a href="/uploads/RijnMUN_Delegate_Handbook.pdf" target="_blank" rel="noopener noreferrer">Handbook</a>
-                            </li>
+
+                            <!-- <li> -->
+                                <!-- <a href="/uploads/RijnMUN_Delegate_Handbook.pdf" target="_blank" rel="noopener noreferrer">Handbook</a> -->
+                            <!-- </li> --> 
+                            
+
                             <li>
                                 <a href="/rijnmun-2025/general-information?tab=resources">Resources</a>
                             </li>
@@ -325,6 +328,9 @@ const footerHTML = `
                             </li>
                             <li>
                                 <a href="/uploads/RijnMUN 2024 Resolution Template.odt" target="_blank" rel="noopener noreferrer">Resolution Template</a>
+                            </li>
+                            <li>
+                                <a href="https://archive.rijnmun.org" target="_blank" rel="noopener noreferrer">Past Editions & Photos</a>
                             </li>
                         </ul>
                     </div>
