@@ -268,16 +268,13 @@
 
                     <!-- script for not-yet-uploaded research report (can be removed once research report uploaded) -->
                     <script>
-                        let researchReportButtons = document.querySelectorAll("td.pc-btn > a");
-
+                        const researchReportButtons = document.querySelectorAll("td.pc-btn a");
                         researchReportButtons.forEach((element) => {
-                            // console.log(element.getAttribute("href"));
+                            // console.log(element, element.getAttribute("href"));
                             if (element.getAttribute("href") == "") {
                                 element.removeAttribute("href");
                                 element.removeAttribute("target");
-                                element.onclick = function() {
-                                    alert("Our chairs are still busy writing the research reports for you ;)");
-                                }
+                                element.setAttribute("onclick", 'alert("Our chairs are still busy writing the research reports for you ;)")')
                             }
                         })
                     </script>

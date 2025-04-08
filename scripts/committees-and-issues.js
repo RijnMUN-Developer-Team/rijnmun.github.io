@@ -1,6 +1,12 @@
 import { resos } from "./resos.js"
 
 document.addEventListener("DOMContentLoaded", () => {
+    try {
+        on_DOM_loaded
+    } catch(err) {}
+})
+
+function on_DOM_loaded() {
     const committees = Object.keys(resos)
     committees.forEach(committee => {
         // const reso_cont = document.getElementById(`resos-${committee}`)
@@ -32,4 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     })
-})
+}
