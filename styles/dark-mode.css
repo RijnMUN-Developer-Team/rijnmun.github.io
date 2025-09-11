@@ -1,0 +1,11 @@
+/* dark-mode.css */
+body.dark {
+    background-color: #121212 !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark a {
+    color: #bb86fc !important;
+}
+
+/* Add more overrides here for other elements if needed */
