@@ -10,7 +10,7 @@ window.onload = () => {
         document.getElementById("dropbtn").href = "javascript: void(0)";
     }
     const is_staff = window.localStorage.getItem('staffID')
-    if (is_staff === window.atob('VW1scWJrMVZUaUEyT1RReU1BPT0=') && window.location.href != 'https://www.rijnmun.org/staff/schedule') {
+    if (is_staff === window.atob('VW1scWJrMVZUaUEyT1RReU1BPT0=') && !window.location.href.includes("staff")) {
         // console.log('recognized staff member')
         // document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('menu').innerHTML += '<a class="normal" href="/staff/schedule">Staff</a>'
