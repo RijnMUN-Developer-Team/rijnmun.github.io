@@ -1,0 +1,296 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+    --news-text: #1C4473;
+
+    --h3-color: #ade1f2f2;
+}
+
+h2 {
+    width: 98%;
+    font-size: 30px;
+    /* align-self: end; */
+    text-align: end;
+    justify-self: end;
+    /* color: #5cd6ff; */
+    color: var(--h3-color);
+    margin: 1%;
+}
+
+.btns {
+    display: flex;
+    text-align: end;
+    height: fit-content;
+    justify-content: end;
+    width: fit-content;    
+    margin-left: 1.5%;
+}
+
+.btns a {
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600px;
+
+    background-color: var(--theme-bl);
+    color: var(--theme-wh);
+    border: 2px solid var(--theme-wh);
+}
+
+.btns a:hover {
+    border: 2px solid #EBFAFF;
+    color: var(--theme-bl);
+    background: #EBFAFF;
+}
+
+/* Mobile support */
+
+@media screen and (max-width: 767px) {
+    .welcome {
+        display: block;
+        flex-direction: unset;
+        padding: 1.5%;
+        width: fit-content;
+    }
+
+    h1 {
+        width: unset;
+        padding: 5%;
+        padding-left: 2%;
+        padding-bottom: none;
+        /* font-size: 50px; why does mobile have larger titles than laptop?? 50px is kinda too big for a phone i think*/
+    }    
+
+    h2 {
+        width: 85%;
+        padding-left: 5%;
+        padding-bottom: 3%;
+        /* padding-right: unset; */
+        margin: 1px;
+        font-size: 25px;
+    }
+
+    /* .title {
+        width: fit-content;
+    } */
+
+    .f_contact {
+        margin-right: none;
+        padding-right: none;
+    }
+
+    ul.f_contact {
+        margin: unset;
+        padding: unset;
+    }
+}
+
+/* SG welcome/announcement letter */
+
+.message p {
+    margin-top: unset;
+    color: var(--bl-txt);
+    font-size: 18px;
+    text-align: center;
+    /* font-weight: 500; */
+    line-height: 32px;
+
+    /* for open sans ----  */
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.message {
+    width: 60%;
+    display: block;
+    justify-content: center;
+}
+
+#closing-video {
+    width: 60vw;
+    height: calc(60vw * calc(315/560));
+    border-radius: 10px;
+}
+
+.keywords {
+    /* font-weight: 800; */
+    margin-top: unset;
+
+    /* for open sans------  */
+    font-weight: 600;
+    font-style: italic;
+}
+
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+/* sidebar ------------------ */
+
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    /* margin-top: 50px; */
+    padding: 20px;
+    background-color: #ade1f2f2;
+    /* background-color: #AFDDFD; */
+    height: fit-content;
+    border-radius: 10px;
+    width: 250px;
+    color: var(--dark-bl);
+    max-height: calc(100vh - 150px);
+    overflow-y: scroll;
+}
+
+.sidebar h3 {
+    margin-bottom: unset;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+}
+
+.sidebar h4 {
+    margin-bottom: 5px;
+}
+
+.sidebar #date {
+    margin: 5px 0 5px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* .sidebar div {
+    padding-bottom: 10px;
+} */
+
+.sidebar .news-item {
+    padding-bottom: 0;
+    margin: 15px 0;
+}
+
+.sidebar .news-title {
+    margin: 0px;
+    font-weight: 600;
+    font-style: italic;
+    /* letter-spacing: 0.5px; */
+    text-wrap: wrap;
+}
+
+.sidebar .news-date {
+    text-align: right;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.sidebar .news-details {
+    font-size: 14px;
+    margin: 5px 0;
+    color: var(--news-text);
+}
+
+.sidebar .news-details a {
+    color: inherit;
+}
+
+.sidebar .news-details a:hover {
+    color: var(--theme-rd);
+}
+
+.sidebar .news-toggle {
+    text-align: center;
+    font-size: 14px;
+}
+
+.sidebar .news-toggle .toggle-cont:hover {
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.sidebar #news-overflow {
+    display: none;
+    height: 0px;
+    overflow-y: hidden;
+
+    /* transition: height 0.2s linear; */
+    transition: height 0.2s ease-in-out;
+
+}
+
+.sidebar #nws-ovrflw-arrw {
+    transition: rotate 0.2s linear;
+}
+
+.news-socials p {
+    /* margin: 10px 0; old code */
+
+    /* code added for showing icons only ------ */
+    width: fit-content;
+    margin: 0;
+}
+
+
+.side_insta {
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    position: relative;
+    top: 7px;
+}
+
+.side_tiktok {
+    width: 19px;
+    height: 23px;
+    margin-right: 6px;
+    margin-left: 4px;
+    position: relative;
+    top: 6px;
+}
+
+/* .side_link, .side_link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.side_link:hover {
+    text-decoration: underline;
+} */
+
+
+/* Mobile support */
+
+@media screen and (max-width: 767px) {
+    .message {
+        width: 90%;
+        margin-left: 5vw;
+    }
+
+    .message p {
+        font-size: 15px;
+        /* font-weight: 600; don't override default font design settings*/
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 85vw;
+        margin-left: 2.5vw;
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,343 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+    /* other possible colours */
+    /* --theme-gr: #01895D; */
+    /* --light-gr: #b3e3d4; */
+    /* --theme-yw: #FAB800; */
+    /* --theme-yw: #EBC700; */
+
+    --disclaimer-bg: #FED7E4; /* used to be light-bl */
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+
+    --delegate: #0782DA;
+    --stoff: #02A768;
+    --general: #FF8629;
+    --mundir: #d76dd7;
+}
+
+.container {
+    width: 95%;
+    display: flex;
+    /* to align with title banner  */
+    padding: 2% 3% 0 2%;
+    flex-wrap: wrap;
+
+    /* don't remove this; the position relative does the sticky bar magic and don't question it ----  */
+    position: relative;
+}
+
+.container .disclaimer {
+    background-color: var(--disclaimer-bg);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 25px;
+    width: calc(100% - 10px);
+}
+
+.container .disclaimer #disclaimer {
+    display: flex;
+    justify-content: space-evenly;
+    width: calc(100vw * 0.94);
+    align-items: center;
+    padding: 20px 5px 20px 5px;
+}
+
+.container .disclaimer #disclaimer i {
+    margin-left: 10px;
+}
+
+.container .disclaimer #disclaimer span {
+    margin-left: 15px;
+    width: 95%;
+    margin-right: 10px;
+}
+
+/* .agenda {
+    display: grid;
+    grid-template-columns: repeat(3, 0.9fr);
+    grid-template-rows: 1.9fr;
+
+    grid-column-gap: 40px;
+    grid-row-gap: 15px;
+    
+    grid-template-areas: 
+    "friday saturday sunday"
+    "friday-info party-info key";
+} */
+
+/* .agenda .fri {
+    grid-area: friday;
+} */
+
+.agenda {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    div.item {
+        margin: 20px;
+        max-width: 33%;
+    }
+}
+
+.agenda .fri-optional-info {
+    line-height: normal;
+    /* grid-area: friday-info; */
+    margin: 10px 0 0 10px;
+    width: 75%;
+
+    text-align: justify;
+}
+
+.agenda .fri-optional-info p {
+    margin-top: unset;
+}
+    
+/* 
+.agenda .sat {
+    grid-area: saturday;
+} */
+
+.agenda .sat-party-info {
+    line-height: normal;
+    /* grid-area: party-info; */
+    text-align: justify;
+    width: 75%;
+    margin: 10px 0 0 10px;
+}
+/* 
+.agenda .sun {
+    grid-area: sunday;
+} */
+
+.col-key-parent {
+    position: fixed !important;
+    /* left: calc(100% - 235px);  */
+    right: 20px;
+    bottom: 10px;
+    grid-area: key;
+    /* width: 60%; */
+    width: 230px;
+    height: fit-content;
+    margin: 10px 0 10px 0;
+}
+
+.col-key-parent .color-key {
+    border: 3px solid var(--theme-bl);
+    /* border: 3px solid #000; */
+    border-radius: 10px;
+    padding-left: 20px;
+    background-color: white;
+    grid-area: key;
+    /* padding: 0 0 10px 20px; */
+
+    height: 100%;
+
+    h2 {
+        margin: 10px 0 16px 0;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    p {
+        margin: 8px 0 8px 0;
+        padding: 3px 0 3px 0;
+    }
+
+    p:last-of-type {
+        margin: 8px 0 15px 0;
+    }
+    #collapsible-cols {
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.col-key-parent .color-key p {
+    width: fit-content;
+}
+
+.col-key-parent .color-key .stoff {
+    border-left: 5px solid var(--stoff);
+    padding-left: 15px;
+}
+.col-key-parent .color-key .delegates {
+    border-left: 5px solid var(--delegate);
+    padding-left: 15px;
+}
+.col-key-parent .color-key .general {
+    border-left: 5px solid var(--general);
+    padding-left: 15px;
+}
+.col-key-parent .color-key .mundir {
+    border-left: 5px solid var(--mundir);
+    padding-left: 15px;
+}
+
+.col-key-parent i {
+    /* position: absolute;
+    right: 10px; bottom: 10px; */
+    z-index: 100;
+    /* transition: all 0.2s ease-in-out; */
+    /* padding: 0 0 10px; */
+}
+
+.col-key-parent #arrow {
+    cursor: pointer;
+}
+
+.agenda .item {
+    margin-bottom: unset;
+    /* width: 80%; */
+}
+
+h2 {
+    color: var(--theme-bl);
+    border-left: 5px solid var(--theme-rd);
+
+    /* margin order: top/bottom left-right */
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    padding-left: 10px;
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+}
+
+.container li, .container a {
+    color: var(--dark-bl);
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.agenda li {
+    /* list-style-type: none; */
+    padding-left: 7px;
+    list-style: none;
+    color: var(--dark-bl);
+}
+
+.info table {
+    border-collapse: separate;
+
+    /* spacing between borders: left/right top/down */
+    border-spacing: 0 10px;
+
+    
+}
+
+.info table tr td {
+    padding: 3px 0 3px 10px;
+}
+
+/* adding left borders ----------  */
+.info table tr td.stoff {
+    border-left: 5px solid var(--stoff);
+}
+
+.info table tr td.delegates {
+    border-left: 5px solid var(--delegate);
+}
+
+.info table tr td.general {
+    border-left: 5px solid var(--general);
+}
+
+.info table tr td.mundir {
+    border-left: 5px solid var(--mundir);
+}
+
+.info table tr td.time {
+    font-weight: bold;
+    color: var(--bl-txt);
+}
+
+#scrollup {
+    display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 90vw;
+        flex-wrap: wrap;
+        justify-content: start;
+        padding: 0;
+    }
+
+    .container .disclaimer {
+        width: 90vw;
+        padding: 2px;
+        margin-left: 10px;
+        margin-right: unset;
+        margin-top: 10px;
+    }
+    
+    .container .disclaimer #disclaimer {
+        /* DO NOT MESS WITH THIS */
+        width: calc(calc(100vw * 0.94) - 25px);
+    }
+
+    .container .disclaimer #disclaimer i {
+        padding-right: 10px;
+    }
+
+    .container .disclaimer #disclaimer span {
+        width: 80%;
+        margin: unset;
+        margin-right: 5px;
+    } 
+
+    .agenda {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agenda div.item {
+        width: 100%;
+        max-width: unset;
+        margin: 0 0 20px 0;
+    }
+
+    .agenda .item .info {
+        width: 95%;
+        margin-left: 15px;
+    }
+
+    .col-key-parent {
+        position: relative !important;
+        left: 0px; bottom: 10px;
+        width: 70vw;
+        background-color: #fff;
+        .color-key p.stoff, .color-key p.delegates, .color-key p.general {
+            margin-left: 15px;
+        }
+    }
+
+    .col-key-parent .color-key {
+        border: unset;
+        padding-left: unset;
+    }
+    .col-key-parent .color-key h2 {
+        margin-left: unset;
+    }
+    .col-key-parent .color-key p {
+        margin: 12px;
+    }           
+    i#arrow {
+        display: none;
+    }
+    .color-key #collapsible-cols {
+        display: block !important;
+    }
+    .agenda .fri-optional-info, .agenda .sat-party-info {
+        width: 90%;
+    }
+}

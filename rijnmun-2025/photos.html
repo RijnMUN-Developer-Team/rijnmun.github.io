@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light">
+        <meta name="robots" content="index, follow">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="RijnMUN 2025 Photos">
+        <meta property="og:url" content="https://www.rijnmun.org/rijnmun-2025/photos">
+        <meta property="og:site_name" content="RijnMUN">
+        <meta name="theme-color" content="#23569090">
+        <meta name="description" content="Photos of RijnMUN 2025">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" href="/images/favicon.ico" sizes="96x96">
+        <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
+
+        <!-- preloading the fonts ---- -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="/styles/photos.css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/scripts/base.js"></script>
+        <title>RijnMUN | Photos</title>
+    </head>
+    <body>
+        <header data-nosnippet>
+            <div class="logo_container">
+                <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
+            </div>
+            <!-- dropdown for laptop version -->
+            <div class="menu" id="menu">
+                <a href="/" class="normal" title="Keyboard shortcut: 'H' to go back to the home page!">Home</a>
+                <div class="current">
+                    <div class="dropdown">
+                        <a id="dropbtn" class="dropbtn" href="/rijnmun-2025/general-information">RijnMUN 2025</a>
+                        <div class="dropdown-content">
+                            <a href="/rijnmun-2025/general-information">General Information</a>
+                            <a href="/rijnmun-2025/committees-and-issues">Committees and Issues</a>
+                            <a href="/rijnmun-2025/programme-of-events">Programme of Events</a>
+                            <a href="/rijnmun-2025/board-of-directors">Board of Directors</a>
+                            <a href="/rijnmun-2025/speakers-and-advisors">Guest Speakers & Advisors</a>
+                            <a href="/rijnmun-2025/venue">Venue & Leiden</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="normal" href="/registration">Registration</a>
+                <a class="normal" href="/contact">Contact</a>
+                <p class="icon" onclick="show_bars()" style="height: 30px;">
+                        <span id="bar1" class="bar" style="--i:0"></span>
+                        <span id="bar2" class="bar" style="--i:9"></span>
+                        <span id="bar3" class="bar" style="--i:18"></span>
+                </p>
+            </div>
+        </header>
+        <!-- dropdown for phone version -->
+        <div class="toggle" id="toggle" style="display:none;">
+            <ul>
+                <li class="main"><a href="/">Home</a></li>
+                <li class="main"><a href="/rijnmun-2025/general-information">RijnMUN 2025</a></li>
+                <ul><li>
+                    <a href="/rijnmun-2025/general-information">General Information</a>
+                    <a href="/rijnmun-2025/committees-and-issues">Committees and Issues</a>
+                    <a href="/rijnmun-2025/programme-of-events">Programme of Events</a>
+                    <a href="/rijnmun-2025/board-of-directors">Board of Directors</a>
+                    <a href="/rijnmun-2025/speakers-and-advisors">Guest Speakers & Advisors</a>
+                    <a href="/rijnmun-2025/venue">Venue & Leiden</a>
+                </li></ul>
+                <li class="main"><a href="/registration">Registration</a></li>
+                
+                <li class="main"><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <noscript><div id="js_alert">
+            <h2>JavaScript Disabled</h2>
+            <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
+        </div></noscript>    
+        <main>
+            <!-- MAIN CONTENT HERE -->
+            
+            <div class="title">
+                <h1>Photos</h1>
+            </div>
+            
+            <div class="container">
+                <!-- <p>Photo credits to Owen Schouten, Diana Kadzhoyan and Fiene Oskam.</p>
+                <p>All photos can be found <a href="https://drive.google.com/drive/folders/18G-NJw6jTeC30QygRwny-PVaUnen64kS?usp=sharing" target="_blank" rel="noopener noreferrer">in this google drive folder</a>!</p>
+                <p>For any feedback for the conference, or claiming the <a href="/images/conference-photos/RijnMUN_lost_and_found.JPEG">lost and found</a> items, please contact us</p> -->
+
+                <h2>Day 1</h2>
+                <!-- photos are automated into the divs through js  -->
+                <div class="conference-day" id="conference-day1"></div>
+
+                <h2>Day 2</h2>
+                <!-- photos are automated into the divs through js  -->
+                <div class="conference-day" id="conference-day2"></div>
+
+                <h2>Day 3</h2>
+                <!-- photos are automated into the divs through js  -->
+                <div class="conference-day" id="conference-day3"></div>
+
+                <!-- <h2>Closing Video</h2> -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IW-zTPyezhY?si=5T3ddKivGNnQHOx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+            </div>
+
+            <script src="/scripts/photos.js"></script>
+            <div id="large-img">
+                <i class="fa fa-plus" id="close-img" onclick="enlarge('$CLOSE$')"></i>
+                <i class="fa fa-download" id="download-img" onclick="download()"></i>
+                <img src="" alt="Preview Image" id="preview-img">
+            </div>
+            <div id="scrollup">
+                <i class="fa fa-arrow-up fa-2x"></i>
+            </div>
+            <div class="rcmenu" id="rcmenu">
+                <div class="funcs" id="funcs">
+                    <p onclick="window.location.reload()">Reload</p>
+                </div>
+                <div class="links" id="links">
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/')">Home</p>
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/rijnmun-2025\/programme-of-events')">Agenda</p>
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/rijnmun-2025\/committees-and-issues')">Committees</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

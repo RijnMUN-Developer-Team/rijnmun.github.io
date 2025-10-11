@@ -1,0 +1,185 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+    --light-rd: #c71852;
+    --link-rd: #B7013E;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* shorthand: top right bottom left */
+    margin: 2% 3% 3% 2%;
+    padding: 0 1.5%;
+
+    justify-content: left;
+    width: auto;
+}
+
+/* css for the top red section -------------- */
+
+.container h2 {
+    font-size: 20px;
+    color: var(--theme-rd);
+    margin: 10px 0 10px 0;
+}
+
+.container h3 {
+    font-size: 18px;
+    margin: 13px 0 8px 0;
+    color: var(--light-rd);
+}
+
+.container p a {
+    color: var(--link-rd);
+}
+
+.emphasis {
+    color: var(--light-rd);
+}
+
+.about-rlo {
+    display: flex;
+    text-align: justify;
+}
+
+/* travel info css------------- */
+.go-to-rlo {
+    width: 100%;
+    display: block;
+
+    /* red border separator */
+    border-bottom: 5px solid var(--theme-rd);
+    padding-bottom: 20px;
+}
+
+.go-to-rlo {
+    display: flex;
+}
+
+.go-to-rlo .text {
+    width: 48%;
+}
+
+.go-to-rlo .map{
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.go-to-rlo .map iframe {
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
+    height: 100%;
+}
+
+/* about leiden ------------- */
+.leiden {
+    /* blue border separator  */
+    margin-top: 5px;
+    padding-top: 20px;
+    border-top: 5px solid var(--theme-bl);
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* font colors ------  */
+.leiden h2.sub-heading {
+    color: var(--theme-bl);
+    width: 100%;
+}
+
+.leiden .emphasis {
+    color: var(--bl-txt);
+}
+
+.leiden p a {
+    color: var(--bl-txt);
+}
+
+/* formatting --------  */
+.leiden .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.leiden .half {
+    width: 48%;
+}
+
+.leiden .content .half .text {
+    padding-bottom: 20px;
+}
+
+.label .text {
+    width: 100%;
+}
+
+.leiden img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+.leiden .image .label {
+    font-style: italic;
+    line-height: 20px;
+    text-wrap: wrap;
+    width: 100%;
+}
+
+.leiden .label .author {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+/* mobile support --------- */
+@media screen and (max-width: 767px) {
+
+    .about-rlo, .go-to-rlo, .content {
+        flex-direction: column;
+    }
+
+    /* about rlo section ------------- */
+
+    .about-rlo .text, .about-rlo .image {
+        width: 100%;
+    }
+
+    .about-rlo #school_icon {
+        display: none;
+    }
+
+    /* travel advice section ------------- */
+
+    .go-to-rlo .text {
+        width: 100%;
+    }
+    
+    .go-to-rlo .map {
+        margin-top: 15px;
+        margin-bottom: 1px;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .go-to-rlo .map iframe{
+        box-shadow: none;
+    }
+
+    /* about leiden section ----------- */
+    .leiden .half {
+        width: 100%;
+    }
+
+}

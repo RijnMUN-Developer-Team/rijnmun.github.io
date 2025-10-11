@@ -1,0 +1,111 @@
+:root {
+    --theme-bl: #235690;
+    --theme-rd: #D90148;
+    --theme-wh: white;
+    --bl-txt: #0269B3;
+
+    --mid-bl: #5B95D7;
+    --light-bl: #cedff3;
+    --dark-bl: #143152;
+
+    --mid-rd: #e55c89;
+}
+
+.title h3 {
+    width: 98%;
+    padding-top: 10px;
+    font-size: 20px;
+    /* align-self: end; */
+    text-align: end;
+    justify-self: end;
+    color: #5cd6ff;
+    margin: 1%;
+    font-style: italic;
+}
+
+.container {
+    padding-bottom: 20px;
+    margin: 2% 3% 3% 4.5%;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--theme-bl);
+    border-left: var(--theme-rd) solid 5px;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px; 
+}
+
+p a {
+    color: var(--theme-bl);
+}
+
+p a:hover {
+    color: var(--theme-rd);
+}
+
+.conference-day {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conference-photos {
+    max-height: 400px;
+    max-width: min(600px, calc(50% - 30px));
+
+    margin: 15px;
+    object-fit: cover;
+}
+
+.conference-photos:hover {
+    cursor: pointer;
+}
+
+#large-img {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: calc(5vh - 10px); left: calc(5vw - 10px);
+    width: 90vw;
+    height: 90vh;
+    border: 10px solid var(--theme-bl);
+    background: var(--dark-bl);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 100vw #000000ee;
+    #close-img {
+        font-size: 25px;
+        position: absolute;
+        top: 10px; right: 10px;
+        color: #fff;
+        transform: rotate(45deg);
+    }
+    #close-img:hover {
+        cursor: pointer;
+        color: #ccc;
+    }
+    #download-img {
+        font-size: 25px;
+        position: absolute;
+        top: 10px; right: 40px;
+        color: #fff;
+    }
+    #download-img:hover {
+        cursor: pointer;
+        color: #ccc;
+    }
+    #preview-img {
+        max-width: 89vw;
+        max-height: 89vh;
+    }
+}
+
+@media screen and (max-width: 500px)  {
+    .conference-photos {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+}

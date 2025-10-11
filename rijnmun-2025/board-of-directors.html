@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light">
+        <meta name="robots" content="index, follow">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Board of Directors">
+        <meta property="og:url" content="https://www.rijnmun.org/rijnmun-2025/board-of-directors">
+        <meta property="og:site_name" content="RijnMUN">
+        <meta name="theme-color" content="#23569090">
+        <meta name="description" content="List of names of RijnMUN 2025 Board of Directors">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" href="/images/favicon.ico" sizes="96x96">
+        <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
+
+        <!-- preloading the fonts ---- -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="/styles/bod.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/scripts/base.js"></script>
+        <script type="module" src="/scripts/contextmenu.js"></script>
+        <script type="module" src="/scripts/bod.js"></script>
+        <title>RijnMUN | Board of Directors</title>
+    </head>
+    <body>
+        <header data-nosnippet>
+            <div class="logo_container">
+                <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
+            </div>
+            <!-- dropdown for laptop version -->
+            <div class="menu" id="menu">
+                <a href="/" class="normal" title="Keyboard shortcut: 'H' to go back to the home page!">Home</a>
+                <div class="current">
+                    <div class="dropdown">
+                        <a id="dropbtn" class="dropbtn" href="/rijnmun-2025/general-information">RijnMUN 2025</a>
+                        <div class="dropdown-content">
+                            <a href="/rijnmun-2025/general-information">General Information</a>
+                            <a href="/rijnmun-2025/committees-and-issues">Committees and Issues</a>
+                            <a href="/rijnmun-2025/programme-of-events">Programme of Events</a>
+                            <a href="/rijnmun-2025/board-of-directors">Board of Directors</a>
+                            <a href="/rijnmun-2025/speakers-and-advisors">Guest Speakers & Advisors</a>
+                            <a href="/rijnmun-2025/venue">Venue & Leiden</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="normal" href="/registration">Registration</a>
+                <a class="normal" href="/contact">Contact</a>
+                <p class="icon" onclick="show_bars()" style="height: 30px;">
+                        <span id="bar1" class="bar" style="--i:0"></span>
+                        <span id="bar2" class="bar" style="--i:9"></span>
+                        <span id="bar3" class="bar" style="--i:18"></span>
+                </p>
+            </div>
+        </header>
+        <!-- dropdown for phone version -->
+        <div class="toggle" id="toggle" style="display:none;">
+            <ul>
+                <li class="main"><a href="/">Home</a></li>
+                <li class="main"><a href="/rijnmun-2025/general-information">RijnMUN 2025</a></li>
+                <ul><li>
+                    <a href="/rijnmun-2025/general-information">General Information</a>
+                    <a href="/rijnmun-2025/committees-and-issues">Committees and Issues</a>
+                    <a href="/rijnmun-2025/programme-of-events">Programme of Events</a>
+                    <a href="/rijnmun-2025/board-of-directors">Board of Directors</a>
+                    <a href="/rijnmun-2025/speakers-and-advisors">Guest Speakers & Advisors</a>
+                    <a href="/rijnmun-2025/venue">Venue & Leiden</a>
+                </li></ul>
+                <li class="main"><a href="/registration">Registration</a></li>
+                
+                <li class="main"><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <noscript><div id="js_alert">
+            <h2>JavaScript Disabled</h2>
+            <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
+        </div></noscript>
+        <main onclick="hide_bars()">
+
+            <div class="title">
+                <h1>Board of Directors</h1>
+            </div>
+
+            <div class="container">
+                <div class="row1">
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-full_bod.webp" alt="RijnMUN Board of Directors"> -->
+                        <img src="/images/BoD-photos/bod.jpg" alt="RijnMUN Board of Directors">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label">Board of Directors</p>
+                                <p class="img_label role-title">RijnMUN 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-SG.webp" alt="RijnMUN Secretary General"> -->
+                        <img src="/images/BoD-photos/sg.jpg" alt="RijnMUN Secretary General">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label"><span title="One of the great minds behind the RijnMUN website" onclick="window.location.replace('https:\/\/www.rijnmun.org/extras/tic-tac-toe')">Alan Gil Forza</span></p>
+                                <p class="img_label role-title">Secretary General</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-secreatariat.webp" alt="RijnMUN Secretariat"> -->
+                        <img src="/images/BoD-photos/secretariat.jpg" alt="RijnMUN Secretariat">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <p class="img_label"><span title="One of the great minds behind the RijnMUN website" onclick="window.location.replace('https:\/\/www.rijnmun.org/extras/hangman')">Alan Gil Forza</span>, Alice Rinalducci, Alexander Graham, Tanvi Sharma, Wiebe de Jong, Samantha van Ingen</p>
+                                <p class="img_label role-title">RijnMUN Secretariat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row2">
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-management.webp" alt="RijnMUN Management Sector"> -->
+                        <img src="/images/BoD-photos/management.jpg" alt="RijnMUN Management Sector">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <!-- <p class="img_label">Emily Hanlon, <span title="Head of Student Officers">Olivia Alwayn</span>, <span title="Head of Approval Panel">Ruben van Zuijlen</span>, <span title="Approval Panel">Alice Rinalducci</span>, <span title="Approval Panel">Samantha van Ingen</span></p> -->
+                                <p class="img_label">Alexander Graham, Lizzy de Klein, Micah Murray, Eleanor Brabant, Ruby O'Regan</p>
+                                <p class="img_label role-title">Management</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-finance.webp" alt="RijnMUN Finance Sector"> -->
+                        <img src="/images/BoD-photos/finance.jpg" alt="RijnMUN Finance Sector">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <!-- <p class="img_label"><span onclick="window.location.replace('https:\/\/www.rijnmun.org/extras/tic-tac-toe')">Alan Gil Forza</span> <span title="Treasurer">Toyo Chupin</span>, <span title="Logistics Officer">Dori Kovacs</span>, Shuyao (Charlotte) Zhao, Thomas Lin, <span title="Logistics Officer">Magdalena Rok</p> -->
+                                <p class="img_label">Wiebe de Jong, Alyssia van Raaij, Alba Castro Barat</p>
+                                <p class="img_label role-title">Finance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-comms.webp" alt="RijnMUN Communication Sector"> -->
+                        <img src="/images/BoD-photos/external_affairs.jpg" alt="RijnMUN External Affairs">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <!-- <p class="img_label"><span onclick="window.location.replace('https:\/\/www.rijnmun.org/extras/tic-tac-toe')">Lenka Huang</span>, <span title="Head of Internal Communications">Ruby O’Regan</span>, <span title="Head of Guest Speaker Communications">Kiran van Brandenburg</span>, <span title="Chief Technical Officer">Alexander Graham</span></p> -->
+                                <p class="img_label">Alice Rinalducci, Emma Válkyová, Lucia Alvarez, </p>
+                                <p class="img_label role-title">External Affairs</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-hospitality.webp" alt="RijnMUN Hospitality Sector"> -->
+                        <img src="/images/BoD-photos/internal_affairs.jpg" alt="RijnMUN Internal Affairs">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <!-- <p class="img_label">Beatriz Soares, <span title="Head of Admins">Janneke Veerman</span>, <span title="Head of Catering">Sieger Pols</span>, <span title="Head of Info-Desk">Sabriel van Ingen</span>, <span title="Head of Admins">Tanvi Sharma</span></p> -->
+                                <p class="img_label">Tanvi Sharma, Nina Mannaerts, Azlan Tousif, Thomas Lin, Noémi Galana, Alice Lodereau</p>
+                                <p class="img_label role-title">Internal Affairs</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="person">
+                        <!-- <img src="/images/BoD-photos/BOD-pub-press.webp" alt="RijnMUN Press & Publicity Team"> -->
+                        <img src="/images/BoD-photos/pub_press.jpg" alt="RijnMUN Press & Publicity Team">
+                        <div class="label-content">
+                            <div class="label-text">
+                                <!-- <p class="img_label">Hannelore Coppens, <span title="Head of Photography">Owen Schouten</span>, <span title="Head of Merch">Daire Coyle</span>, <span title="Head of Social Media">Elena Fernandez de Paz</span>, <span title="Head of Journalism">Kashvi Sutar</span>, <span title="Head of Social Media">Mania Vaseghi</span></p> -->
+                                <p class="img_label">Samantha van Ingen, Charlotte Zhao, Chiome Uche, Carmen Cadaval, Saugaat Lamba</p>
+                                <p class="img_label role-title">Press & Publicity</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- <div class="person">
+                    <img src="/images/BoD-photos/grey.webp" alt="">
+                    <p class="img_label">name(s)</p>
+                    <p class="img_label role-title">RijnMUN 2025 BoD</p>
+                </div> -->
+            </div>
+            <div id="scrollup">
+                <i class="fa fa-arrow-up fa-2x"></i>
+            </div>
+            <div class="rcmenu" id="rcmenu">
+                <div class="funcs" id="funcs">
+                    <p onclick="window.location.reload()">Reload</p>
+                </div>
+                <div class="links" id="links">
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/')">Home</p>
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/rijnmun-2025\/programme-of-events')">Agenda</p>
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/rijnmun-2025\/committees-and-issues')">Committees</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

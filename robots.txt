@@ -1,0 +1,11 @@
+# This file allows crawlers to find the sitemap
+sitemap: https://www.rijnmun.org/sitemap.xml
+
+User-agent: *
+Disallow: /*.webp$
+Disallow: /*.png$
+Disallow: /extras/
+Disallow: /*.css
+Disallow: /*.js
+Disallow: /staff/*
+Disallow: /scripts/*

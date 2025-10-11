@@ -1,0 +1,28 @@
+{
+    "short_name": "RijnMUN",
+    "name": "RijnMUN",
+    "icons": [
+        {
+            "src": "/images/favicon.ico",
+            "type": "image/x-icon",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/images/maskable/mskbl_icon_192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/maskable/mskbl_icon_512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "id": "/index",
+    "start_url": "/index",
+    "display" : "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#23569090"
+}

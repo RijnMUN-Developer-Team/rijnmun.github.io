@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light">
+        <meta name="robots" content="index, follow">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Registration">
+        <meta property="og:url" content="https://www.rijnmun.org/registration">
+        <meta property="og:site_name" content="RijnMUN">
+        <meta name="theme-color" content="#23569090">
+        <meta name="description" content="Registration information for the RijnMUN 2025 conference">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" href="/images/favicon.ico" sizes="96x96">
+        <!-- <link rel="stylesheet" type="text/css" href="/styles/reset.css"> -->
+
+        <!-- preloading the fonts ---- -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="/styles/base.css">
+        <link rel="stylesheet" type="text/css" href="/styles/mobile.css" media="screen and (max-width: 767px)">
+        <link rel="stylesheet" type="text/css" href="/styles/registration.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/scripts/base.js"></script>
+        <script type="module" src="/scripts/contextmenu.js"></script>
+        <script src="/scripts/registration.js"></script>
+        <title>RijnMUN | Registration</title>
+    </head>
+    <body>
+        <header data-nosnippet>
+            <div class="logo_container">
+                <a href="/"><img alt="RijnMUN Logo" class="logo" id="logo" src="/images/logos/logo.webp"></a>
+            </div>
+            <!-- dropdown for laptop version -->
+            <div class="menu" id="menu">
+                <a href="/" class="normal" title="Keyboard shortcut: 'H' to go back to the home page!">Home</a>
+                <div class="normal">
+                    <div class="dropdown">
+                        <a id="dropbtn" class="dropbtn" href="/rijnmun-2025/general-information">RijnMUN 2025</a>
+                        <div class="dropdown-content">
+                            <a href="/rijnmun-2025/general-information">General Information</a>
+                            <a href="/rijnmun-2025/committees-and-issues">Committees and Issues</a>
+                            <a href="/rijnmun-2025/programme-of-events">Programme of Events</a>
+                            <a href="/rijnmun-2025/board-of-directors">Board of Directors</a>
+                            <a href="/rijnmun-2025/speakers-and-advisors">Guest Speakers & Advisors</a>
+                            <a href="/rijnmun-2025/venue">Venue & Leiden</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="current" href="/registration">Registration</a>
+                <a class="normal" href="/contact">Contact</a>
+                <p class="icon" onclick="show_bars()" style="height: 30px;">
+                    <span id="bar1" class="bar" style="--i:0"></span>
+                    <span id="bar2" class="bar" style="--i:9"></span>
+                    <span id="bar3" class="bar" style="--i:18"></span>
+                </p>
+            </div>
+        </header>
+            
+        <!-- dropdown for phone version -->
+        <div class="toggle" id="toggle" style="display:none;">
+            <ul>
+                <li class="main"><a href="/">Home</a></li>
+                <li class="main"><a href="/rijnmun-2025/general-information">RijnMUN 2025</a></li>
+                <ul><li>
+                    <a href="/rijnmun-2025/general-information">General Information</a>
+                    <a href="/rijnmun-2025/committees-and-issues">Committees and Issues</a>
+                    <a href="/rijnmun-2025/programme-of-events">Programme of Events</a>
+                    <a href="/rijnmun-2025/board-of-directors">Board of Directors</a>
+                    <a href="/rijnmun-2025/speakers-and-advisors">Guest Speakers & Advisors</a>
+                    <a href="/rijnmun-2025/venue">Venue & Leiden</a>
+                </li></ul>
+                <li class="main"><a href="/registration">Registration</a></li>
+                
+                <li class="main"><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <noscript><div id="js_alert">
+            <h2>JavaScript Disabled</h2>
+            <p>Please allow JavaScript for this website as it is needed for many of the core functionalities of this website. You can change website permissions in your browser settings, and then reload the page.</p>
+        </div></noscript>
+        <main onclick="hide_bars()">
+            <div class="title">
+                <h1>Registration</h1>
+            </div>
+
+            <div class="container">
+                <div class="left-div">
+                    <div class="fees">
+                        <h2>Conference Fees 2025</h2>
+                        <div class="layout">
+                            <!-- <p>Conference fees for RijnMUN 2025 will be announced soon.</p> -->
+
+                            <table>
+                                <tr><td class="delegate">Delegate</td><td>€35</td></tr>
+                                <tr><td class="stoff">Student Officer</td><td>€15</td></tr>
+                                <tr><td class="director">MUN Directors/Visitors</td><td>€15</td></tr>
+                                <tr><td class="other">Lost badges</td><td>€5</td></tr>
+                            </table>
+                            <ul>    
+                                <li>Conference fee include a badge and lunch for two days.</li>
+                                <li>There are no extra fees for school registrations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sch-registration">
+                        <h2 onclick="collapse('sch')" class="collapsible-heading" id="sch-heading"><span id="text">School Registrations</span><span class="arrow"><i id="sch-arrow" class="fa fa-caret-left 0"></i></span></h2>
+
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it prevents unresponsive first-clicks -->
+                        <div id="sch-registration-info" class="collapsible-content" style="display: none;">
+                            <p>Schools may reserve delegate spots based on the number of beginner delegates expected to join MUN in the new school year. Schools will only need to confirm details of delegates, which may be two more or two less than reserved, in September.</p>
+                            <p>To sign up as a school, please fill in <a target="_blank" href="https://forms.gle/Aa2pJS6ep7Gud7jA6">this form</a>.</p>
+                            <!-- <p>School applications for RijnMUN 2025 are not yet open. Please come back later.</p> -->
+
+                            <!-- OPEN APPLICATIONS HERE --------------------------- -->
+                            <!-- <p><em>Preliminary Form</em> (open from 6th May to 7th June 2025): are now open. </p> -->
+
+                            <!-- <p><em>Confirmation Form</em> (open from 26th August to 6th of September 2025): confirm details such as names, dietary restrictions, experience level...etc of your delegation with a size within a two-delegate margin of your previous estimate.</p> -->
+
+                            <!-- <p><b>Confirmation forms have been sent.</b> Please <a href="/contact" target="_blank">contact us</a> if you have not received a confirmation form or require an extension.</p> -->
+
+                            <p>Please feel free to <a href="/contact" target="_blank" rel="noopener noreferrer">contact us</a> for any questions or amendments regarding your applications.</p>
+
+                            <p id="for-rlo-students">RLO students please see <a href="#rlo-heading" onclick="collapse('rlo')">RLO student registration info</a> below.</p>
+                        </div>
+                    </div>
+
+                    <div class="ind-registration">
+                        <h2 onclick="collapse('ind')" class="collapsible-heading" id="ind-heading"><span id="text">Individual Registrations</span><span class="arrow"><i id="ind-arrow" class="fa fa-caret-left 0"></i></span></h2>
+
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it prevents unresponsive first-clicks -->
+                        <div id="ind-registration-info" class="collapsible-content" style="display: none;">
+                            <p><em>Individual applications for RijnMUN 2025 are now open!</em> To sign up please fill in <a target="_blank" href="https://forms.gle/PJuwvDdJ7EsK4Ycy7">this form</a>.</p>
+                            <!-- <p>Individual applications for RijnMUN 2025 are not yet open. Please come back later.</p> -->
+                            <!-- <p>Applications for delegates at RijnMUN 2025 are now closed. We are working hard to organize them and you can expect a confirmation email from us within the next two weeks.</p> -->
+                            <!-- <p>Applications for delegates at RijnMUN 2025 are now closed. Position-assignments have been sent to all delegates.</p> -->
+
+                            <p>Please feel free to <a href="/contact" target="_blank" rel="noopener noreferrer">contact us</a> for any questions or amendments to your application.</p>
+
+                            <p id="for-rlo-students">RLO students: please see <a href="#rlo-heading" onclick="collapse('rlo')">RLO students registration below.</a></p>
+                        </div>
+                    </div>
+
+                    <div class="stoff-registration">
+                        <h2 onclick="collapse('stoff')" class="collapsible-heading" id="stoff-heading"><span id="text">StOff Registrations</span><span class="arrow"><i id="stoff-arrow" class="fa fa-caret-left 0"></i></span></h2>
+
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it prevents unresponsive first-clicks -->
+                        <div id="stoff-registration-info" class="collapsible-content" style="display: none;">
+                            <!-- <p>StOff applications for RijnMUN 2025 are not yet open. Please come back later.</p> -->
+                            <!-- <p>Are you a motivated and organised person? Have you already been to multiple MUN conferences and are you ready for a new challenge? Try being a chair at our RijnMUN conference!</p> -->
+                            <!-- <p><b>From now on until <em>2nd May 2025</em>, you can <a href="https://forms.gle/WarxzQHSx2JZGiW88" target="_blank" rel="noopener noreferrer">submit your application</a>!</b></p> -->
+                            <!-- <p>Applications for Student Officers at RijnMUN 2025 are now closed and all applicants have been informed of their application status.</p> -->
+                            <p>Applications for Student Officers at RijnMUN 2025 are now closed, and we are working hard to process all submitted applications.</p>
+                            <!-- <p>Please <a href="./contact" target="_blank" rel="noopener noreferrer">contact us</a> for any questions or if you have not received an email from us. </p> -->
+                            <p>Please <a href="./contact" target="_blank" rel="noopener noreferrer">contact us</a> in case of any questions or concerns. </p>
+                        </div>
+                    </div>
+
+                    <div class="rlo-registration">
+                        <h2 onclick="collapse('rlo')" class="collapsible-heading" id="rlo-heading"><span id="text">RLO Student Registrations</span><span class="arrow"><i id="rlo-arrow" class="fa fa-caret-left 0"></i></span></h2>
+
+                        <!-- DO NOT REMOVE style tag: display -->
+                        <!-- it prevents unresponsive first-clicks -->
+                        <div id="rlo-registration-info" class="collapsible-content" style="display: none;">
+                            <p>Do you want to be part of MUN debates in RLO? All students MP3/2e klas or older as of school year 2025-26 are welcome to join our after-school MUN debate practice, every Thursday 6th period in n103. Beginners are always welcome!</p>
+
+                            <p><i>De voertal van Model United Nations is wel Engels maar alle studenten van RLO zijn van harte welkom!</i></p>
+
+                            <!-- <p>To attend RijnMUN, you must attend a MUN training session every week, starting from the beginning of school up until the week of RijnMUN. These training sessions occur weekly on Mondays and Wednesdays, during 6th period, in N104.</p>
+
+                            <p>For fulfilling CAS or SA requirements with RijnMUN, please consult your tutor and supervisors.</p> -->
+
+                            <p>Questions? <a href="/contact">Send us an email</a> or dm us on <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
+
+                        </div>
+                    </div>
+
+                    
+                    <!-- <div class="bod-registration">
+                        <h2 onclick="collapse('bod')" class="collapsible-heading" id="bod-heading"><span id="text">Secretariat & Board of Directors Registration</span><span class="arrow"><i id="bod-arrow" class="fa fa-caret-left 0"></i></span></h2>
+
+                        DO NOT REMOVE style tag: display
+                        it prevents unresponsive first-clicks
+                        <div id="bod-registration-info" class="collapsible-content" style="display: none;">
+
+                            <p><strong>Board of Director applications for RijnMUN 2025 are now closed.</strong></p>
+                            <p>Please keep an eye on the website for RLO delegates and admin registrations.</p>
+
+                            <p>Are you interested in being part of the organizing team for RijnMUN 2025? Are you NOT graduating in 2025, and is in MP4/3e klas or higher as of this current school year? Then read the information below!</p>
+
+                            <p>RijnMUN is organized by ~30 students, who form the Board of Directors. Within these 30 students, there are 6 "sector leaders" (one Secretary General and five Deputy Secretary Generals) that form the Secretariat of RijnMUN. These Secretariat members make major decisions, and each Deputy Secretary General leads their own sector of 4-6 other students (who are part of the Board of Directors but are NOT secretariat members) that take on tasks related to an aspect of RijnMUN.</p>
+
+                            <p>To fill in your application, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLTD0JXiJaaHhUilUvUlSICTKNBvLhuRa4bq3vYcL66cYVmw/viewform" target="_blank">click here</a>.</p>
+
+                            <p>We look forward to reading your applications!</p>
+                            <p>Kind regards, <br>RijnMUN 2025 Secretariat</p>
+
+                        </div>
+                    </div> -->
+
+                    <div class="cancelation-info">
+                        <i class="fa fa-exclamation-triangle fa-xl"></i>
+                        <ul>
+                            <p>Please note:</p>
+                            <!-- <li>
+                                Cancellation for individuals and StOff was free until the 2<sup style="font-size:xx-small; vertical-align:super;">nd</sup> Sep 2025. Now, the original registration fee must still be paid due to organizational inconveniences;
+                            </li> -->
+                            <li>
+                                RijnMUN 2025 will not be providing any accomodation;
+                            </li>
+                            <li>
+                                Any guests that are allergic to gluten are kindly requested to bring their own lunch.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <h2>Deadlines</h2>
+                    <!-- <p>Registration and mailing deadlines will be provided soon. Please come back later.</p> -->
+                    <!-- <p>Please note that these are only provisional deadlines and may still be subjected to change.</p> -->
+                    
+                    <table>
+                        <tr><td class="time stoff">10 Mar. 2025</td><td>StOff Registrations Open</td></tr>
+                        <tr><td class="time delegate">21 Apr. 2025</td><td>Delegate Registration Open</td></tr>
+                        <tr><td class="time stoff">04 May 2025</td><td>StOff Registration Closed</td></tr>
+                        <tr><td class="time stoff">20 May 2025</td><td>StOff Acceptance Confirmation</td></tr>
+                        <tr><td class="time stoff">21 Jun. 2025</td><td>Chairs Research Report Deadline</td></tr>
+                        <tr><td class="time delegate">06 Jul. 2025</td><td>Individual and Group Spot Reservations Closed</td></tr>
+                        <tr><td class="time delegate">02 Sep. 2025</td><td>Final Group Confirmations <br> Cancellation Deadline for Individuals</td></tr>
+                        <tr><td class="time delegate">08 Sep. 2025</td><td>Delegate Acceptance Confirmation</td></tr>
+                        <tr><td class="time deadline">03 Oct. 2025</td><td>Pre-Conference Informative Mailing</td></tr>
+                        <tr><td class="time other">10 Oct. 2025</td><td>RijnMUN</td></tr>
+                    </table>
+
+                    <div class="mailings">
+                        <a class="mailing_btn" href="" target="_blank" rel="noopener noreferrer">1<sup>st</sup> Mailing</a>
+                        <a class="mailing_btn" href="" target="_blank" rel="noopener noreferrer">Last Mailing</a>
+                        <a class="mailing_btn" href="" target="_blank" rel="noopener noreferrer">3<sup>rd</sup> Mailing</a>
+                        <a class="mailing_btn" href="" target="_blank" rel="noopener noreferrer">4<sup>th</sup> Mailing</a>
+                        <a class="mailing_btn" href="" target="_blank" rel="noopener noreferrer">5<sup>th</sup> Mailing</a>
+                    </div>
+                </div>
+            </div>
+            <div id="scrollup">
+                <i class="fa fa-arrow-up fa-2x"></i>
+            </div>
+            <div class="rcmenu" id="rcmenu">
+                <div class="funcs" id="funcs">
+                    <p onclick="window.location.reload()">Reload</p>
+                </div>
+                <div class="links" id="links">
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/')">Home</p>
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/rijnmun-2025\/programme-of-events')">Agenda</p>
+                    <p onclick="window.location.replace('https:\/\/www.rijnmun.org\/rijnmun-2025\/committees-and-issues')">Committees</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
