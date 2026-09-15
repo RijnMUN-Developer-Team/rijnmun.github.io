@@ -13,9 +13,29 @@ function update_news_toggle() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', update_news_toggle);
+// places the visible news items above the "Show more" toggle and the
+// extra items (the overflow) below it
+function arrange_news() {
+    const news = document.querySelector('.news');
+    const toggle = document.getElementById('news-toggle-cont');
+    const overflow = document.getElementById('news-overflow');
+    if (!news || !toggle || !overflow) return;
+
+    // content engine appends items to the end of the container, so move the
+    // toggle and overflow back into place after them
+    news.appendChild(toggle);
+    news.appendChild(overflow);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    update_news_toggle();
+    arrange_news();
+});
 // re-check once the sheet content engine has rendered the news items
-document.addEventListener('cs:ready', update_news_toggle);
+document.addEventListener('cs:ready', function () {
+    update_news_toggle();
+    arrange_news();
+});
 
 let news_overflow_toggled = false;
 
