@@ -25,6 +25,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/committees-and-issues.css" media="screen">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
+        <script src="/scripts/content.js" defer></script>
         <script type="module" src="/scripts/committees-and-issues.js"></script>
         <script type="module" src="/scripts/contextmenu.js"></script>
         <script src="/scripts/cai_funcs.js"></script>
@@ -87,173 +88,29 @@
             
             <div class="title">
                 <h1>Committees & Issues</h1>
-                <h3>Convergence: where perspectives unite for global progress</h3>
+                <h3 data-cs="settings.committees_tagline">Convergence: where perspectives unite for global progress</h3>
             </div>
             
             <div class="container">
-                <div class="all-committees">
+                <div class="all-committees" data-cs-repeat="committees" data-cs-group="committee">
 
-                    <div class="per-committee">
-                        <!-- <h2><span>GA1 - International Security and Disarmement</span><i class="fa fa-caret-left debate-resos-arrow" id="arrow-GA1" onclick="toggleResos('GA1')"></i></h2> -->
-                        <h2><span>GA1 - International Security and Disarmement</span></h2>
-                        <h3>Chairs to be announced!</h3>
-                        <!-- <h3>Chaired by <i>Karel Duchatteau</i> and <i>Mirthe Visser</i>.</h3> -->
-                        <!-- <h3>Chaired by <span title="Gymnasium Haganum"><i>Vikram Klaassens</i></span> and <span title="Gymnasium Haganum"><i>Edward Connor</i></span></h3> -->
-                        <!-- <h4>Contact via ga1@rijnmun.org</h4> -->
-                        <div class="txt-btn-rel">
-                            <table>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>The regulation of autonomous weapons systems</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">GA101</a></td></tr>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Preventing cyber warfare against civilian infrastructure</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">GA102</a></td></tr>
-                            </table>
+                    <template data-cs-item>
+                        <div class="per-committee">
+                            <h2><span data-cs-group-key></span></h2>
+                            <h3 data-cs-group-col="chairs" data-cs-default="Chairs to be announced!"></h3>
+                            <div class="txt-btn-rel">
+                                <table data-cs-group-rows>
+                                    <template data-cs-item>
+                                        <tr>
+                                            <td class="pc-txt"><ul><li></li></ul><p data-cs-col="issue"></p></td>
+                                            <td class="pc-btn"><a data-cs-col="code" data-cs-col-attr="href:report_url" data-cs-emptyalert="Our chairs are still busy writing the research reports for you ;)" target="_blank" rel="noopener noreferrer"></a></td>
+                                        </tr>
+                                    </template>
+                                </table>
+                            </div>
                         </div>
-                        
-                        <!-- <div style="display: none" class="debate-in-session" id="resos-GA1">
-                            <div class="approved-resos resos" id="approved-GA1">
-                                <h4>Approved Resolutions</h4>
-                            </div>
+                    </template>
 
-                            <div class="active-resos resos" id="active-GA1">
-                                <h4>Resolution in Debate</h4>
-                            </div>
-
-                            <div class="passed-resos resos" id="passed-GA1">
-                                <h4>Passed Resolutions</h4>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <div class="per-committee">
-                        <!-- <h2><span>GA3 - Social, Humanitarian and Cultural</span><i class="fa fa-caret-left debate-resos-arrow" id="arrow-GA3" onclick="toggleResos('GA3')"></i></h2> -->
-                        <h2><span>GA3 - Social, Humanitarian and Cultural</span></h2>
-                        <h3>Chairs to be announced!</h3>
-                        <!-- <h3>Chaired by <i>Zhao Xiong William</i> and <i>Julia Wilhelmina Fröhlich</i>.</h3> -->
-                        <!-- <h3>Chaired by <span title="Stedelijke Gymnasium Haarlem"><i>Stephanie Wieberdink</i></span> and <span title="Coornhert Gymnasium"><i>Jochem van Dijk</i></span></h3> -->
-                        <!-- <h4>Contact via ga3@rijnmun.org</h4> -->
-
-                        <div class="txt-btn-rel">
-                            <table>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Protecting indigenous communities amid development projects</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">GA301</a></td></tr>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Advancing gender equality in humanitarian response systems</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">GA302</a></td></tr>
-                            </table>
-                        </div>
-                        <!-- <div style="display: none" class="debate-in-session" id="resos-GA3">
-                            <div class="approved-resos resos" id="approved-GA3">
-                                <h4>Approved Resolutions</h4>
-                            </div>
-
-                            <div class="active-resos resos" id="active-GA3">
-                                <h4>Resolution in Debate</h4>
-                            </div>
-
-                            <div class="passed-resos resos" id="passed-GA3">
-                                <h4>Passed Resolutions</h4>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <div class="per-committee">
-                        <!-- <h2><span>GA4 - Special Political and Decolonization</span><i class="fa fa-caret-left debate-resos-arrow" id="arrow-GA4" onclick="toggleResos('GA4')"></i></h2> -->
-                        <h2><span>GA4 - Special Political and Decolonization</span></h2>
-                        <!-- <h3>Chaired by <i>Sevanthy Nahenthiram</i> and <i>Troy Jones</i>.</h3> -->
-                        <h3>Chairs to be announced!</h3>
-                        <!-- <h3>Chaired by <span title="International School of Utrecht"><i>Nimar Grover</i></span>, assisted by Daan de Klein</h3> -->
-                        <!-- <h4>Contact via ga4@rijnmun.org</h4> -->
-
-                        <div class="txt-btn-rel">
-                            <table>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>The question of the Western Sahara</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">GA401</a></td></tr>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Addressing the rights of the Chagossian peoples of Diego Garcia</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">GA402</a></td></tr>
-                            </table>
-                        </div>
-
-                        <!-- <div style="display: none" class="debate-in-session" id="resos-GA4">
-                            <div class="approved-resos resos" id="approved-GA4">
-                                <h4>Approved Resolutions</h4>
-                            </div>
-
-                            <div class="active-resos resos" id="active-GA4">
-                                <h4>Resolution in Debate</h4>
-                            </div>
-
-                            <div class="passed-resos resos" id="passed-GA4">
-                                <h4>Passed Resolutions</h4>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <div class="per-committee">
-                        <!-- <h2><span>HRC - Human Rights Council</span><i class="fa fa-caret-left debate-resos-arrow" id="arrow-HRC" onclick="toggleResos('HRC')"></i></h2> -->
-                        <h2><span>HRC - Human Rights Council</span></h2>
-                        <!-- <h3>Chaired by <span title="Stedelijke Gymnasium Haarlem"><i>Karel Duchatteau</i></span> and <span title="International School of Utrecht"><i>Sanvi Choudhary</i></span></h3> -->
-                        <!-- <h3>Chaired by <i>Shams Kamel</i> and <i>Anne Voorden</i>.</h3> -->
-                        <h3>Chairs to be announced!</h3>
-                        <!-- <h4>Contact via hrc@rijnmun.org</h4> -->
-
-                        <div class="txt-btn-rel">
-                            <table>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>The protection of journalists in conflict zones</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">HRC01</a></td></tr>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Ensuring humanitarian access to conflict zones</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">HRC02</a></td></tr>
-                                <!-- <tr><td class="pc-txt"><ul><li></li></ul><p>Addressing mass displacement due to conflict</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">HRC03</a></td></tr> -->
-                            </table>
-                        </div>
-
-                        <!-- <div style="display: none" class="debate-in-session" id="resos-HRC">
-                            <div class="approved-resos resos" id="approved-HRC">
-                                <h4>Approved Resolutions</h4>
-                            </div>
-
-                            <div class="active-resos resos" id="active-HRC">
-                                <h4>Resolution in Debate</h4>
-                            </div>
-
-                            <div class="passed-resos resos" id="passed-HRC">
-                                <h4>Passed Resolutions</h4>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <div class="per-committee">
-                        <!-- <h2><span>SC - Security Council</span><i class="fa fa-caret-left debate-resos-arrow" id="arrow-SC" onclick="toggleResos('SC')"></i></h2> -->
-                        <h2><span>SC - Security Council</span></h2>
-                        <!-- <h3>Chaired by <span title="Coornhert Gymnasium"><i>Hidde van der Ligt</i></span> and <span title="Rijnlands Lyceum Oegstgeest"><i>Tarana Saha</i></span></h3> -->
-                        <!-- <h3>Chaired by <i>Iris Hiemstra</i> and <i>Steve Liju</i>.</h3> -->
-                        <h3>Chairs to be announced!</h3>
-                        <!-- <h4>Contact via sc@rijnmun.org</h4> -->
-
-                        <div class="txt-btn-rel">
-                            <table>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>The situation in Sudan</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">SC01</a></td></tr>
-                                <tr><td class="pc-txt"><ul><li></li></ul><p>Maritime security in the Red Sea</p></td><td class="pc-btn"><a href="" target="_blank" rel="noopener noreferrer">SC02</a></td></tr>
-                            </table>
-                        </div>
-
-                        <!-- <div style="display: none" class="debate-in-session" id="resos-SC">
-                            <div class="approved-resos resos" id="approved-SC">
-                                <h4>Approved Resolutions</h4>
-                            </div>
-
-                            <div class="active-resos resos" id="active-SC">
-                                <h4>Resolution in Debate</h4>
-                            </div>
-
-                            <div class="passed-resos resos" id="passed-SC">
-                                <h4>Passed Resolutions</h4>
-                            </div>
-                        </div> -->
-                    </div>
-
-                    <!-- script for not-yet-uploaded research report (can be removed once research report uploaded) -->
-                    <script>
-                        const researchReportButtons = document.querySelectorAll("td.pc-btn a");
-                        researchReportButtons.forEach((element) => {
-                            // console.log(element, element.getAttribute("href"));
-                            if (element.getAttribute("href") == "") {
-                                element.removeAttribute("href");
-                                element.removeAttribute("target");
-                                element.setAttribute("onclick", 'alert("Our chairs are still busy writing the research reports for you ;)")')
-                            }
-                        })
-                    </script>
                 </div>
             </div>
             <div id="scrollup">

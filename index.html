@@ -24,7 +24,8 @@
         <link rel="stylesheet" type="text/css" href="/styles/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
-        <script src="/scripts/index.js"></script> 
+        <script src="/scripts/content.js" defer></script>
+        <script src="/scripts/index.js"></script>
         <script type="module" src="/scripts/contextmenu.js"></script>
         <title>RijnMUN 2026</title>
 
@@ -165,100 +166,34 @@
         </div></noscript>
         <main onclick="hide_bars()">
             <div class="title">
-                <h1>Rijnlands Lyceum Oegstgeest<br>Model United Nations</h1>
-                <h2>9<sup>th</sup> to 11<sup>th</sup> October 2026</h2>
+                <h1 data-cs="home.headline" data-cs-failure-keep>Rijnlands Lyceum Oegstgeest<br>Model United Nations</h1>
+                <h2 style="text-align: end;" data-cs="settings.conference_dates">9<sup>th</sup> to 11<sup>th</sup> October 2026</h2>
 
-
-                <!-- tbh not really sure if it works out or makes the home page too excessive (?) -->
                 <div class="btns">
-                    <a href="./rijnmun-2026/general-information">What is MUN?</a>
-                    <a href="./rijnmun-2026/committees-and-issues">See the issues</a>
-                    <a href="./rijnmun-2026/programme-of-events">Agenda</a>
+                    <a data-cs="home.btn1_text" data-cs-attr="href:home.btn1_url" href="./rijnmun-2026/general-information">What is MUN?</a>
+                    <a data-cs="home.btn2_text" data-cs-attr="href:home.btn2_url" href="./rijnmun-2026/committees-and-issues">See the issues</a>
+                    <a data-cs="home.btn3_text" data-cs-attr="href:home.btn3_url" href="./rijnmun-2026/programme-of-events">Agenda</a>
                 </div>
             </div>
             <div class="container">
                 <div class="message" data-nosnippet>
-
-                    <!-- <p><span class="keywords">Welcome to the RijnMUN 2026 website.</span></p> -->
-                    
-                    <!-- SG LETTER --------  -->
-                    <!-- <p><span class="keywords">Dear MUN directors, aspiring delegates, students officers, and all others,</span>
-                        <br>
-                        <br>
-                        The Board of Directors of RijnMUN 2026 is overjoyed to announce the continuation of <span class="keywords">Het Rijnlands Lyceum Oegstgeest Model United Nations</span> (RijnMUN), following our inaugural conference in October of 2024, which successfully hosted 170 delegates in 5 different committees. Welcome to our website.
-                        <br>
-                        <br>
-                        <span class="keywords">RijnMUN 2026 is a conference organized with a beginner-friendly approach,</span> aiming to promote the fascinating world of MUN to a new generation of delegates and student officers. Throughout our three-day conference we will be offering delegate and student officer workshops for both new and experienced delegates.
-                        <br>
-                        <br>
-                        Finally, we encourage you to look through our website to learn more about this years' RijnMUN. Please do not hesitate to contact us for any questions you may have.
-                        <br>
-                        <br>
-                        <span class="keywords">We hope to see you all there for RijnMUN 2026!</span>
-                        <br>
-                        <br>
-                        Sincerely,
-                        <br>
-                        <i>Alan Gil Forza</i>
-                        <br>
-                        Secretary General RijnMUN 2026
-                    </p> -->
-
-                        <!-- AFTER CONFERENCE MESSAGE -----  -->
-                        <p>
-                            <span class="keywords">Dear MUN directors, advisors, delegates, student officers, admins, and guests,</span> <br>
-                            <br>
-                            This second edition of RijnMUN has been a joyous success, with 120 delegates and over 60 student volunteers supporting the conference. We thank everyone who was present and made this event possible. Throughout the weekend, there were many fun and unforgettable highlights, captured in the photos made by our wonderful photography team. 
-                            <br>On behalf of the RijnMUN Board of Directors, we hope to see you all again at RijnMUN 2026!<br>
-                            <br>
-                            <span class="keywords">
-                                Signing off,
-                                <br>
-                                The RijnMUN 2025 Secretariat
-                            </span>
-                        </p>
+                    <p data-cs="home.message"></p>
                 </div>
                 <div class="sidebar">
                     <div>
                         <h4>LATEST NEWS</h4>
-                        <p id="date">Last updated: 23/05/2025</p>
-                        <div class="news">
+                        <p id="date">Last updated: <span data-cs="settings.last_updated">23/05/2025</span></p>
+                        <div class="news" data-cs-repeat="news" data-cs-sort="date:desc" data-cs-visible="2" data-cs-overflow="#news-overflow">
 
-                            <!-- lets keep two news item visible at a time?  -->
-                            <div class="news-item">
-                                <p class="news-title">Committees and Issues Released</p>
-                                <p class="news-details">Committees and issues can now be found <a target="_blank" href="/rijnmun-2026/committees-and-issues">here</a>.</p>
-                                <p class="news-date">Published 10/05/2026</p>
-                            </div>
-
-                             <div class="news-item">
-                                <p class="news-title">RijnMUN 2025 Photos</p>
-                                <p class="news-details">Photos of RijnMUN 2025 are uploaded in the <a target="_blank" href="https://archive.rijnmun.org/photos">RijnMUN photo archives</a>.</p>
-                                <p class="news-date">Published 12/10/2025</p>
-                            </div>
-
-                            <div class="news-overflow" id="news-overflow">
+                            <template data-cs-item>
                                 <div class="news-item">
-                                    <p class="news-title">RijnMUN Archives</p>
-                                    <p class="news-details">You can now find RijnMUN archives and photos at <a target="_blank" href="https://archive.rijnmun.org/">archive.rijnmun.org</a>.</p>
-                                    <p class="news-date">Published 31/12/2024</p>
+                                    <p class="news-title" data-cs-col="title"></p>
+                                    <p class="news-details" data-cs-col="text"></p>
+                                    <p class="news-date">Published <span data-cs-col="date"></span></p>
                                 </div>
+                            </template>
 
-                            <!-- <div class="news-item">
-                                <p class="news-title">RijnMUN 2026 Secretariat Applications Open!</p>
-                                <p class="news-details">Interested RLO students can find details under our <a href="/registration#bod-heading">regstrations</a> page.</p>
-                                <p class="news-date">Published on 04/11/2026</p>
-                            </div>    -->
-
-                            <!-- <div class="news-item">
-                                <p class="news-title">Thank you for attending RijnMUN 2026!</p>
-                                <p class="news-details">Please find some <a href="/rijnmun-2026/photos" target="_blank">photos here</a>, follow our socials, and feel free to contact us for any feedback you may have or to claim <a href="/images/conference-photos/RijnMUN_lost_and_found.JPEG">lost and found items</a>.</p>
-                                <p class="news-date">Published on 15/10/2026</p>
-                            </div>                             -->
-
-
-                                
-                            </div>
+                            <div class="news-overflow" id="news-overflow"></div>
 
                             <p class="news-toggle" id="news-toggle-cont"><span class="toggle-cont"><span id="news-toggle" onclick="toggle_news_overflow()">Show more </span><i id="nws-ovrflw-arrw" class="fa fa-caret-down"></i></span></p>
                         </div>
@@ -266,19 +201,13 @@
 
                     <div class="news-socials">
                         <p>
-                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer"><img title="Go follow @rijn.mun on Instagram!" alt="Instagram" src="/images/logos/instagram_black.webp" class="side_insta"></a>
+                            <a data-cs-attr="href:settings.instagram_url" href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer"><img title="Go follow @rijn.mun on Instagram!" alt="Instagram" src="/images/logos/instagram_black.webp" class="side_insta"></a>
 
-                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank" rel="noopener noreferrer"><img title="Go follow @rijn_mun on TikTok!" alt="TikTok" src="/images/logos/tiktok_black.webp" class="side_tiktok"></a>
+                            <a data-cs-attr="href:settings.tiktok_url" href="https://www.tiktok.com/@rijn_mun" target="_blank" rel="noopener noreferrer"><img title="Go follow @rijn_mun on TikTok!" alt="TikTok" src="/images/logos/tiktok_black.webp" class="side_tiktok"></a>
 
                         </p>
                     </div>
-
-                    <script>
-                        let lastUpdated = new Date(document.lastModified);
-                        document.getElementById("date").innerHTML = `Last Updated: ${String(lastUpdated.getDate()).padStart(2, '0')}/${String(lastUpdated.getMonth()+1).padStart(2, '0')}/${lastUpdated.getFullYear()}`;
-                    </script>
                 </div>
-            </div>
             <div id="scrollup">
                 <i class="fa fa-arrow-up fa-2x"></i>
             </div>

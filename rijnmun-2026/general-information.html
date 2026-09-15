@@ -26,6 +26,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/general-information.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
+        <script src="/scripts/content.js" defer></script>
         <script type="module" src="/scripts/contextmenu.js"></script>
         <script src="/scripts/general-information.js"></script>
         <title>RijnMUN | General Information</title>
@@ -95,13 +96,16 @@
                 
 
                 <div class="about">
-                    <p>Model United Nations (MUN) is an educational simulation where students take on the role of a country's representative (known as a <i>delegate</i>) and debate on current global issues with other delegates. Students will be given real-world issues with the goal of reaching a solution together with other delegates during the conference, each debating from the perspective of their representing countries. Debates will be moderated by <i>student officers</i>, who are experienced MUN students selected by the RijnMUN Board of Directors.</p>
+                    <div data-cs-repeat="general_info" data-cs-where="section:about_intro">
+                        <template data-cs-item>
+                            <p data-cs-col="text"></p>
+                        </template>
+                    </div>
 
-                    <div class="text">
-                        <p>MUN is for all students of any age between 14-18, any race, religion, gender, etc. As an educational model of the United Nations, participants can improve their public speaking skills, critical thinking, as well as honing their knowledge about international relations and real issues in the global community. </p>
-                    
-                        <p>RijnMUN is a Model United Nations conference hosted by students of Het Rijnlands Lyceum Oegstgeest. It is a small conference aimed for high-school beginner delegates to familiarize themselves with the MUN rules of procedure and to get involved with the MUN community. RijnMUN follows the THIMUN rules of procedures, which can be found on the <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-11-General-Rules-of-Procedure.pdf" target="_blank" rel="noopener noreferrer">THIMUN website</a>.</p>
-                        <p><i>Please note that housing for delegates, staff, or any other visitors will not be provided by RijnMUN 2026.</i></p>
+                    <div class="text" data-cs-repeat="general_info" data-cs-where="section:about_more">
+                        <template data-cs-item>
+                            <p data-cs-col="text"></p>
+                        </template>
                     </div>
 
                     <div class="image">
@@ -119,13 +123,10 @@
                     <h2>Guidelines</h2>
                     <div class="guidelines-content">
                         <div class="guidelines-list">
-                            <ul>
-                                <li>All must abide by the <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank" rel="noopener noreferrer">THIMUN guidelines</a> on top of the following RijnMUN specific guidelines below:</li>
-                                <li>Delegates must respect all other staff and delegates associated with the conference;</li>
-                                <li>Visitors will only be allowed into the conference with a badge, which will be distributed on the first day upon arrival;</li>
-                                <li>All people associated with RijnMUN must treat the building and corresponding properties with respect and care. Anyone caught in violation of this rule will be held accountable by the RijnMUN Board of Directors, who will decide upon appropriate consequences;</li>
-                                <li>Wear appropriate attire. Males shall wear a suit, tie, and formal footwear, while female delegates are expected to wear formal clothing, for example a blouse and appropriate length skirt. </li>
-                                <li><b>Note paper:</b> Delegates are required to bring their own note paper to RijnMUN. A template can be found <a href="/uploads/RijnMUN Note Paper Template.pdf">here</a>.</li>
+                            <ul data-cs-repeat="general_info" data-cs-where="section:guidelines">
+                                <template data-cs-item>
+                                    <li data-cs-col="text"></li>
+                                </template>
                             </ul>
                         </div>
         
@@ -135,36 +136,22 @@
                     </div> 
                 </div>
 
-                <!-- <div id="theme" class="page" style="display:none;">
-                    <h2>Theme</h2>
-                    <p>The theme for RijnMUN 2026 is <span id="theme-text">[theme here]</span>, which represents [...]</p>
-                </div> -->
-
                 <div id="guides" class="page" style="display:none;">
                     <div class="delegate-info">
                         <h2>How can I be part of (Rijn)MUN?</h2>
-                        <ul>
-                            <li><a href="/registration">Register for RijnMUN!</a> We are a beginner-friendly conference and in the three-day event you will receive workshops to help you find your way in the MUN community! Make sure you follow all the steps in the registration page.</li>
-                            <li>Check out the issues you will be discussing in your committee on the <a href="/rijnmun-2026/committees-and-issues.html">Committees and Issues</a> page. Make sure to read the research reports your chairs have written for you.</li>
-                            <li><a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-4-Research-and-Preparation.pdf">Find out more about the country which you are representing</a>: we recommend using the <a href="https://www.cia.gov/the-world-factbook/" target="_blank" rel="noopener noreferrer">CIA World Factbook</a> or the list of <a href="https://www.un.org/en/about-us/member-states" target="_blank" rel="noopener noreferrer">UN member states</a> as a starting point!</li>
-                            <li>Understand the stance of your country on the issues that you will be discussing. Is your country in favor or against a certain solution? Are there already alliances with certain countries in order to solve the issue?</li>
-                            <li>Prepare clauses, <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-7-Draft-Resolutions.pdf" target="_blank" rel="noopener noreferrer">resolutions</a> and or <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-5-Developing-a-Policy.pdf" target="_blank" rel="noopener noreferrer">policy statements</a>: check out the <a href="https://foundation.thimun.org/participation/guidelines/" target="_blank" rel="noopener noreferrer">guides</a> provided by the THIMUN foundation to help you!</li>
-                            <li>Be prepared to dress formally for RijnMUN, and bring a device, charger, pen, paper and lunch (for Friday) for the conference!</li>
-
-                            <!-- wait until the handbook is published -->
-                            <!-- <li>Check out the RijnMUN Delegate Handbook for further guidance.</li> -->
+                        <ul data-cs-repeat="general_info" data-cs-where="section:guides_delegate">
+                            <template data-cs-item>
+                                <li data-cs-col="text"></li>
+                            </template>
                         </ul>
                     </div>
             
                     <div class="chair-info" id="chair-info">
                         <h2>How do I become a good chair at RijnMUN?</h2>
-                        <ul>
-                            <li>Are you a motivated and organized person? Have you participated in at least two conferences and are you ready for a new challenge? Are you passionate about providing newcomers a great impression of MUN? <a href="/registration.html">Apply to be a chair</a>!</li>
-                            <li>Pre-Conference preparation: understand the <a href="/rijnmun-2026/committees-and-issues" target="_blank" rel="noopener noreferrer">issues</a> being debated in your committee, and write a coherent research report before the research report deadline following  <!-- <a href="" target="_blank" rel="noopener noreferrer"> -->tips and guidelines<!--</a>--> set by the RijnMUN BoD.</li>
-                            <li>Pre-Conference preparation: familiarize yourself with the <a href="https://foundation.thimun.org/wp-content/uploads/2023/08/Booklet-11-General-Rules-of-Procedure.pdf" target="_blank" rel="noopener noreferrer"> THIMUN Rules of Procedures</a></li>
-                            <li>Pre- and During-Conference: maintain good communication with the RijnMUN Board of Directors.</li>
-                            <li>During the Conference: set a good example for your committee, ensuring fruitful and productive debates while making sure the new delegates also feel immersed in the experience.</li>
-                            <li>General tip: be confident in your ability to chair!</li>
+                        <ul data-cs-repeat="general_info" data-cs-where="section:guides_chair">
+                            <template data-cs-item>
+                                <li data-cs-col="text"></li>
+                            </template>
                         </ul>
                     </div>
                 </div>
@@ -172,22 +159,23 @@
                 <div id="resources" class="page" style="display: none;">
                     <h2>Resources</h2>
                     <div id="resources-cont">
-                        <div class="resources-left">
-                            <p><b>Note paper:</b> Delegates are required to bring their own note paper to RijnMUN. A template can be found <a href="/uploads/RijnMUN Note Paper Template.pdf">here</a>.</p>
-                            <p><b>Research reports:</b> Research reports have been written for you by your chairs. You can find the research reports for your issues on the <a href="/rijnmun-2026/committees-and-issues">here</a>.</p>
-                            <p><b>Delegate handbook:</b> A delegate handbook has been written for you to help you better prepare for RijnMUN 2026, which can be found <a href="/uploads/RijnMUN_Delegate_Handbook.pdf">here</a>.</p>
-                            <p><b>MUN Attire:</b> Don't know what to wear at RijnMUN? Checkout other MUN conferences' past photos, such as the <a href="https://thehague.thimun.org/impressions/photo/" target="_blank" rel="noopener noreferrer">photo gallery of THIMUN</a> or <a href="https://www.facebook.com/Model-United-Nations-at-The-International-School-of-The-Hague-1554093008213683" target="_blank" rel="noopener noreferrer">the facebook page of MUNISH</a> to get an idea of what people dress like.</p>
-                            <p><b>Empty Resolution Template</b>: Feel free to directly copy/paste the template from <a href="/uploads/RijnMUN 2026 Resolution Template.odt" target="_blank" rel="noopener noreferrer">here</a> for your resolution!</p>
-                            <p><b>Annoted Example Resolution</b>: See our <a href="/uploads/RijnMUN_Resolution_Annotations.pdf" target="_blank" rel="noopener noreferrer">annotated sample resolution</a> provided by our Head of Approval Panel!</p>
+                        <div class="resources-left" data-cs-repeat="general_info" data-cs-where="section:resources_left">
+                            <template data-cs-item>
+                                <p data-cs-col="text"></p>
+                            </template>
                         </div>
                         <div class="resources-right">
                             <p><b>Useful research pages:</b></p>
-                            <ul></ul>
-                                <li><a href="https://www.gapminder.org/">Gapminder</a></li>
-                                <li><a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI">Human Development Index</a></li>
-                                <li><a href="https://www.cia.gov/the-world-factbook/">The World Factbook</a></li>
+                            <ul data-cs-repeat="general_info" data-cs-where="section:resources_right_links">
+                                <template data-cs-item>
+                                    <li data-cs-col="text"></li>
+                                </template>
                             </ul>
-                            <p>The RijnMUN staff hopes these resources will help you prepare for RijnMUN, and highly recommends you use them as they help provide a more enjoyable conference experience. Should you have any questions or concerns, please don't hesitate to <a href="/contact">contact us</a>.</p>
+                            <div data-cs-repeat="general_info" data-cs-where="section:resources_outro">
+                                <template data-cs-item>
+                                    <p data-cs-col="text"></p>
+                                </template>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -25,6 +25,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/programme-of-events.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
+        <script src="/scripts/content.js" defer></script>
         <script type="module" src="/scripts/contextmenu.js"></script>
         <script src="/scripts/programme-of-events.js"></script>
         <title>RijnMUN | Programme of Events</title>
@@ -97,119 +98,47 @@
                     
                 <div class="agenda">
                     <div class="fri item">
-                        <h2 id="fri-title">Friday 10<sup>th</sup> October<!--<sup>*</sup>--></h2>
+                        <h2 id="fri-title">Friday 10<sup>th</sup> October</h2>
                         <div id="fri-info" class="info">
-                            <p>To be announced.</p>
-                            <!-- <table>
-                                <tr>
-                                    <td class="time stoff">11:30<br>12:30</td>
-                                    <td>StOff Briefing</td>
-                                </tr>
-                                <tr>
-                                    <td class="time delegates">11:30<br>12:45</td>
-                                    <td>Arrivals and Registration</td>
-                                </tr>
-                                <tr>
-                                    <td class="time mundir">13:00<br>14:00</td>
-                                    <td>MUN Director's Meeting</td>
-                                </tr>
-                                <tr>
-                                    <td class="time delegates">13:00<br>13:45</td>
-                                    <td>Workshop #1</td>
-                                </tr>
-                                <tr>
-                                    <td class="time delegates">14:00<br>14:45</td>
-                                    <td>Workshops #2</td>
-                                </tr>
-                                <tr>
-                                    <td class="time delegates">15:00<br>16:30</td>
-                                    <td>Lobbying in committee</td>
-                                </tr>
-                                <tr>
-                                    <td class="time stoff">16:30<br>17:30</td>
-                                    <td>StOff Debriefing</td>
-                                </tr>
+                            <p data-cs-empty style="display: none;">To be announced.</p>
+                            <table data-cs-repeat="programme" data-cs-where="day:Friday" data-cs-hideempty data-cs-empty-scope="parent">
+                                <template data-cs-item>
+                                    <tr>
+                                        <td class="time" data-cs-col-class="audience" data-cs-col="time"></td>
+                                        <td data-cs-col="event"></td>
+                                    </tr>
+                                </template>
                             </table>
-                            <div class="fri-optional-info">
-                                <p>* This is an optional day that is mandatory for StOff and highly recommended for beginner delegates to attend.</p>
-                                <p>* This day is mandatory for StOff, optional for delegates but highly recommended for beginner delegates.</p>
-                                <p>* Lunch will not be offered.</p>
-                                <!- <p>There are four workshops offered, and delegates may choose any two for the two sessions until the room is full.</p> ->
-                            </div> -->
                         </div>
                     </div>
 
                     <div class="sat item">
                         <h2 id="sat-title">Saturday 11<sup>th</sup> October</h2>
                         <div id="sat-info" class="info">
-                            <p>To be announced</p>
-                            <!-- <table>
-                                <tr>
-                                    <td class="time delegates">08:00<br>08:30</td>
-                                    <td>Arrivals and Registration</td>
-                                </tr>
-                                <tr>
-                                    <td class="time stoff">08:00<br>08:30</td>
-                                    <td>StOff Briefing</td>
-                                </tr>
-                                <tr>
-                                    <td class="time general">08:30<br>09:30</td>
-                                    <td>Opening Ceremony</td>
-                                </tr>
-                                <tr>
-                                    <td class="time delegates">09:30<br>17:00</td>
-                                    <td>All Committees in Session</td>
-                                </tr>
-                                <tr>
-                                    <td class="time general">12:00<br>14:00</td>
-                                    <td>Staggered Lunch</td>
-                                </tr>
-                                <tr>
-                                    <td class="time stoff">17:15<br>18:00</td>
-                                    <td>StOff Debriefing</td>
-                                </tr>
-                                <tr>
-                                    <td class="time general">20:00<br>23:00</td>
-                                    <td>RijnMUN Party at RLO*</td>
-                                </tr>
+                            <p data-cs-empty style="display: none;">To be announced.</p>
+                            <table data-cs-repeat="programme" data-cs-where="day:Saturday" data-cs-hideempty data-cs-empty-scope="parent">
+                                <template data-cs-item>
+                                    <tr>
+                                        <td class="time" data-cs-col-class="audience" data-cs-col="time"></td>
+                                        <td data-cs-col="event"></td>
+                                    </tr>
+                                </template>
                             </table>
-                            <div class="sat-party-info">
-                                <p>*Doors close at 21:30.</p>
-                                <p>No alcohol or drugs allowed; Badges will be required to enter the party.</p>
-                            </div> -->
                         </div>
                     </div>
 
                     <div class="sun item">
                         <h2 id="sun-title">Sunday 12<sup>th</sup> October</h2>
                         <div id="sun-info" class="info">
-                            <p>To be announced</p>
-                            <!-- <table>
-                                <tr>
-                                    <td class="time stoff">08:30<br>09:00</td>
-                                    <td>StOff Briefing</td>
-                                </tr>
-                                <tr>
-                                    <td class="time delegates">09:00<br>15:30</td>
-                                    <td>All Committees in Session</td>
-                                </tr>
-                                <tr>
-                                    <td class="time general">11:30<br>13:30</td>
-                                    <td>Staggered Lunch</td>
-                                </tr>
-                                <tr>
-                                    <td class="time general">15:30<br>16:00</td>
-                                    <td>Break</td>
-                                </tr>
-                                <tr>
-                                    <td class="time general">16:00<br>17:00</td>
-                                    <td>Closing Ceremony</td>
-                                </tr>
-                                <tr>
-                                    <td class="time stoff">17:00<br>17:30</td>
-                                    <td>StOff Debriefing</td>
-                                </tr>
-                            </table> -->
+                            <p data-cs-empty style="display: none;">To be announced.</p>
+                            <table data-cs-repeat="programme" data-cs-where="day:Sunday" data-cs-hideempty data-cs-empty-scope="parent">
+                                <template data-cs-item>
+                                    <tr>
+                                        <td class="time" data-cs-col-class="audience" data-cs-col="time"></td>
+                                        <td data-cs-col="event"></td>
+                                    </tr>
+                                </template>
+                            </table>
                         </div>
 
                     </div>

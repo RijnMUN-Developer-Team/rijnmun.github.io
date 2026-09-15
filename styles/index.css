@@ -16,7 +16,7 @@ h2 {
     width: 98%;
     font-size: 30px;
     /* align-self: end; */
-    text-align: end;
+    /* text-align: end; */
     justify-self: end;
     /* color: #5cd6ff; */
     color: var(--h3-color);

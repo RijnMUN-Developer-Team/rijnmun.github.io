@@ -25,6 +25,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/venue.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
+        <script src="/scripts/content.js" defer></script>
         <script type="module" src="/scripts/contextmenu.js"></script>
         <title>RijnMUN | Venue</title>
     </head>
@@ -89,15 +90,12 @@
             <div class="container">
                 <h2 class="sub-heading">About RLO</h2>
                 <div class="about-rlo">
-                    <div class="text">
-                        <p><a href="https://www.rlo.nl/" target="_blank" rel="noopener noreferrer">Het Rijnlands Lyceum Oegstgeest</a> is part of the Het Rijnlands Lyceum Foundation first established in 1936. RLO was first founded in 1956 as a Dutch secondary school. It soon founded its TTO (bilingual) education
-                        and IB programs, where 2026 marks the 40<sup>th</sup> anniversary of the IB's establishment in RLO. </p>
-                        <p>Having HAVO, VWO-TTO, VWO and IB programs all under the same roof, Het Rijnlands Lyceum
-                        Oegstgeest is a unique and diverse place for students to be in. Having over 1500 students, amongst them 
-                        350 of which are international students from over 40 countries and 150 staff members, RLO is home to many wonderful opportunities.</p>
+                    <div class="text" data-cs-repeat="venue" data-cs-where="section:about_rlo">
+                        <template data-cs-item>
+                            <p data-cs-col="text"></p>
+                        </template>
                     </div>
                     <div class="image">
-                        <!-- <img src="/images/rlo/rlo.webp" alt="RLO icon" id="school_icon" style="padding-left: 20px; width: 150px;"> -->
                         <img src="/images/logos/40-years-isrlo.webp" alt="RLO icon" id="school_icon" style="padding-left: 20px; width: 350px;">
                     </div>
                 </div>
@@ -105,13 +103,24 @@
                 <h2 class="sub-heading">Travelling to RLO</h2>
                 <div class="go-to-rlo">
                     <div class="text">
-                    <p>The conference will be hosted at <span class="emphasis">Het Rijnlands Lyceum Oegstgeest</span>, at the address <a href="https://maps.app.goo.gl/eAHMe1EkFLLd3BHS7" target="_blank" rel="noopener noreferrer">Apollolaan 1, 2341 BA Oegstgeest</a></p>
+                        <div data-cs-repeat="venue" data-cs-where="section:travel_intro">
+                            <template data-cs-item>
+                                <p data-cs-col="text"></p>
+                            </template>
+                        </div>
                         <h3>By car</h3>
-                        <p>RLO is located near <span class="emphasis" title="We dare all the non-Dutch speakers to try and pronounce 'Oegstgeest'">Exit 7: Oegstgeest | Rijnsburg</span> on the A44. Please note that there are limited parking spaces around the school.</p>
+                        <div data-cs-repeat="venue" data-cs-where="section:by_car">
+                            <template data-cs-item>
+                                <p data-cs-col="text"></p>
+                            </template>
+                        </div>
 
                         <h3>By public transport</h3>
-                        <p>RLO is a 10-minute walk from the bus stop <span class="emphasis">Leidsebuurt</span>. Visitors are recommended to take a train to <span class="emphasis">Leiden Centraal</span> followed by either bus 20, 21 or 57 to the bus station Leidsebuurt.</p>
-                        <p>We recommend using an app such as <a href="https://9292.nl/" target="_blank" rel="noopener noreferrer">9292.nl</a> or <a href="https://ns.nl" target="_blank" rel="noopener noreferrer">ns.nl</a> to assist your travel planning with public transport.</p>
+                        <div data-cs-repeat="venue" data-cs-where="section:by_public_transport">
+                            <template data-cs-item>
+                                <p data-cs-col="text"></p>
+                            </template>
+                        </div>
                     </div>
 
                     <div class="map">
@@ -123,8 +132,10 @@
                     <h2 class="sub-heading">About Leiden</h2>
                     <div class="content">
                         <div class="half">
-                            <div class="text">
-                                <p>Leiden is a beautiful city with a rich history and academic life. The city houses the oldest university in the Netherlands- <span class="emphasis">Leiden University</span>, which was founded in 1575 and is now a leading research university with seven different faculties. It now houses over 29,000 students and 6500 staff members from around the world.</p>
+                            <div class="text" data-cs-repeat="venue" data-cs-where="section:leiden_1">
+                                <template data-cs-item>
+                                    <p data-cs-col="text"></p>
+                                </template>
                             </div>
         
                             <div class="image">
@@ -134,8 +145,10 @@
                         </div>
 
                         <div class="half">
-                            <div class="text">
-                                <p>In Leiden, you can also find over 2800 <span class="emphasis">historical monuments</span> if you know where to look for them. These monuments range from courtyards, city gates, gardens to mills.<br><a href="https://www.visitleiden.nl/nl/cultuur/monumenten" target="_blank" rel="noopener noreferrer">Learn more</a> about monuments in Leiden.</p>
+                            <div class="text" data-cs-repeat="venue" data-cs-where="section:leiden_2">
+                                <template data-cs-item>
+                                    <p data-cs-col="text"></p>
+                                </template>
                             </div>
 
                             <div class="image">

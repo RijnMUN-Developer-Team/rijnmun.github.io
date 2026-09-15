@@ -295,15 +295,6 @@ function scroll_up() {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
 }
 
-// spam email protection------------------------------------
-function email() {
-    let recipient="info";
-    let at = String.fromCharCode(64);
-    let dotcom="rijnmun.org";
-    let mail="mailto:";
-    window.open(mail+recipient+at+dotcom);
-}
-
 const footerHTML = `
         <footer data-nosnippet>
             <div class="f_container">
@@ -351,7 +342,7 @@ const footerHTML = `
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>
-                                <div class="at" onclick="email()">&#105;&#110;&#102;&#111;&#64;&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#46;&#111;&#114;&#103;</div>
+                                <a href="mailto:info@rijnmun.org">&#105;&#110;&#102;&#111;&#64;&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#46;&#111;&#114;&#103;</a>
                             </li>
                             <li>
                                 <span class="spc>"><i class="fa fa-globe"></i></span>

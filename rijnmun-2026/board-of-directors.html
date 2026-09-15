@@ -25,6 +25,7 @@
         <link rel="stylesheet" type="text/css" href="/styles/bod.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="/scripts/base.js"></script>
+        <script src="/scripts/content.js" defer></script>
         <script type="module" src="/scripts/contextmenu.js"></script>
         <script type="module" src="/scripts/bod.js"></script>
         <title>RijnMUN | Board of Directors</title>
@@ -88,98 +89,33 @@
             </div>
 
             <div class="container">
-                <div class="row1">
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Board of Directors">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">Board of Directors</p>
-                                <p class="img_label role-title">RijnMUN 2026</p>
+                <div class="row1" data-cs-repeat="board" data-cs-where="group:row1">
+                    <template data-cs-item>
+                        <div class="person">
+                            <img src="/images/BoD-photos/grey.webp" alt="" data-cs-col-img="photo_url" data-cs-col-attr="alt:names">
+                            <div class="label-content">
+                                <div class="label-text">
+                                    <p class="img_label" data-cs-col="names"></p>
+                                    <p class="img_label role-title" data-cs-col="role"></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Secretary General">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">Ruby O'Regan</p>
-                                <p class="img_label role-title">Secretary General</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Secretariat">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">Ruby O'Regan, Azlan Shurjeel Tousif, Tereza Valkyova</p>
-                                <p class="img_label role-title">RijnMUN Secretariat</p>
-                            </div>
-                        </div>
-                    </div>
+                    </template>
                 </div>
 
-                <div class="row2">
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Management Sector">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">To be announced soon!</p>
-                                <p class="img_label role-title">Management</p>
+                <div class="row2" data-cs-repeat="board" data-cs-where="group:row2">
+                    <template data-cs-item>
+                        <div class="person">
+                            <img src="/images/BoD-photos/grey.webp" alt="" data-cs-col-img="photo_url" data-cs-col-attr="alt:names">
+                            <div class="label-content">
+                                <div class="label-text">
+                                    <p class="img_label" data-cs-col="names"></p>
+                                    <p class="img_label role-title" data-cs-col="role"></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Finance Sector">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">To be announced soon!</p>
-                                <p class="img_label role-title">Finance</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN External Affairs">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">To be announced soon!</p>
-                                <p class="img_label role-title">External Affairs</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Internal Affairs">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">To be announced soon!</p>
-                                <p class="img_label role-title">Internal Affairs</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="person">
-                        <img src="/images/BoD-photos/grey.webp" alt="RijnMUN Publicity & Press Team">
-                        <div class="label-content">
-                            <div class="label-text">
-                                <p class="img_label">To be announced soon!</p>
-                                <p class="img_label role-title">Press & Publicity</p>
-                            </div>
-                        </div>
-
-                    </div>
+                    </template>
                 </div>
-
-                <!-- <div class="person">
-                    <img src="/images/BoD-photos/grey.webp" alt="">
-                    <p class="img_label">name(s)</p>
-                    <p class="img_label role-title">RijnMUN 2026 BoD</p>
-                </div> -->
             </div>
             <div id="scrollup">
                 <i class="fa fa-arrow-up fa-2x"></i>

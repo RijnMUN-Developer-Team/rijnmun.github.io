@@ -2,11 +2,20 @@
 // let lastUpdated = new Date(document.lastModified);
 // document.getElementById("date").innerHTML = `Last Updated: ${String(lastUpdated.getDate()).padStart(2, '0')}/${String(lastUpdated.getMonth()+1).padStart(2, '0')}/${lastUpdated.getFullYear()}`;
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (document.querySelectorAll('div#news-overflow div').length < 1) {
-    document.getElementById('news-toggle-cont').style.display = 'none'
-  }
-})
+// hides the news "Show more" toggle when there is nothing to overflow
+function update_news_toggle() {
+    const toggle_cont = document.getElementById('news-toggle-cont');
+    if (!toggle_cont) return;
+    if (document.querySelectorAll('div#news-overflow div[data-cs-rendered]').length < 1) {
+        toggle_cont.style.display = 'none'
+    } else {
+        toggle_cont.style.display = ''
+    }
+}
+
+document.addEventListener('DOMContentLoaded', update_news_toggle);
+// re-check once the sheet content engine has rendered the news items
+document.addEventListener('cs:ready', update_news_toggle);
 
 let news_overflow_toggled = false;
 
