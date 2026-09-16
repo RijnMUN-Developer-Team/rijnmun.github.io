@@ -30,7 +30,10 @@
    PART 1 — pure helpers (no DOM). Also exercised by the Node test-suite.
    ========================================================================== */
 
-var CS_SHEET_ID = "1zwSIutFtt_bld4UvOV4sFnVSrzSZm3MZn_aUzu5LzH8"; // ← the published Google Sheet
+// the published Google Sheet ID is configured once in scripts/base.js
+// (window.CS_SHEET_ID); the literal is kept only as a safety fallback
+var CS_SHEET_ID = (typeof window !== "undefined" && window.CS_SHEET_ID) ||
+    "1zwSIutFtt_bld4UvOV4sFnVSrzSZm3MZn_aUzu5LzH8";
 var CS_CACHE_KEY = "cs_cache_v1";
 var CS_FETCH_TIMEOUT = 7000; // ms before we give up on Google
 

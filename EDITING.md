@@ -24,7 +24,7 @@ A few simple tricks work everywhere (news, programme, registration…):
 | `*notice*` | *notice* |
 | `__highlighted__` | highlighted (blue-ish, like elsewhere on the site) |
 | `[click here](https://example.com)` | a link: [click here](https://example.com) |
-| `^{th}` | a superscript: 9^th^ (as in "9th October") |
+| `^{th}` | a superscript: 20^th^ (as in "20th November") |
 | a new line in the cell (`Ctrl`+`Enter`) | a line break on the website |
 
 Anything else you type (normal text) shows up exactly as written.
@@ -35,7 +35,7 @@ Anything else you type (normal text) shows up exactly as written.
 
 | Tab | Controls |
 |---|---|
-| `settings` | Conference dates, fees heading, social media links, the "last updated" date, and the three **registration switches** (see below) |
+| `settings` | Conference dates, the countdown target, fees heading, social media links, the "last updated" date, and the three **registration switches** (see below) |
 | `home` | Big headline on the front page, the secretariat message, the three buttons |
 | `news` | The "Latest News" box on the front page. Newest first — put a date like `10/05/2026`, and set `visible` to `no` to hide an item without deleting it |
 | `registration` | Everything on the Registration page: fees table, each registration section's paragraphs, the notes list, mailing buttons |
@@ -46,6 +46,16 @@ Anything else you type (normal text) shows up exactly as written.
 | `general_info` | The General Information page: intro text, guidelines list, the two "how to" lists, resources |
 | `venue` | Venue & Leiden page texts |
 | `contact` | Address lines and the displayed email address |
+
+## The countdown
+
+The footer countdown reads the `countdown_date` key on the `settings` tab.
+You can write the date however you like — for example `20/11/2026`,
+`2026-11-20` or `20 November 2026`. Add a time as `... 11:30` to count down
+to a specific moment; **without a time it counts down to noon (12:00)**.
+
+Leave `countdown_date` blank and the countdown uses the first date from
+`conference_dates` automatically, so you usually don't need to touch it.
 
 ## The registration switches
 

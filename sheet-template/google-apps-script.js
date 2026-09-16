@@ -13,7 +13,7 @@
  * 4. When it finishes, open View → Logs for the spreadsheet link
  * 5. In the new sheet: File → Share → Publish to web → Publish
  * 6. Copy the Sheet ID from the URL (the long code between /d/ and /edit)
- *    into  scripts/content.js  →  var CS_SHEET_ID = "..."
+ *    into  scripts/base.js  →  window.CS_SHEET_ID = "..."
  *
  * After that, editing the sheet edits the website. See EDITING.md.
  */
@@ -159,6 +159,7 @@ var INSTRUCTIONS = [
   "",
   "What each tab does",
   "settings — dates, fees heading, social links, the 3 registration switches (open / closed / not_open)",
+  "countdown_date (on settings, optional) — countdown target; write a normal date like 20/11/2026 or 20 November 2026 (leave the time off for noon), or add a time as 20/11/2026 11:30. If left blank the countdown uses the first date in conference_dates",
   "home — front page headline, secretariat message, the 3 buttons",
   "news — Latest News box (newest first; visible = yes/no)",
   "registration — fees table, per-section paragraphs, notes, mailing buttons",
@@ -178,7 +179,8 @@ var DATA = {
   "settings": {
     "site_name": "RijnMUN",
     "conference_edition": "RijnMUN 2026",
-    "conference_dates": "9^{th} to 11^{th} October 2026",
+    "conference_dates": "20^{th} to 22^{nd} November 2026",
+    "countdown_date": "2026-11-20 11:30",
     "committees_tagline": "Convergence: where perspectives unite for global progress",
     "fees_heading": "Conference Fees 2026",
     "school_reg": "open",

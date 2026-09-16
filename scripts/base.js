@@ -1,7 +1,14 @@
 
+// Google Sheet content source ----------------------------------------
+// Single place to configure the content spreadsheet: content.js reads
+// window.CS_SHEET_ID, and base.js uses it to fill the footer + countdown.
+window.CS_SHEET_ID = "1zwSIutFtt_bld4UvOV4sFnVSrzSZm3MZn_aUzu5LzH8";
+
 // removes the "enable javascript" alert ------------------------------
 window.onload = () => {
-    document.querySelector('body').innerHTML += footerHTML
+    if (!document.querySelector('footer[data-base-footer]')) {
+        document.body.insertAdjacentHTML('beforeend', footerHTML)
+    }
     document.querySelector('header').style = "display: flex !important;";
     document.querySelector('footer').style = "display: block !important;";    
     document.querySelector('main').style = "display: block !important;";
@@ -17,6 +24,7 @@ window.onload = () => {
         document.querySelector('#toggle ul').innerHTML += '<li class="main"><a href="/staff/schedule">Staff</a></li>'
         // })
     }
+    boot_footer()
 }
 
 // transition for mobile support settings ------------------------
@@ -89,9 +97,280 @@ document.onkeypress = function (key) {
     }    
 }
 
+// ---------------------------------------------------------------------
+// Footer content engine (Google Sheets)
+// base.js runs on every page, so it fills the footer's social links and
+// email address and the countdown target from the content sheet. When
+// content.js is also on the page we reuse its data (window.CS) and never
+// fetch twice; on pages without it we fetch just the settings + contact
+// tabs. Failures are silent: we fall back to the last cached values and
+// then to the defaults below. content.js stays the only error reporter.
+// ---------------------------------------------------------------------
+
+var BASE_CACHE_KEY = "base_cache_v1";
+var BASE_FETCH_TIMEOUT = 7000;
+
+var BASE_DEFAULTS = {
+    instagram_url: "https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5",
+    tiktok_url: "https://www.tiktok.com/@rijn_mun",
+    email: "info@rijnmun.org",
+    countdown_date: "2026-11-20T11:30:00"
+};
+
+/* compact RFC-4180 CSV parser (quoted fields, escaped quotes, newlines) */
+function baseParseCSV(text) {
+    var rows = [], row = [], field = "", inQuotes = false, i = 0;
+    if (typeof text !== "string") return rows;
+    if (text.charCodeAt(0) === 0xFEFF) i = 1; // strip BOM
+    for (; i < text.length; i++) {
+        var c = text[i];
+        if (inQuotes) {
+            if (c === '"') {
+                if (text[i + 1] === '"') { field += '"'; i++; }
+                else { inQuotes = false; }
+            } else { field += c; }
+        } else if (c === '"') {
+            inQuotes = true;
+        } else if (c === ",") {
+            row.push(field); field = "";
+        } else if (c === "\r") {
+            /* skip */
+        } else if (c === "\n") {
+            row.push(field); rows.push(row); row = []; field = "";
+        } else {
+            field += c;
+        }
+    }
+    row.push(field); rows.push(row);
+    return rows;
+}
+
+/* "key,value" CSV rows -> plain object (header row optional) */
+function baseKvFromCSV(text) {
+    var out = {};
+    baseParseCSV(text).forEach(function (r) {
+        var k = String(r[0] == null ? "" : r[0]).trim();
+        if (!k || k.toLowerCase() === "key") return;
+        out[k] = String(r[1] == null ? "" : r[1]).trim();
+    });
+    return out;
+}
+
+function baseFetchKV(tab) {
+    var url = "https://docs.google.com/spreadsheets/d/" + window.CS_SHEET_ID +
+        "/gviz/tq?tqx=out:csv&headers=1&sheet=" + encodeURIComponent(tab);
+    var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, BASE_FETCH_TIMEOUT);
+    return fetch(url, ctrl ? { signal: ctrl.signal } : undefined)
+        .then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.text();
+        })
+        .then(function (text) {
+            // an unpublished sheet answers with the sign-in page, not CSV
+            if (/^\s*<!doctype|^\s*<html/i.test(String(text))) {
+                throw new Error("Tab not published");
+            }
+            return baseKvFromCSV(text);
+        })
+        .finally(function () { clearTimeout(timer); });
+}
+
+/* pull the fields we care about out of a {settings, contact} object */
+function baseFieldsFrom(raw) {
+    if (!raw) return {};
+    var s = raw.settings || {};
+    var c = raw.contact || {};
+    return {
+        instagram_url: s.instagram_url,
+        tiktok_url: s.tiktok_url,
+        email: c.email,
+        countdown_date: s.countdown_date,
+        conference_dates: s.conference_dates
+    };
+}
+
+function baseCleanFields(f) {
+    var out = {};
+    Object.keys(f || {}).forEach(function (k) {
+        if (f[k] != null && String(f[k]).trim() !== "") out[k] = String(f[k]).trim();
+    });
+    return out;
+}
+
+function baseReadJSON(key) {
+    try {
+        var raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw).data || null : null;
+    } catch (e) { return null; }
+}
+
+/* last known values: content.js's full cache first, then our own */
+function baseCachedFields() {
+    var full = baseReadJSON("cs_cache_v1");
+    if (full) {
+        var f = baseCleanFields(baseFieldsFrom(full));
+        if (Object.keys(f).length) return f;
+    }
+    var own = baseReadJSON(BASE_CACHE_KEY);
+    return own ? baseCleanFields(own) : {};
+}
+
+function baseCacheFields(f) {
+    try { localStorage.setItem(BASE_CACHE_KEY, JSON.stringify({ ts: Date.now(), data: f })); }
+    catch (e) { /* storage full/blocked — not fatal */ }
+}
+
+/* Resolve the footer fields. Reuse content.js when it is on the page;
+   otherwise fetch the two small tabs ourselves. Never rejects. */
+function baseGetSheetData() {
+    if (window.CS) {
+        return new Promise(function (resolve) {
+            if (window.CS.ready) { resolve(baseCleanFields(baseFieldsFrom(window.CS.data))); return; }
+            var done = false;
+            function finish() {
+                if (done) return;
+                done = true;
+                resolve(baseCleanFields(baseFieldsFrom(window.CS.data)));
+            }
+            document.addEventListener("cs:ready", finish);
+            setTimeout(finish, 8000); // never wait forever on a broken engine
+        });
+    }
+    if (!window.CS_SHEET_ID) return Promise.resolve({});
+    return Promise.all([baseFetchKV("settings"), baseFetchKV("contact")])
+        .then(function (res) {
+            var fields = baseCleanFields({
+                instagram_url: res[0].instagram_url,
+                tiktok_url: res[0].tiktok_url,
+                countdown_date: res[0].countdown_date,
+                conference_dates: res[0].conference_dates,
+                email: res[1].email
+            });
+            if (Object.keys(fields).length) baseCacheFields(fields);
+            return fields;
+        })
+        .catch(function () { return {}; });
+}
+
+/* Obfuscate the email with numeric HTML entities (anti-scraper). */
+function baseEncodeEmail(email) {
+    return String(email).split("").map(function (ch) {
+        return "&#" + ch.charCodeAt(0) + ";";
+    }).join("");
+}
+
+function baseSafeUrl(url) {
+    var u = String(url || "").trim();
+    return /^https?:\/\//i.test(u) ? u : "";
+}
+
+function apply_footer_data(fields) {
+    var f = {};
+    Object.keys(BASE_DEFAULTS).forEach(function (k) { f[k] = BASE_DEFAULTS[k]; });
+    Object.keys(fields || {}).forEach(function (k) {
+        if (fields[k] != null && String(fields[k]).trim() !== "") f[k] = String(fields[k]).trim();
+    });
+
+    var insta = document.getElementById("footer-instagram");
+    var tiktok = document.getElementById("footer-tiktok");
+    var email = document.getElementById("footer-email");
+
+    var iu = baseSafeUrl(f.instagram_url);
+    if (insta && iu) insta.setAttribute("href", iu);
+    var tu = baseSafeUrl(f.tiktok_url);
+    if (tiktok && tu) tiktok.setAttribute("href", tu);
+    if (email && f.email) {
+        email.setAttribute("href", "mailto:" + f.email);
+        email.innerHTML = baseEncodeEmail(f.email);
+    }
+
+    // precedence: explicit countdown_date → conference_dates → hardcoded default
+    set_countdown_target(fields && fields.countdown_date,
+        fields && fields.conference_dates, BASE_DEFAULTS.countdown_date);
+}
+
+function boot_footer() {
+    var cached = baseCachedFields();
+    apply_footer_data(cached); // cached values, else defaults
+    baseGetSheetData().then(function (fresh) {
+        if (fresh && Object.keys(fresh).length) apply_footer_data(fresh);
+    });
+}
+
 // COUNTDOWN TIMER -------------------------------------------------
 
-var countDownDate = new Date("Oct 10, 2026 11:30:00").getTime();
+var DEFAULT_COUNTDOWN = "2026-11-20T11:30:00";
+var DEFAULT_COUNTDOWN_HOUR = 12; // noon when no time is given
+
+var BASE_MONTHS = {
+    jan: 0, january: 0, feb: 1, february: 1, mar: 2, march: 2, apr: 3, april: 3,
+    may: 4, jun: 5, june: 5, jul: 6, july: 6, aug: 7, august: 7,
+    sep: 8, sept: 8, september: 8, oct: 9, october: 9,
+    nov: 10, november: 10, dec: 11, december: 11
+};
+
+/* Parse a date written by a human. Accepts ISO (2026-11-20T11:30),
+   day-first (20/11/2026 11:30) and month-name forms (20 November 2026,
+   Nov 20, 2026), with or without a time, and even a date range such as
+   "20^{th} to 22^{nd} November 2026" (the first day is used). If no time
+   is found it defaults to noon. Returns 0 when unparseable. */
+function baseParseDate(v) {
+    var s = String(v == null ? "" : v).trim();
+    if (!s) return 0;
+
+    // strip superscript markup (^{th}) and ordinal suffixes (20th -> 20)
+    s = s.replace(/\^\{[^}]*\}/g, "").replace(/\^/g, "");
+    s = s.replace(/(\d+)(st|nd|rd|th)\b/gi, "$1");
+    s = s.replace(/\s+/g, " ").trim();
+
+    // optional time; defaults to noon
+    var hour = DEFAULT_COUNTDOWN_HOUR, min = 0, sec = 0;
+    var tm = s.match(/(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(am|pm)?/i);
+    if (tm) {
+        hour = +tm[1];
+        min = +tm[2];
+        sec = +(tm[3] || 0);
+        var ap = (tm[4] || "").toLowerCase();
+        if (ap === "pm" && hour < 12) hour += 12;
+        if (ap === "am" && hour === 12) hour = 0;
+        s = s.replace(tm[0], " ");
+    }
+    s = s.replace(/\s+/g, " ").trim();
+
+    var m, y, mo, d;
+    // numeric day-first: 20/11/2026, 20-11-2026, 20.11.2026
+    if ((m = s.match(/^(\d{1,2})[\/\-\.](\d{1,2})[\/\-\.](\d{4})/))) {
+        d = +m[1]; mo = +m[2] - 1; y = +m[3];
+    // numeric ISO: 2026-11-20
+    } else if ((m = s.match(/^(\d{4})[\/\-\.](\d{1,2})[\/\-\.](\d{1,2})/))) {
+        y = +m[1]; mo = +m[2] - 1; d = +m[3];
+    // "20 to 22 November 2026" / "20-22 Nov 2026" (range → first day)
+    } else if ((m = s.match(/^(\d{1,2})\s*(?:to|-|–|—|&)\s*\d{1,2}\s+(?:of\s+)?([A-Za-z]+)\.?\s+(\d{4})/))) {
+        d = +m[1]; mo = BASE_MONTHS[m[2].toLowerCase()]; y = +m[3];
+    // "20 November 2026"
+    } else if ((m = s.match(/^(\d{1,2})\s+(?:of\s+)?([A-Za-z]+)\.?\s+(\d{4})/))) {
+        d = +m[1]; mo = BASE_MONTHS[m[2].toLowerCase()]; y = +m[3];
+    // "November 20, 2026" / "Nov 20 2026"
+    } else if ((m = s.match(/([A-Za-z]+)\.?\s+(\d{1,2})(?:,)?\s+(\d{4})/))) {
+        mo = BASE_MONTHS[m[1].toLowerCase()]; d = +m[2]; y = +m[3];
+    } else {
+        var t = Date.parse(s);
+        return isNaN(t) ? 0 : t;
+    }
+    if (mo == null || isNaN(mo)) return 0;
+    return new Date(y, mo, d, hour, min, sec).getTime();
+}
+
+/* Try each candidate in order and use the first one that parses. */
+function set_countdown_target() {
+    for (var i = 0; i < arguments.length; i++) {
+        var t = baseParseDate(arguments[i]);
+        if (t > 0) { countDownDate = t; return; }
+    }
+}
+
+var countDownDate = baseParseDate(DEFAULT_COUNTDOWN) || new Date("Nov 20, 2026 11:30:00").getTime();
 var prev_days
 var prev_hours
 var prev_mins
@@ -296,7 +575,7 @@ function scroll_up() {
 }
 
 const footerHTML = `
-        <footer data-nosnippet>
+        <footer data-nosnippet data-base-footer>
             <div class="f_container">
                 <div class="f">
                     <div class="ft">
@@ -342,7 +621,7 @@ const footerHTML = `
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>
-                                <a href="mailto:info@rijnmun.org">&#105;&#110;&#102;&#111;&#64;&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#46;&#111;&#114;&#103;</a>
+                                <a id="footer-email" href="mailto:info@rijnmun.org">&#105;&#110;&#102;&#111;&#64;&#114;&#105;&#106;&#110;&#109;&#117;&#110;&#46;&#111;&#114;&#103;</a>
                             </li>
                             <li>
                                 <span class="spc>"><i class="fa fa-globe"></i></span>
@@ -361,9 +640,9 @@ const footerHTML = `
                             </table>
                         </div>
                         <div class="socials">
-                            <a href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp" title="Follow us @rijn.mun on Instagram!"></a>
+                            <a id="footer-instagram" href="https://www.instagram.com/rijn.mun?igsh=cWtvcHhlZzN3N2R5" target="_blank" rel="noopener noreferrer"><img alt="Instagram" class="insta" src="/images/logos/instagram.webp" title="Follow us @rijn.mun on Instagram!"></a>
                             <h4>FOLLOW US</h4>
-                            <a href="https://www.tiktok.com/@rijn_mun" target="_blank" rel="noopener noreferrer"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp" title="Follow @rijn_mun on TikTok!"></a>
+                            <a id="footer-tiktok" href="https://www.tiktok.com/@rijn_mun" target="_blank" rel="noopener noreferrer"><img alt="TikTok" class="tiktok" src="/images/logos/tiktok.webp" title="Follow @rijn_mun on TikTok!"></a>
                         </div>
                     </div>
                 </div>
