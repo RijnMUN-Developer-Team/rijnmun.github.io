@@ -344,10 +344,12 @@ function csRowEmpty(r) {
                     applyAttr(e, e.getAttribute("data-cs-group-attr"), g.rows[0], true);
                 });
 
+                // bind the group node first: it must not descend into the
+                // nested rows below, so render those only afterwards
+                hydrateRowBindings(el, g.rows[0], true);
+
                 var inner = el.querySelector("[data-cs-group-rows]");
                 if (inner) hydrateRepeat(inner, { rows: g.rows });
-
-                hydrateRowBindings(el, g.rows[0], true);
             });
         } else {
             rows.forEach(function (row, i) {
